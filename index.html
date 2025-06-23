@@ -5,28 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
     <title>Columbia Care Home - Compassionate Home Care Services</title>
     <meta name="description" content="Columbia Care Home provides compassionate, professional home care services that allow your loved ones to maintain their independence and dignity in familiar surroundings.">
-    
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>❤️</text></svg>">
-    
-    <!-- Open Graph tags -->
-    <meta property="og:title" content="Columbia Care Home - Compassionate Home Care Services">
-    <meta property="og:description" content="Professional home care services that allow your loved ones to age gracefully in place with dignity and independence.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="">
-    
     <link rel="stylesheet" href="./styles.css">
   </head>
   <body>
-    <!-- Navigation -->
     <nav class="sticky-nav fixed w-full top-0 z-50 text-white bg-primary">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16">
@@ -36,20 +21,15 @@
               <span class="font-playfair text-xl font-bold">Columbia Care Home</span>
             </a>
           </div>
-          
           <div class="hidden md:block">
             <div class="ml-10 flex items-baseline space-x-8">
-              <a href="index.html" class="hover:text-secondary transition-colors px-3 py-2 text-sm font-medium">Home</a>
+              <a href="index.html" class="text-secondary px-3 py-2 text-sm font-medium">Home</a>
               <a href="services.html" class="hover:text-secondary transition-colors px-3 py-2 text-sm font-medium">Services</a>
               <a href="about.html" class="hover:text-secondary transition-colors px-3 py-2 text-sm font-medium">About</a>
               <a href="blog.html" class="hover:text-secondary transition-colors px-3 py-2 text-sm font-medium">Blog</a>
-              <a href="#contact" class="hover:text-secondary transition-colors px-3 py-2 text-sm font-medium">Contact</a>
-              <a href="tel:+15551234567" class="bg-secondary text-primary px-4 py-2 rounded-full hover:bg-white transition-colors text-sm font-semibold">
-                <i class="fas fa-phone mr-2"></i>Call Now
-              </a>
+              <a href="index.html#contact" class="hover:text-secondary transition-colors px-3 py-2 text-sm font-medium">Contact</a>
             </div>
           </div>
-          
           <div class="md:hidden">
             <button type="button" id="mobile-menu-btn" class="text-white hover:text-secondary focus:outline-none focus:text-secondary">
               <i class="fas fa-bars text-xl"></i>
@@ -57,503 +37,33 @@
           </div>
         </div>
       </div>
-      
       <div id="mobile-menu" class="md:hidden bg-primary hidden">
         <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-          <a href="index.html" class="block hover:text-secondary px-3 py-2 text-base font-medium">Home</a>
+          <a href="index.html" class="block text-secondary px-3 py-2 text-base font-medium">Home</a>
           <a href="services.html" class="block hover:text-secondary px-3 py-2 text-base font-medium">Services</a>
           <a href="about.html" class="block hover:text-secondary px-3 py-2 text-base font-medium">About</a>
           <a href="blog.html" class="block hover:text-secondary px-3 py-2 text-base font-medium">Blog</a>
-          <a href="#contact" class="block hover:text-secondary px-3 py-2 text-base font-medium">Contact</a>
-          <a href="tel:+15551234567" class="block bg-secondary text-primary px-3 py-2 text-base font-semibold rounded">
-            <i class="fas fa-phone mr-2"></i>Call Now
-          </a>
+          <a href="index.html#contact" class="block hover:text-secondary px-3 py-2 text-base font-medium">Contact</a>
         </div>
       </div>
     </nav>
 
-    <!-- Hero Carousel -->
-    <section id="home" class="relative min-h-screen">
-      <div class="carousel-container relative h-screen">
-        <div class="carousel-slides">
-          <div class="carousel-slide active">
-            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Compassionate Care">
-          </div>
-          <div class="carousel-slide">
-            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Companion Care">
-          </div>
-          <div class="carousel-slide">
-            <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Professional Health Monitoring">
-          </div>
-          <div class="carousel-slide">
-            <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Independence at Home">
-          </div>
-        </div>
-        
-        <button class="carousel-btn carousel-prev" onclick="changeSlide(-1)">
-          <i class="fas fa-chevron-left"></i>
-        </button>
-        <button class="carousel-btn carousel-next" onclick="changeSlide(1)">
-          <i class="fas fa-chevron-right"></i>
-        </button>
-        
-        <div class="carousel-dots">
-          <button class="carousel-dot active" onclick="currentSlide(1)"></button>
-          <button class="carousel-dot" onclick="currentSlide(2)"></button>
-          <button class="carousel-dot" onclick="currentSlide(3)"></button>
-          <button class="carousel-dot" onclick="currentSlide(4)"></button>
-        </div>
-        
-        <div class="hero-content">
-          <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-            <h1 class="font-playfair text-3xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Columbia Care Home
-            </h1>
-            <p class="text-lg md:text-xl lg:text-2xl mb-8 font-light max-w-3xl mx-auto leading-relaxed">
-              Personalized, professional home care services that allow your loved ones to maintain their independence and dignity in familiar surroundings.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a href="#contact" class="btn-primary px-8 py-4 rounded-full text-lg font-semibold hover:shadow-lg transition-all">
-                <i class="fas fa-calendar-check mr-2"></i>Schedule Consultation
-              </a>
-              <a href="tel:+15551234567" class="bg-transparent border-2 border-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-primary transition-all">
-                <i class="fas fa-phone mr-2"></i>(555) 123-4567
-              </a>
-            </div>
-          </div>
+    <section id="home" class="relative min-h-screen carousel-container">
+      <div class="carousel-slides">
+        <div class="carousel-slide active" style="background-image: url('https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');"></div>
+        <div class="carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');"></div>
+        <div class="carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');"></div>
+      </div>
+      <div class="hero-content text-center text-white">
+        <div class="fade-in">
+          <h1 class="font-playfair text-3xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">Columbia Care Home</h1>
+          <p class="text-lg md:text-xl lg:text-2xl mb-8 font-light max-w-3xl mx-auto leading-relaxed">Personalized, professional home care services that allow your loved ones to maintain their independence and dignity in familiar surroundings.</p>
+          <a href="#contact" class="btn-primary px-8 py-4 rounded-full text-lg font-semibold hover:shadow-lg transition-all">
+            <i class="fas fa-calendar-check mr-2"></i>Schedule Consultation
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="py-20 bg-gray-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-          <h2 class="font-playfair text-4xl md:text-5xl font-bold text-primary mb-6">Our Care Services</h2>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-            We offer comprehensive home care services tailored to meet the unique needs of each individual and family.
-          </p>
-        </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden">
-            <div class="relative h-48">
-              <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Personal Care" class="w-full h-full object-cover">
-              <div class="absolute inset-0 bg-primary/20"></div>
-              <div class="absolute top-4 right-4 w-16 h-16 bg-secondary rounded-full flex items-center justify-center">
-                <i class="fas fa-user-nurse text-2xl text-primary"></i>
-              </div>
-            </div>
-            <div class="p-6">
-              <h3 class="font-playfair text-xl font-semibold text-primary mb-3">Personal Care</h3>
-              <p class="text-gray-600 mb-4 text-sm">Assistance with daily activities including bathing, dressing, grooming, and medication management.</p>
-              <ul class="text-gray-600 space-y-1">
-                <li class="text-sm"><i class="fas fa-check text-accent mr-2"></i>Bathing and hygiene assistance</li>
-                <li class="text-sm"><i class="fas fa-check text-accent mr-2"></i>Medication reminders</li>
-                <li class="text-sm"><i class="fas fa-check text-accent mr-2"></i>Mobility support</li>
-              </ul>
-            </div>
-          </div>
-          
-          <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden">
-            <div class="relative h-48">
-              <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Companion Care" class="w-full h-full object-cover">
-              <div class="absolute inset-0 bg-primary/20"></div>
-              <div class="absolute top-4 right-4 w-16 h-16 bg-secondary rounded-full flex items-center justify-center">
-                <i class="fas fa-home text-2xl text-primary"></i>
-              </div>
-            </div>
-            <div class="p-6">
-              <h3 class="font-playfair text-xl font-semibold text-primary mb-3">Companion Care</h3>
-              <p class="text-gray-600 mb-4 text-sm">Social interaction, emotional support, and companionship to enhance quality of life.</p>
-              <ul class="text-gray-600 space-y-1">
-                <li class="text-sm"><i class="fas fa-check text-accent mr-2"></i>Conversation and social interaction</li>
-                <li class="text-sm"><i class="fas fa-check text-accent mr-2"></i>Activity planning and engagement</li>
-                <li class="text-sm"><i class="fas fa-check text-accent mr-2"></i>Transportation assistance</li>
-              </ul>
-            </div>
-          </div>
-          
-          <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden">
-            <div class="relative h-48">
-              <img src="https://images.unsplash.com/photo-1581299894007-aaa50297cf16?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Meal Preparation" class="w-full h-full object-cover">
-              <div class="absolute inset-0 bg-primary/20"></div>
-              <div class="absolute top-4 right-4 w-16 h-16 bg-secondary rounded-full flex items-center justify-center">
-                <i class="fas fa-utensils text-2xl text-primary"></i>
-              </div>
-            </div>
-            <div class="p-6">
-              <h3 class="font-playfair text-xl font-semibold text-primary mb-3">Meal Preparation</h3>
-              <p class="text-gray-600 mb-4 text-sm">Nutritious meal planning, preparation, and assistance with eating when needed.</p>
-              <ul class="text-gray-600 space-y-1">
-                <li class="text-sm"><i class="fas fa-check text-accent mr-2"></i>Custom meal planning</li>
-                <li class="text-sm"><i class="fas fa-check text-accent mr-2"></i>Grocery shopping</li>
-                <li class="text-sm"><i class="fas fa-check text-accent mr-2"></i>Special dietary needs</li>
-              </ul>
-            </div>
-          </div>
-          
-          <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden">
-            <div class="relative h-48">
-              <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Light Housekeeping" class="w-full h-full object-cover">
-              <div class="absolute inset-0 bg-primary/20"></div>
-              <div class="absolute top-4 right-4 w-16 h-16 bg-secondary rounded-full flex items-center justify-center">
-                <i class="fas fa-broom text-2xl text-primary"></i>
-              </div>
-            </div>
-            <div class="p-6">
-              <h3 class="font-playfair text-xl font-semibold text-primary mb-3">Light Housekeeping</h3>
-              <p class="text-gray-600 mb-4 text-sm">Maintaining a clean, safe, and comfortable living environment for our clients.</p>
-              <ul class="text-gray-600 space-y-1">
-                <li class="text-sm"><i class="fas fa-check text-accent mr-2"></i>Light cleaning and tidying</li>
-                <li class="text-sm"><i class="fas fa-check text-accent mr-2"></i>Laundry assistance</li>
-                <li class="text-sm"><i class="fas fa-check text-accent mr-2"></i>Organization and maintenance</li>
-              </ul>
-            </div>
-          </div>
-          
-          <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden">
-            <div class="relative h-48">
-              <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Health Monitoring" class="w-full h-full object-cover">
-              <div class="absolute inset-0 bg-primary/20"></div>
-              <div class="absolute top-4 right-4 w-16 h-16 bg-secondary rounded-full flex items-center justify-center">
-                <i class="fas fa-heartbeat text-2xl text-primary"></i>
-              </div>
-            </div>
-            <div class="p-6">
-              <h3 class="font-playfair text-xl font-semibold text-primary mb-3">Health Monitoring</h3>
-              <p class="text-gray-600 mb-4 text-sm">Regular health checks and coordination with healthcare providers for optimal wellness.</p>
-              <ul class="text-gray-600 space-y-1">
-                <li class="text-sm"><i class="fas fa-check text-accent mr-2"></i>Vital signs monitoring</li>
-                <li class="text-sm"><i class="fas fa-check text-accent mr-2"></i>Appointment scheduling</li>
-                <li class="text-sm"><i class="fas fa-check text-accent mr-2"></i>Health record maintenance</li>
-              </ul>
-            </div>
-          </div>
-          
-          <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden">
-            <div class="relative h-48">
-              <img src="https://images.unsplash.com/photo-1584467735871-8e418dc02d8d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="24/7 Care" class="w-full h-full object-cover">
-              <div class="absolute inset-0 bg-primary/20"></div>
-              <div class="absolute top-4 right-4 w-16 h-16 bg-secondary rounded-full flex items-center justify-center">
-                <i class="fas fa-clock text-2xl text-primary"></i>
-              </div>
-            </div>
-            <div class="p-6">
-              <h3 class="font-playfair text-xl font-semibold text-primary mb-3">24/7 Care</h3>
-              <p class="text-gray-600 mb-4 text-sm">Round-the-clock care services for clients requiring continuous support and monitoring.</p>
-              <ul class="text-gray-600 space-y-1">
-                <li class="text-sm"><i class="fas fa-check text-accent mr-2"></i>Live-in care options</li>
-                <li class="text-sm"><i class="fas fa-check text-accent mr-2"></i>Emergency response</li>
-                <li class="text-sm"><i class="fas fa-check text-accent mr-2"></i>Family communication</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-20 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Compassionate caregiver helping elderly woman" class="rounded-lg shadow-xl w-full h-auto object-cover">
-          </div>
-          
-          <div>
-            <h2 class="font-playfair text-4xl md:text-5xl font-bold text-primary mb-6">About Columbia Care Home</h2>
-            <p class="text-lg text-gray-600 mb-6 leading-relaxed">
-              For over 15 years, Columbia Care Home has been a trusted name in home care services. We understand that aging in place is not just a preference—it's about maintaining dignity, independence, and connection to the memories that make a house a home.
-            </p>
-            <p class="text-lg text-gray-600 mb-8 leading-relaxed">
-              Our team of certified caregivers is carefully selected, thoroughly trained, and committed to providing the highest standard of care. We believe that exceptional care begins with genuine compassion and understanding of each client's unique needs.
-            </p>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-              <div class="flex items-start">
-                <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                  <i class="fas fa-certificate text-primary text-xl"></i>
-                </div>
-                <div>
-                  <h4 class="font-semibold text-primary mb-2">Licensed & Insured</h4>
-                  <p class="text-gray-600 text-sm">Fully licensed and insured for your peace of mind</p>
-                </div>
-              </div>
-              
-              <div class="flex items-start">
-                <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                  <i class="fas fa-users text-primary text-xl"></i>
-                </div>
-                <div>
-                  <h4 class="font-semibold text-primary mb-2">Experienced Team</h4>
-                  <p class="text-gray-600 text-sm">Certified caregivers with years of experience</p>
-                </div>
-              </div>
-              
-              <div class="flex items-start">
-                <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                  <i class="fas fa-heart text-primary text-xl"></i>
-                </div>
-                <div>
-                  <h4 class="font-semibold text-primary mb-2">Compassionate Care</h4>
-                  <p class="text-gray-600 text-sm">Treating every client like family</p>
-                </div>
-              </div>
-              
-              <div class="flex items-start">
-                <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                  <i class="fas fa-clock text-primary text-xl"></i>
-                </div>
-                <div>
-                  <h4 class="font-semibold text-primary mb-2">24/7 Support</h4>
-                  <p class="text-gray-600 text-sm">Available whenever you need us most</p>
-                </div>
-              </div>
-            </div>
-            
-            <div class="flex flex-col sm:flex-row gap-4">
-              <a href="#contact" class="btn-primary px-6 py-3 rounded-full text-center font-semibold text-white hover:shadow-lg transition-all">
-                Learn More About Our Services
-              </a>
-              <a href="tel:+15551234567" class="border-2 border-primary text-primary px-6 py-3 rounded-full text-center font-semibold hover:bg-primary hover:text-white transition-all">
-                <i class="fas fa-phone mr-2"></i>Call Today
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-primary text-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-          <h2 class="font-playfair text-4xl md:text-5xl font-bold mb-6">Get in Touch</h2>
-          <p class="text-xl max-w-3xl mx-auto">
-            Ready to learn more about our services? Contact us today for a free consultation and let us show you how we can help.
-          </p>
-        </div>
-        
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div>
-            <div class="bg-white rounded-lg shadow-xl p-8">
-              <h3 class="font-playfair text-2xl font-bold text-primary mb-6">Schedule Your Free Consultation</h3>
-              <form action="https://formspree.io/f/xpzvgkpv" method="POST" class="space-y-6">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <label for="firstName" class="block text-sm font-medium text-gray-700 mb-2">First Name *</label>
-                    <input type="text" id="firstName" name="firstName" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
-                  </div>
-                  <div>
-                    <label for="lastName" class="block text-sm font-medium text-gray-700 mb-2">Last Name *</label>
-                    <input type="text" id="lastName" name="lastName" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
-                  </div>
-                </div>
-                
-                <div>
-                  <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
-                  <input type="email" id="email" name="email" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
-                </div>
-                
-                <div>
-                  <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number *</label>
-                  <input type="tel" id="phone" name="phone" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
-                </div>
-                
-                <div>
-                  <label for="service" class="block text-sm font-medium text-gray-700 mb-2">Service Needed</label>
-                  <select name="service" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
-                    <option value="">Select a service...</option>
-                    <option value="personal-care">Personal Care</option>
-                    <option value="companion-care">Companion Care</option>
-                    <option value="meal-preparation">Meal Preparation</option>
-                    <option value="light-housekeeping">Light Housekeeping</option>
-                    <option value="health-monitoring">Health Monitoring</option>
-                    <option value="24-7-care">24/7 Care</option>
-                    <option value="consultation">General Consultation</option>
-                  </select>
-                </div>
-                
-                <div>
-                  <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                  <textarea id="message" name="message" rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Tell us about your care needs..."></textarea>
-                </div>
-                
-                <button type="submit" class="w-full btn-primary px-6 py-4 text-lg font-semibold text-white hover:shadow-lg transition-all rounded-lg">
-                  <i class="fas fa-paper-plane mr-2"></i>Send Message
-                </button>
-              </form>
-            </div>
-          </div>
-          
-          <div class="space-y-8">
-            <div>
-              <h3 class="font-playfair text-2xl font-bold mb-6">Contact Information</h3>
-              <div class="space-y-6">
-                <div class="flex items-start">
-                  <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                    <i class="fas fa-phone text-primary text-xl"></i>
-                  </div>
-                  <div>
-                    <h4 class="font-semibold mb-2">Phone</h4>
-                    <p class="text-secondary">
-                      <a href="tel:+15551234567" class="hover:underline">(555) 123-4567</a>
-                    </p>
-                    <p class="text-sm text-gray-300">Available 24/7 for emergencies</p>
-                  </div>
-                </div>
-                
-                <div class="flex items-start">
-                  <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                    <i class="fas fa-envelope text-primary text-xl"></i>
-                  </div>
-                  <div>
-                    <h4 class="font-semibold mb-2">Email</h4>
-                    <p class="text-secondary">
-                      <a href="mailto:info@columbiacarehome.com" class="hover:underline">info@columbiacarehome.com</a>
-                    </p>
-                    <p class="text-sm text-gray-300">We'll respond within 2 hours</p>
-                  </div>
-                </div>
-                
-                <div class="flex items-start">
-                  <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                    <i class="fas fa-map-marker-alt text-primary text-xl"></i>
-                  </div>
-                  <div>
-                    <h4 class="font-semibold mb-2">Service Area</h4>
-                    <p class="text-secondary">Columbia County & Surrounding Areas</p>
-                    <p class="text-sm text-gray-300">Serving within 50 miles</p>
-                  </div>
-                </div>
-                
-                <div class="flex items-start">
-                  <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                    <i class="fas fa-clock text-primary text-xl"></i>
-                  </div>
-                  <div>
-                    <h4 class="font-semibold mb-2">Office Hours</h4>
-                    <p class="text-secondary">Monday - Friday: 8:00 AM - 6:00 PM</p>
-                    <p class="text-sm text-gray-300">Saturday: 9:00 AM - 4:00 PM<br>Emergency care available 24/7</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div>
-              <h3 class="font-playfair text-2xl font-bold mb-6">Why Choose Us?</h3>
-              <div class="space-y-4">
-                <div class="flex items-center">
-                  <i class="fas fa-check-circle text-secondary mr-3"></i>
-                  <span>Free in-home consultations</span>
-                </div>
-                <div class="flex items-center">
-                  <i class="fas fa-check-circle text-secondary mr-3"></i>
-                  <span>Customized care plans</span>
-                </div>
-                <div class="flex items-center">
-                  <i class="fas fa-check-circle text-secondary mr-3"></i>
-                  <span>Licensed and bonded caregivers</span>
-                </div>
-                <div class="flex items-center">
-                  <i class="fas fa-check-circle text-secondary mr-3"></i>
-                  <span>Flexible scheduling options</span>
-                </div>
-                <div class="flex items-center">
-                  <i class="fas fa-check-circle text-secondary mr-3"></i>
-                  <span>Competitive and transparent pricing</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div>
-            <div class="flex items-center mb-4">
-              <i class="fas fa-heart text-2xl mr-3 text-secondary"></i>
-              <span class="font-playfair text-xl font-bold">Columbia Care Home</span>
-            </div>
-            <p class="text-gray-300 mb-4">
-              Providing compassionate, professional home care services that allow your loved ones to age gracefully in place.
-            </p>
-            <div class="flex space-x-4">
-              <a href="#" class="text-secondary hover:text-white transition-colors">
-                <i class="fab fa-facebook-f text-xl"></i>
-              </a>
-              <a href="#" class="text-secondary hover:text-white transition-colors">
-                <i class="fab fa-twitter text-xl"></i>
-              </a>
-              <a href="#" class="text-secondary hover:text-white transition-colors">
-                <i class="fab fa-linkedin-in text-xl"></i>
-              </a>
-              <a href="#" class="text-secondary hover:text-white transition-colors">
-                <i class="fab fa-instagram text-xl"></i>
-              </a>
-            </div>
-          </div>
-          
-          <div>
-            <h4 class="font-playfair text-lg font-semibold mb-4">Quick Links</h4>
-            <ul class="space-y-2">
-              <li><a href="index.html" class="text-gray-300 hover:text-secondary transition-colors">Home</a></li>
-              <li><a href="services.html" class="text-gray-300 hover:text-secondary transition-colors">Services</a></li>
-              <li><a href="about.html" class="text-gray-300 hover:text-secondary transition-colors">About Us</a></li>
-              <li><a href="blog.html" class="text-gray-300 hover:text-secondary transition-colors">Blog</a></li>
-              <li><a href="#contact" class="text-gray-300 hover:text-secondary transition-colors">Contact</a></li>
-            </ul>
-          </div>
-          
-          <div>
-            <h4 class="font-playfair text-lg font-semibold mb-4">Our Services</h4>
-            <ul class="space-y-2">
-              <li><a href="services.html" class="text-gray-300 hover:text-secondary transition-colors">Personal Care</a></li>
-              <li><a href="services.html" class="text-gray-300 hover:text-secondary transition-colors">Companion Care</a></li>
-              <li><a href="services.html" class="text-gray-300 hover:text-secondary transition-colors">Meal Preparation</a></li>
-              <li><a href="services.html" class="text-gray-300 hover:text-secondary transition-colors">Light Housekeeping</a></li>
-              <li><a href="services.html" class="text-gray-300 hover:text-secondary transition-colors">24/7 Care</a></li>
-            </ul>
-          </div>
-          
-          <div>
-            <h4 class="font-playfair text-lg font-semibold mb-4">Contact Info</h4>
-            <div class="space-y-3">
-              <div class="flex items-center">
-                <i class="fas fa-phone mr-3 text-secondary"></i>
-                <a href="tel:+15551234567" class="text-gray-300 hover:text-secondary transition-colors">
-                  (555) 123-4567
-                </a>
-              </div>
-              <div class="flex items-center">
-                <i class="fas fa-envelope mr-3 text-secondary"></i>
-                <a href="mailto:info@columbiacarehome.com" class="text-gray-300 hover:text-secondary transition-colors">
-                  info@columbiacarehome.com
-                </a>
-              </div>
-              <div class="flex items-start">
-                <i class="fas fa-map-marker-alt mr-3 text-secondary mt-1"></i>
-                <span class="text-gray-300">
-                  Columbia County<br>& Surrounding Areas
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="border-t border-gray-700 mt-8 pt-8 text-center">
-          <p class="text-gray-400">
-            &copy; 2024 Columbia Care Home. All rights reserved. Licensed and insured home care services.
-          </p>
-        </div>
-      </div>
-    </footer>
-
-    <script src="./script.js"></script>
-  </body>
+    </body>
 </html>
