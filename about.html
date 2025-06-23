@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <title>About Us - Columbia Care Home</title>
+    <meta name="description" content="Learn about Columbia Care Home's 15+ years of experience providing compassionate home care services. Meet our certified caregivers and discover our mission.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>❤️</text></svg>">
+    
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="About Us - Columbia Care Home">
+    <meta property="og:description" content="15+ years of compassionate home care services with certified caregivers committed to helping families age in place with dignity.">
+    <meta property="og:type" content="website">
+    
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="sticky-nav fixed w-full top-0 z-50 text-white bg-primary">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex-shrink-0 flex items-center">
+            <a href="index.html" class="flex items-center">
+              <i class="fas fa-heart text-2xl mr-3 text-secondary"></i>
+              <span class="font-playfair text-xl font-bold">Columbia Care Home</span>
+            </a>
+          </div>
+          
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-8">
+              <a href="index.html" class="hover:text-secondary transition-colors px-3 py-2 text-sm font-medium">Home</a>
+              <a href="services.html" class="hover:text-secondary transition-colors px-3 py-2 text-sm font-medium">Services</a>
+              <a href="about.html" class="text-secondary px-3 py-2 text-sm font-medium">About</a>
+              <a href="blog.html" class="hover:text-secondary transition-colors px-3 py-2 text-sm font-medium">Blog</a>
+              <a href="index.html#contact" class="hover:text-secondary transition-colors px-3 py-2 text-sm font-medium">Contact</a>
+              <a href="tel:+15551234567" class="bg-secondary text-primary px-4 py-2 rounded-full hover:bg-white transition-colors text-sm font-semibold">
+                <i class="fas fa-phone mr-2"></i>Call Now
+              </a>
+            </div>
+          </div>
+          
+          <div class="md:hidden">
+            <button type="button" id="mobile-menu-btn" class="text-white hover:text-secondary focus:outline-none focus:text-secondary">
+              <i class="fas fa-bars text-xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <div id="mobile-menu" class="md:hidden bg-primary hidden">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a href="index.html" class="block hover:text-secondary px-3 py-2 text-base font-medium">Home</a>
+          <a href="services.html" class="block hover:text-secondary px-3 py-2 text-base font-medium">Services</a>
+          <a href="about.html" class="block text-secondary px-3 py-2 text-base font-medium">About</a>
+          <a href="blog.html" class="block hover:text-secondary px-3 py-2 text-base font-medium">Blog</a>
+          <a href="index.html#contact" class="block hover:text-secondary px-3 py-2 text-base font-medium">Contact</a>
+          <a href="tel:+15551234567" class="block bg-secondary text-primary px-3 py-2 text-base font-semibold rounded">
+            <i class="fas fa-phone mr-2"></i>Call Now
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="bg-primary text-white py-20" style="margin-top: 4rem;">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="font-playfair text-4xl md:text-5xl font-bold mb-6">About Columbia Care Home</h1>
+        <p class="text-xl max-w-3xl mx-auto">
+          For over 15 years, we've been dedicated to providing compassionate, professional home care services that help families stay together in the comfort of their own homes.
+        </p>
+      </div>
+    </section>
+
+    <!-- Our Story -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Compassionate caregiver helping elderly woman" class="rounded-lg shadow-xl w-full h-auto object-cover">
+          </div>
+          
+          <div>
+            <h2 class="font-playfair text-3xl md:text-4xl font-bold text-primary mb-6">Our Story</h2>
+            <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+              Columbia Care Home was founded in 2009 with a simple but powerful mission: to provide exceptional home care services that allow individuals to age gracefully in the comfort and familiarity of their own homes.
+            </p>
+            <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+              Our founder, Sarah Mitchell, RN, witnessed firsthand the challenges families face when trying to balance caring for aging loved ones while maintaining their own lives. She recognized that with the right support, most people could continue living independently at home rather than moving to institutional care.
+            </p>
+            <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+              Today, we've grown to serve hundreds of families throughout Columbia County and surrounding areas, but our commitment to personalized, compassionate care remains unchanged.
+            </p>
+            
+            <div class="grid grid-cols-2 gap-6">
+              <div class="text-center">
+                <div class="text-3xl font-bold text-primary mb-2">15+</div>
+                <div class="text-gray-600">Years of Service</div>
+              </div>
+              <div class="text-center">
+                <div class="text-3xl font-bold text-primary mb-2">500+</div>
+                <div class="text-gray-600">Families Served</div>
+              </div>
+              <div class="text-center">
+                <div class="text-3xl font-bold text-primary mb-2">50+</div>
+                <div class="text-gray-600">Certified Caregivers</div>
+              </div>
+              <div class="text-center">
+                <div class="text-3xl font-bold text-primary mb-2">24/7</div>
+                <div class="text-gray-600">Availability</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission & Values -->
+    <section class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="font-playfair text-4xl md:text-5xl font-bold text-primary mb-6">Our Mission & Values</h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Everything we do is guided by our core mission and fundamental values that put our clients and their families first.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+          <div class="bg-white rounded-lg shadow-lg p-8">
+            <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mb-6 mx-auto">
+              <i class="fas fa-bullseye text-2xl text-primary"></i>
+            </div>
+            <h3 class="font-playfair text-2xl font-bold text-primary mb-4 text-center">Our Mission</h3>
+            <p class="text-gray-600 leading-relaxed text-center">
+              To provide compassionate, professional home care services that enable individuals to maintain their independence, dignity, and quality of life while remaining in the comfort of their own homes surrounded by the people and memories they cherish most.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-lg p-8">
+            <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mb-6 mx-auto">
+              <i class="fas fa-heart text-2xl text-primary"></i>
+            </div>
+            <h3 class="font-playfair text-2xl font-bold text-primary mb-4 text-center">Our Vision</h3>
+            <p class="text-gray-600 leading-relaxed text-center">
+              To be the most trusted and respected home care provider in our community, known for our unwavering commitment to excellence, compassion, and the belief that everyone deserves to age with grace and dignity in their own home.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-4 mx-auto">
+              <i class="fas fa-users text-2xl text-white"></i>
+            </div>
+            <h4 class="font-semibold text-primary mb-2">Compassion</h4>
+            <p class="text-gray-600 text-sm">We treat every client with genuine care, empathy, and respect, understanding that each person has unique needs and preferences.</p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-4 mx-auto">
+              <i class="fas fa-shield-alt text-2xl text-white"></i>
+            </div>
+            <h4 class="font-semibold text-primary mb-2">Integrity</h4>
+            <p class="text-gray-600 text-sm">We maintain the highest ethical standards in all our interactions, being honest, transparent, and reliable in everything we do.</p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-4 mx-auto">
+              <i class="fas fa-star text-2xl text-white"></i>
+            </div>
+            <h4 class="font-semibold text-primary mb-2">Excellence</h4>
+            <p class="text-gray-600 text-sm">We continuously strive to exceed expectations through ongoing training, innovation, and commitment to quality care.</p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-4 mx-auto">
+              <i class="fas fa-handshake text-2xl text-white"></i>
+            </div>
+            <h4 class="font-semibold text-primary mb-2">Partnership</h4>
+            <p class="text-gray-600 text-sm">We work closely with families, healthcare providers, and community resources to ensure comprehensive, coordinated care.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leadership Team -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="font-playfair text-4xl md:text-5xl font-bold text-primary mb-6">Our Leadership Team</h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Meet the experienced professionals who guide our mission and ensure the highest standards of care for every client.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-gray-50 rounded-lg p-8 text-center">
+            <div class="w-32 h-32 bg-primary rounded-full mx-auto mb-6 flex items-center justify-center">
+              <i class="fas fa-user-md text-4xl text-white"></i>
+            </div>
+            <h3 class="font-playfair text-xl font-bold text-primary mb-2">Sarah Mitchell, RN</h3>
+            <p class="text-gray-600 font-semibold mb-4">Founder & Clinical Director</p>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              With over 20 years in healthcare and gerontology, Sarah founded Columbia Care Home to bridge the gap between medical care and compassionate home support. She holds certifications in aging life care management and dementia care.
+            </p>
+          </div>
+
+          <div class="bg-gray-50 rounded-lg p-8 text-center">
+            <div class="w-32 h-32 bg-primary rounded-full mx-auto mb-6 flex items-center justify-center">
+              <i class="fas fa-user-tie text-4xl text-white"></i>
+            </div>
+            <h3 class="font-playfair text-xl font-bold text-primary mb-2">Michael Rodriguez</h3>
+            <p class="text-gray-600 font-semibold mb-4">Operations Director</p>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Michael brings 15 years of healthcare administration experience, ensuring our operations run smoothly and efficiently. He oversees caregiver training, scheduling, and quality assurance programs.
+            </p>
+          </div>
+
+          <div class="bg-gray-50 rounded-lg p-8 text-center">
+            <div class="w-32 h-32 bg-primary rounded-full mx-auto mb-6 flex items-center justify-center">
+              <i class="fas fa-user-friends text-4xl text-white"></i>
+            </div>
+            <h3 class="font-playfair text-xl font-bold text-primary mb-2">Jennifer Chen, LSW</h3>
+            <p class="text-gray-600 font-semibold mb-4">Care Coordinator</p>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Jennifer specializes in care plan development and family support services. Her background in social work helps families navigate the emotional and practical aspects of aging and care transitions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-20 bg-primary text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="font-playfair text-4xl md:text-5xl font-bold mb-6">Why Families Choose Us</h2>
+          <p class="text-xl max-w-3xl mx-auto">
+            Our commitment to excellence and personalized care sets us apart in the home care industry.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mb-6 mx-auto">
+              <i class="fas fa-certificate text-2xl text-primary"></i>
+            </div>
+            <h3 class="font-playfair text-xl font-bold mb-4">Licensed & Insured</h3>
+            <p class="text-gray-300 leading-relaxed">
+              Fully licensed by the state and comprehensively insured, providing complete peace of mind for our clients and their families.
+            </p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mb-6 mx-auto">
+              <i class="fas fa-user-graduate text-2xl text-primary"></i>
+            </div>
+            <h3 class="font-playfair text-xl font-bold mb-4">Certified Caregivers</h3>
+            <p class="text-gray-300 leading-relaxed">
+              All our caregivers are certified, background-checked, and undergo continuous training in the latest care techniques and safety protocols.
+            </p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mb-6 mx-auto">
+              <i class="fas fa-clock text-2xl text-primary"></i>
+            </div>
+            <h3 class="font-playfair text-xl font-bold mb-4">24/7 Availability</h3>
+            <p class="text-gray-300 leading-relaxed">
+              Round-the-clock support and emergency response capability, because care needs don't follow a schedule.
+            </p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mb-6 mx-auto">
+              <i class="fas fa-file-alt text-2xl text-primary"></i>
+            </div>
+            <h3 class="font-playfair text-xl font-bold mb-4">Personalized Care Plans</h3>
+            <p class="text-gray-300 leading-relaxed">
+              Customized care plans developed in collaboration with clients, families, and healthcare providers to meet unique needs.
+            </p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mb-6 mx-auto">
+              <i class="fas fa-dollar-sign text-2xl text-primary"></i>
+            </div>
+            <h3 class="font-playfair text-xl font-bold mb-4">Transparent Pricing</h3>
+            <p class="text-gray-300 leading-relaxed">
+              Clear, upfront pricing with no hidden fees. We work with families to find care solutions that fit their budget.
+            </p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mb-6 mx-auto">
+              <i class="fas fa-comments text-2xl text-primary"></i>
+            </div>
+            <h3 class="font-playfair text-xl font-bold mb-4">Family Communication</h3>
+            <p class="text-gray-300 leading-relaxed">
+              Regular updates and open communication with family members, keeping everyone informed about their loved one's care and well-being.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="font-playfair text-4xl md:text-5xl font-bold text-primary mb-6">What Families Say</h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Hear from the families who have trusted us with their most precious loved ones.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white rounded-lg shadow-lg p-8">
+            <div class="flex items-center mb-4">
+              <div class="flex text-accent">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              "Columbia Care Home has been a blessing for our family. The caregivers are not just professionals, they've become part of our family. Mom looks forward to their visits and has been able to stay in her own home because of their excellent care."
+            </p>
+            <div class="flex items-center">
+              <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mr-4">
+                <i class="fas fa-user text-white"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold text-primary">Margaret Thompson</h4>
+                <p class="text-gray-500 text-sm">Daughter of client</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-lg p-8">
+            <div class="flex items-center mb-4">
+              <div class="flex text-accent">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              "The level of care and compassion shown by Columbia Care Home is exceptional. They helped my father maintain his independence after his stroke, and their communication with our family has been outstanding."
+            </p>
+            <div class="flex items-center">
+              <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mr-4">
+                <i class="fas fa-user text-white"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold text-primary">Robert Martinez</h4>
+                <p class="text-gray-500 text-sm">Son of client</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-lg p-8">
+            <div class="flex items-center mb-4">
+              <div class="flex text-accent">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              "We couldn't have asked for better care for our mother. The team at Columbia Care Home is professional, reliable, and genuinely caring. They've given us peace of mind knowing Mom is in good hands."
+            </p>
+            <div class="flex items-center">
+              <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mr-4">
+                <i class="fas fa-user text-white"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold text-primary">Linda Foster</h4>
+                <p class="text-gray-500 text-sm">Daughter of client</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="font-playfair text-4xl md:text-5xl font-bold text-primary mb-6">Ready to Learn More?</h2>
+        <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+          We'd love to meet you and discuss how we can help your family navigate the journey of aging with dignity and grace.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <a href="index.html#contact" class="btn-primary px-8 py-4 rounded-full text-lg font-semibold text-white hover:shadow-lg transition-all">
+            <i class="fas fa-calendar-check mr-2"></i>Schedule Free Consultation
+          </a>
+          <a href="tel:+15551234567" class="border-2 border-primary text-primary px-8 py-4 rounded-full text-lg font-semibold hover:bg-primary hover:text-white transition-all">
+            <i class="fas fa-phone mr-2"></i>(555) 123-4567
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div>
+            <div class="flex items-center mb-4">
+              <i class="fas fa-heart text-2xl mr-3 text-secondary"></i>
+              <span class="font-playfair text-xl font-bold">Columbia Care Home</span>
+            </div>
+            <p class="text-gray-300 mb-4">
+              Providing compassionate, professional home care services that allow your loved ones to age gracefully in place.
+            </p>
+            <div class="flex space-x-4">
+              <a href="#" class="text-secondary hover:text-white transition-colors">
+                <i class="fab fa-facebook-f text-xl"></i>
+              </a>
+              <a href="#" class="text-secondary hover:text-white transition-colors">
+                <i class="fab fa-twitter text-xl"></i>
+              </a>
+              <a href="#" class="text-secondary hover:text-white transition-colors">
+                <i class="fab fa-linkedin-in text-xl"></i>
+              </a>
+              <a href="#" class="text-secondary hover:text-white transition-colors">
+                <i class="fab fa-instagram text-xl"></i>
+              </a>
+            </div>
+          </div>
+          
+          <div>
+            <h4 class="font-playfair text-lg font-semibold mb-4">Quick Links</h4>
+            <ul class="space-y-2">
+              <li><a href="index.html" class="text-gray-300 hover:text-secondary transition-colors">Home</a></li>
+              <li><a href="services.html" class="text-gray-300 hover:text-secondary transition-colors">Services</a></li>
+              <li><a href="about.html" class="text-gray-300 hover:text-secondary transition-colors">About Us</a></li>
+              <li><a href="blog.html" class="text-gray-300 hover:text-secondary transition-colors">Blog</a></li>
+              <li><a href="index.html#contact" class="text-gray-300 hover:text-secondary transition-colors">Contact</a></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 class="font-playfair text-lg font-semibold mb-4">Our Services</h4>
+            <ul class="space-y-2">
+              <li><a href="services.html" class="text-gray-300 hover:text-secondary transition-colors">Personal Care</a></li>
+              <li><a href="services.html" class="text-gray-300 hover:text-secondary transition-colors">Companion Care</a></li>
+              <li><a href="services.html" class="text-gray-300 hover:text-secondary transition-colors">Meal Preparation</a></li>
+              <li><a href="services.html" class="text-gray-300 hover:text-secondary transition-colors">Light Housekeeping</a></li>
+              <li><a href="services.html" class="text-gray-300 hover:text-secondary transition-colors">24/7 Care</a></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 class="font-playfair text-lg font-semibold mb-4">Contact Info</h4>
+            <div class="space-y-3">
+              <div class="flex items-center">
+                <i class="fas fa-phone mr-3 text-secondary"></i>
+                <a href="tel:+15551234567" class="text-gray-300 hover:text-secondary transition-colors">
+                  (555) 123-4567
+                </a>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-envelope mr-3 text-secondary"></i>
+                <a href="mailto:info@columbiacarehome.com" class="text-gray-300 hover:text-secondary transition-colors">
+                  info@columbiacarehome.com
+                </a>
+              </div>
+              <div class="flex items-start">
+                <i class="fas fa-map-marker-alt mr-3 text-secondary mt-1"></i>
+                <span class="text-gray-300">
+                  Columbia County<br>& Surrounding Areas
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+          <p class="text-gray-400">
+            &copy; 2024 Columbia Care Home. All rights reserved. Licensed and insured home care services.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
