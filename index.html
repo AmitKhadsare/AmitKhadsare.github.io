@@ -2,68 +2,60 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Columbia Care Home - Compassionate Home Care Services</title>
-    <meta name="description" content="Columbia Care Home provides compassionate, professional home care services that allow your loved ones to maintain their independence and dignity in familiar surroundings.">
+    <meta name="description" content="Columbia Care Home provides compassionate, professional home care services that allow your loved ones to maintain independence and dignity in familiar surroundings.">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="./styles.css">
+
+    <!-- Custom Logo -->
+    <link rel="icon" href="./assets/columbia-logo.png" type="image/png">
+
+    <!-- Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.1.1/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/index-DxXJdLqx.css">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Columbia Care Home - Compassionate Home Care Services">
+    <meta property="og:image" content="./assets/columbia-logo.png">
   </head>
   <body>
-    <nav class="sticky-nav fixed w-full top-0 z-50 text-white bg-primary">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-16">
-          <div class="flex-shrink-0 flex items-center">
-            <a href="index.html" class="flex items-center">
-              <i class="fas fa-heart text-2xl mr-3 text-secondary"></i>
-              <span class="font-playfair text-xl font-bold">Columbia Care Home</span>
-            </a>
-          </div>
-          <div class="hidden md:block">
-            <div class="ml-10 flex items-baseline space-x-8">
-              <a href="index.html" class="text-secondary px-3 py-2 text-sm font-medium">Home</a>
-              <a href="services.html" class="hover:text-secondary transition-colors px-3 py-2 text-sm font-medium">Services</a>
-              <a href="about.html" class="hover:text-secondary transition-colors px-3 py-2 text-sm font-medium">About</a>
-              <a href="blog.html" class="hover:text-secondary transition-colors px-3 py-2 text-sm font-medium">Blog</a>
-              <a href="index.html#contact" class="hover:text-secondary transition-colors px-3 py-2 text-sm font-medium">Contact</a>
-            </div>
-          </div>
-          <div class="md:hidden">
-            <button type="button" id="mobile-menu-btn" class="text-white hover:text-secondary focus:outline-none focus:text-secondary">
-              <i class="fas fa-bars text-xl"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div id="mobile-menu" class="md:hidden bg-primary hidden">
-        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-          <a href="index.html" class="block text-secondary px-3 py-2 text-base font-medium">Home</a>
-          <a href="services.html" class="block hover:text-secondary px-3 py-2 text-base font-medium">Services</a>
-          <a href="about.html" class="block hover:text-secondary px-3 py-2 text-base font-medium">About</a>
-          <a href="blog.html" class="block hover:text-secondary px-3 py-2 text-base font-medium">Blog</a>
-          <a href="index.html#contact" class="block hover:text-secondary px-3 py-2 text-base font-medium">Contact</a>
-        </div>
-      </div>
-    </nav>
+    <header style="display:flex;align-items:center;gap:1rem;padding:1rem">
+      <img src="./assets/columbia-logo.png" alt="Columbia Logo" style="height:60px">
+      <h1 style="font-family: 'Playfair Display', serif; font-size:1.8rem">Columbia Care Home</h1>
+    </header>
 
-    <section id="home" class="relative min-h-screen carousel-container">
-      <div class="carousel-slides">
-        <div class="carousel-slide active" style="background-image: url('https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');"></div>
-        <div class="carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');"></div>
-        <div class="carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');"></div>
+    <!-- Carousel -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="https://source.unsplash.com/800x400/?elderly,care" alt="Elderly Care"></div>
+        <div class="swiper-slide"><img src="https://source.unsplash.com/800x400/?nursing,home" alt="Nursing Home"></div>
+        <div class="swiper-slide"><img src="https://source.unsplash.com/800x400/?senior,care" alt="Senior Support"></div>
       </div>
-      <div class="hero-content text-center text-white">
-        <div class="fade-in">
-          <h1 class="font-playfair text-3xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">Columbia Care Home</h1>
-          <p class="text-lg md:text-xl lg:text-2xl mb-8 font-light max-w-3xl mx-auto leading-relaxed">Personalized, professional home care services that allow your loved ones to maintain their independence and dignity in familiar surroundings.</p>
-          <a href="#contact" class="btn-primary px-8 py-4 rounded-full text-lg font-semibold hover:shadow-lg transition-all">
-            <i class="fas fa-calendar-check mr-2"></i>Schedule Consultation
-          </a>
-        </div>
-      </div>
-    </section>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
 
-    </body>
+    <div id="root"></div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.1.1/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        loop: true,
+        autoplay: { delay: 3000 },
+        pagination: { el: ".swiper-pagination", clickable: true },
+        navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" }
+      });
+    </script>
+
+    <script type="module" crossorigin src="./assets/index-DdRSpphx.js"></script>
+  </body>
 </html>
