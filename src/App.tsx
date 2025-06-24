@@ -26,7 +26,7 @@ function Home() {
 
 function App() {
   return (
-    <BrowserRouter basename="/columbia-care-home">
+    <BrowserRouter basename="/">
       <ScrollToTop />
       <div className="min-h-screen">
         <Header />
