@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
 import { motion, Variants } from 'framer-motion';
 import { Heart, Home, Users } from 'lucide-react';
-import myPhoto from '../assets/about-us.png';
+import newAboutImage from '../assets/care.jpg';
+import aboutUsImage from '../assets/about-us.png';
 
 const About = () => {
   const containerVariants: Variants = {
@@ -43,7 +44,7 @@ const About = () => {
   return (
     <motion.section
       id="about"
-      className="py-24 bg-gradient-to-br from-stone-100 to-emerald-50 overflow-hidden"
+      className="py-12 lg:py-16 bg-gradient-to-br from-stone-100 to-emerald-50 overflow-hidden"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
@@ -51,32 +52,33 @@ const About = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
-          <motion.div className="relative order-2 lg:order-1" variants={imageVariants}>
+          <motion.div className="relative order-1 lg:order-1 lg:flex-1 w-full max-w-lg mx-auto lg:mx-0 lg:max-w-none" variants={imageVariants}>
             <div className="relative z-10">
               <img
-                src={myPhoto}
-                alt="Dr. Bhargav Patel and Dr. Sheetal Patel"
+                src={newAboutImage}
+                alt="A compassionate caregiver supporting a resident"
                 className="rounded-2xl shadow-2xl w-full h-auto object-cover"
               />
             </div>
             <div className="absolute inset-0 bg-gradient-to-br from-emerald-200 to-stone-200 rounded-2xl transform -rotate-3 scale-105 opacity-20"></div>
           </motion.div>
 
-          <motion.div className="space-y-10 order-1 lg:order-2" variants={containerVariants}>
+          {/* On mobile, text is below (order-2), on lg screens it is the second item (lg:order-2) */}
+          <motion.div className="space-y-10 order-2 lg:order-2 lg:flex-1" variants={containerVariants}>
             <motion.div variants={itemVariants}>
-              <h2 className="text-4xl lg:text-5xl font-bold text-stone-800 leading-tight font-serif mb-6">
+              <h2 className="text-4xl lg:text-5xl font-bold text-stone-800 leading-tight font-serif mb-6 text-center lg:text-left">
                 Our Mission: A Home Filled with Heart
               </h2>
-              <p className="text-lg text-stone-600 leading-relaxed">
+              <p className="text-lg text-stone-600 leading-relaxed text-center lg:text-left">
                 Columbia Care Home was founded with a simple yet powerful mission: to provide compassionate, dignified care to elderly individuals in a setting that truly feels like home.
               </p>
             </motion.div>
 
             <motion.div variants={itemVariants}>
-              <h3 className="text-3xl font-bold text-emerald-700 font-serif mb-4">
+              <h3 className="text-3xl font-bold text-emerald-700 font-serif mb-4 text-center lg:text-left">
                 Our Story
               </h3>
-              <p className="text-lg text-stone-600 leading-relaxed mb-6">
+              <p className="text-lg text-stone-600 leading-relaxed mb-6 text-center lg:text-left">
                 At the heart of this vision is Dr. Bhargav Patel and his wife Dr. Sheetal Patel, both qualified physiotherapists. They bring medical expertise and a deep sense of purpose to create a space where residents feel safe, valued, and cared for like family.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center mt-8">
@@ -95,7 +97,7 @@ const About = () => {
               </div>
             </motion.div>
             
-            <motion.div variants={itemVariants}>
+            <motion.div variants={itemVariants} className="text-center lg:text-left">
               <Link to="/about-us">
                 <button className="bg-emerald-700 text-white px-8 py-4 rounded-full hover:bg-emerald-800 transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                   Learn More About Us

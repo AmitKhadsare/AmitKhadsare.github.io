@@ -1,86 +1,100 @@
 import React from 'react';
-import { Heart, Home, Utensils, Activity, Shield, Users } from 'lucide-react';
+import { motion, Variants } from 'framer-motion';
+import familyImage from '../assets/family.png';
+
+const services = [
+  {
+    title: 'Dignified Personal Assistance',
+    description: 'We provide respectful, discreet support with daily activities like bathing, dressing, and medication reminders, empowering residents to live with confidence and grace.',
+    image: 'https://images.pexels.com/photos/7551627/pexels-photo-7551627.jpeg'
+  },
+  {
+    title: 'A Comforting, Homelike Haven',
+    description: "Our residences offer the warmth and comfort of home, with the security of 24/7 supervision. It's a safe, nurturing space where residents truly belong.",
+    image: 'https://images.pexels.com/photos/3768131/pexels-photo-3768131.jpeg'
+  },
+  {
+    title: 'Nourishing Body & Soul',
+    description: 'Our culinary team prepares delicious, dietician-approved meals that cater to individual tastes and nutritional needs, making every meal a delightful experience.',
+    image: 'https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg'
+  },
+  {
+    title: 'Vibrant Life & Wellness',
+    description: 'We foster a lively community with engaging activities, gentle exercise, and social events designed to stimulate the mind, strengthen the body, and lift the spirit.',
+    image: 'https://images.pexels.com/photos/5962036/pexels-photo-5962036.jpeg'
+  },
+  {
+    title: 'Proactive Health & Safety',
+    description: "With on-site medical oversight and close coordination with healthcare providers, we ensure each resident's health is managed proactively and compassionately.",
+    image: 'https://images.pexels.com/photos/20897581/pexels-photo-20897581.jpeg'
+  },
+  {
+    title: 'A Partnership with Families',
+    description: "We believe in open communication, providing regular updates and dedicated support to families, making you a constant, welcome part of your loved one's journey.",
+    image: familyImage
+  }
+];
+
+const containerVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+};
+
+const itemVariants: Variants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0 }
+};
 
 const Services = () => {
-  const services = [
-    {
-      icon: Heart,
-      title: 'Personal Care',
-      description: 'Assistance with daily activities including bathing, dressing, grooming, and medication management.',
-      image: 'https://images.pexels.com/photos/7551470/pexels-photo-7551470.jpeg?auto=compress&cs=tinysrgb&w=400'
-    },
-    {
-      icon: Home,
-      title: 'Residential Care',
-      description: 'Comfortable, home-like accommodations with 24/7 supervision and support.',
-      image: 'https://images.pexels.com/photos/7551421/pexels-photo-7551421.jpeg?auto=compress&cs=tinysrgb&w=400'
-    },
-    {
-      icon: Utensils,
-      title: 'Nutrition Services',
-      description: 'Nutritious, delicious meals prepared by our culinary team to meet dietary needs.',
-      image: 'https://images.pexels.com/photos/7551608/pexels-photo-7551608.jpeg?auto=compress&cs=tinysrgb&w=400'
-    },
-    {
-      icon: Activity,
-      title: 'Recreation & Wellness',
-      description: 'Engaging activities, exercise programs, and social events to promote physical and mental well-being.',
-      image: 'https://images.pexels.com/photos/7551613/pexels-photo-7551613.jpeg?auto=compress&cs=tinysrgb&w=400'
-    },
-    {
-      icon: Shield,
-      title: 'Medical Care',
-      description: 'On-site medical services, medication management, and coordination with healthcare providers.',
-      image: 'https://images.pexels.com/photos/7551659/pexels-photo-7551659.jpeg?auto=compress&cs=tinysrgb&w=400'
-    },
-    {
-      icon: Users,
-      title: 'Family Support',
-      description: 'Regular communication, family meetings, and support services for loved ones.',
-      image: 'https://images.pexels.com/photos/7551675/pexels-photo-7551675.jpeg?auto=compress&cs=tinysrgb&w=400'
-    }
-  ];
-
   return (
-    <section id="services" className="py-20 bg-stone-50">
+    <section id="services" className="py-12 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-stone-800 mb-4">
+        <div className="text-center mb-12">
+          <motion.h2 
+            className="text-4xl font-bold text-stone-800 mb-4"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+          >
             Our Comprehensive Services
-          </h2>
+          </motion.h2>
           <p className="text-xl text-stone-600 max-w-3xl mx-auto">
             We provide a full range of senior care services designed to meet the unique 
             needs of each resident while promoting independence and quality of life.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <motion.div 
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+        >
           {services.map((service, index) => (
-            <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
-              <div className="relative h-48 overflow-hidden">
+            <motion.div 
+              key={index} 
+              className="bg-white rounded-xl shadow-sm border border-stone-200/80 p-8 text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1 group"
+              variants={itemVariants}
+            >
+              <div className="mx-auto w-48 h-32 mb-6 overflow-hidden rounded-[50%] shadow-md">
                 <img 
                   src={service.image} 
-                  alt={service.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  alt={service.title} 
+                  className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                <div className="absolute bottom-4 left-4">
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-white rounded-full">
-                    <service.icon className="text-emerald-700" size={24} />
-                  </div>
-                </div>
               </div>
               
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-stone-800 mb-3">{service.title}</h3>
-                <p className="text-stone-600 leading-relaxed">{service.description}</p>
-                <button className="mt-4 text-emerald-700 font-semibold hover:text-emerald-800 transition-colors">
-                  Learn More →
-                </button>
-              </div>
-            </div>
+              <h3 className="text-xl font-lora font-semibold text-stone-800 mb-3">{service.title}</h3>
+              <p className="text-stone-600 leading-relaxed font-nunito">{service.description}</p>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

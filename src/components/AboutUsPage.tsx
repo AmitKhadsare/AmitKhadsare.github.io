@@ -3,7 +3,7 @@ import { motion, Variants } from 'framer-motion';
 import { ArrowLeft, Stethoscope, ShieldCheck, HeartHandshake, Sparkles } from 'lucide-react';
 
 // Placeholder images - replace with actual photos
-const bhargavPhoto = 'https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&cs=tinysrgb&w=800';
+const bhargavPhoto = 'https://images.pexels.com/photos/5452293/pexels-photo-5452293.jpeg';
 const sheetalPhoto = 'https://images.pexels.com/photos/5407206/pexels-photo-5407206.jpeg?auto=compress&cs=tinysrgb&w=800';
 const carePhoto = 'https://images.pexels.com/photos/7551623/pexels-photo-7551623.jpeg?auto=compress&cs=tinysrgb&w=1260';
 
@@ -175,7 +175,7 @@ const AboutUsPage = () => {
           <p className="text-xl text-emerald-100 mb-8 max-w-2xl mx-auto">
             We invite you to visit our home, meet our family, and see why residents love living at Columbia Care Home.
           </p>
-          <Link to="/#contact">
+          <Link to="/schedule-a-tour">
             <button className="bg-white text-emerald-800 px-8 py-4 rounded-full hover:bg-emerald-50 transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1">
               Schedule a Personal Tour
             </button>

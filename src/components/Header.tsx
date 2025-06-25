@@ -1,8 +1,47 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Phone, Mail, MapPin } from 'lucide-react';
+import { Menu, X, Phone, MapPin } from 'lucide-react';
 import { HashLink } from 'react-router-hash-link';
 import { Link } from 'react-router-dom';
+import { motion, AnimatePresence, Variants } from 'framer-motion';
 import logo from '../assets/logo.png';
+
+const AnimatedPill = ({ children }: { children: React.ReactNode }) => (
+  <motion.div
+    className="bg-teal-950 text-white rounded-full px-3 py-1 font-body font-medium text-base"
+    whileHover={{ scale: 1.05, backgroundColor: "#115e59" }}
+    transition={{ type: "spring", stiffness: 400, damping: 17 }}
+  >
+    {children}
+  </motion.div>
+);
+
+const NavLink = ({ to, children, onClick }: { to: string; children: React.ReactNode; onClick: () => void }) => {
+  return (
+    <HashLink smooth to={to} onClick={onClick}>
+      <AnimatedPill>{children}</AnimatedPill>
+    </HashLink>
+  );
+};
+
+const MobileNavLink = ({ to, children, onClick }: { to: string; children: React.ReactNode; onClick: () => void }) => {
+  const linkVariants: Variants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 100 } },
+  };
+
+  return (
+    <motion.div variants={linkVariants}>
+      <HashLink
+        smooth
+        to={to}
+        onClick={onClick}
+        className="text-4xl font-serif text-stone-800 hover:text-emerald-700 transition-colors duration-300"
+      >
+        {children}
+      </HashLink>
+    </motion.div>
+  );
+};
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,176 +50,108 @@ const Header = () => {
     if (isMenuOpen) {
       document.body.style.overflow = 'hidden';
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = 'auto';
     }
     return () => {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = 'auto';
     };
   }, [isMenuOpen]);
+  
+  const menuContainerVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { staggerChildren: 0.1, delayChildren: 0.2 } },
+    exit: { opacity: 0, transition: { when: "afterChildren", staggerChildren: 0.05, staggerDirection: -1 } },
+  };
 
   return (
     <>
       {/* Top Contact Bar */}
-      <div className="bg-emerald-900 text-white py-2 px-4">
-        <div className="max-w-7xl mx-auto flex flex-wrap justify-between items-center text-sm">
-          <div className="flex items-center space-x-6">
-            <div className="flex items-center space-x-2">
-              <Phone size={14} />
-              <span>(555) 123-4567</span>
-            </div>
-          </div>
-          <div className="flex items-center space-x-2">
+      <div className="bg-gradient-to-l from-teal-950 to-[#081e22] text-white py-2 px-4">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center md:justify-between gap-2 text-xs">
+          <a href="tel:555-123-4567" className="flex items-center space-x-2 hover:text-emerald-300 transition-colors">
+            <Phone size={14} />
+            <span>(555) 123-4567</span>
+          </a>
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=123+Care+Street,+Columbia,+SC+29201"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center space-x-2 text-center md:text-left hover:text-emerald-300 transition-colors"
+          >
             <MapPin size={14} />
             <span>123 Care Street, Columbia, SC 29201</span>
-          </div>
+          </a>
         </div>
       </div>
 
       {/* Main Header */}
-      <header className="bg-stone-50 shadow-lg sticky top-0 z-50 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-4">
-            {/* Logo Only */}
-            <div className="flex items-center justify-center" style={{ width: '280px', height: '80px' }}>
-              <HashLink smooth to="/#home" className="flex items-center w-full h-full">
-                <img
-                  src={logo}
-                  alt="Columbia Care Home Logo"
-                  className="max-w-full max-h-full object-contain"
-                  style={{ width: '100%', height: '100%' }}
-                />
-              </HashLink>
-            </div>
+      <header className="bg-[#f5fbf7] shadow-lg sticky top-0 z-50">
+        <div className="max-w-7xl mx-auto flex items-center justify-between h-20 px-4 sm:px-6 lg:px-8">
+          {/* Logo */}
+          <div className="flex-shrink-0">
+            <HashLink smooth to="/#home" className="flex-shrink-0">
+              <img
+                src={logo}
+                alt="Columbia Care Home Logo"
+                className="h-20 w-auto"
+              />
+            </HashLink>
+          </div>
 
-            {/* Desktop Navigation */}
-            <nav className="hidden md:flex space-x-8">
-              <HashLink smooth to="/#home" className="text-stone-700 hover:text-emerald-700 font-medium transition-colors">Home</HashLink>
-              <HashLink smooth to="/#about" className="text-stone-700 hover:text-emerald-700 font-medium transition-colors">About Us</HashLink>
-              <HashLink smooth to="/#services" className="text-stone-700 hover:text-emerald-700 font-medium transition-colors">Services</HashLink>
-              <HashLink smooth to="/#care" className="text-stone-700 hover:text-emerald-700 font-medium transition-colors">Care Plans</HashLink>
-              <HashLink smooth to="/#contact" className="text-stone-700 hover:text-emerald-700 font-medium transition-colors">Contact</HashLink>
-              <Link to="/article" className="text-stone-700 hover:text-emerald-700 font-medium transition-colors">Article</Link>
-            </nav>
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex items-center space-x-2">
+            <NavLink to="/#home" onClick={() => setIsMenuOpen(false)}>Home</NavLink>
+            <NavLink to="/#about" onClick={() => setIsMenuOpen(false)}>Our Promise</NavLink>
+            <NavLink to="/#services" onClick={() => setIsMenuOpen(false)}>How We Care</NavLink>
+            <NavLink to="/#faq" onClick={() => setIsMenuOpen(false)}>Peace of Mind</NavLink>
+            <NavLink to="/#contact" onClick={() => setIsMenuOpen(false)}>Start the Conversation</NavLink>
+            <Link to="/about-us">
+              <AnimatedPill>Our Story</AnimatedPill>
+            </Link>
+          </nav>
 
-            {/* CTA Button */}
-            <div className="hidden md:block">
-              <button className="bg-emerald-700 text-white px-6 py-2 rounded-full hover:bg-emerald-800 transition-colors font-medium">
-                Schedule Visit
-              </button>
-            </div>
-
-            {/* Mobile Menu Button */}
+          {/* Mobile Menu Button */}
+          <div className="lg:hidden">
             <button
-              className="md:hidden"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-emerald-500"
             >
+              <span className="sr-only">Open main menu</span>
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
-
-            {/* Mobile Navigation */}
-            {isMenuOpen && (
-              <div className="fixed inset-0 z-50">
-                {/* Overlay */}
-                <div 
-                  className="fixed inset-0 bg-black bg-opacity-50"
-                  onClick={() => setIsMenuOpen(false)}
-                />
-                
-                {/* Menu */}
-                <div className="fixed right-0 top-0 h-full w-3/4 bg-white shadow-lg transform transition-transform duration-300 ease-in-out overflow-y-auto" style={{ maxHeight: '100vh' }}>
-                  <div className="p-4">
-                    <div className="flex justify-between items-center">
-                      <HashLink smooth to="/#home" className="flex items-center w-full h-full" onClick={() => setIsMenuOpen(false)}>
-                        <img
-                          src={logo}
-                          alt="Columbia Care Home Logo"
-                          className="max-w-full max-h-full object-contain"
-                          style={{ width: '150px', height: '60px' }}
-                        />
-                      </HashLink>
-                      <button 
-                        className="text-emerald-700 hover:text-emerald-500"
-                        onClick={() => setIsMenuOpen(false)}
-                      >
-                        <X size={24} />
-                      </button>
-                    </div>
-                  </div>
-                  <nav className="space-y-4 p-4">
-                    <div className="border-t border-white pt-4">
-                      <HashLink 
-                        smooth
-                        to="/#home"
-                        className="block w-full px-4 py-2 bg-emerald-700 text-white hover:bg-emerald-600 hover:text-white font-medium text-lg rounded-lg"
-                        onClick={() => setIsMenuOpen(false)}
-                      >
-                        Home
-                      </HashLink>
-                    </div>
-                    <div>
-                      <HashLink 
-                        smooth
-                        to="/#about"
-                        className="block w-full px-4 py-2 bg-emerald-700 text-white hover:bg-emerald-600 hover:text-white font-medium text-lg rounded-lg"
-                        onClick={() => setIsMenuOpen(false)}
-                      >
-                        About Us
-                      </HashLink>
-                    </div>
-                    <div>
-                      <HashLink 
-                        smooth
-                        to="/#services"
-                        className="block w-full px-4 py-2 bg-emerald-700 text-white hover:bg-emerald-600 hover:text-white font-medium text-lg rounded-lg"
-                        onClick={() => setIsMenuOpen(false)}
-                      >
-                        Services
-                      </HashLink>
-                    </div>
-                    <div>
-                      <HashLink 
-                        smooth
-                        to="/#care"
-                        className="block w-full px-4 py-2 bg-emerald-700 text-white hover:bg-emerald-600 hover:text-white font-medium text-lg rounded-lg"
-                        onClick={() => setIsMenuOpen(false)}
-                      >
-                        Care Plans
-                      </HashLink>
-                    </div>
-                    <div>
-                      <HashLink 
-                        smooth
-                        to="/#contact"
-                        className="block w-full px-4 py-2 bg-emerald-700 text-white hover:bg-emerald-600 hover:text-white font-medium text-lg rounded-lg"
-                        onClick={() => setIsMenuOpen(false)}
-                      >
-                        Contact
-                      </HashLink>
-                    </div>
-                    <div>
-                      <Link 
-                        to="/article"
-                        className="block w-full px-4 py-2 bg-emerald-700 text-white hover:bg-emerald-600 hover:text-white font-medium text-lg rounded-lg"
-                        onClick={() => setIsMenuOpen(false)}
-                      >
-                        Article
-                      </Link>
-                    </div>
-                    <div className="mt-8">
-                      <button 
-                        className="w-full px-4 py-2 bg-emerald-700 text-white hover:bg-emerald-600 hover:text-white font-medium text-lg rounded-lg"
-                        onClick={() => setIsMenuOpen(false)}
-                      >
-                        Schedule Visit
-                      </button>
-                    </div>
-                  </nav>
-                </div>
-              </div>
-            )}
         </div>
       </header>
+
+      {/* Mobile Navigation */}
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            className="fixed inset-0 z-40 bg-[#f5fbf7]/80 backdrop-blur-lg flex items-center justify-center"
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            variants={menuContainerVariants}
+          >
+            <nav className="flex flex-col items-center space-y-8">
+              <MobileNavLink to="/#home" onClick={() => setIsMenuOpen(false)}>Home</MobileNavLink>
+              <MobileNavLink to="/#about" onClick={() => setIsMenuOpen(false)}>Our Promise</MobileNavLink>
+              <MobileNavLink to="/#services" onClick={() => setIsMenuOpen(false)}>How We Care</MobileNavLink>
+              <MobileNavLink to="/#faq" onClick={() => setIsMenuOpen(false)}>Peace of Mind</MobileNavLink>
+              <MobileNavLink to="/#contact" onClick={() => setIsMenuOpen(false)}>Start the Conversation</MobileNavLink>
+              <motion.div>
+                <Link
+                  to="/about-us"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="text-4xl font-serif text-stone-800 hover:text-emerald-700 transition-colors duration-300"
+                >
+                  Our Story
+                </Link>
+              </motion.div>
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 };

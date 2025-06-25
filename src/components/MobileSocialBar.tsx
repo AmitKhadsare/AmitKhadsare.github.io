@@ -1,51 +1,29 @@
 import React from 'react';
+import { Facebook, Twitter, Instagram, Linkedin, Youtube } from 'lucide-react';
+
+const socialLinks = [
+  { name: 'Facebook', url: 'https://facebook.com', icon: Facebook, color: 'bg-[#1877F2]' },
+  { name: 'Twitter', url: 'https://twitter.com', icon: Twitter, color: 'bg-[#1DA1F2]' },
+  { name: 'Instagram', url: 'https://instagram.com', icon: Instagram, color: 'bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500' },
+  { name: 'LinkedIn', url: 'https://linkedin.com', icon: Linkedin, color: 'bg-[#0A66C2]' },
+  { name: 'YouTube', url: 'https://youtube.com', icon: Youtube, color: 'bg-[#FF0000]' },
+];
 
 const MobileSocialBar = () => {
-  const socialLinks = [
-    {
-      name: 'Facebook',
-      url: 'https://facebook.com/columbiacarehome',
-      icon: 'https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg'
-    },
-    {
-      name: 'Twitter',
-      url: 'https://twitter.com/columbiacarehome',
-      icon: 'https://cdn-icons-png.flaticon.com/512/733/733579.png'
-    },
-    {
-      name: 'Instagram',
-      url: 'https://instagram.com/columbiacarehome',
-      icon: 'https://cdn-icons-png.flaticon.com/512/733/733558.png'
-    },
-    {
-      name: 'LinkedIn',
-      url: 'https://linkedin.com/company/columbiacarehome',
-      icon: 'https://cdn-icons-png.flaticon.com/512/733/733561.png'
-    },
-    {
-      name: 'YouTube',
-      url: 'https://youtube.com/@columbiacarehome',
-      icon: 'https://cdn-icons-png.flaticon.com/512/733/733646.png'
-    }
-  ];
-
   return (
-    <div className="md:hidden fixed bottom-0 left-0 right-0 bg-emerald-800 shadow-lg z-40">
+    <div className="md:hidden fixed bottom-0 left-0 right-0 bg-gradient-to-r from-[#081e22] to-teal-950 shadow-lg z-40">
       <div className="flex justify-center items-center py-3">
-        <div className="flex space-x-6">
-          {socialLinks.map((social, index) => (
+        <div className="flex space-x-4">
+          {socialLinks.map((social) => (
             <a
-              key={index}
+              key={social.name}
               href={social.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center w-10 h-10 bg-white/10 rounded-full hover:bg-white/20 transition-all duration-300 transform hover:scale-110"
+              className={`flex items-center justify-center w-12 h-12 rounded-full group transition-all duration-300 transform hover:-translate-y-1 ${social.color}`}
+              aria-label={social.name}
             >
-              <img 
-                src={social.icon} 
-                alt={social.name} 
-                className="w-5 h-5 filter brightness-0 invert"
-              />
+              <social.icon className="h-6 w-6 text-white transition-colors duration-300" />
             </a>
           ))}
         </div>
@@ -54,4 +32,4 @@ const MobileSocialBar = () => {
   );
 };
 
-export default MobileSocialBar;
+export default MobileSocialBar; 

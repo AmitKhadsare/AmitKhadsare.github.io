@@ -1,134 +1,226 @@
-import React from 'react';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { MapPin, Phone, Mail, Facebook, Twitter, Instagram, Linkedin, Youtube, ChevronDown } from 'lucide-react';
+
+interface FooterAccordionItemProps {
+  title: string;
+  children: React.ReactNode;
+  isOpen: boolean;
+  onToggle: () => void;
+}
+
+const FooterAccordionItem: React.FC<FooterAccordionItemProps> = ({ title, children, isOpen, onToggle }) => {
+  return (
+    <div className="border-b border-gray-700">
+      <button
+        onClick={onToggle}
+        className="flex justify-between items-center w-full py-4 text-left text-white"
+      >
+        <h4 className="text-md font-semibold uppercase tracking-wider">{title}</h4>
+        <motion.div
+          animate={{ rotate: isOpen ? 180 : 0 }}
+          transition={{ duration: 0.3 }}
+        >
+          <ChevronDown size={20} />
+        </motion.div>
+      </button>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="overflow-hidden"
+          >
+            <div className="pb-4">
+              {children}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+};
 
 const Footer = () => {
+  const [openAccordion, setOpenAccordion] = useState<string | null>(null);
+
+  const handleAccordionToggle = (title: string) => {
+    setOpenAccordion(openAccordion === title ? null : title);
+  };
+
+  const navLinks = [
+    { name: 'Home', path: '/#home' },
+    { name: 'Our Promise', path: '/#about' },
+    { name: 'How We Care', path: '/#services' },
+    { name: 'FAQ', path: '/#faq' },
+    { name: 'Start the Conversation', path: '/#contact' },
+  ];
+
+  const resourceLinks = [
+    { name: 'Our Story', path: '/about-us' },
+    { name: 'Schedule a Tour', path: '/schedule-a-tour' },
+    { name: 'Read Our FAQ', path: '/faq' },
+  ];
+
+  const contactInfo = [
+    { icon: <Phone size={16} />, text: '(555) 123-4567' },
+    { icon: <Mail size={16} />, text: 'info@columbiacarehome.com' },
+    { icon: <MapPin size={16} />, text: '123 Care Street, Columbia, SC 29201' },
+  ];
+
   const socialLinks = [
+    { name: 'Facebook', icon: <Facebook size={20} />, url: '#' },
+    { name: 'Twitter', icon: <Twitter size={20} />, url: '#' },
+    { name: 'Instagram', icon: <Instagram size={20} />, url: '#' },
+    { name: 'Linkedin', icon: <Linkedin size={20} />, url: '#' },
+    { name: 'Youtube', icon: <Youtube size={20} />, url: '#' },
+  ];
+
+  const linkHoverVariant = {
+    hover: { color: '#A5B4FC', transition: { duration: 0.3 } },
+  };
+
+  const iconHoverVariant = {
+    hover: { scale: 1.2, color: '#A5B4FC', transition: { duration: 0.2 } },
+  };
+
+  const locationContent = (
+    <div className="space-y-4 text-center md:text-left">
+       <div className="hidden md:block">
+         <h3 className="text-xl font-bold text-white">Columbia Care Home</h3>
+         <p className="text-sm text-gray-400">Compassionate care, dignified living.</p>
+       </div>
+       <ul className="space-y-3 pt-3">
+         {contactInfo.map((item, index) => (
+           <li key={index} className="flex items-center justify-center md:justify-start space-x-3">
+             <span className="text-indigo-300">{item.icon}</span>
+             <span className="text-gray-400 text-sm">{item.text}</span>
+           </li>
+         ))}
+       </ul>
+    </div>
+  );
+
+  const footerSections = [
     {
-      name: 'Facebook',
-      url: 'https://facebook.com/columbiacarehome',
-      icon: 'https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg'
+      title: 'On This Page',
+      content: (
+        <div className="space-y-2 text-center md:text-left">
+          {navLinks.map((link) => (
+            <motion.div key={link.name} variants={linkHoverVariant} whileHover="hover">
+              <HashLink smooth to={link.path} className="text-gray-400 text-sm block py-1">
+                {link.name}
+              </HashLink>
+            </motion.div>
+          ))}
+        </div>
+      )
     },
     {
-      name: 'Twitter',
-      url: 'https://twitter.com/columbiacarehome',
-      icon: 'https://cdn-icons-png.flaticon.com/512/733/733579.png'
+      title: 'Resources',
+      content: (
+        <div className="space-y-2 text-center md:text-left">
+          {resourceLinks.map((link) => (
+            <motion.div key={link.name} variants={linkHoverVariant} whileHover="hover">
+              <Link to={link.path} className="text-gray-400 text-sm block py-1">
+                {link.name}
+              </Link>
+            </motion.div>
+          ))}
+        </div>
+      )
     },
     {
-      name: 'Instagram',
-      url: 'https://instagram.com/columbiacarehome',
-      icon: 'https://cdn-icons-png.flaticon.com/512/733/733558.png'
-    },
-    {
-      name: 'LinkedIn',
-      url: 'https://linkedin.com/company/columbiacarehome',
-      icon: 'https://cdn-icons-png.flaticon.com/512/733/733561.png'
-    },
-    {
-      name: 'YouTube',
-      url: 'https://youtube.com/@columbiacarehome',
-      icon: 'https://cdn-icons-png.flaticon.com/512/733/733646.png'
+      title: 'Connect With Us',
+      content: (
+        <div className="space-y-4 text-center md:text-left">
+          <div className="flex items-center justify-center md:justify-start space-x-4">
+            {socialLinks.map((social) => (
+              <motion.a 
+                key={social.name}
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400"
+                variants={iconHoverVariant}
+                whileHover="hover"
+              >
+                {social.icon}
+              </motion.a>
+            ))}
+          </div>
+        </div>
+      )
     }
   ];
 
   return (
-    <footer className="bg-stone-900 text-white pb-16 md:pb-0">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid md:grid-cols-4 gap-8">
-          {/* Company Info */}
-          <div className="space-y-4">
-            <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-emerald-600 to-emerald-500 rounded-full flex items-center justify-center">
-                <div className="text-white font-bold text-lg">CC</div>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold">Columbia Care Home</h3>
-                <p className="text-sm text-stone-400">Compassionate Senior Care</p>
-              </div>
+    <footer className="bg-gray-800 text-gray-300 pt-16 pb-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Desktop Footer */}
+        <div className="hidden md:grid md:grid-cols-4 gap-8">
+          <div>
+            {locationContent}
+          </div>
+          {footerSections.map(section => (
+            <div key={section.title}>
+              <h4 className="text-md font-semibold text-white mb-3 uppercase tracking-wider text-center md:text-left">{section.title}</h4>
+              {section.content}
             </div>
-            <p className="text-stone-400 leading-relaxed">
-              Providing exceptional senior care with dignity, respect, and personalized 
-              attention for over 25 years in Columbia, South Carolina.
-            </p>
-            
-            {/* Social Media Links - Desktop */}
-            <div className="space-y-3">
-              <h4 className="text-lg font-semibold">Follow Us</h4>
-              <div className="flex space-x-4">
-                {socialLinks.map((social, index) => (
-                  <a 
-                    key={index}
-                    href={social.url} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="w-10 h-10 bg-stone-800 rounded-full flex items-center justify-center hover:bg-emerald-700 transition-all duration-300 transform hover:scale-110"
-                  >
-                    <img 
-                      src={social.icon} 
-                      alt={social.name} 
-                      className={`w-5 h-5 ${social.name === 'Facebook' ? 'filter brightness-0 invert' : 'filter brightness-0 invert'}`}
-                    />
-                  </a>
+          ))}
+        </div>
+
+        {/* Mobile Accordion Footer */}
+        <div className="md:hidden">
+           <div className="space-y-4 text-center mb-8">
+              <h3 className="text-xl font-bold text-white">Columbia Care Home</h3>
+              <p className="text-sm text-gray-400">Compassionate care, dignified living.</p>
+           </div>
+           
+           <FooterAccordionItem
+             title="Get In Touch"
+             isOpen={openAccordion === 'location'}
+             onToggle={() => handleAccordionToggle('location')}
+           >
+              <ul className="space-y-3 pt-3">
+                {contactInfo.map((item, index) => (
+                  <li key={index} className="flex items-center justify-center space-x-3">
+                    <span className="text-indigo-300">{item.icon}</span>
+                    <span className="text-gray-400 text-sm">{item.text}</span>
+                  </li>
                 ))}
-              </div>
-            </div>
-          </div>
+              </ul>
+           </FooterAccordionItem>
 
-          {/* Quick Links */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2">
-              <li><a href="#home" className="text-stone-400 hover:text-white transition-colors">Home</a></li>
-              <li><a href="#about" className="text-stone-400 hover:text-white transition-colors">About Us</a></li>
-              <li><a href="#services" className="text-stone-400 hover:text-white transition-colors">Services</a></li>
-              <li><a href="#care" className="text-stone-400 hover:text-white transition-colors">Care Plans</a></li>
-              <li><a href="#contact" className="text-stone-400 hover:text-white transition-colors">Contact</a></li>
-            </ul>
-          </div>
+           {footerSections.map(section => (
+             <FooterAccordionItem
+               key={section.title}
+               title={section.title}
+               isOpen={openAccordion === section.title}
+               onToggle={() => handleAccordionToggle(section.title)}
+             >
+              {section.content}
+             </FooterAccordionItem>
+           ))}
+        </div>
 
-          {/* Services */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Our Services</h4>
-            <ul className="space-y-2">
-              <li><a href="#" className="text-stone-400 hover:text-white transition-colors">Personal Care</a></li>
-              <li><a href="#" className="text-stone-400 hover:text-white transition-colors">Medical Care</a></li>
-              <li><a href="#" className="text-stone-400 hover:text-white transition-colors">Residential Care</a></li>
-              <li><a href="#" className="text-stone-400 hover:text-white transition-colors">Recreation & Wellness</a></li>
-              <li><a href="#" className="text-stone-400 hover:text-white transition-colors">Family Support</a></li>
-            </ul>
-          </div>
+        <div className="border-t border-gray-700 mt-12 mb-6"></div>
 
-          {/* Contact Info */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3">
-                <Phone size={16} className="text-emerald-400" />
-                <span className="text-stone-400">(555) 123-4567</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Mail size={16} className="text-emerald-400" />
-                <span className="text-stone-400">info@columbiacarehome.com</span>
-              </div>
-              <div className="flex items-start space-x-3">
-                <MapPin size={16} className="text-emerald-400 mt-1" />
-                <span className="text-stone-400">123 Care Street<br />Columbia, SC 29201</span>
-              </div>
-            </div>
+        <div className="flex flex-col md:flex-row justify-between items-center text-sm">
+          <p className="text-gray-500 mb-4 md:mb-0">
+            © {new Date().getFullYear()} Columbia Care Home. All Rights Reserved.
+          </p>
+          <div className="space-x-6">
+            <Link to="/privacy-policy" className="text-gray-400 hover:text-white">Privacy Policy</Link>
+            <Link to="/terms-of-service" className="text-gray-400 hover:text-white">Terms of Service</Link>
           </div>
         </div>
 
-        <div className="border-t border-stone-800 mt-12 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-stone-400 text-sm">
-              © 2024 Columbia Care Home. All rights reserved.
-            </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="text-stone-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
-              <a href="#" className="text-stone-400 hover:text-white text-sm transition-colors">Terms of Service</a>
-              <a href="#" className="text-stone-400 hover:text-white text-sm transition-colors">Accessibility</a>
-            </div>
-          </div>
-        </div>
       </div>
     </footer>
   );
