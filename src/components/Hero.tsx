@@ -17,7 +17,7 @@ const Hero = () => {
           {/* Content */}
           <div className="space-y-8">
             <div className="space-y-6">
-              <h1 className="text-5xl lg:text-6xl font-bold text-stone-800 leading-tight">
+              <h1 className="text-5xl lg:text-6xl font-bold text-stone-800 leading-tight font-serif">
                 Compassionate Care for
                 <span className="text-emerald-700 block">Your Loved Ones</span>
               </h1>

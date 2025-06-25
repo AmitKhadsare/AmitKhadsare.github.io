@@ -2,7 +2,12 @@
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        serif: ['Lora', 'serif'],
+        sans: ['"Nunito Sans"', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 };

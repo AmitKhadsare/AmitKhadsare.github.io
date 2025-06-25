@@ -10,6 +10,7 @@ import Footer from './components/Footer';
 import MobileSocialBar from './components/MobileSocialBar';
 import Article from './components/Article';
 import ScrollToTop from './components/ScrollToTop';
+import AboutUsPage from './components/AboutUsPage';
 
 function Home() {
   return (
@@ -26,13 +27,14 @@ function Home() {
 
 function App() {
   return (
-    <BrowserRouter basename="/">
+    <BrowserRouter>
       <ScrollToTop />
       <div className="min-h-screen">
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/article" element={<Article />} />
+          <Route path="/about-us" element={<AboutUsPage />} />
         </Routes>
         <Footer />
         <MobileSocialBar />
