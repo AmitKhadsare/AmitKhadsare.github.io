@@ -1,34 +1,39 @@
 import React from 'react';
 import { motion, Variants } from 'framer-motion';
 import familyImage from '../assets/family.png';
+import dignifiedPersonalAssistanceImage from '../assets/dignifiedpersonalassistance.avif';
+import comfortingHomelikeHavenImage from '../assets/comforting_homelike_haven.avif';
+import nourishingBodySoulImage from '../assets/Nourishing_Body_Soul.avif';
+import vibrantLifeAndWellnessImage from '../assets/vibrantlifeandwelness.avif';
+import proactiveHealthSafetyImage from '../assets/proactivehealthsafety.avif';
 
-  const services = [
-    {
+const services = [
+  {
     title: 'Dignified Personal Assistance',
     description: 'We provide respectful, discreet support with daily activities like bathing, dressing, and medication reminders, empowering residents to live with confidence and grace.',
-    image: 'https://images.pexels.com/photos/7551627/pexels-photo-7551627.jpeg'
-    },
-    {
+    image: dignifiedPersonalAssistanceImage
+  },
+  {
     title: 'A Comforting, Homelike Haven',
     description: "Our residences offer the warmth and comfort of home, with the security of 24/7 supervision. It's a safe, nurturing space where residents truly belong.",
-    image: 'https://images.pexels.com/photos/3768131/pexels-photo-3768131.jpeg'
-    },
-    {
+    image: comfortingHomelikeHavenImage
+  },
+  {
     title: 'Nourishing Body & Soul',
     description: 'Our culinary team prepares delicious, dietician-approved meals that cater to individual tastes and nutritional needs, making every meal a delightful experience.',
-    image: 'https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg'
-    },
-    {
+    image: nourishingBodySoulImage
+  },
+  {
     title: 'Vibrant Life & Wellness',
     description: 'We foster a lively community with engaging activities, gentle exercise, and social events designed to stimulate the mind, strengthen the body, and lift the spirit.',
-    image: 'https://images.pexels.com/photos/5962036/pexels-photo-5962036.jpeg'
-    },
-    {
+    image: vibrantLifeAndWellnessImage
+  },
+  {
     title: 'Proactive Health & Safety',
     description: "With on-site medical oversight and close coordination with healthcare providers, we ensure each resident's health is managed proactively and compassionately.",
-    image: 'https://images.pexels.com/photos/20897581/pexels-photo-20897581.jpeg'
-    },
-    {
+    image: proactiveHealthSafetyImage
+  },
+  {
     title: 'A Partnership with Families',
     description: "We believe in open communication, providing regular updates and dedicated support to families, making you a constant, welcome part of your loved one's journey.",
     image: familyImage
