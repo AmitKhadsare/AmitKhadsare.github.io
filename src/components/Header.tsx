@@ -69,8 +69,8 @@ const Header = () => {
       <div className="bg-gradient-to-l from-teal-950 to-[#081e22] text-white py-2 px-4">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center md:justify-between gap-2 text-xs">
           <a href="tel:555-123-4567" className="flex items-center space-x-2 hover:text-emerald-300 transition-colors">
-            <Phone size={14} />
-            <span>(555) 123-4567</span>
+              <Phone size={14} />
+              <span>(555) 123-4567</span>
           </a>
           <a
             href="https://www.google.com/maps/search/?api=1&query=123+Care+Street,+Columbia,+SC+29201"
@@ -90,27 +90,27 @@ const Header = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <HashLink smooth to="/#home" className="flex-shrink-0">
-              <img
-                src={logo}
-                alt="Columbia Care Home Logo"
+                <img
+                  src={logo}
+                  alt="Columbia Care Home Logo"
                 className="h-20 w-auto"
-              />
-            </HashLink>
-          </div>
+                />
+              </HashLink>
+            </div>
 
-          {/* Desktop Navigation */}
+            {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-2">
             <NavLink to="/#home" onClick={() => setIsMenuOpen(false)}>Home</NavLink>
             <NavLink to="/#about" onClick={() => setIsMenuOpen(false)}>Our Promise</NavLink>
             <NavLink to="/#services" onClick={() => setIsMenuOpen(false)}>How We Care</NavLink>
             <NavLink to="/#faq" onClick={() => setIsMenuOpen(false)}>Peace of Mind</NavLink>
-            <NavLink to="/#contact" onClick={() => setIsMenuOpen(false)}>Start the Conversation</NavLink>
+            <NavLink to="/#contact" onClick={() => setIsMenuOpen(false)}>Contact</NavLink>
             <Link to="/about-us">
               <AnimatedPill>Our Story</AnimatedPill>
             </Link>
-          </nav>
+            </nav>
 
-          {/* Mobile Menu Button */}
+            {/* Mobile Menu Button */}
           <div className="lg:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -123,11 +123,11 @@ const Header = () => {
         </div>
       </header>
 
-      {/* Mobile Navigation */}
+            {/* Mobile Navigation */}
       <AnimatePresence>
-        {isMenuOpen && (
+            {isMenuOpen && (
           <motion.div
-            className="fixed inset-0 z-40 bg-[#f5fbf7]/80 backdrop-blur-lg flex items-center justify-center"
+            className="fixed inset-0 z-[9999] bg-[#f5fbf7]/80 backdrop-blur-lg flex items-center justify-center pt-20"
             initial="hidden"
             animate="visible"
             exit="exit"
@@ -138,7 +138,7 @@ const Header = () => {
               <MobileNavLink to="/#about" onClick={() => setIsMenuOpen(false)}>Our Promise</MobileNavLink>
               <MobileNavLink to="/#services" onClick={() => setIsMenuOpen(false)}>How We Care</MobileNavLink>
               <MobileNavLink to="/#faq" onClick={() => setIsMenuOpen(false)}>Peace of Mind</MobileNavLink>
-              <MobileNavLink to="/#contact" onClick={() => setIsMenuOpen(false)}>Start the Conversation</MobileNavLink>
+              <MobileNavLink to="/#contact" onClick={() => setIsMenuOpen(false)}>Contact</MobileNavLink>
               <motion.div>
                 <Link
                   to="/about-us"
@@ -150,7 +150,7 @@ const Header = () => {
               </motion.div>
             </nav>
           </motion.div>
-        )}
+            )}
       </AnimatePresence>
     </>
   );

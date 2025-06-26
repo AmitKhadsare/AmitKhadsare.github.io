@@ -108,7 +108,7 @@ const Contact = () => {
         >
           {/* Left Column: Contact Info & Map */}
           <motion.div className="space-y-8" variants={itemVariants}>
-            <div className="space-y-6">
+              <div className="space-y-6">
               <ContactInfoCard icon={Phone} title="By Phone" href="tel:555-123-4567">
                 <p>(555) 123-4567</p>
                 <p className="text-sm text-stone-500">Available 24/7 for inquiries</p>
@@ -152,48 +152,48 @@ const Contact = () => {
             ) : (
               <>
                 <h3 className="text-2xl font-lora font-semibold text-stone-800 mb-6">Send us a Message</h3>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-6">
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="grid md:grid-cols-2 gap-6">
                     <motion.div variants={itemVariants}>
                       <label htmlFor="name" className="block text-sm font-medium text-stone-700 mb-2 font-nunito">
-                        Full Name *
-                      </label>
+                    Full Name *
+                  </label>
                       <input type="text" id="name" name="name" required value={formData.name} onChange={handleChange} className="w-full px-4 py-3 bg-stone-50 border border-stone-300 rounded-lg focus:ring-2 focus:ring-emerald-600 focus:border-transparent transition-colors" placeholder="Your full name" />
                     </motion.div>
-                    
+                
                     <motion.div variants={itemVariants}>
                       <label htmlFor="phone" className="block text-sm font-medium text-stone-700 mb-2 font-nunito">
-                        Phone Number
-                      </label>
+                    Phone Number
+                  </label>
                       <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleChange} className="w-full px-4 py-3 bg-stone-50 border border-stone-300 rounded-lg focus:ring-2 focus:ring-emerald-600 focus:border-transparent transition-colors" placeholder="(555) 123-4567" />
                     </motion.div>
-                  </div>
+              </div>
 
                   <motion.div variants={itemVariants}>
                     <label htmlFor="email" className="block text-sm font-medium text-stone-700 mb-2 font-nunito">
-                      Email Address *
-                    </label>
+                  Email Address *
+                </label>
                     <input type="email" id="email" name="email" required value={formData.email} onChange={handleChange} className="w-full px-4 py-3 bg-stone-50 border border-stone-300 rounded-lg focus:ring-2 focus:ring-emerald-600 focus:border-transparent transition-colors" placeholder="your.email@example.com" />
                   </motion.div>
 
                   <motion.div variants={itemVariants}>
                     <label htmlFor="message" className="block text-sm font-medium text-stone-700 mb-2 font-nunito">
-                      Message *
-                    </label>
+                  Message *
+                </label>
                     <textarea id="message" name="message" required rows={5} value={formData.message} onChange={handleChange} className="w-full px-4 py-3 bg-stone-50 border border-stone-300 rounded-lg focus:ring-2 focus:ring-emerald-600 focus:border-transparent transition-colors resize-none" placeholder="Tell us about your care needs or questions..."></textarea>
                   </motion.div>
 
                   <motion.div variants={itemVariants}>
-                    <button
-                      type="submit"
+              <button
+                type="submit"
                       disabled={isSubmitting}
                       className="w-full bg-emerald-700 text-white py-4 px-6 rounded-lg hover:bg-emerald-800 transition-all duration-300 font-nunito font-semibold flex items-center justify-center space-x-2 disabled:bg-emerald-800/50 disabled:cursor-not-allowed transform hover:-translate-y-0.5"
-                    >
-                      <Send size={20} />
+              >
+                <Send size={20} />
                       <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
-                    </button>
+              </button>
                   </motion.div>
-                </form>
+            </form>
               </>
             )}
           </motion.div>

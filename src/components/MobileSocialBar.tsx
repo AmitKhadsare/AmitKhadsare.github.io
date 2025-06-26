@@ -32,4 +32,4 @@ const MobileSocialBar = () => {
   );
 };
 
-export default MobileSocialBar; 
+export default MobileSocialBar;

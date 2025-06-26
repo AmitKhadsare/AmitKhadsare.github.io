@@ -180,7 +180,7 @@ const Footer = () => {
            <div className="space-y-4 text-center mb-8">
               <h3 className="text-xl font-bold text-white">Columbia Care Home</h3>
               <p className="text-sm text-gray-400">Compassionate care, dignified living.</p>
-           </div>
+          </div>
            
            <FooterAccordionItem
              title="Get In Touch"
@@ -214,7 +214,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center text-sm">
           <p className="text-gray-500 mb-4 md:mb-0">
             © {new Date().getFullYear()} Columbia Care Home. All Rights Reserved.
-          </p>
+            </p>
           <div className="space-x-6">
             <Link to="/privacy-policy" className="text-gray-400 hover:text-white">Privacy Policy</Link>
             <Link to="/terms-of-service" className="text-gray-400 hover:text-white">Terms of Service</Link>

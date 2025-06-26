@@ -2,33 +2,33 @@ import React from 'react';
 import { motion, Variants } from 'framer-motion';
 import familyImage from '../assets/family.png';
 
-const services = [
-  {
+  const services = [
+    {
     title: 'Dignified Personal Assistance',
     description: 'We provide respectful, discreet support with daily activities like bathing, dressing, and medication reminders, empowering residents to live with confidence and grace.',
     image: 'https://images.pexels.com/photos/7551627/pexels-photo-7551627.jpeg'
-  },
-  {
+    },
+    {
     title: 'A Comforting, Homelike Haven',
     description: "Our residences offer the warmth and comfort of home, with the security of 24/7 supervision. It's a safe, nurturing space where residents truly belong.",
     image: 'https://images.pexels.com/photos/3768131/pexels-photo-3768131.jpeg'
-  },
-  {
+    },
+    {
     title: 'Nourishing Body & Soul',
     description: 'Our culinary team prepares delicious, dietician-approved meals that cater to individual tastes and nutritional needs, making every meal a delightful experience.',
     image: 'https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg'
-  },
-  {
+    },
+    {
     title: 'Vibrant Life & Wellness',
     description: 'We foster a lively community with engaging activities, gentle exercise, and social events designed to stimulate the mind, strengthen the body, and lift the spirit.',
     image: 'https://images.pexels.com/photos/5962036/pexels-photo-5962036.jpeg'
-  },
-  {
+    },
+    {
     title: 'Proactive Health & Safety',
     description: "With on-site medical oversight and close coordination with healthcare providers, we ensure each resident's health is managed proactively and compassionately.",
     image: 'https://images.pexels.com/photos/20897581/pexels-photo-20897581.jpeg'
-  },
-  {
+    },
+    {
     title: 'A Partnership with Families',
     description: "We believe in open communication, providing regular updates and dedicated support to families, making you a constant, welcome part of your loved one's journey.",
     image: familyImage
@@ -85,7 +85,7 @@ const Services = () => {
               <div className="mx-auto w-48 h-32 mb-6 overflow-hidden rounded-[50%] shadow-md">
                 <img 
                   src={service.image} 
-                  alt={service.title} 
+                  alt={service.title}
                   className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
                 />
               </div>
