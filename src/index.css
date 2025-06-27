@@ -6,3 +6,16 @@ body {
   font-family: 'Inter', sans-serif;
   background-color: #f5fbf7;
 }
+
+@keyframes shimmer {
+  0%, 100% { 
+    background-position: 0% center; 
+  }
+  50% { 
+    background-position: 300% center; 
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 4s ease-in-out infinite;
+}

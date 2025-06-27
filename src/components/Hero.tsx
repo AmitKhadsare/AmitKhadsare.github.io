@@ -81,7 +81,7 @@ const Hero = () => {
         />
       </div>
 
-      <div className="absolute inset-0 bg-grid-slate-800 [mask-image:linear-gradient(0deg,#fff,rgba(255,255,255,0.6))] opacity-25"></div>
+      <div className="absolute inset-0 bg-slate-800/10 opacity-25"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">

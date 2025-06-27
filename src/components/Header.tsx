@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Phone, MapPin, Home, Heart, Shield, Smile, Mail, BookOpen } from 'lucide-react';
+import { Menu, X, Phone, MapPin, Home, Heart, Shield, Smile, Mail, BookOpen, Grid3X3 } from 'lucide-react';
 import { HashLink } from 'react-router-hash-link';
 import { Link } from 'react-router-dom';
-import { motion, AnimatePresence, Variants, useScroll, useTransform } from 'framer-motion';
+import { motion, AnimatePresence, Variants } from 'framer-motion';
 import logo from '../assets/logo.avif';
 import ColumbiaCareLogo from './CodeLogo';
 
@@ -47,7 +47,6 @@ const NavLink = ({ to, children, onClick, isActive }: {
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
-  const { scrollY } = useScroll();
 
   useEffect(() => {
     if (isMenuOpen) {
@@ -64,6 +63,7 @@ const Header = () => {
     { name: 'Home', path: '/#home', icon: Home },
     { name: 'Our Promise', path: '/#about', icon: Heart },
     { name: 'How We Care', path: '/#services', icon: Shield },
+    { name: 'All Services', path: '/services', icon: Grid3X3 },
     { name: 'Peace of Mind', path: '/#faq', icon: Smile },
     { name: 'Contact', path: '/#contact', icon: Mail },
     { name: 'Our Story', path: '/about-us', icon: BookOpen }
@@ -131,12 +131,17 @@ const Header = () => {
               <NavLink to="/#services" onClick={() => setIsMenuOpen(false)} isActive={activeSection === 'services'}>How We Care</NavLink>
             </motion.div>
             <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7 }}>
-              <NavLink to="/#faq" onClick={() => setIsMenuOpen(false)} isActive={activeSection === 'faq'}>Peace of Mind</NavLink>
+              <Link to="/services">
+                <AnimatedPill>All Services</AnimatedPill>
+              </Link>
             </motion.div>
             <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.8 }}>
-              <NavLink to="/#contact" onClick={() => setIsMenuOpen(false)} isActive={activeSection === 'contact'}>Contact</NavLink>
+              <NavLink to="/#faq" onClick={() => setIsMenuOpen(false)} isActive={activeSection === 'faq'}>Peace of Mind</NavLink>
             </motion.div>
             <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.9 }}>
+              <NavLink to="/#contact" onClick={() => setIsMenuOpen(false)} isActive={activeSection === 'contact'}>Contact</NavLink>
+            </motion.div>
+            <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.0 }}>
               <Link to="/about-us">
                 <AnimatedPill>Our Story</AnimatedPill>
               </Link>

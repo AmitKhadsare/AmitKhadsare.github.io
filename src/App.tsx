@@ -12,6 +12,7 @@ import ScrollToTop from './components/ScrollToTop';
 import AboutUsPage from './components/AboutUsPage';
 import FaqPage from './components/FaqPage';
 import ScheduleTourPage from './components/ScheduleTourPage';
+import AllServicesPage from './components/AllServicesPage';
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
           <Route path="/about-us" element={<AboutUsPage />} />
           <Route path="/faq" element={<FaqPage />} />
           <Route path="/schedule-a-tour" element={<ScheduleTourPage />} />
+          <Route path="/services" element={<AllServicesPage />} />
         </Routes>
         <Footer />
         <MobileSocialBar />
