@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Phone, MapPin, Home, Heart, Shield, Smile, Mail, BookOpen, Grid3X3 } from 'lucide-react';
+import { Phone, MapPin } from 'lucide-react';
 import { HashLink } from 'react-router-hash-link';
 import { Link } from 'react-router-dom';
-import { motion, AnimatePresence, Variants } from 'framer-motion';
+import { motion } from 'framer-motion';
 import logo from '../assets/logo.avif';
 import MobileMenu from './MobileMenu';
 
@@ -57,31 +57,6 @@ const Header = () => {
       document.body.style.overflow = 'auto';
     };
   }, [isMenuOpen]);
-
-  const navLinksForMobile = [
-    { name: 'Home', path: '/#home', icon: Home },
-    { name: 'Our Promise', path: '/#about', icon: Heart },
-    { name: 'How We Care', path: '/#services', icon: Shield },
-    { name: 'All Services', path: '/services', icon: Grid3X3 },
-    { name: 'Peace of Mind', path: '/#faq', icon: Smile },
-    { name: 'Contact', path: '/#contact', icon: Mail },
-    { name: 'Our Story', path: '/about-us', icon: BookOpen }
-  ];
-
-  // Animation variants for the mobile menu
-  const menuVariants: Variants = {
-    hidden: { y: '-100%', opacity: 0 },
-    visible: { y: 0, opacity: 1, transition: { type: 'spring', stiffness: 120, damping: 20, mass: 0.8 } },
-    exit: { y: '-100%', opacity: 0, transition: { duration: 0.3, ease: 'easeInOut' } },
-  };
-  const linkContainerVariants: Variants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { staggerChildren: 0.08, delayChildren: 0.2 } }
-  };
-  const linkVariants: Variants = {
-    hidden: { opacity: 0, x: -30 },
-    visible: { opacity: 1, x: 0, transition: { type: 'spring', stiffness: 100 } }
-  };
 
   return (
     <>
@@ -151,64 +126,6 @@ const Header = () => {
           </div>
         </div>
       </motion.header>
-
-      {/* --- REVISED "EMERALD HUB" MOBILE MENU --- */}
-      <AnimatePresence>
-        {isMenuOpen && (
-          <motion.div
-            className="fixed inset-0 z-[9999] bg-gradient-to-br from-slate-900 to-emerald-900 flex flex-col p-8"
-            variants={menuVariants}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-          >
-            {/* --- CHANGE: Logo alignment and size updated --- */}
-            <motion.div
-              className="w-full flex justify-start pl-4 pt-8 pb-12"
-              variants={linkVariants}
-            >
-              <HashLink smooth to="/#home" onClick={() => setIsMenuOpen(false)}>
-                <motion.img src={logo} alt="Columbia Care Home Logo" className="h-16 w-auto" />
-              </HashLink>
-            </motion.div>
-
-            {/* Centered Navigation Links with Icons */}
-            <div className="flex-grow flex flex-col justify-start">
-              <motion.nav
-                className="flex flex-col items-center space-y-2"
-                variants={linkContainerVariants}
-                initial="hidden"
-                animate="visible"
-              >
-                {navLinksForMobile.map((link) => {
-                  const Icon = link.icon;
-                  const LinkComponent = ({ children }: { children: React.ReactNode }) =>
-                    link.path.includes('#') ?
-                      (<HashLink smooth to={link.path} onClick={() => setIsMenuOpen(false)}>{children}</HashLink>) :
-                      (<Link to={link.path} onClick={() => setIsMenuOpen(false)}>{children}</Link>);
-
-                  return (
-                    <motion.div key={link.name} variants={linkVariants} className="w-full max-w-xs">
-                      <LinkComponent>
-                        <motion.div
-                          className="flex items-center w-full gap-4 p-4 rounded-lg"
-                          whileHover={{ backgroundColor: "rgba(16, 185, 129, 0.1)" }}
-                          whileTap={{ scale: 0.95 }}
-                        >
-                          <Icon className="w-6 h-6 text-emerald-400" />
-                          <span className="text-2xl font-semibold text-stone-200">
-                            {link.name}
-                          </span>
-                        </motion.div>
-                      </LinkComponent>
-                    </motion.div>
-                  );
-                })}
-              </motion.nav>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </>
   );
 };
