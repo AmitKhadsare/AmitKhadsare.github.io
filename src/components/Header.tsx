@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Phone, MapPin, Home, Heart, Shield, Smile, Mail, BookOpen, Grid3X3 } from 'lucide-react';
+import { Phone, MapPin, Home, Heart, Shield, Smile, Mail, BookOpen, Grid3X3 } from 'lucide-react';
 import { HashLink } from 'react-router-hash-link';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 import logo from '../assets/logo.avif';
-import ColumbiaCareLogo from './CodeLogo';
+import MobileMenu from './MobileMenu';
 
 // Your existing AnimatedPill component (no changes)
 const AnimatedPill = ({ children, isActive = false }: { children: React.ReactNode; isActive?: boolean }) => (
@@ -46,7 +46,6 @@ const NavLink = ({ to, children, onClick, isActive }: {
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
     if (isMenuOpen) {
@@ -122,13 +121,13 @@ const Header = () => {
           </motion.div>
           <motion.nav className="hidden lg:flex items-center space-x-2" initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, staggerChildren: 0.1 }}>
             <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }}>
-              <NavLink to="/#home" onClick={() => setIsMenuOpen(false)} isActive={activeSection === 'home'}>Home</NavLink>
+              <NavLink to="/#home" onClick={() => setIsMenuOpen(false)}>Home</NavLink>
             </motion.div>
             <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}>
-              <NavLink to="/#about" onClick={() => setIsMenuOpen(false)} isActive={activeSection === 'about'}>Our Promise</NavLink>
+              <NavLink to="/#about" onClick={() => setIsMenuOpen(false)}>Our Promise</NavLink>
             </motion.div>
             <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }}>
-              <NavLink to="/#services" onClick={() => setIsMenuOpen(false)} isActive={activeSection === 'services'}>How We Care</NavLink>
+              <NavLink to="/#services" onClick={() => setIsMenuOpen(false)}>How We Care</NavLink>
             </motion.div>
             <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7 }}>
               <Link to="/services">
@@ -136,10 +135,10 @@ const Header = () => {
               </Link>
             </motion.div>
             <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.8 }}>
-              <NavLink to="/#faq" onClick={() => setIsMenuOpen(false)} isActive={activeSection === 'faq'}>Peace of Mind</NavLink>
+              <NavLink to="/#faq" onClick={() => setIsMenuOpen(false)}>Peace of Mind</NavLink>
             </motion.div>
             <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.9 }}>
-              <NavLink to="/#contact" onClick={() => setIsMenuOpen(false)} isActive={activeSection === 'contact'}>Contact</NavLink>
+              <NavLink to="/#contact" onClick={() => setIsMenuOpen(false)}>Contact</NavLink>
             </motion.div>
             <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.0 }}>
               <Link to="/about-us">
@@ -147,22 +146,9 @@ const Header = () => {
               </Link>
             </motion.div>
           </motion.nav>
-          <motion.div className="lg:hidden" initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.3 }}>
-            <motion.button onClick={() => setIsMenuOpen(!isMenuOpen)} className="relative z-[10000] inline-flex items-center justify-center p-2 rounded-lg text-stone-700 hover:text-emerald-700 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all duration-200" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} aria-label={isMenuOpen ? "Close menu" : "Open menu"}>
-              <span className="sr-only">{isMenuOpen ? "Close main menu" : "Open main menu"}</span>
-              <AnimatePresence mode="wait">
-                {isMenuOpen ? (
-                  <motion.div key="close" initial={{ rotate: -90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: 90, opacity: 0 }} transition={{ duration: 0.2 }}>
-                    <X size={24} className="text-white" />
-                  </motion.div>
-                ) : (
-                  <motion.div key="menu" initial={{ rotate: 90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: -90, opacity: 0 }} transition={{ duration: 0.2 }}>
-                    <Menu size={24} />
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </motion.button>
-          </motion.div>
+          <div className="lg:hidden">
+            <MobileMenu />
+          </div>
         </div>
       </motion.header>
 
@@ -182,7 +168,7 @@ const Header = () => {
               variants={linkVariants}
             >
               <HashLink smooth to="/#home" onClick={() => setIsMenuOpen(false)}>
-                <ColumbiaCareLogo />
+                <motion.img src={logo} alt="Columbia Care Home Logo" className="h-16 w-auto" />
               </HashLink>
             </motion.div>
 
