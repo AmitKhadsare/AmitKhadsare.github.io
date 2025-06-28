@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, Variants } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle2, Heart, Home, Users, Shield, Sparkles, Activity, BrainCircuit } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Heart, Home, Users, Shield, Sparkles, Activity, BrainCircuit, LucideIcon } from 'lucide-react';
 import familyImage from '../assets/family.avif';
 import dignifiedPersonalAssistanceImage from '../assets/dignifiedpersonalassistance.avif';
 import comfortingHomelikeHavenImage from '../assets/comforting_homelike_haven.avif';
@@ -29,7 +29,7 @@ interface Service {
   title: string;
   description: string;
   image: string;
-  icon: React.ComponentType<any>;
+  icon: LucideIcon;
   accentColor: 'emerald' | 'teal' | 'orange' | 'blue' | 'stone' | 'red' | 'indigo';
   features: string[];
 }

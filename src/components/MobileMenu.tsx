@@ -98,16 +98,16 @@ const StripeStyleMobileMenu = () => {
       id: 'info',
       title: 'Information',
       items: [
-        { name: 'Peace of Mind', path: '/#faq', icon: Smile },
         { name: 'Our Story', path: '/about-us', icon: BookOpen },
+        { name: 'FAQ', path: '/faq', icon: Smile },
       ]
     },
     {
       id: 'connect',
       title: 'Connect',
       items: [
-        { name: 'Contact Us', path: '/#contact', icon: Mail },
-        { name: 'Visit Us', path: '/#location', icon: MapPin },
+        { name: 'Contact Us', path: '/contact', icon: Mail },
+        { name: 'Schedule Tour', path: '/schedule-a-tour', icon: Calendar },
       ]
     }
   ];

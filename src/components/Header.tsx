@@ -110,14 +110,23 @@ const Header = () => {
               </Link>
             </motion.div>
             <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.8 }}>
-              <NavLink to="/#faq" onClick={() => setIsMenuOpen(false)}>Peace of Mind</NavLink>
-            </motion.div>
-            <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.9 }}>
-              <NavLink to="/#contact" onClick={() => setIsMenuOpen(false)}>Contact</NavLink>
-            </motion.div>
-            <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.0 }}>
               <Link to="/about-us">
                 <AnimatedPill>Our Story</AnimatedPill>
+              </Link>
+            </motion.div>
+            <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.9 }}>
+              <Link to="/faq">
+                <AnimatedPill>FAQ</AnimatedPill>
+              </Link>
+            </motion.div>
+            <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.0 }}>
+              <Link to="/contact">
+                <AnimatedPill>Contact</AnimatedPill>
+              </Link>
+            </motion.div>
+            <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.1 }}>
+              <Link to="/schedule-a-tour">
+                <AnimatedPill>Schedule Tour</AnimatedPill>
               </Link>
             </motion.div>
           </motion.nav>

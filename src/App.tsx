@@ -13,6 +13,7 @@ import AboutUsPage from './components/AboutUsPage';
 import FaqPage from './components/FaqPage';
 import ScheduleTourPage from './components/ScheduleTourPage';
 import AllServicesPage from './components/AllServicesPage';
+import ContactPage from './components/ContactPage';
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
           <Route path="/faq" element={<FaqPage />} />
           <Route path="/schedule-a-tour" element={<ScheduleTourPage />} />
           <Route path="/services" element={<AllServicesPage />} />
+          <Route path="/contact" element={<ContactPage />} />
         </Routes>
         <Footer />
         <MobileSocialBar />

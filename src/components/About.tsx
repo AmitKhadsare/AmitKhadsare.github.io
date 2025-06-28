@@ -1,231 +1,218 @@
+import { useState } from 'react';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { motion, Variants } from 'framer-motion';
-import { Heart, Home, Users, Sparkles, ArrowRight } from 'lucide-react';
-import newAboutImage from '../assets/aboutus.avif';
+import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 
-const About = () => {
-  const containerVariants: Variants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.1,
-      },
-    },
+// Import your images here
+import dignifiedCareImage from '../assets/dignifiedpersonalassistance.avif';
+import comfortingHavenImage from '../assets/comforting_homelike_haven.avif';
+import nurseCheckingImage from '../assets/medium-shot-nurse-checking-man_converted.avif';
+import caregiverWheelchairImage from '../assets/caregiver-taking-care-woman-wheelchair_converted.avif';
+import nurseListeningImage from '../assets/nurse-retirement-home-listening-old-sick-man-heart-bead-pensioner-lies-hospital-bed_converted.avif';
+
+const ElegantPeekAbout = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  
+  // Updated with actual image imports
+  const images = [
+    { src: dignifiedCareImage, alt: 'Dignified personal assistance care' },
+    { src: comfortingHavenImage, alt: 'Comforting homelike environment' },
+    { src: nurseCheckingImage, alt: 'Nurse providing medical care' },
+    { src: caregiverWheelchairImage, alt: 'Caregiver assisting with mobility' },
+    { src: nurseListeningImage, alt: 'Nurse listening and providing emotional support' },
+  ];
+
+  const nextImage = () => {
+    setCurrentIndex((prev) => (prev + 1) % images.length);
   };
 
-  const itemVariants: Variants = {
-    hidden: { y: 30, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        type: 'spring',
-        stiffness: 120,
-        damping: 10,
-      },
-    },
+  const prevImage = () => {
+    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
   };
 
-  const imageVariants: Variants = {
-    hidden: { scale: 0.8, opacity: 0, rotateY: -15 },
-    visible: {
-      scale: 1,
-      opacity: 1,
-      rotateY: 0,
-      transition: {
-        type: 'spring',
-        duration: 1.2,
-        bounce: 0.3,
-      },
-    },
-  };
-
-  const floatingVariants: Variants = {
-    animate: {
-      y: [-10, 10, -10],
-      rotate: [0, 5, 0, -5, 0],
-      transition: {
-        duration: 6,
-        repeat: Infinity,
-        ease: "easeInOut"
-      }
-    }
-  };
+  // Get the three images to display
+  const mainImage = images[currentIndex];
+  const leftPeekImage = images[(currentIndex + 1) % images.length];
+  const rightPeekImage = images[(currentIndex + 2) % images.length];
 
   return (
-    <motion.section
-      id="about"
-      // THEME UPDATE: Changed background gradient from purple/pink to stone/emerald
-      className="py-12 lg:py-16 bg-gradient-to-br from-stone-100 to-emerald-50 relative overflow-hidden"
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.2 }}
-      variants={containerVariants}
-    >
-      {/* THEME UPDATE: Animated Background Elements now use theme colors */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <motion.div
-          className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-emerald-200 to-teal-300 rounded-full opacity-20 blur-xl"
-          animate={{ scale: [1, 1.2, 1], x: [0, 20, 0] }}
-          transition={{ duration: 8, repeat: Infinity }}
-        />
-        <motion.div
-          className="absolute bottom-32 right-16 w-40 h-40 bg-gradient-to-br from-teal-200 to-emerald-300 rounded-full opacity-15 blur-xl"
-          animate={{ scale: [1.2, 1, 1.2], y: [0, -30, 0] }}
-          transition={{ duration: 10, repeat: Infinity }}
-        />
-        <motion.div
-          className="absolute top-1/2 left-1/4 w-24 h-24 bg-gradient-to-br from-stone-200 to-emerald-200 rounded-full opacity-10 blur-lg"
-          animate={{ rotate: [0, 360], scale: [1, 1.1, 1] }}
-          transition={{ duration: 15, repeat: Infinity }}
-        />
-      </div>
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col lg:flex-row gap-16 lg:gap-20 items-center">
-
-          {/* Enhanced Image Section */}
-          <motion.div
-            className="relative order-1 lg:order-1 lg:flex-1 w-full max-w-lg mx-auto lg:mx-0 lg:max-w-none"
-            variants={imageVariants}
+    <section id="about" className="py-12 lg:py-16 bg-gradient-to-br from-stone-100 to-emerald-50 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          
+          {/* Desktop: Elegant Peek | Mobile: Simple Carousel */}
+          <motion.div 
+            className="relative"
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
           >
-            <div className="relative z-10 group">
-              <motion.div
-                whileHover={{ scale: 1.05, rotateY: 5 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                <img
-                  src={newAboutImage}
-                  alt="A compassionate caregiver supporting a resident"
-                  className="rounded-3xl shadow-2xl w-full h-auto object-cover border-4 border-white/50"
+            {/* Desktop Layout */}
+            <div className="hidden lg:block relative h-[450px]">
+              
+              {/* Main Image with Navigation */}
+              <div className="relative h-[350px] rounded-2xl overflow-hidden shadow-xl z-30">
+                <img 
+                  src={mainImage.src}
+                  alt={mainImage.alt}
+                  className="w-full h-full object-cover"
                 />
-                {/* THEME UPDATE: Hover overlay */}
-                <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-teal-600/20 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              </motion.div>
+                
+                {/* Navigation Arrows */}
+                <button
+                  onClick={() => prevImage()}
+                  className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-2 rounded-full shadow-lg transition-all duration-300 z-10"
+                >
+                  <ChevronLeft className="w-6 h-6" />
+                </button>
+                <button
+                  onClick={nextImage}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 p-2 bg-white/80 backdrop-blur-sm rounded-full hover:bg-white transition-colors"
+                  aria-label="Next image"
+                >
+                  <ChevronRight className="w-5 h-5 text-gray-800" />
+                </button>
+                
+                {/* Image Counter */}
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/50 backdrop-blur-sm px-3 py-1 rounded-full">
+                  <span className="text-white text-sm font-medium">
+                    {currentIndex + 1} / {images.length}
+                  </span>
+                </div>
+              </div>
+              
+              {/* Peeking Images - Interactive */}
+              <button
+                onClick={nextImage}
+                className="absolute bottom-0 left-0 w-[48%] h-[150px] rounded-xl overflow-hidden shadow-lg transform translate-y-[50px] z-20 transition-transform hover:translate-y-[45px]"
+              >
+                <img 
+                  src={leftPeekImage.src}
+                  alt={leftPeekImage.alt}
+                  className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent pointer-events-none" />
+              </button>
+              
+              <button
+                onClick={() => setCurrentIndex((currentIndex + 2) % images.length)}
+                className="absolute bottom-0 right-0 w-[48%] h-[150px] rounded-xl overflow-hidden shadow-lg transform translate-y-[50px] z-20 transition-transform hover:translate-y-[45px]"
+              >
+                <img 
+                  src={rightPeekImage.src}
+                  alt={rightPeekImage.alt}
+                  className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent pointer-events-none" />
+              </button>
             </div>
 
-            {/* THEME UPDATE: Floating decorative elements */}
-            <motion.div
-              className="absolute -top-6 -right-6 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-full p-4 shadow-xl"
-              variants={floatingVariants}
-              animate="animate"
-            >
-              <Sparkles className="w-8 h-8 text-white" />
-            </motion.div>
-
-            <motion.div
-              className="absolute -bottom-4 -left-4 bg-gradient-to-br from-red-400 to-pink-500 rounded-2xl p-3 shadow-lg"
-              variants={floatingVariants}
-              animate="animate"
-              transition={{ delay: 1 }}
-            >
-              <Heart className="w-6 h-6 text-white" />
-            </motion.div>
-
-            {/* THEME UPDATE: Background decorative shapes */}
-            <div className="absolute inset-0 bg-gradient-to-br from-emerald-200 to-teal-200 rounded-3xl transform -rotate-6 scale-105 opacity-30 -z-10"></div>
-            <div className="absolute inset-0 bg-gradient-to-br from-stone-200 to-emerald-200 rounded-3xl transform rotate-3 scale-110 opacity-20 -z-20"></div>
-          </motion.div>
-
-          {/* Enhanced Content Section */}
-          <motion.div className="space-y-12 order-2 lg:order-2 lg:flex-1" variants={containerVariants}>
-
-            {/* Main Heading */}
-            <motion.div variants={itemVariants}>
-              <motion.div
-                // THEME UPDATE: Mission tag
-                className="inline-block px-4 py-2 bg-gradient-to-r from-emerald-600 to-teal-700 text-white rounded-full text-sm font-semibold mb-4"
-                whileHover={{ scale: 1.05 }}
+            {/* Mobile Layout - Simple Carousel */}
+            <div className="lg:hidden relative h-[300px]">
+              <motion.div 
+                className="relative h-full rounded-2xl overflow-hidden shadow-xl"
+                drag="x"
+                dragConstraints={{ left: 0, right: 0 }}
+                dragElastic={0.2}
+                onDragEnd={(_, { offset }) => {
+                  if (offset.x > 50) prevImage();
+                  else if (offset.x < -50) nextImage();
+                }}
               >
-                ✨ Our Mission
+                <motion.img 
+                  key={currentIndex}
+                  src={mainImage.src}
+                  alt={mainImage.alt}
+                  className="w-full h-full object-cover"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.3 }}
+                />
+                
+                {/* Mobile Navigation Dots */}
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                  {images.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentIndex(index)}
+                      className={`w-2 h-2 rounded-full transition-all ${
+                        index === currentIndex 
+                          ? 'bg-white w-6' 
+                          : 'bg-white/60'
+                      }`}
+                      aria-label={`Go to image ${index + 1}`}
+                    />
+                  ))}
+                </div>
               </motion.div>
-              <h2
-                // THEME UPDATE: Main headline gradient
-                className="text-5xl lg:text-6xl font-bold bg-gradient-to-r from-emerald-700 via-teal-700 to-stone-800 bg-clip-text text-transparent leading-tight font-serif mb-6 text-center lg:text-left"
-              >
+            </div>
+          </motion.div>
+          
+          {/* Content Section - Keeping your original styling */}
+          <motion.div 
+            className="space-y-8 lg:pl-8"
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            {/* Mission Tag */}
+            <div>
+              <span className="inline-block px-4 py-2 bg-gradient-to-r from-emerald-600 to-teal-700 text-white rounded-full text-sm font-semibold mb-4">
+                ✨ Our Mission
+              </span>
+              
+              {/* Main Heading */}
+              <h2 className="text-5xl lg:text-6xl font-bold bg-gradient-to-r from-emerald-700 via-teal-700 to-stone-800 bg-clip-text text-transparent leading-tight font-serif mb-6">
                 A Home Filled with Heart & Joy
               </h2>
-              <p className="text-xl text-gray-700 leading-relaxed text-center lg:text-left font-medium">
-                {/* THEME UPDATE: Highlighted text span */}
-                Columbia Care Home was founded with a <span className="bg-gradient-to-r from-emerald-500 to-teal-600 bg-clip-text text-transparent font-bold">simple yet powerful mission</span>: to provide compassionate, dignified care in a setting that sparkles with warmth and feels like home.
+              
+              {/* Description */}
+              <p className="text-xl text-gray-700 leading-relaxed font-medium">
+                Columbia Care Home was founded with a{' '}
+                <span className="bg-gradient-to-r from-emerald-500 to-teal-600 bg-clip-text text-transparent font-bold">
+                  simple yet powerful mission
+                </span>
+                : to provide compassionate, dignified care in a setting that sparkles with warmth and feels like home.
               </p>
-            </motion.div>
-
+            </div>
+            
             {/* Story Section */}
-            <motion.div variants={itemVariants}>
-              <h3
-                // THEME UPDATE: Story headline
-                className="text-4xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent font-serif mb-6 text-center lg:text-left"
-              >
+            <div>
+              <h3 className="text-4xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent font-serif mb-4">
                 Our Inspiring Story
               </h3>
-              <p className="text-lg text-gray-700 leading-relaxed mb-8 text-center lg:text-left">
-                {/* THEME UPDATE: Founder name colors */}
-                At the heart of this vision are <span className="font-bold text-emerald-700">Dr. Bhargav Patel</span> and <span className="font-bold text-teal-700">Dr. Sheetal Patel</span>, both qualified physiotherapists who bring medical expertise and boundless compassion to create a space where residents thrive like family.
+              <p className="text-lg text-gray-700 leading-relaxed">
+                At the heart of this vision are{' '}
+                <span className="font-bold text-emerald-700">Dr. Bhargav Patel</span> and{' '}
+                <span className="font-bold text-teal-700">Dr. Sheetal Patel</span>, 
+                both qualified physiotherapists who bring medical expertise and boundless compassion 
+                to create a space where residents thrive like family.
               </p>
-
-              {/* THEME UPDATE: Enhanced Feature Cards now use theme colors */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
-                <motion.div
-                  className="relative p-6 bg-gradient-to-br from-red-400 to-pink-500 rounded-2xl shadow-xl text-white overflow-hidden group cursor-pointer"
-                  whileHover={{ scale: 1.05, rotateY: 5 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <div className="absolute top-0 right-0 w-20 h-20 bg-white/10 rounded-full -translate-y-6 translate-x-6" />
-                  <Heart className="h-12 w-12 mb-4 relative z-10" />
-                  <p className="font-bold text-lg relative z-10">Compassionate 24/7 Staff</p>
-                  <div className="absolute inset-0 bg-gradient-to-br from-white/0 to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                </motion.div>
-
-                <motion.div
-                  className="relative p-6 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl shadow-xl text-white overflow-hidden group cursor-pointer"
-                  whileHover={{ scale: 1.05, rotateY: 5 }}
-                  whileTap={{ scale: 0.95 }}
-                  transition={{ delay: 0.1 }}
-                >
-                  <div className="absolute top-0 right-0 w-20 h-20 bg-white/10 rounded-full -translate-y-6 translate-x-6" />
-                  <Home className="h-12 w-12 mb-4 relative z-10" />
-                  <p className="font-bold text-lg relative z-10">Warm, Home-like Vibes</p>
-                  <div className="absolute inset-0 bg-gradient-to-br from-white/0 to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                </motion.div>
-
-                <motion.div
-                  className="relative p-6 bg-gradient-to-br from-blue-600 to-teal-700 rounded-2xl shadow-xl text-white overflow-hidden group cursor-pointer"
-                  whileHover={{ scale: 1.05, rotateY: 5 }}
-                  whileTap={{ scale: 0.95 }}
-                  transition={{ delay: 0.2 }}
-                >
-                  <div className="absolute top-0 right-0 w-20 h-20 bg-white/10 rounded-full -translate-y-6 translate-x-6" />
-                  <Users className="h-12 w-12 mb-4 relative z-10" />
-                  <p className="font-bold text-lg relative z-10">Expert Physiotherapy</p>
-                  <div className="absolute inset-0 bg-gradient-to-br from-white/0 to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                </motion.div>
-              </div>
-            </motion.div>
-
-            {/* THEME UPDATE: Enhanced CTA Button */}
-            <motion.div variants={itemVariants} className="text-center lg:text-left">
+            </div>
+            
+            {/* CTA Button */}
+            <div className="pt-4">
               <Link to="/about-us">
-                <motion.button
-                  className="group relative px-10 py-5 bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-700 text-white rounded-full font-bold text-xl shadow-2xl overflow-hidden"
-                  whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(16, 185, 129, 0.4)" }}
-                  whileTap={{ scale: 0.95 }}
+                <motion.button 
+                  className="group relative px-10 py-5 bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-700 text-white rounded-full font-bold text-xl shadow-2xl overflow-hidden hover:shadow-emerald-500/30 transition-all"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
                 >
                   <span className="relative z-10 flex items-center gap-3">
                     Discover Our Amazing Story
                     <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
                   </span>
-                  <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-teal-600 via-emerald-600 to-green-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </motion.button>
               </Link>
-            </motion.div>
+            </div>
           </motion.div>
+          
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 };
 
-export default About;
+export default ElegantPeekAbout;

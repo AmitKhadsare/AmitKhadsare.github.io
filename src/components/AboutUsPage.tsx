@@ -2,9 +2,8 @@ import { Link } from 'react-router-dom';
 import { motion, Variants } from 'framer-motion';
 import { ArrowLeft, Stethoscope, ShieldCheck, HeartHandshake, Sparkles } from 'lucide-react';
 
-// Placeholder images - replace with actual photos
 const bhargavPhoto = 'https://images.pexels.com/photos/5452293/pexels-photo-5452293.jpeg';
-const sheetalPhoto = 'https://images.pexels.com/photos/5407206/pexels-photo-5407206.jpeg?auto=compress&cs=tinysrgb&w=800';
+// Removed sheetalPhoto as it's no longer needed
 const carePhoto = 'https://images.pexels.com/photos/7551623/pexels-photo-7551623.jpeg?auto=compress&cs=tinysrgb&w=1260';
 
 const AboutUsPage = () => {
@@ -25,7 +24,7 @@ const AboutUsPage = () => {
 
   return (
     <div className="bg-stone-50 text-stone-700">
-      {/* Hero Section */}
+      {/* Hero Section (Unchanged) */}
       <motion.section 
         className="relative py-32 bg-gradient-to-br from-emerald-50 via-stone-50 to-emerald-100"
         initial="hidden"
@@ -57,38 +56,25 @@ const AboutUsPage = () => {
       >
         <div className="max-w-6xl mx-auto">
           <motion.h2 variants={fadeIn} className="text-4xl font-bold text-center text-stone-800 font-serif mb-16">
-            Meet Our Founders
+            Meet Our Founder
           </motion.h2>
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <motion.div variants={fadeIn}>
-              <img src={bhargavPhoto} alt="Dr. Bhargav Patel" className="rounded-2xl shadow-xl w-full object-cover aspect-[4/5]" />
-              <h3 className="font-serif text-2xl text-stone-800 font-bold mt-6">Dr. Bhargav Patel</h3>
-              <p className="text-emerald-700 font-semibold">Founder & Physiotherapist</p>
+              <img src={bhargavPhoto} alt="Bhargav Patel" className="rounded-2xl shadow-xl w-full object-cover aspect-[4/5]" />
+              <h3 className="font-serif text-2xl text-stone-800 font-bold mt-6">Bhargav Patel</h3>
+              <p className="text-emerald-700 font-semibold">Founder & Licensed Physical Therapist</p>
             </motion.div>
             <motion.div variants={fadeIn} className="space-y-4 text-lg leading-relaxed">
+              {/* --- TEXT UPDATED TO INCLUDE SHEETAL --- */}
               <p>
-                At the heart of our vision is Dr. Bhargav Patel, a licensed physiotherapist and founder of At Home Rehabilitation — a respected facility specializing in physical and occupational therapy.
+                At the heart of our vision is Bhargav Patel, a licensed Physical Therapist and founder of At Home Rehabilitation. Witnessing the remarkable healing journeys of his patients, he was inspired to create a new kind of senior living experience.
               </p>
               <p>
-                Witnessing the remarkable healing journeys of his patients and recognizing the growing need for affordable, high-quality elder care, Dr. Patel was inspired to create a new kind of senior living experience.
+                Joined by his wife, Sheetal, who shares his deep sense of purpose and is also a licensed Physical Therapist, they established Columbia Care Home. Together, they lead with a philosophy that every resident deserves to feel safe, valued, and cared for like family.
               </p>
             </motion.div>
           </div>
-          <div className="grid md:grid-cols-2 gap-16 items-center mt-20">
-            <motion.div variants={fadeIn}>
-              <img src={sheetalPhoto} alt="Dr. Sheetal Patel" className="rounded-2xl shadow-xl w-full object-cover aspect-[4/5]" />
-              <h3 className="font-serif text-2xl text-stone-800 font-bold mt-6">Dr. Sheetal Patel</h3>
-              <p className="text-emerald-700 font-semibold">Co-Founder & Physiotherapist</p>
-            </motion.div>
-            <motion.div variants={fadeIn} className="space-y-4 text-lg leading-relaxed">
-              <p>
-                Dr. Sheetal Patel, also a qualified physiotherapist, shares this deep sense of purpose. Together, they extended their vision to senior living, combining their medical expertise with a heartfelt commitment to service.
-              </p>
-              <p>
-                They lead Columbia Care Home with a philosophy that every resident deserves to feel safe, valued, and cared for like family.
-              </p>
-            </motion.div>
-          </div>
+          {/* --- ENTIRE SECTION FOR SHEETAL HAS BEEN REMOVED --- */}
         </div>
       </motion.section>
 
@@ -142,25 +128,21 @@ const AboutUsPage = () => {
             Our Journey
           </h2>
           <div className="relative">
-            {/* The vertical line */}
             <div className="absolute left-4 top-0 h-full w-0.5 bg-emerald-200"></div>
-            
             <motion.div variants={timelineItem} className="relative pl-12 pb-12">
               <div className="absolute left-0 top-1.5 w-8 h-8 bg-white border-4 border-emerald-500 rounded-full"></div>
               <h4 className="font-serif text-2xl font-bold text-emerald-700">A Vision for Rehabilitation</h4>
-              <p className="mt-2">Dr. Bhargav Patel founds At Home Rehabilitation, dedicating his career to helping patients regain strength and independence through physiotherapy.</p>
+              <p className="mt-2">Bhargav Patel founds At Home Rehabilitation, dedicating his career to helping patients regain strength and independence through physical therapy.</p>
             </motion.div>
-
             <motion.div variants={timelineItem} className="relative pl-12 pb-12">
               <div className="absolute left-0 top-1.5 w-8 h-8 bg-white border-4 border-emerald-500 rounded-full"></div>
               <h4 className="font-serif text-2xl font-bold text-emerald-700">Identifying a Need</h4>
-              <p className="mt-2">Through his work, Dr. Patel observes a critical need for senior care that is not only medically sound but also affordable and deeply compassionate.</p>
+              <p className="mt-2">Through his work, Bhargav observes a critical need for senior care that is not only medically sound but also affordable and deeply compassionate.</p>
             </motion.div>
-
             <motion.div variants={timelineItem} className="relative pl-12">
               <div className="absolute left-0 top-1.5 w-8 h-8 bg-white border-4 border-emerald-500 rounded-full"></div>
               <h4 className="font-serif text-2xl font-bold text-emerald-700">Columbia Care Home is Born</h4>
-              <p className="mt-2">Joined by his wife, Dr. Sheetal Patel, the vision expands. They establish Columbia Care Home to provide a safe, family-like environment backed by professional physiotherapy expertise.</p>
+              <p className="mt-2">Joined by his wife, Sheetal, the vision expands. They establish Columbia Care Home to provide a safe, family-like environment backed by professional physical therapy expertise.</p>
             </motion.div>
           </div>
         </div>
@@ -186,4 +168,4 @@ const AboutUsPage = () => {
   );
 };
 
-export default AboutUsPage; 
+export default AboutUsPage;
