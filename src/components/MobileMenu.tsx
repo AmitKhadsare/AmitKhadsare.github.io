@@ -1,242 +1,151 @@
 import React, { useState, useEffect } from 'react';
-import { X, Phone, MapPin, Home, Heart, Shield, Smile, Mail, BookOpen, Grid3X3, ChevronDown, Calendar } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { HashLink } from 'react-router-hash-link';
+import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
+import { X, Phone, Calendar, Home, ArrowLeft, ChevronRight } from 'lucide-react';
+import { menuData } from '../data/navigationData';
 import logo from '../assets/logo.avif';
 
-interface MenuItem {
-  name: string;
-  path: string;
-  icon: React.ComponentType<{ className?: string }>;
-}
-
-interface MenuSectionProps {
-  title: string;
-  items: MenuItem[];
+interface MobileMenuProps {
   isOpen: boolean;
-  onToggle: () => void;
-  onItemClick: () => void;
+  onClose: () => void;
 }
 
-// Menu Section Component
-const MenuSection = ({ title, items, isOpen, onToggle, onItemClick }: MenuSectionProps) => {
-  return (
-    <div className="border-b border-gray-100">
-      <button
-        onClick={onToggle}
-        className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition-colors"
-      >
-        <span className="text-sm font-semibold text-gray-900 uppercase tracking-wide">{title}</span>
-        <motion.div
-          animate={{ rotate: isOpen ? 180 : 0 }}
-          transition={{ duration: 0.2 }}
-        >
-          <ChevronDown className="w-4 h-4 text-gray-400" />
-        </motion.div>
-      </button>
-      
-      <AnimatePresence initial={false}>
-        {isOpen && (
-          <motion.div
-            initial={{ height: 0 }}
-            animate={{ height: "auto" }}
-            exit={{ height: 0 }}
-            transition={{ duration: 0.2, ease: "easeInOut" }}
-            className="overflow-hidden"
-          >
-            <div className="pb-4">
-              {items.map((item) => {
-                const LinkComponent = item.path.includes('#') ? HashLink : Link;
-                return (
-                  <LinkComponent
-                    key={item.name}
-                    to={item.path}
-                    className="flex items-center gap-3 px-6 py-3 hover:bg-gray-50 transition-colors"
-                    onClick={onItemClick}
-                  >
-                    <item.icon className="w-5 h-5 text-gray-400" />
-                    <span className="text-gray-700">{item.name}</span>
-                  </LinkComponent>
-                );
-              })}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
-  );
-};
+const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
+  const [activeSubMenu, setActiveSubMenu] = useState<keyof typeof menuData | null>(null);
 
-const StripeStyleMobileMenu = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [openSection, setOpenSection] = useState('care');
-
-  // Lock body scroll when menu is open
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
+    if (!isOpen) {
+      setTimeout(() => setActiveSubMenu(null), 250);
     }
-    return () => {
-      document.body.style.overflow = 'auto';
-    };
   }, [isOpen]);
 
-  const menuSections = [
-    {
-      id: 'care',
-      title: 'Care Services',
-      items: [
-        { name: 'Our Promise', path: '/#about', icon: Heart },
-        { name: 'How We Care', path: '/#services', icon: Shield },
-        { name: 'All Services', path: '/services', icon: Grid3X3 },
-      ]
-    },
-    {
-      id: 'info',
-      title: 'Information',
-      items: [
-        { name: 'Our Story', path: '/about-us', icon: BookOpen },
-        { name: 'FAQ', path: '/faq', icon: Smile },
-      ]
-    },
-    {
-      id: 'connect',
-      title: 'Connect',
-      items: [
-        { name: 'Contact Us', path: '/contact', icon: Mail },
-        { name: 'Schedule Tour', path: '/schedule-a-tour', icon: Calendar },
-      ]
-    }
-  ];
+  const activeSubMenuData = activeSubMenu ? menuData[activeSubMenu] : null;
+  const activeSubMenuTitle = activeSubMenu ? menuData[activeSubMenu].title : '';
+
+  // --- REFINED ANIMATIONS ---
+  const panelVariants: Variants = {
+    // Panel now fades in and scales up slightly for a quick "takeover" effect
+    hidden: { opacity: 0, scale: 0.98 },
+    visible: { opacity: 1, scale: 1, transition: { type: "tween", duration: 0.2, ease: 'easeOut' } },
+    exit: { opacity: 0, scale: 0.98, transition: { type: "tween", duration: 0.15, ease: 'easeIn' } },
+  };
+  const listVariants: Variants = {
+    enter: { x: 0, opacity: 1, transition: { staggerChildren: 0.05, delayChildren: 0.1 } },
+    exit: { x: -30, opacity: 0, transition: { duration: 0.15 } },
+  };
+  const subMenuVariants: Variants = {
+    enter: { x: 0, opacity: 1, transition: { staggerChildren: 0.05, delayChildren: 0.1 } },
+    exit: { x: 30, opacity: 0, transition: { duration: 0.15 } },
+  };
 
   return (
-    <>
-      {/* Menu Toggle Button */}
-      <button
-        onClick={() => setIsOpen(true)}
-        className="relative z-50 p-2 rounded-lg hover:bg-gray-100 transition-colors"
-        aria-label="Toggle menu"
-      >
-        <div className="w-6 h-6 relative">
-          <motion.span
-            className="absolute w-6 h-0.5 bg-gray-900 left-0"
-            animate={{
-              top: isOpen ? '11px' : '5px',
-              rotate: isOpen ? 45 : 0,
-            }}
-            transition={{ duration: 0.2 }}
-          />
-          <motion.span
-            className="absolute w-6 h-0.5 bg-gray-900 left-0 top-[11px]"
-            animate={{
-              opacity: isOpen ? 0 : 1,
-            }}
-            transition={{ duration: 0.1 }}
-          />
-          <motion.span
-            className="absolute w-6 h-0.5 bg-gray-900 left-0"
-            animate={{
-              top: isOpen ? '11px' : '17px',
-              rotate: isOpen ? -45 : 0,
-            }}
-            transition={{ duration: 0.2 }}
-          />
-        </div>
-      </button>
-
-      {/* Backdrop */}
-      <AnimatePresence>
-        {isOpen && (
+    <AnimatePresence>
+      {isOpen && (
+        <>
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="fixed inset-0 bg-black/20 backdrop-blur-sm z-40"
-            onClick={() => setIsOpen(false)}
+            className="fixed inset-0 z-[9998] bg-black/30 backdrop-blur-sm"
+            onClick={onClose}
           />
-        )}
-      </AnimatePresence>
-
-      {/* Menu Panel */}
-      <AnimatePresence>
-        {isOpen && (
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ type: "tween", duration: 0.25, ease: "easeOut" }}
-            className="fixed inset-0 bg-white shadow-xl z-50"
+            className="fixed inset-0 bg-white shadow-2xl z-[9999] flex flex-col"
+            variants={panelVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
           >
-            {/* Header */}
-            <div className="flex items-center justify-between px-6 py-4 border-b border-gray-100">
-              {/* Logo - kept compact for mobile */}
-              <HashLink to="/#home" className="flex items-center" onClick={() => setIsOpen(false)}>
-                <img 
-                  src={logo} 
-                  alt="Columbia Care Home" 
-                  className="h-10 w-auto"
-                />
+            <div className="flex-shrink-0 flex items-center justify-between p-4 border-b border-gray-200">
+              <HashLink to="/#home" onClick={onClose}>
+                <img src={logo} alt="Columbia Care Home" className="h-16 w-auto" />
               </HashLink>
-              <button
-                onClick={() => setIsOpen(false)}
-                className="p-2 rounded-lg hover:bg-gray-100 transition-colors"
-              >
-                <X className="w-5 h-5 text-gray-500" />
-              </button>
+              <button onClick={onClose} className="p-2 rounded-full hover:bg-gray-100 transition-colors"><X className="w-6 h-6 text-gray-600" /></button>
             </div>
-
-            {/* Scrollable Content */}
-            <div className="h-full overflow-y-auto pb-32">
-              {/* Home Link */}
-              <HashLink
-                to="/#home"
-                className="flex items-center gap-3 px-6 py-4 border-b border-gray-100 hover:bg-gray-50 transition-colors"
-                onClick={() => setIsOpen(false)}
-              >
-                <Home className="w-5 h-5 text-gray-400" />
-                <span className="text-gray-700 font-medium">Home</span>
-              </HashLink>
-
-              {/* Accordion Sections */}
-              {menuSections.map((section) => (
-                <MenuSection
-                  key={section.id}
-                  title={section.title}
-                  items={section.items}
-                  isOpen={openSection === section.id}
-                  onToggle={() => setOpenSection(openSection === section.id ? '' : section.id)}
-                  onItemClick={() => setIsOpen(false)}
-                />
-              ))}
-
-              {/* Footer Actions */}
-              <div className="p-6 space-y-3 border-t border-gray-100 mt-8">
-                <a
-                  href="tel:555-123-4567"
-                  className="flex items-center justify-center gap-2 w-full py-3 px-4 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-colors"
-                >
-                  <Phone className="w-4 h-4" />
-                  <span className="font-medium">Call Now</span>
-                </a>
-                <Link
-                  to="/schedule-a-tour"
-                  onClick={() => setIsOpen(false)}
-                  className="flex items-center justify-center gap-2 w-full py-3 px-4 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors"
-                >
-                  <Calendar className="w-4 h-4" />
-                  <span className="font-medium">Schedule a Tour</span>
-                </Link>
-              </div>
+            
+            <div className="flex-1 overflow-hidden relative">
+              <AnimatePresence initial={false}>
+                {!activeSubMenu && (
+                  <motion.div key="main-menu" className="absolute w-full h-full flex flex-col" variants={listVariants} initial="enter" animate="enter" exit="exit">
+                    <nav className="flex-1 overflow-y-auto p-4">
+                      <HashLink to="/#home" onClick={onClose} className="block w-full text-left">
+                        <div className="flex items-center justify-between p-4 rounded-lg hover:bg-gray-100 transition-colors">
+                          <div className="flex items-center gap-4"><Home className="w-6 h-6 text-emerald-700" /><span className="text-lg font-medium text-gray-800">Home</span></div>
+                        </div>
+                      </HashLink>
+                      {Object.keys(menuData).map((key) => {
+                        const item = menuData[key as keyof typeof menuData];
+                        const Icon = item.icon;
+                        return (
+                          <button key={item.title} onClick={() => setActiveSubMenu(key as keyof typeof menuData)} className="w-full text-left">
+                            <div className="flex items-center justify-between p-4 rounded-lg hover:bg-gray-100 transition-colors">
+                              <div className="flex items-center gap-4"><Icon className="w-6 h-6 text-emerald-700" /><span className="text-lg font-medium text-gray-800">{item.title}</span></div>
+                              <ChevronRight className="w-5 h-5 text-gray-400" />
+                            </div>
+                          </button>
+                        );
+                      })}
+                    </nav>
+                  </motion.div>
+                )}
+                {activeSubMenu && activeSubMenuData && (
+                   <motion.div key={activeSubMenu} className="absolute w-full h-full flex flex-col" variants={subMenuVariants} initial="enter" animate="enter" exit="exit">
+                     <div className="flex-shrink-0 p-2 border-b border-gray-200">
+                       <button onClick={() => setActiveSubMenu(null)} className="flex items-center gap-2 p-2 w-full font-semibold text-emerald-700 hover:bg-gray-100 rounded-lg">
+                         <ArrowLeft className="w-5 h-5" />
+                         {activeSubMenuTitle}
+                       </button>
+                     </div>
+                     <nav className="flex-1 overflow-y-auto p-4">
+                       {'subMenu' in activeSubMenuData ? (
+                         (activeSubMenuData as any).subMenu.map((item: any) => {
+                           const Icon = item.icon;
+                           return (
+                             <Link key={item.name} to={item.path} onClick={onClose} className="block">
+                               <div className="flex items-center gap-4 p-4 rounded-lg hover:bg-gray-100 transition-colors">
+                                 <Icon className="w-6 h-6 text-emerald-700" />
+                                 <span className="text-lg font-medium text-gray-800">{item.name}</span>
+                               </div>
+                             </Link>
+                           );
+                         })
+                       ) : 'sections' in activeSubMenuData ? (
+                         (activeSubMenuData as any).sections.map((section: any) => (
+                           <div key={section.title} className="mb-6">
+                             <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3 px-4">{section.title}</h3>
+                             {section.links.map((link: any) => {
+                               const Icon = link.icon;
+                               const LinkComponent = link.path.includes('#') ? HashLink : Link;
+                               return (
+                                 <LinkComponent key={link.name} to={link.path} onClick={onClose} className="block">
+                                   <div className="flex items-center gap-4 p-4 rounded-lg hover:bg-gray-100 transition-colors">
+                                     <Icon className="w-6 h-6 text-emerald-700" />
+                                     <div>
+                                       <span className="text-lg font-medium text-gray-800">{link.name}</span>
+                                       <p className="text-sm text-gray-500">{link.description}</p>
+                                     </div>
+                                   </div>
+                                 </LinkComponent>
+                               );
+                             })}
+                           </div>
+                         ))
+                       ) : null}
+                     </nav>
+                   </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+            <div className="flex-shrink-0 p-4 space-y-3 border-t border-gray-200 bg-gray-50">
+              <a href="tel:555-123-4567" className="w-full flex items-center justify-center gap-2 py-3 px-4 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 font-semibold"><Phone className="w-5 h-5" /> Call Now</a>
+              <Link to="/schedule-a-tour" onClick={onClose} className="w-full flex items-center justify-center gap-2 py-3 px-4 bg-white text-gray-800 rounded-lg hover:bg-gray-100 border border-gray-300 font-semibold"><Calendar className="w-5 h-5" /> Schedule a Tour</Link>
             </div>
           </motion.div>
-        )}
-      </AnimatePresence>
-    </>
+        </>
+      )}
+    </AnimatePresence>
   );
 };
 
-export default StripeStyleMobileMenu;
+export default MobileMenu;

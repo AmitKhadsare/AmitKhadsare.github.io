@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight, Heart, Home, Users, Shield, Utensils, Activity, Brain, Dumbbell, CheckCircle2 } from 'lucide-react';
 import dignifiedCareImage from '../assets/dignifiedpersonalassistance.avif';
 import comfortingHavenImage from '../assets/comforting_homelike_haven.avif';
@@ -19,6 +20,7 @@ interface Service {
   image: string;
   imagePosition: string;
   color: 'blue' | 'rose' | 'emerald' | 'orange' | 'purple' | 'teal' | 'indigo';
+  path?: string;
 }
 
 // Service data with professional names, descriptions, and features
@@ -31,7 +33,8 @@ const services: Service[] = [
     icon: Dumbbell,
     image: physicalTherapyImage,
     imagePosition: 'object-[center_30%]',
-    color: 'blue'
+    color: 'blue',
+    path: '/rehabilitation'
   },
   {
     id: 2,
@@ -41,7 +44,8 @@ const services: Service[] = [
     icon: Heart,
     image: dignifiedCareImage,
     imagePosition: 'object-[center_25%]',
-    color: 'rose'
+    color: 'rose',
+    path: '/personal-assistance'
   },
   {
     id: 3,
@@ -51,7 +55,8 @@ const services: Service[] = [
     icon: Home,
     image: comfortingHavenImage,
     imagePosition: 'object-center',
-    color: 'emerald'
+    color: 'emerald',
+    path: '/residential-care'
   },
   {
     id: 4,
@@ -61,7 +66,8 @@ const services: Service[] = [
     icon: Utensils,
     image: nourishingImage,
     imagePosition: 'object-[center_40%]',
-    color: 'orange'
+    color: 'orange',
+    path: '/dietary'
   },
   {
     id: 5,
@@ -71,7 +77,8 @@ const services: Service[] = [
     icon: Activity,
     image: vibrantLifeImage,
     imagePosition: 'object-[center_30%]',
-    color: 'purple'
+    color: 'purple',
+    path: '/recreation'
   },
   {
     id: 6,
@@ -81,7 +88,8 @@ const services: Service[] = [
     icon: Shield,
     image: proactiveHealthImage,
     imagePosition: 'object-[center_35%]',
-    color: 'teal'
+    color: 'teal',
+    path: '/health-safety'
   },
   {
     id: 7,
@@ -91,7 +99,8 @@ const services: Service[] = [
     icon: Users,
     image: familyImage,
     imagePosition: 'object-[center_25%]',
-    color: 'indigo'
+    color: 'indigo',
+    path: '/family-partnership'
   },
   {
     id: 8,
@@ -101,7 +110,8 @@ const services: Service[] = [
     icon: Brain,
     image: memoryCareImage,
     imagePosition: 'object-[center_30%]',
-    color: 'purple'
+    color: 'purple',
+    path: '/memory-care'
   }
 ];
 
@@ -173,10 +183,19 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
         </div>
         
         {/* CTA */}
-        <button className="w-full py-4 px-6 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg font-semibold text-base sm:text-lg transition-colors inline-flex items-center justify-center gap-2">
-          Learn More
-          <ArrowRight className="w-4 h-4" />
-        </button>
+        {service.path ? (
+          <Link to={service.path} className="w-full">
+            <button className="w-full py-4 px-6 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg font-semibold text-base sm:text-lg transition-colors inline-flex items-center justify-center gap-2">
+              Learn More
+              <ArrowRight className="w-4 h-4" />
+            </button>
+          </Link>
+        ) : (
+          <button className="w-full py-4 px-6 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg font-semibold text-base sm:text-lg transition-colors inline-flex items-center justify-center gap-2">
+            Learn More
+            <ArrowRight className="w-4 h-4" />
+          </button>
+        )}
       </div>
     </motion.div>
   );
@@ -192,6 +211,7 @@ const AllServicesPage = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
+            className="text-center"
           >
             {/* Back Link */}
             <button className="inline-flex items-center gap-2 text-emerald-100 hover:text-white font-medium mb-8 transition-colors text-base sm:text-lg">
@@ -203,12 +223,12 @@ const AllServicesPage = () => {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 font-serif leading-tight">
               Our Comprehensive Services
             </h1>
-            <p className="text-lg sm:text-xl text-emerald-50 max-w-3xl mb-12 leading-relaxed">
+            <p className="text-lg sm:text-xl text-emerald-50 max-w-3xl mb-12 leading-relaxed mx-auto">
               Every service we offer is designed with one goal in mind: to provide a nurturing, supportive, and enriching environment where our residents can thrive.
             </p>
             
             {/* Statistics */}
-            <div className="grid grid-cols-3 gap-8 max-w-2xl">
+            <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}

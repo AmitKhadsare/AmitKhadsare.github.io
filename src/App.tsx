@@ -14,6 +14,18 @@ import FaqPage from './components/FaqPage';
 import ScheduleTourPage from './components/ScheduleTourPage';
 import AllServicesPage from './components/AllServicesPage';
 import ContactPage from './components/ContactPage';
+import FacilityPage from './components/FacilityPage';
+import CareersPage from './components/CareersPage';
+import PrivacyPolicyPage from './components/PrivacyPolicyPage';
+import TermsOfServicePage from './components/TermsOfServicePage';
+import RehabilitationPage from './components/RehabilitationPage';
+import MemoryCarePage from './components/MemoryCarePage';
+import FamilyPartnershipPage from './components/FamilyPartnershipPage';
+import HealthAndSafetyPage from './components/HealthAndSafetyPage';
+import ResidentialCarePage from './components/ResidentialCarePage';
+import RecreationPage from './components/RecreationPage';
+import PersonalAssistancePage from './components/PersonalAssistancePage';
+import DietaryPage from './components/DietaryPage';
 
 function App() {
   return (
@@ -47,6 +59,18 @@ function App() {
           <Route path="/schedule-a-tour" element={<ScheduleTourPage />} />
           <Route path="/services" element={<AllServicesPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/facility" element={<FacilityPage />} />
+          <Route path="/careers" element={<CareersPage />} />
+          <Route path="/rehabilitation" element={<RehabilitationPage />} />
+          <Route path="/memory-care" element={<MemoryCarePage />} />
+          <Route path="/family-partnership" element={<FamilyPartnershipPage />} />
+          <Route path="/health-safety" element={<HealthAndSafetyPage />} />
+          <Route path="/residential-care" element={<ResidentialCarePage />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+          <Route path="/terms-of-service" element={<TermsOfServicePage />} />
+          <Route path="/recreation" element={<RecreationPage />} />
+          <Route path="/personal-assistance" element={<PersonalAssistancePage />} />
+          <Route path="/dietary" element={<DietaryPage />} />
         </Routes>
         <Footer />
         <MobileSocialBar />

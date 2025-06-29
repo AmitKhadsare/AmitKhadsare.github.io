@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ChevronDown, Users, DollarSign, Clock, Utensils, Heart, Calendar } from 'lucide-react';
+import { ChevronDown, Users, Clock, Utensils, Heart, Calendar } from 'lucide-react';
 
 interface FAQItem {
   icon: React.ComponentType<{ className?: string }>;
@@ -10,11 +10,6 @@ interface FAQItem {
 }
 
 const faqData: FAQItem[] = [
-  {
-    icon: DollarSign,
-    question: "What's included in the monthly fee?",
-    answer: "Our monthly fee covers accommodation, 24/7 care, three nutritious meals plus snacks, housekeeping, laundry, activities, and basic medical supplies. Additional services like physical therapy or specialized care may incur extra charges.",
-  },
   {
     icon: Clock,
     question: "Can family visit anytime?",
@@ -97,7 +92,7 @@ const UpdatedFAQSection = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="py-16 lg:py-20 bg-gray-50">
+    <section id="faq" className="py-12 lg:py-16 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div 

@@ -189,6 +189,7 @@ const FAQPage = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
+            className="text-center"
           >
             <Link to="/">
               <button className="inline-flex items-center gap-2 text-emerald-100 hover:text-white mb-6">
@@ -199,7 +200,7 @@ const FAQPage = () => {
             <h1 className="text-4xl lg:text-5xl font-bold mb-4">
               Frequently Asked Questions
             </h1>
-            <p className="text-xl text-emerald-50 max-w-3xl">
+            <p className="text-xl text-emerald-50 max-w-3xl mx-auto">
               Everything you need to know about Columbia Care Home
             </p>
           </motion.div>

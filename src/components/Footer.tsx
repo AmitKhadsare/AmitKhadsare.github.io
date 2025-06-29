@@ -177,11 +177,6 @@ const Footer = () => {
 
         {/* Mobile Accordion Footer */}
         <div className="md:hidden">
-           <div className="space-y-4 text-center mb-8">
-              <h3 className="text-xl font-bold text-white">Columbia Care Home</h3>
-              <p className="text-sm text-gray-400">Compassionate care, dignified living.</p>
-          </div>
-           
            <FooterAccordionItem
              title="Get In Touch"
              isOpen={openAccordion === 'location'}

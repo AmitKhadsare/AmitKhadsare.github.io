@@ -1,8 +1,8 @@
-import React from 'react';
-import { Heart, Shield, Users, ArrowRight } from 'lucide-react';
 import { motion, Variants } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import myPhoto from '../assets/main.avif';
+import { ArrowRight } from 'lucide-react';
+import { Heart, Shield, Users } from 'lucide-react';
+import carehomeImage from '../assets/carehome.avif';
 
 const Hero = () => {
   const containerVariants: Variants = {
@@ -48,7 +48,7 @@ const Hero = () => {
   return (
     <motion.section
       id="home"
-      className="relative bg-gradient-to-br from-slate-900 to-emerald-900 py-20 overflow-hidden text-center lg:text-left"
+      className="relative bg-gradient-to-br from-slate-900 to-emerald-900 py-16 lg:py-12 overflow-hidden text-center lg:text-left"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
@@ -197,7 +197,7 @@ const Hero = () => {
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 <img
-                  src={myPhoto}
+                  src={carehomeImage}
                   alt="A compassionate caregiver with a resident"
                   className="rounded-2xl shadow-2xl w-full h-auto max-h-[500px] object-cover"
                 />
