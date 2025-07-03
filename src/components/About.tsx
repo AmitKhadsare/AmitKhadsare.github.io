@@ -70,7 +70,7 @@ const About = () => (
                   whileTap={{ scale: 0.98 }}
                 >
                   <span className="relative z-10 flex items-center justify-center gap-3">
-                    Discover Our Amazing Story
+                    Discover Our Story
                     <ArrowRight className="w-5 h-5 lg:w-6 lg:h-6 group-hover:translate-x-1 transition-transform" />
                   </span>
                 </motion.button>
@@ -138,7 +138,7 @@ const About = () => (
                   whileTap={{ scale: 0.98 }}
                 >
                   <span className="relative z-10 flex items-center gap-3">
-                    Discover Our Amazing Story
+                    Discover Our Story
                     <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
                   </span>
                 </motion.button>

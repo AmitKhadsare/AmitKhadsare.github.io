@@ -134,8 +134,7 @@ const ContactPage: React.FC = () => {
           <div className="lg:col-span-1 space-y-6">
             {/* Primary Contact */}
             <InfoCard icon={Phone} title="Call Us">
-              <p className="font-semibold text-emerald-700 text-lg">(555) 123-4567</p>
-              <p className="text-sm">Available 24/7 for emergencies</p>
+              <p className="font-semibold text-emerald-700">(201) 885-9225, (301) 500-0809</p>
               <p className="text-sm">Office hours: Mon-Fri 8AM-6PM</p>
             </InfoCard>
 
@@ -145,10 +144,10 @@ const ContactPage: React.FC = () => {
             </InfoCard>
 
             <InfoCard icon={MapPin} title="Visit Us">
-              <p className="font-semibold">123 Care Street</p>
-              <p>Columbia, SC 29201</p>
+              <p className="font-semibold">10610 Hickory Point Lane</p>
+              <p>Columbia, MD 21044</p>
               <a 
-                href="https://maps.google.com" 
+                href="https://www.google.com/maps/search/?api=1&query=10610+Hickory+Point+Lane,+Columbia,+MD+21044" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-emerald-600 hover:text-emerald-700 text-sm inline-flex items-center gap-1 mt-2"
@@ -327,7 +326,7 @@ const ContactPage: React.FC = () => {
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                 <div>
                   <h3 className="font-semibold text-gray-900">Columbia Care Home</h3>
-                  <p className="text-gray-600">123 Care Street, Columbia, SC 29201</p>
+                  <p className="text-gray-600">10610 Hickory Point Lane, Columbia, MD 21044</p>
                 </div>
                 <a
                   href="https://maps.google.com"

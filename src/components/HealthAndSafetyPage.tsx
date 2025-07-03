@@ -36,13 +36,13 @@ const HealthAndSafetyPage = () => {
     },
     {
       icon: ShieldCheck,
-      title: "24/7 Medical Oversight",
-      description: "Our licensed nursing staff is on-site around the clock to provide expert medical care and immediate attention."
+      title: "24/7 Support and Care",
+      description: "Our dedicated staff is available around the clock to provide attentive assistance, ensuring residents feel safe, comfortable, and well cared for at all times."
     },
     {
       icon: Siren,
-      title: "Rapid Emergency Response",
-      description: "State-of-the-art emergency call systems in every room, with established protocols for swift and effective response."
+      title: "Reliable Emergency Response",
+      description: "Our team is trained to respond quickly in case of emergencies, with systems in place to ensure resident safety and peace of mind."
     }
   ];
 

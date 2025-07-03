@@ -92,28 +92,17 @@ const Hero = () => {
           >
             <motion.div className="space-y-6" variants={itemVariants}>
               <motion.h1 
-                className="text-5xl lg:text-6xl font-bold text-stone-200 leading-tight font-serif relative"
+                className="text-5xl lg:text-6xl font-bold leading-tight font-serif relative"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, type: "spring" }}
               >
-
-                A Place Where Care
-                <motion.span 
-                  className="text-emerald-400 block relative"
-                  animate={{ 
-                    backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
-                  }}
-                  transition={{ duration: 5, repeat: Infinity }}
-                  style={{
-                    backgroundImage: "linear-gradient(90deg, #10b981, #14b8a6, #10b981)",
-                    backgroundSize: "200% 100%",
-                    WebkitBackgroundClip: "text",
-                    backgroundClip: "text",
-                  }}
-                >
-                  Feels Like Family.
-                </motion.span>
+                <span className="bg-gradient-to-r from-emerald-400 via-teal-400 to-emerald-400 bg-clip-text text-transparent block">
+                  A Home of Comfort,
+                </span>
+                <span className="bg-gradient-to-r from-emerald-400 via-teal-400 to-emerald-400 bg-clip-text text-transparent block">
+                  A Heart of Care.
+                </span>
               </motion.h1>
               <p className="text-xl text-stone-300 leading-relaxed max-w-lg mx-auto lg:mx-0">
                 Find peace of mind knowing your loved one is in a safe, nurturing home where they are treated with dignity, respect, and the personalized attention they deserve.

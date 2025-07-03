@@ -31,18 +31,18 @@ const DietaryPage = () => {
   const features = [
     {
       icon: Leaf,
-      title: "Fresh & Seasonal Ingredients",
-      description: "We prioritize locally sourced, seasonal ingredients to create meals that are fresh, flavorful, and nutritious."
+      title: "Fresh & Quality Ingredients",
+      description: "We prioritize high-quality, seasonal ingredients to create meals that are fresh, flavorful, and nutritious."
     },
     {
       icon: Fish,
       title: "Specialized Diet Accommodation",
-      description: "Our registered dietitians and chefs work together to cater to all needs, including low-sodium, diabetic, and heart-healthy diets."
+      description: "Our registered dietitians and chefs work together to cater to all dietary needs, including low-sodium, diabetic, heart-healthy, and pureed or soft-texture diets."
     },
     {
       icon: Utensils,
-      title: "Restaurant-Style Dining",
-      description: "Residents enjoy a social dining experience in our beautiful dining hall, with table service and a choice of daily specials."
+      title: "Balanced & Wholesome Meals",
+      description: "Every meal is thoughtfully planned to provide a complete nutritional profile, balancing lean proteins, complex carbohydrates, and healthy fats, along with essential vitamins and fiber."
     }
   ];
 
@@ -100,7 +100,7 @@ const DietaryPage = () => {
               We believe that great food is a cornerstone of a great life. Our dining program is centered around creating delicious, nutritionally balanced meals that our residents look forward to every day. It's about more than just sustenance; it's about creating joyful, social experiences around the dinner table.
             </p>
             <p className="text-lg text-gray-600 leading-relaxed">
-              Our on-site culinary team, guided by a registered dietitian, crafts menus that are both healthy and appealing, always ready to accommodate the personal tastes and dietary needs of each individual resident.
+              Our team members, guided by a registered dietitian, crafts menus that are both healthy and appealing, always ready to accommodate the personal tastes and dietary needs of each individual resident.
             </p>
           </motion.div>
         </div>
@@ -124,10 +124,10 @@ const DietaryPage = () => {
         {/* CTA Section */}
         <div className="mt-24 bg-white rounded-2xl shadow-lg border border-gray-100 p-8 lg:p-12 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            See How We Care Through Food
+            Caring Through Every Meal
           </h2>
           <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            Discover how our culinary team creates nutritious, delicious meals specifically designed for our elderly residents. Learn about our meal preparation process and how we ensure every resident receives the nutrition they need.
+            Our residents enjoy meals that are both nutritious and comforting, thoughtfully tailored to their individual dietary needs.
           </p>
           <Link to="/schedule-a-tour">
             <motion.button

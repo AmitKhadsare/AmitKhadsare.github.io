@@ -10,9 +10,11 @@ interface ContactCardProps {
   subContent?: string;
   href: string;
   delay?: number;
+  target?: string;
+  rel?: string;
 }
 
-const ContactCard: React.FC<ContactCardProps> = ({ icon: Icon, title, content, subContent, href, delay = 0 }) => (
+const ContactCard: React.FC<ContactCardProps> = ({ icon: Icon, title, content, subContent, href, delay = 0, target, rel }) => (
   <motion.a
     href={href}
     className="group block p-6 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md hover:border-emerald-200 transition-all duration-300"
@@ -21,6 +23,8 @@ const ContactCard: React.FC<ContactCardProps> = ({ icon: Icon, title, content, s
     viewport={{ once: true }}
     transition={{ delay, duration: 0.5 }}
     whileHover={{ y: -2 }}
+    target={target}
+    rel={rel}
   >
     <div className="flex items-start gap-4">
       <div className="flex-shrink-0">
@@ -63,10 +67,11 @@ const SimplifiedContact: React.FC = () => {
           <ContactCard
             icon={Phone}
             title="Call Us"
-            content="(555) 123-4567"
-            subContent="Available 24/7"
-            href="tel:555-123-4567"
+            content="(201) 885-9225, (301) 500-0809"
+            href="tel:201-885-9225"
             delay={0.1}
+            target="_blank"
+            rel="noopener noreferrer"
           />
           
           <ContactCard
@@ -81,10 +86,12 @@ const SimplifiedContact: React.FC = () => {
           <ContactCard
             icon={MapPin}
             title="Visit Us"
-            content="123 Care Street"
-            subContent="Columbia, SC 29201"
-            href="https://maps.google.com"
+            content="10610 Hickory Point Lane, Columbia, MD 21044"
+            subContent="Columbia, MD 21044"
+            href="https://www.google.com/maps/search/?api=1&query=10610+Hickory+Point+Lane,+Columbia,+MD+21044"
             delay={0.3}
+            target="_blank"
+            rel="noopener noreferrer"
           />
         </div>
 

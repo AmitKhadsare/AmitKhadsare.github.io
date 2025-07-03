@@ -2,8 +2,9 @@ import { Link } from 'react-router-dom';
 import { motion, Variants } from 'framer-motion';
 import { ArrowLeft, Stethoscope, ShieldCheck, HeartHandshake, Sparkles } from 'lucide-react';
 
+// Founder and hero images
 const bhargavPhoto = 'https://images.pexels.com/photos/5452293/pexels-photo-5452293.jpeg';
-// Removed sheetalPhoto as it's no longer needed
+const sheetalPhoto = 'https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2';
 const carePhoto = 'https://images.pexels.com/photos/7551623/pexels-photo-7551623.jpeg?auto=compress&cs=tinysrgb&w=1260';
 
 const AboutUsPage = () => {
@@ -24,7 +25,7 @@ const AboutUsPage = () => {
 
   return (
     <div className="bg-stone-50 text-stone-700">
-      {/* Hero Section (Unchanged) */}
+      {/* Hero Section */}
       <motion.section 
         className="relative py-32 bg-gradient-to-br from-emerald-50 via-stone-50 to-emerald-100"
         initial="hidden"
@@ -46,35 +47,54 @@ const AboutUsPage = () => {
         </div>
       </motion.section>
 
-      {/* Founders Section */}
+      {/* Meet Our Founders Section */}
       <motion.section 
         className="py-24 px-4"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
+        viewport={{ once: true, amount: 0.1 }}
         variants={{ visible: { transition: { staggerChildren: 0.3 } } }}
       >
         <div className="max-w-6xl mx-auto">
-          <motion.h2 variants={fadeIn} className="text-4xl font-bold text-center text-stone-800 font-serif mb-16">
-            Meet Our Founder
+          <motion.h2 variants={fadeIn} className="text-4xl font-bold text-center text-stone-800 font-serif mb-20">
+            Meet Our Founders
           </motion.h2>
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <motion.div variants={fadeIn}>
-              <img src={bhargavPhoto} alt="Bhargav Patel" className="rounded-2xl shadow-xl w-full object-cover aspect-[4/5]" />
-              <h3 className="font-serif text-2xl text-stone-800 font-bold mt-6">Bhargav Patel</h3>
-              <p className="text-emerald-700 font-semibold">Founder & Licensed Physical Therapist</p>
+          
+          <div className="space-y-24">
+            {/* Bhargav's Story */}
+            <motion.div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center" variants={fadeIn}>
+              <div>
+                <img src={bhargavPhoto} alt="Bhargav Patel" className="rounded-2xl shadow-xl w-full object-cover aspect-[4/5]" />
+              </div>
+              <div className="space-y-4">
+                <h3 className="font-serif text-3xl text-stone-800 font-bold">Bhargav Patel, PT, DPT</h3>
+                <p className="text-emerald-700 font-semibold text-lg">Founder</p>
+                <p className="text-lg leading-relaxed">
+                  The vision for Columbia Care Home began with Bhargav Patel. As a licensed Doctor of Physical Therapy and the founder of At Home Rehab, Bhargav spent years dedicated to helping patients recover their mobility and independence.
+                </p>
+                <p className="text-lg leading-relaxed">
+                  It was through this direct experience that he identified a profound need in senior living: a place where proactive, expert-led therapy wasn't just an option, but the very core of the care philosophy. He was the driving force behind creating a home built on the principle that preserving movement is essential to preserving dignity.
+                </p>
+              </div>
             </motion.div>
-            <motion.div variants={fadeIn} className="space-y-4 text-lg leading-relaxed">
-              {/* --- TEXT UPDATED TO INCLUDE SHEETAL --- */}
-              <p>
-                At the heart of our vision is Bhargav Patel, a licensed Physical Therapist and founder of At Home Rehabilitation. Witnessing the remarkable healing journeys of his patients, he was inspired to create a new kind of senior living experience.
-              </p>
-              <p>
-                Joined by his wife, Sheetal, who shares his deep sense of purpose and is also a licensed Physical Therapist, they established Columbia Care Home. Together, they lead with a philosophy that every resident deserves to feel safe, valued, and cared for like family.
-              </p>
+
+            {/* Sheetal's Story */}
+            <motion.div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center" variants={fadeIn}>
+              <div className="md:order-last">
+                <img src={sheetalPhoto} alt="Sheetal Khadsare" className="rounded-2xl shadow-xl w-full object-cover aspect-[4/5]" />
+              </div>
+              <div className="space-y-4">
+                 <h3 className="font-serif text-3xl text-stone-800 font-bold">Sheetal Khadsare, DPT</h3>
+                <p className="text-teal-700 font-semibold text-lg">Co-Founder</p>
+                <p className="text-lg leading-relaxed">
+                  Joining Bhargav in his mission, Sheetal Khadsare was instrumental in bringing the vision of Columbia Care Home to life. As a fellow Doctor of Physical Therapy, she shares his clinical expertise but brings a unique focus on creating a true community.
+                </p>
+                <p className="text-lg leading-relaxed">
+                  Sheetal is the heart of the home's warm, family-like atmosphere. She ensures that the high standard of clinical care is delivered with the compassion, respect, and personal attention that makes residents feel genuinely cared for.
+                </p>
+              </div>
             </motion.div>
           </div>
-          {/* --- ENTIRE SECTION FOR SHEETAL HAS BEEN REMOVED --- */}
         </div>
       </motion.section>
 
@@ -132,7 +152,7 @@ const AboutUsPage = () => {
             <motion.div variants={timelineItem} className="relative pl-12 pb-12">
               <div className="absolute left-0 top-1.5 w-8 h-8 bg-white border-4 border-emerald-500 rounded-full"></div>
               <h4 className="font-serif text-2xl font-bold text-emerald-700">A Vision for Rehabilitation</h4>
-              <p className="mt-2">Bhargav Patel founds At Home Rehabilitation, dedicating his career to helping patients regain strength and independence through physical therapy.</p>
+              <p className="mt-2">Bhargav Patel founds At Home Rehab, dedicating his career to helping patients regain strength and independence through physical therapy.</p>
             </motion.div>
             <motion.div variants={timelineItem} className="relative pl-12 pb-12">
               <div className="absolute left-0 top-1.5 w-8 h-8 bg-white border-4 border-emerald-500 rounded-full"></div>
@@ -142,7 +162,7 @@ const AboutUsPage = () => {
             <motion.div variants={timelineItem} className="relative pl-12">
               <div className="absolute left-0 top-1.5 w-8 h-8 bg-white border-4 border-emerald-500 rounded-full"></div>
               <h4 className="font-serif text-2xl font-bold text-emerald-700">Columbia Care Home is Born</h4>
-              <p className="mt-2">Joined by his wife, Sheetal, the vision expands. They establish Columbia Care Home to provide a safe, family-like environment backed by professional physical therapy expertise.</p>
+              <p className="mt-2">Bhargav and Sheetal unite their clinical expertise and passion for community, establishing Columbia Care Home to provide a safe, family-like environment backed by professional therapy expertise.</p>
             </motion.div>
           </div>
         </div>

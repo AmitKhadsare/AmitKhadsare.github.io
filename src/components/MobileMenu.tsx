@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
-import { X, Phone, Calendar, Home, ArrowLeft, ChevronRight } from 'lucide-react';
+import { X, Phone, Calendar, Home, ArrowLeft, ChevronRight, BookOpen } from 'lucide-react';
 import { menuData } from '../data/navigationData';
 import logo from '../assets/logo.avif';
 
@@ -138,7 +138,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
               </AnimatePresence>
             </div>
             <div className="flex-shrink-0 p-4 space-y-3 border-t border-gray-200 bg-gray-50">
-              <a href="tel:555-123-4567" className="w-full flex items-center justify-center gap-2 py-3 px-4 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 font-semibold"><Phone className="w-5 h-5" /> Call Now</a>
+              <a href="tel:201-885-9225" className="inline-flex items-center gap-2 px-4 py-3 rounded-lg bg-emerald-600 text-white shadow-lg hover:bg-emerald-700 font-semibold"><Phone className="w-5 h-5" /> Call Now: (201) 885-9225, (301) 500-0809</a>
               <Link to="/schedule-a-tour" onClick={onClose} className="w-full flex items-center justify-center gap-2 py-3 px-4 bg-white text-gray-800 rounded-lg hover:bg-gray-100 border border-gray-300 font-semibold"><Calendar className="w-5 h-5" /> Schedule a Tour</Link>
             </div>
           </motion.div>

@@ -67,9 +67,9 @@ const Footer = () => {
   ];
 
   const contactInfo = [
-    { icon: <Phone size={16} />, text: '(555) 123-4567' },
+    { icon: <Phone size={16} />, text: '(201) 885-9225, (301) 500-0809' },
     { icon: <Mail size={16} />, text: 'info@columbiacarehome.com' },
-    { icon: <MapPin size={16} />, text: '123 Care Street, Columbia, SC 29201' },
+    { icon: <MapPin size={16} />, text: '10610 Hickory Point Lane, Columbia, MD 21044' },
   ];
 
   const socialLinks = [

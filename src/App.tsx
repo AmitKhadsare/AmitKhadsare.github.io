@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -28,11 +28,13 @@ import PersonalAssistancePage from './components/PersonalAssistancePage';
 import DietaryPage from './components/DietaryPage';
 
 function App() {
+  const location = useLocation();
+  const isProposal = location.pathname === '/proposal';
   return (
-    <BrowserRouter>
+    <>
       <ScrollToTop />
       <div className="min-h-screen">
-        <Header />
+        {!isProposal && <Header />}
         <Routes>
           <Route path="/" element={
             <>
@@ -72,10 +74,10 @@ function App() {
           <Route path="/personal-assistance" element={<PersonalAssistancePage />} />
           <Route path="/dietary" element={<DietaryPage />} />
         </Routes>
-        <Footer />
-        <MobileSocialBar />
+        {!isProposal && <Footer />}
+        {!isProposal && <MobileSocialBar />}
       </div>
-    </BrowserRouter>
+    </>
   );
 }
 

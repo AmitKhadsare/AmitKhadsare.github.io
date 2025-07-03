@@ -95,7 +95,7 @@ const PersonalAssistancePage = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <h2 className="text-3xl font-bold text-gray-900 font-serif">Care that Honors a Lifetime</h2>
+            <h2 className="text-3xl font-bold text-gray-900 font-serif">Compassionate Personal Care</h2>
             <p className="text-lg text-gray-600 leading-relaxed">
               We understand that asking for help with personal activities can be difficult. Our approach to personal assistance is founded on respect for each resident's life story, privacy, and independence.
             </p>

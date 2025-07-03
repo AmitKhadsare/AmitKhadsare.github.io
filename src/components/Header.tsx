@@ -39,8 +39,8 @@ const Header = () => {
       {/* Top Bar and Desktop Nav... (no changes here) */}
       <div className="bg-gradient-to-r from-slate-900 via-emerald-900 to-teal-900 text-white py-3 px-4">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center md:justify-between gap-4 text-sm">
-          <a href="tel:555-123-4567" className="flex items-center space-x-2 hover:text-emerald-300"><Phone size={14} /><span>Call us: (555) 123-4567</span></a>
-          <a href="https://www.google.com/maps/search/?api=1&query=123+Care+Street,+Columbia,+SC+29201" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-center md:text-left hover:text-emerald-300"><MapPin size={14} /><span>Visit us: 123 Care Street, Columbia, SC 29201</span></a>
+          <a href="tel:201-885-9225" className="flex items-center space-x-2 hover:text-emerald-300"><Phone size={14} /><span>Call us: (201) 885-9225, (301) 500-0809</span></a>
+          <a href="https://www.google.com/maps/search/?api=1&query=10610+Hickory+Point+Lane,+Columbia,+MD+21044" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-center md:text-left hover:text-emerald-300"><MapPin size={14} /><span>Visit us: 10610 Hickory Point Lane, Columbia, MD 21044</span></a>
         </div>
       </div>
       <header className="sticky top-0 z-40 bg-white border-b border-stone-200">

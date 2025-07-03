@@ -32,12 +32,12 @@ const ResidentialCarePage = () => {
     {
       icon: BedDouble,
       title: "Personalized Rooms",
-      description: "Residents are encouraged to bring their own furniture and decor to make their space feel like their own."
+      description: "Each room is thoughtfully arranged to meet the unique needs of the resident, with options for layout, comfort features, and accessibility adjustments based on individual care requirements."
     },
     {
       icon: ShieldCheck,
       title: "Safe & Secure",
-      description: "Our facility is equipped with 24/7 security, emergency call systems, and safety features in all rooms and hallways."
+      description: "We prioritize resident safety with thoughtful features throughout the facility, including secure access, trained staff on-site 24/7, and emergency support available when needed."
     },
     {
       icon: Armchair,
@@ -95,7 +95,7 @@ const ResidentialCarePage = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <h2 className="text-3xl font-bold text-gray-900 font-serif">More Than a Residence, It's a Home</h2>
+            <h2 className="text-3xl font-bold text-gray-900 font-serif">More than a care home - A place to belong</h2>
             <p className="text-lg text-gray-600 leading-relaxed">
               We believe a senior living facility should feel less like a facility and more like a home. Our residential care services are built around this core principle. We provide a clean, secure, and beautifully maintained environment where residents feel comfortable, safe, and part of a true community.
             </p>
