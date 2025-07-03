@@ -175,10 +175,10 @@ const ScheduleTourPage = () => {
             >
               <h3 className="text-xl font-bold text-emerald-900 mb-2">Can't Wait?</h3>
               <p className="text-emerald-800 mb-4">Feel free to call us directly for immediate questions.</p>
-              <a href="tel:555-123-4567" className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-700 transition-colors">
-                <Phone className="w-5 h-5" />
-                Call Us Now
-              </a>
+              <div className="flex flex-col items-center gap-2">
+                <a href="tel:201-885-9225" className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-700 transition-colors">(201) 885-9225</a>
+                <a href="tel:301-500-0809" className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-700 transition-colors">(301) 500-0809</a>
+              </div>
             </motion.div>
           </div>
         </div>

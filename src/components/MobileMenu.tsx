@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
-import { X, Phone, Calendar, Home, ArrowLeft, ChevronRight, BookOpen } from 'lucide-react';
+import { X, Phone, Calendar, Home, ArrowLeft, ChevronRight } from 'lucide-react';
 import { menuData } from '../data/navigationData';
 import logo from '../assets/logo.avif';
 
@@ -12,7 +12,7 @@ interface MobileMenuProps {
 }
 
 const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
-  const [activeSubMenu, setActiveSubMenu] = useState<keyof typeof menuData | null>(null);
+  const [activeSubMenu, setActiveSubMenu] = useState<keyof typeof menuData | 'call' | null>(null);
 
   useEffect(() => {
     if (!isOpen) {
@@ -20,8 +20,8 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
     }
   }, [isOpen]);
 
-  const activeSubMenuData = activeSubMenu ? menuData[activeSubMenu] : null;
-  const activeSubMenuTitle = activeSubMenu ? menuData[activeSubMenu].title : '';
+  const activeSubMenuData = activeSubMenu && activeSubMenu !== 'call' ? menuData[activeSubMenu] : null;
+  const activeSubMenuTitle = activeSubMenu && activeSubMenu !== 'call' ? menuData[activeSubMenu].title : activeSubMenu === 'call' ? 'Call Now' : '';
 
   // --- REFINED ANIMATIONS ---
   const panelVariants: Variants = {
@@ -135,11 +135,27 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                      </nav>
                    </motion.div>
                 )}
+                {activeSubMenu === 'call' && (
+                  <motion.div key="call" className="absolute w-full h-full flex flex-col" variants={subMenuVariants} initial="enter" animate="enter" exit="exit">
+                    <div className="flex-shrink-0 p-2 border-b border-gray-200">
+                      <button onClick={() => setActiveSubMenu(null)} className="flex items-center gap-2 p-2 w-full font-semibold text-emerald-700 hover:bg-gray-100 rounded-lg">
+                        <ArrowLeft className="w-5 h-5" />
+                        Call Now
+                      </button>
+                    </div>
+                    <nav className="flex-1 overflow-y-auto p-4">
+                      <a href="tel:201-885-9225" className="block w-full mb-4 px-4 py-4 rounded-lg bg-emerald-600 text-white font-semibold text-lg text-center shadow hover:bg-emerald-700 transition-colors">(201) 885-9225</a>
+                      <a href="tel:301-500-0809" className="block w-full px-4 py-4 rounded-lg bg-emerald-600 text-white font-semibold text-lg text-center shadow hover:bg-emerald-700 transition-colors">(301) 500-0809</a>
+                    </nav>
+                  </motion.div>
+                )}
               </AnimatePresence>
             </div>
-            <div className="flex-shrink-0 p-4 space-y-3 border-t border-gray-200 bg-gray-50">
-              <a href="tel:201-885-9225" className="inline-flex items-center gap-2 px-4 py-3 rounded-lg bg-emerald-600 text-white shadow-lg hover:bg-emerald-700 font-semibold"><Phone className="w-5 h-5" /> Call Now: (201) 885-9225, (301) 500-0809</a>
-              <Link to="/schedule-a-tour" onClick={onClose} className="w-full flex items-center justify-center gap-2 py-3 px-4 bg-white text-gray-800 rounded-lg hover:bg-gray-100 border border-gray-300 font-semibold"><Calendar className="w-5 h-5" /> Schedule a Tour</Link>
+            <div className="flex-shrink-0 p-4 border-t border-gray-200 bg-gray-50">
+              <div className="flex flex-col items-center space-y-3">
+                <button onClick={() => setActiveSubMenu('call')} className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-emerald-600 text-white shadow-lg hover:bg-emerald-700 font-semibold"><Phone className="w-5 h-5" /> Call Now</button>
+                <Link to="/schedule-a-tour" onClick={onClose} className="flex items-center justify-center gap-2 py-3 px-6 bg-white text-gray-800 rounded-lg hover:bg-gray-100 border border-gray-300 font-semibold"><Calendar className="w-5 h-5" /> Schedule a Tour</Link>
+              </div>
             </div>
           </motion.div>
         </>

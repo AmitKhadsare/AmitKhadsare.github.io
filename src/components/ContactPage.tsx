@@ -134,7 +134,10 @@ const ContactPage: React.FC = () => {
           <div className="lg:col-span-1 space-y-6">
             {/* Primary Contact */}
             <InfoCard icon={Phone} title="Call Us">
-              <p className="font-semibold text-emerald-700">(201) 885-9225, (301) 500-0809</p>
+              <div className="flex flex-col gap-1">
+                <a href="tel:201-885-9225" className="text-emerald-700 font-semibold hover:underline">(201) 885-9225</a>
+                <a href="tel:301-500-0809" className="text-emerald-700 font-semibold hover:underline">(301) 500-0809</a>
+              </div>
               <p className="text-sm">Office hours: Mon-Fri 8AM-6PM</p>
             </InfoCard>
 
@@ -371,10 +374,10 @@ const ContactPage: React.FC = () => {
               <p className="text-red-700 mb-3">
                 For urgent matters concerning current residents, our emergency support team is available around the clock.
               </p>
-              <a href="tel:555-123-4567" className="inline-flex items-center gap-2 text-red-600 font-semibold hover:text-red-700">
-                <Phone className="w-4 h-4" />
-                Call Emergency Line: (555) 123-4567
-              </a>
+              <div className="flex gap-4 mt-2">
+                <a href="tel:201-885-9225" className="inline-flex items-center gap-2 text-red-600 font-semibold hover:text-red-700">(201) 885-9225</a>
+                <a href="tel:301-500-0809" className="inline-flex items-center gap-2 text-red-600 font-semibold hover:text-red-700">(301) 500-0809</a>
+              </div>
             </div>
           </div>
         </div>

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import { ChevronDown, Users, Clock, Utensils, Heart, Calendar } from 'lucide-react';
 
 interface FAQItem {
@@ -144,18 +143,10 @@ const UpdatedFAQSection = () => {
           <p className="text-gray-600 mb-6">
             Browse our complete FAQ or speak directly with our care team.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/faq">
-              <button className="px-6 py-3 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-700 transition-colors">
-                View All FAQs
-              </button>
-            </Link>
-            <a 
-              href="tel:555-123-4567" 
-              className="px-6 py-3 bg-white text-emerald-600 border-2 border-emerald-600 rounded-lg font-semibold hover:bg-emerald-50 transition-colors"
-            >
-              Call (555) 123-4567
-            </a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-4">
+            <span className="font-semibold text-gray-800">Call Us:</span>
+            <a href="tel:201-885-9225" className="px-6 py-3 bg-white text-emerald-600 border-2 border-emerald-600 rounded-lg font-semibold hover:bg-emerald-50 transition-colors">(201) 885-9225</a>
+            <a href="tel:301-500-0809" className="px-6 py-3 bg-white text-emerald-600 border-2 border-emerald-600 rounded-lg font-semibold hover:bg-emerald-50 transition-colors">(301) 500-0809</a>
           </div>
         </motion.div>
       </div>

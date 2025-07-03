@@ -2,9 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
-  Search, ChevronDown, ArrowLeft, Phone, Mail,
-  Users, DollarSign, Utensils, Heart,
-  Shield, Activity
+  ArrowLeft, ChevronDown, Search, Users, Shield, DollarSign, Utensils, Heart, Activity
 } from 'lucide-react';
 
 interface FAQ {
@@ -356,20 +354,8 @@ const FAQPage = () => {
             Our caring team is here to help. Contact us directly for personalized answers to your specific questions.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <a
-              href="tel:555-123-4567"
-              className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-700 transition-colors"
-            >
-              <Phone className="w-5 h-5" />
-              Call (555) 123-4567
-            </a>
-            <a
-              href="mailto:info@columbiacarehome.com"
-              className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-white text-emerald-700 rounded-lg font-semibold border-2 border-emerald-600 hover:bg-emerald-50 transition-colors"
-            >
-              <Mail className="w-5 h-5" />
-              Email Us
-            </a>
+            <a href="tel:201-885-9225" className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-700 transition-colors">(201) 885-9225</a>
+            <a href="tel:301-500-0809" className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-700 transition-colors">(301) 500-0809</a>
           </div>
         </motion.div>
       </div>
