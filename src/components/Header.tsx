@@ -37,16 +37,20 @@ const Header = () => {
   return (
     <>
       {/* Top Bar and Desktop Nav... (no changes here) */}
-      <div className="bg-gradient-to-r from-slate-900 via-emerald-900 to-teal-900 text-white py-3 px-4">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center md:justify-between gap-4 text-sm">
-          <span className="flex items-center space-x-2">
+      <div className="bg-gradient-to-r from-slate-900 via-emerald-900 to-teal-900 text-white py-3 px-2 sm:px-4">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center md:justify-between gap-2 sm:gap-4 text-xs sm:text-sm md:text-base text-center">
+          <span className="flex items-center space-x-1 sm:space-x-2 truncate w-full md:w-auto justify-center">
             <Phone size={14} />
             <span>Call us:</span>
-            <a href="tel:201-885-9225" className="hover:text-emerald-300 ml-1">(201) 885-9225</a>
+            <a href="tel:201-885-9225" className="hover:text-emerald-300 ml-1 whitespace-nowrap">(201) 885-9225</a>
             <span className="mx-1">|</span>
-            <a href="tel:301-500-0809" className="hover:text-emerald-300">(301) 500-0809</a>
+            <a href="tel:301-500-0809" className="hover:text-emerald-300 whitespace-nowrap">(301) 500-0809</a>
           </span>
-          <a href="https://www.google.com/maps/search/?api=1&query=10610+Hickory+Point+Lane,+Columbia,+MD+21044" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-center md:text-left hover:text-emerald-300"><MapPin size={14} /><span>Visit us: 10610 Hickory Point Lane, Columbia, MD 21044</span></a>
+          <a href="https://www.google.com/maps/search/?api=1&query=10610+Hickory+Point+Lane,+Columbia,+MD+21044" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-1 sm:space-x-2 text-center md:text-left hover:text-emerald-300 truncate w-full md:w-auto justify-center">
+            <MapPin size={14} />
+            <span className="hidden sm:inline">Visit us:</span>
+            <span className="truncate">10610 Hickory Point Lane, Columbia, MD 21044</span>
+          </a>
         </div>
       </div>
       <header className="sticky top-0 z-40 bg-white border-b border-stone-200">
