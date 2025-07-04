@@ -6,39 +6,39 @@ const CareHomeCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
-  // Carousel data with Pexels images
+  // Carousel data with optimized Pexels images
   const slides = [
     {
       id: 1,
-      image: 'https://images.pexels.com/photos/3768131/pexels-photo-3768131.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      image: 'https://images.pexels.com/photos/6933776/pexels-photo-6933776.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1',
       title: 'Elegant Living Spaces',
       description: 'Our thoughtfully designed rooms offer a perfect blend of comfort and sophistication, with plenty of natural light and personalized touches.',
       badge: 'Premium Care'
     },
     {
       id: 2,
-      image: 'https://images.pexels.com/photos/7551442/pexels-photo-7551442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      image: 'https://images.pexels.com/photos/7551442/pexels-photo-7551442.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1',
       title: 'Dedicated Care Team',
       description: 'Our highly trained caregivers provide round-the-clock support with warmth and professionalism, ensuring personalized attention.',
       badge: '24/7 Support'
     },
     {
       id: 3,
-      image: 'https://images.pexels.com/photos/3768146/pexels-photo-3768146.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      image: 'https://images.pexels.com/photos/8436479/pexels-photo-8436479.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1',
       title: 'Enriching Activities',
       description: 'From morning yoga to afternoon tea socials, our diverse activity program promotes wellness and meaningful connections.',
       badge: 'Active Living'
     },
     {
       id: 4,
-      image: 'https://images.pexels.com/photos/1906437/pexels-photo-1906437.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      image: 'https://images.pexels.com/photos/59321/pexels-photo-59321.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1',
       title: 'Beautiful Gardens',
       description: 'Our meticulously maintained gardens provide peaceful outdoor spaces for gentle walks and quiet reflection.',
       badge: 'Serene Environment'
     },
     {
       id: 5,
-      image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1',
       title: 'Exceptional Cuisine',
       description: 'Our executive chef prepares nutritious, restaurant-quality meals using fresh, seasonal ingredients.',
       badge: 'Gourmet Dining'

@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight, Utensils, Leaf, Fish } from 'lucide-react';
-import nourishingImage from '../assets/Nourishing_Body_Soul.avif';
+const nourishingImage = 'https://images.pexels.com/photos/793759/pexels-photo-793759.jpeg';
 
 interface FeatureCardProps {
   icon: React.ComponentType<{ className?: string }>;
