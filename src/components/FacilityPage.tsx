@@ -13,7 +13,6 @@ const facilitySections = [
     photos: [
       { caption: "Bright and airy private suite" },
       { caption: "Space for personal keepsakes and furniture" },
-      { caption: "Accessible, private bathroom" },
     ]
   },
   {
@@ -22,7 +21,7 @@ const facilitySections = [
     icon: Sofa,
     photos: [
       { caption: "Community dining hall during lunch" },
-      { caption: "Cozy living room with fireplace" },
+      { caption: "Cozy living room" },
       { caption: "Activity and game room" },
     ]
   },
@@ -32,7 +31,7 @@ const facilitySections = [
     icon: Sun,
     photos: [
       { caption: "Secure walking paths and garden" },
-      { caption: "Covered patio with comfortable seating" },
+      { caption: "Patio with comfortable seating" },
       { caption: "Resident gardening area" },
     ]
   },

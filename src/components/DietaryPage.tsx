@@ -37,7 +37,7 @@ const DietaryPage = () => {
     {
       icon: Fish,
       title: "Specialized Diet Accommodation",
-      description: "Our registered dietitians and chefs work together to cater to all dietary needs, including low-sodium, diabetic, heart-healthy, and pureed or soft-texture diets."
+      description: "Our team prepares meals that are approved by licensed dietitians and thoughtfully planned to meet a variety of dietary needs, including low-sodium, diabetic, heart-healthy, and pureed or soft-texture diets."
     },
     {
       icon: Utensils,

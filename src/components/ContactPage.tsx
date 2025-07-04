@@ -92,7 +92,7 @@ const ContactPage: React.FC = () => {
   const faqs = [
     {
       question: "How do I schedule a tour of your facility?",
-      answer: "You can schedule a tour by calling us at (555) 123-4567 or using our online scheduling form. Tours are available Monday through Saturday from 9 AM to 5 PM. We recommend scheduling at least 24 hours in advance."
+      answer: "You can schedule a tour by calling us at (201) 885-9225 or (301) 500-0809, or using our online scheduling form. Tours are available Monday through Saturday from 9 AM to 5 PM. We recommend scheduling at least 24 hours in advance."
     },
     {
       question: "What should I bring when visiting for the first time?",
@@ -316,7 +316,7 @@ const ContactPage: React.FC = () => {
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Find Us</h2>
           <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.7297664550936!2d-81.03577!3d34.00071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDAwJzAyLjYiTiA4McKwMDInMDguOCJX!5e0!3m2!1sen!2sus!4v1234567890"
+              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=10610+Hickory+Point+Lane,+Columbia,+MD+21044"
               width="100%"
               height="400"
               style={{ border: 0 }}

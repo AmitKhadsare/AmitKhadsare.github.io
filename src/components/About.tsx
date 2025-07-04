@@ -20,7 +20,8 @@ const About = () => (
               ✨ Our Mission
             </span>
             <h2 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-emerald-700 via-teal-700 to-stone-800 bg-clip-text text-transparent leading-tight font-serif mb-6">
-              A Home Filled with Heart & Joy
+              Guided by Purpose,<br />
+              Grounded in Care
             </h2>
             <p className="text-lg lg:text-xl text-gray-700 leading-relaxed font-medium">
               Columbia Care Home was founded with a{' '}
@@ -51,12 +52,12 @@ const About = () => (
         >
           <div>
             <h3 className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent font-serif mb-4">
-              Our Inspiring Story
+              Our Story
             </h3>
             <p className="text-base lg:text-lg text-gray-700 leading-relaxed">
               At the heart of this vision are{' '}
-              <span className="font-bold text-emerald-700">Dr. Bhargav Patel</span> and{' '}
-              <span className="font-bold text-teal-700">Dr. Sheetal Patel</span>, 
+              <span className="font-bold text-emerald-700">Bhargav Patel</span> and{' '}
+              <span className="font-bold text-teal-700">Sheetal Khadsare</span>, 
               both qualified physiotherapists who bring medical expertise and boundless compassion 
               to create a space where residents thrive like family.
             </p>
@@ -106,8 +107,9 @@ const About = () => (
             <span className="inline-block px-4 py-2 bg-gradient-to-r from-emerald-600 to-teal-700 text-white rounded-full text-sm font-semibold mb-4">
               ✨ Our Mission
             </span>
-            <h2 className="text-5xl lg:text-6xl font-bold bg-gradient-to-r from-emerald-700 via-teal-700 to-stone-800 bg-clip-text text-transparent leading-tight font-serif mb-6">
-              A Home Filled with Heart & Joy
+            <h2 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-emerald-700 via-teal-700 to-stone-800 bg-clip-text text-transparent leading-tight font-serif mb-6">
+              Guided by Purpose,<br />
+              Grounded in Care
             </h2>
             <p className="text-xl text-gray-700 leading-relaxed font-medium">
               Columbia Care Home was founded with a{' '}
@@ -119,12 +121,12 @@ const About = () => (
           </div>
           <div>
             <h3 className="text-4xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent font-serif mb-4">
-              Our Inspiring Story
+              Our Story
             </h3>
             <p className="text-lg text-gray-700 leading-relaxed">
               At the heart of this vision are{' '}
-              <span className="font-bold text-emerald-700">Dr. Bhargav Patel</span> and{' '}
-              <span className="font-bold text-teal-700">Dr. Sheetal Patel</span>, 
+              <span className="font-bold text-emerald-700">Bhargav Patel</span> and{' '}
+              <span className="font-bold text-teal-700">Sheetal Khadsare</span>, 
               both qualified physiotherapists who bring medical expertise and boundless compassion 
               to create a space where residents thrive like family.
             </p>
