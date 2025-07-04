@@ -20,7 +20,7 @@ const About = () => (
               ✨ Our Mission
             </span>
             <h2 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-emerald-700 via-teal-700 to-stone-800 bg-clip-text text-transparent leading-tight font-serif mb-6">
-              Guided by Purpose,<br />
+              <span className="whitespace-nowrap">Guided by Purpose,</span><br />
               Grounded in Care
             </h2>
             <p className="text-lg lg:text-xl text-gray-700 leading-relaxed font-medium">
