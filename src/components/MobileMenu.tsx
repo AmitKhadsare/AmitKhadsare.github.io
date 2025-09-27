@@ -62,7 +62,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                 <img
                   src={logo}
                   alt="Columbia Care Home"
-                  className="h-16 sm:h-20 md:h-24 w-auto max-w-[90%] object-contain"
+                  className="h-12 sm:h-14 md:h-16 lg:h-18 w-auto max-w-[180px] sm:max-w-[220px] md:max-w-[260px] object-contain"
                 />
               </HashLink>
               <button onClick={onClose} className="p-2 rounded-full hover:bg-gray-100 transition-colors"><X className="w-6 h-6 text-gray-600" /></button>

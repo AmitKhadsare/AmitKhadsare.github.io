@@ -54,9 +54,13 @@ const Header = () => {
         </div>
       </div>
       <header className="sticky top-0 z-40 bg-white border-b border-stone-200">
-        <div className="max-w-7xl mx-auto flex items-center justify-between h-24 lg:h-28 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto flex items-center justify-between h-20 sm:h-22 md:h-24 lg:h-28 px-4 sm:px-6 lg:px-8">
           <Link to="/" className="flex-shrink-0">
-            <img src={logo} alt="Columbia Care Home Logo" className="h-20 lg:h-24 w-auto" />
+            <img 
+              src={logo} 
+              alt="Columbia Care Home Logo" 
+              className="h-16 sm:h-18 md:h-20 lg:h-24 w-auto max-w-[200px] sm:max-w-[250px] md:max-w-[300px] lg:max-w-none object-contain" 
+            />
           </Link>
           <nav className="hidden lg:flex items-center space-x-8 h-full">
             <HashLink to="/#home" className="text-base font-semibold text-gray-700 hover:text-emerald-700 transition-colors">Home</HashLink>
