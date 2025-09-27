@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import { X, Phone, Calendar, Home, ArrowLeft, ChevronRight } from 'lucide-react';
 import { menuData } from '../data/navigationData';
-import logo from '../assets/logo/cch-landscape.svg';
+import logo from '../assets/cch-landscape.svg';
 
 interface MobileMenuProps {
   isOpen: boolean;

@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import { Phone, MapPin, Menu as MenuIcon, ChevronDown } from 'lucide-react';
-import logo from '../assets/logo/cch-landscape.svg';
+import logo from '../assets/cch-landscape.svg';
 import MobileMenu from './MobileMenu';
 import MegaMenu from './MegaMenu';
 import { menuData } from '../data/navigationData';
