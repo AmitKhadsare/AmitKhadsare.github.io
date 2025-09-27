@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import { Phone, MapPin, Menu as MenuIcon, ChevronDown } from 'lucide-react';
-import logo from '../assets/logo.avif';
+import logo from '../assets/logo/cch-landscape.svg';
 import MobileMenu from './MobileMenu';
 import MegaMenu from './MegaMenu';
 import { menuData } from '../data/navigationData';
@@ -37,7 +37,7 @@ const Header = () => {
   return (
     <>
       {/* Top Bar and Desktop Nav... (no changes here) */}
-      <div className="bg-gradient-to-r from-slate-900 via-emerald-900 to-teal-900 text-white py-3 px-2 sm:px-4">
+      <div className="bg-gradient-to-r from-slate-900 via-emerald-900 to-teal-900 text-white py-2 px-2 sm:px-4">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center md:justify-between gap-2 sm:gap-4 text-xs sm:text-sm md:text-base text-center">
           <span className="flex items-center space-x-1 sm:space-x-2 truncate w-full md:w-auto justify-center">
             <Phone size={14} />
@@ -54,7 +54,7 @@ const Header = () => {
         </div>
       </div>
       <header className="sticky top-0 z-40 bg-white border-b border-stone-200">
-        <div className="max-w-7xl mx-auto flex items-center justify-between h-20 lg:h-24 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto flex items-center justify-between h-24 lg:h-28 px-4 sm:px-6 lg:px-8">
           <Link to="/" className="flex-shrink-0">
             <img src={logo} alt="Columbia Care Home Logo" className="h-20 lg:h-24 w-auto" />
           </Link>
