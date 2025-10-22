@@ -1,8 +1,10 @@
+// src/components/Hero.tsx
 import { motion, Variants } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+// Link is no longer needed for the main button, but might be used elsewhere
+// import { Link } from 'react-router-dom'; 
+import { Video } from 'lucide-react'; // Changed ArrowRight to Video for the button icon
 import { Heart, Shield, Users } from 'lucide-react';
-import carehomeImage from '../assets/carehome.avif';
+import carehomeImage from '../assets/carehome.avif'; // Ensure this path is correct
 
 const Hero = () => {
   const containerVariants: Variants = {
@@ -23,7 +25,7 @@ const Hero = () => {
       icon: Shield, 
       title: "Licensed", 
       subtitle: "State Certified",
-      detail: "Fully licensed by South Carolina DHEC",
+      detail: "Fully licensed by Maryland Department of Health", // Updated detail
       iconBg: "bg-emerald-900/80",
       iconFill: "text-emerald-400 fill-emerald-400/50"
     },
@@ -53,30 +55,21 @@ const Hero = () => {
       animate="visible"
       variants={containerVariants}
     >
-      {/* Animated Floating Background Elements - Reduced for desktop */}
+      {/* Animated Floating Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
           className="absolute top-1/4 right-1/4 w-64 h-64 bg-emerald-500 rounded-full filter blur-3xl opacity-10 lg:opacity-5"
-          animate={{ 
-            x: [0, 50, 0],
-            y: [0, -30, 0],
-          }}
+          animate={{ x: [0, 50, 0], y: [0, -30, 0] }}
           transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div
           className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-teal-500 rounded-full filter blur-3xl opacity-10 lg:opacity-5"
-          animate={{ 
-            x: [0, -30, 0],
-            y: [0, 50, 0],
-          }}
+          animate={{ x: [0, -30, 0], y: [0, 50, 0] }}
           transition={{ duration: 25, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div
           className="absolute top-1/2 left-1/2 w-80 h-80 bg-emerald-600 rounded-full filter blur-3xl opacity-5 lg:hidden"
-          animate={{ 
-            scale: [1, 1.2, 1],
-            rotate: [0, 180, 360],
-          }}
+          animate={{ scale: [1, 1.2, 1], rotate: [0, 180, 360] }}
           transition={{ duration: 30, repeat: Infinity, ease: "easeInOut" }}
         />
       </div>
@@ -85,7 +78,7 @@ const Hero = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
-          {/* Enhanced Content Section */}
+          {/* Content Section */}
           <motion.div
             className="flex-1 space-y-8 order-2 lg:order-1"
             variants={containerVariants}
@@ -109,10 +102,10 @@ const Hero = () => {
               </p>
             </motion.div>
 
-            {/* Enhanced CTA with Hover Effects */}
+            {/* --- UPDATED CTA BUTTON --- */}
             <motion.div className="flex justify-center lg:justify-start" variants={itemVariants}>
-              <Link to="/schedule-a-tour">
-                <motion.button 
+              <a href="https://my.matterport.com/show?play=1&lang=en-US&m=Ek5iHJBymGt" target="_blank" rel="noopener noreferrer">
+                <motion.button
                   className="group relative bg-emerald-600 text-white px-10 py-5 rounded-full font-semibold text-lg shadow-2xl overflow-hidden"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -124,18 +117,18 @@ const Hero = () => {
                     whileHover={{ x: 0 }}
                     transition={{ duration: 0.3 }}
                   />
-                  
+
                   {/* Button content */}
                   <span className="relative z-10 flex items-center gap-2">
-                    Schedule a Tour Today
+                    Take the 3D Virtual Tour {/* <-- Text Changed */}
                     <motion.div
                       animate={{ x: [0, 5, 0] }}
                       transition={{ duration: 1.5, repeat: Infinity }}
                     >
-                      <ArrowRight className="w-5 h-5" />
+                      <Video className="w-5 h-5" /> {/* <-- Icon Changed */}
                     </motion.div>
                   </span>
-                  
+
                   {/* Shimmer effect */}
                   <motion.div
                     className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12"
@@ -144,10 +137,11 @@ const Hero = () => {
                     transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
                   />
                 </motion.button>
-              </Link>
+              </a>
             </motion.div>
+            {/* --- END UPDATED CTA BUTTON --- */}
 
-            {/* Enhanced Interactive Trust Indicators - Simplified for desktop */}
+            {/* Trust Indicators */}
             <motion.div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-8" variants={itemVariants}>
               {trustIndicators.map((indicator, index) => (
                 <motion.div
@@ -157,7 +151,6 @@ const Hero = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.5 + index * 0.1 }}
                 >
-                  {/* Icon with heartbeat animation */}
                   <div 
                     className={`p-3 ${indicator.iconBg} rounded-full relative`}
                   >
@@ -177,7 +170,7 @@ const Hero = () => {
             </motion.div>
           </motion.div>
 
-          {/* Enhanced Image Section */}
+          {/* Image Section */}
           <motion.div className="flex-1 relative order-1 lg:order-2" variants={itemVariants}>
             <div className="relative z-10">
               <motion.div
@@ -190,35 +183,23 @@ const Hero = () => {
                   alt="A compassionate caregiver with a resident"
                   className="rounded-2xl shadow-2xl w-full h-auto max-h-[500px] object-cover"
                 />
-                
-                {/* Animated overlay gradient */}
                 <motion.div
                   className="absolute inset-0 bg-gradient-to-t from-emerald-900/20 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"
                 />
               </motion.div>
               
-              {/* Floating accent elements */}
               <motion.div 
                 className="absolute -top-6 -right-6 w-24 h-24 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-full opacity-20 blur-xl"
-                animate={{ 
-                  scale: [1, 1.2, 1],
-                  rotate: [0, 90, 0]
-                }}
+                animate={{ scale: [1, 1.2, 1], rotate: [0, 90, 0] }}
                 transition={{ duration: 8, repeat: Infinity }}
               />
               <motion.div 
                 className="absolute -bottom-6 -left-6 w-32 h-32 bg-gradient-to-br from-teal-400 to-emerald-500 rounded-full opacity-15 blur-xl"
-                animate={{ 
-                  scale: [1.2, 1, 1.2],
-                  rotate: [0, -90, 0]
-                }}
+                animate={{ scale: [1.2, 1, 1.2], rotate: [0, -90, 0] }}
                 transition={{ duration: 10, repeat: Infinity }}
               />
-              
-
             </div>
             
-            {/* Background decorative shapes with animation */}
             <motion.div 
               className="absolute inset-0 bg-gradient-to-br from-emerald-500 to-slate-500 rounded-2xl transform rotate-3 scale-105 opacity-20"
               animate={{ rotate: [3, 6, 3] }}

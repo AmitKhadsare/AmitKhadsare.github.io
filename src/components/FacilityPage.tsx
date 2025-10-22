@@ -415,6 +415,7 @@ const FacilityPage = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [selectedImage, setSelectedImage] = useState<{ categoryIndex: number, photoIndex: number } | null>(null);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const galleryContentRef = useRef<HTMLDivElement>(null);
   const [touchStart, setTouchStart] = useState(0);
   const [touchEnd, setTouchEnd] = useState(0);
 
@@ -446,6 +447,20 @@ const FacilityPage = () => {
       const buttons = scrollContainerRef.current.querySelectorAll('button');
       buttons[index]?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
     }
+    // Scroll to gallery content section
+    setTimeout(() => {
+      if (galleryContentRef.current) {
+        const isMobile = window.innerWidth < 1024;
+        const navHeight = isMobile ? 180 : 200; // Account for header + tab nav
+        const elementPosition = galleryContentRef.current.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - navHeight;
+        
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    }, 100);
   };
 
   // Swipe detection for category navigation on mobile
@@ -502,17 +517,17 @@ const FacilityPage = () => {
       </div>
 
       {/* Modern Mobile Navigation with Swipe Indicator */}
-      <div className="bg-white border-b border-gray-200 sticky top-0 z-30 shadow-sm">
+      <div className="bg-white border-b border-gray-200 sticky top-0 lg:top-[80px] z-40 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Desktop Tabs */}
-          <nav className="hidden lg:flex justify-center space-x-2 py-4" aria-label="Gallery sections">
+          <nav className="hidden lg:flex justify-center flex-wrap gap-2 py-4" aria-label="Gallery sections">
             {galleryData.map((category, index) => {
               const Icon = category.icon;
               return (
                 <button
                   key={category.name}
                   onClick={() => handleTabChange(index)}
-                  className={`flex items-center gap-2 px-6 py-3 rounded-lg font-medium text-sm transition-all ${activeTab === index
+                  className={`flex items-center gap-2 px-6 py-3 rounded-lg font-medium text-sm transition-all whitespace-nowrap ${activeTab === index
                     ? 'bg-emerald-600 text-white shadow-md'
                     : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900'
                     }`}
@@ -524,30 +539,30 @@ const FacilityPage = () => {
             })}
           </nav>
 
-          {/* Enhanced Mobile Navigation */}
+          {/* Enhanced Mobile Navigation - Compact Card Style */}
           <div className="lg:hidden py-3">
             <div
               ref={scrollContainerRef}
-              className="flex gap-3 overflow-x-auto pb-2 snap-x snap-mandatory scrollbar-hide"
+              className="flex gap-3 overflow-x-auto snap-x snap-mandatory scrollbar-hide -mx-4 px-4 pb-2"
               style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
             >
               {galleryData.map((category, index) => {
                 const Icon = category.icon;
-            return (
+                return (
                   <motion.button
                     key={category.name}
                     onClick={() => handleTabChange(index)}
-                    className={`flex-shrink-0 snap-center flex flex-col items-center justify-center gap-1.5 px-4 py-3 rounded-xl font-medium text-xs transition-all min-w-[90px] ${activeTab === index
-                        ? 'bg-gradient-to-br from-emerald-600 to-emerald-700 text-white shadow-lg scale-105'
+                    className={`flex-shrink-0 snap-start flex flex-col items-center justify-center gap-2 px-5 py-4 rounded-2xl font-medium text-xs transition-all min-w-[110px] ${activeTab === index
+                        ? 'bg-gradient-to-br from-emerald-600 to-emerald-700 text-white shadow-lg'
                         : 'bg-gray-100 text-gray-600 active:scale-95'
                       }`}
                     whileTap={{ scale: 0.95 }}
                   >
-                    <Icon className={`w-6 h-6 ${activeTab === index ? 'animate-bounce' : ''}`} />
-                    <span className="whitespace-nowrap">{category.name}</span>
+                    <Icon className={`w-7 h-7`} />
+                    <span className="whitespace-normal text-center leading-tight">{category.name}</span>
                     {activeTab === index && (
                       <motion.div
-                        className="w-6 h-1 bg-white rounded-full mt-0.5"
+                        className="w-8 h-0.5 bg-white rounded-full mt-1"
                         layoutId="activeTab"
                         transition={{ type: "spring", stiffness: 380, damping: 30 }}
                       />
@@ -557,7 +572,7 @@ const FacilityPage = () => {
               })}
             </div>
             {/* Swipe Indicator */}
-            <div className="flex justify-center items-center gap-2 mt-2 text-xs text-gray-400">
+            <div className="flex justify-center items-center gap-2 mt-2 pb-2 text-xs text-gray-400">
               <ChevronLeft className="w-3 h-3 animate-pulse" />
               <span>Swipe to browse</span>
               <ChevronRight className="w-3 h-3 animate-pulse" />
@@ -568,6 +583,7 @@ const FacilityPage = () => {
 
       {/* Gallery Content with Swipe Support */}
       <div
+        ref={galleryContentRef}
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-16"
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
@@ -602,8 +618,8 @@ const FacilityPage = () => {
                   <Camera className="w-4 h-4" />
                   {activeCategory.photos.length} photos
                 </span>
-                  </div>
-                </div>
+              </div>
+            </div>
 
             {/* Photo Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
@@ -629,41 +645,112 @@ const FacilityPage = () => {
                   }`}
                   aria-label={`Go to ${galleryData[index].name}`}
                 />
-                  ))}
-                </div>
-              </motion.div>
+              ))}
+            </div>
+          </motion.div>
         </AnimatePresence>
       </div>
 
-      {/* 3D Tour Section */}
-      <div className="bg-white py-12 md:py-16 border-t border-gray-200">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      {/* Virtual Tour Section - YouTube + 3D Tour */}
+      <div className="bg-gradient-to-br from-gray-50 to-emerald-50 py-12 md:py-20 border-t border-gray-200">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            className="text-center mb-8 md:mb-12"
           >
             <div className="inline-flex items-center justify-center w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-emerald-100 to-emerald-200 rounded-2xl mb-6">
               <Video className="w-7 h-7 md:w-8 md:h-8 text-emerald-600" />
             </div>
-            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 font-serif mb-3 md:mb-4">
-              Experience a Virtual 3D Tour
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 font-serif mb-3 md:mb-4">
+              Experience Our Home Virtually
             </h2>
-            <p className="text-sm md:text-lg text-gray-600 max-w-2xl mx-auto mb-6 md:mb-8 leading-relaxed px-4">
-              Walk through our facility from the comfort of your home
+            <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed px-4">
+              Take a complete tour from the comfort of your home
             </p>
-            <a href="https://my.matterport.com/show?play=1&lang=en-US&m=Ek5iHJBymGt" target="_blank" rel="noopener noreferrer">
-                <motion.button
-                    className="px-6 py-3 md:px-8 md:py-4 bg-gradient-to-r from-emerald-600 to-emerald-700 text-white rounded-full font-bold text-base md:text-lg shadow-lg hover:shadow-xl transition-all inline-flex items-center gap-2 md:gap-3"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                >
-                    <Video className="w-4 h-4 md:w-5 md:h-5" />
-                    Start Virtual Tour
-                </motion.button>
-            </a>
           </motion.div>
+
+          {/* Video Tour Card */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="mb-8 md:mb-12"
+          >
+            <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100">
+              <div className="p-4 md:p-6 bg-gradient-to-r from-emerald-600 to-teal-600">
+                <div className="flex items-center gap-3 text-white">
+                  <div className="bg-white/20 backdrop-blur-sm p-2 rounded-lg">
+                    <Video className="w-5 h-5 md:w-6 md:h-6" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg md:text-xl">Video Home Tour</h3>
+                    <p className="text-emerald-50 text-xs md:text-sm">Guided walkthrough of our facility</p>
+                  </div>
+                </div>
+              </div>
+              <div className="relative aspect-video bg-gray-900">
+                <iframe
+                  className="absolute inset-0 w-full h-full"
+                  src="https://www.youtube.com/embed/ZyAEwLR1lsE"
+                  title="Columbia Care Home Tour"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+              <div className="p-4 md:p-6 bg-gray-50">
+                <p className="text-sm md:text-base text-gray-600 text-center">
+                  Watch our comprehensive video tour showcasing every room, amenity, and the warm atmosphere of our home
+                </p>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* 3D Interactive Tour Card */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
+            <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 p-6 md:p-8">
+              <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8">
+                <div className="flex-shrink-0">
+                  <div className="w-20 h-20 md:w-24 md:h-24 bg-gradient-to-br from-teal-100 to-emerald-200 rounded-2xl flex items-center justify-center">
+                    <Camera className="w-10 h-10 md:w-12 md:h-12 text-emerald-600" />
+                  </div>
+                </div>
+                <div className="flex-1 text-center md:text-left">
+                  <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2 md:mb-3">
+                    Interactive 3D Tour
+                  </h3>
+                  <p className="text-sm md:text-base text-gray-600 mb-4 md:mb-6 leading-relaxed">
+                    Explore every corner at your own pace with our immersive 360° virtual tour. Walk through rooms, zoom in on details, and get a true feel for our home.
+                  </p>
+                  <a href="https://my.matterport.com/show?play=1&lang=en-US&m=Ek5iHJBymGt" target="_blank" rel="noopener noreferrer">
+                    <motion.button
+                      className="px-6 py-3 md:px-8 md:py-4 bg-gradient-to-r from-emerald-600 to-emerald-700 text-white rounded-full font-bold text-sm md:text-base shadow-lg hover:shadow-xl transition-all inline-flex items-center gap-2 md:gap-3"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <Camera className="w-4 h-4 md:w-5 md:h-5" />
+                      Launch 3D Tour
+                    </motion.button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Decorative Element */}
+          <div className="text-center mt-8 md:mt-12">
+            <p className="text-xs md:text-sm text-gray-500 italic">
+              Can't make it in person? These virtual tours give you a comprehensive view of our beautiful home
+            </p>
+          </div>
         </div>
       </div>
 
@@ -683,13 +770,13 @@ const FacilityPage = () => {
               Schedule a personalized tour and experience our home firsthand
             </p>
             <Link to="/schedule-a-tour">
-                <motion.button
-                    className="px-6 py-3 md:px-8 md:py-4 bg-white text-emerald-700 rounded-full font-bold text-base md:text-lg shadow-lg hover:bg-emerald-50 transition-colors"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                >
-                    Schedule Your Visit
-                </motion.button>
+              <motion.button
+                className="px-6 py-3 md:px-8 md:py-4 bg-white text-emerald-700 rounded-full font-bold text-base md:text-lg shadow-lg hover:bg-emerald-50 transition-colors"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Schedule Your Visit
+              </motion.button>
             </Link>
           </motion.div>
         </div>
@@ -716,4 +803,4 @@ const FacilityPage = () => {
   );
 };
 
-export default FacilityPage; 
+export default FacilityPage;
