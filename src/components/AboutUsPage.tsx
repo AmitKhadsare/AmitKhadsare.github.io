@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion, Variants } from 'framer-motion';
 import { ArrowLeft, Stethoscope, ShieldCheck, HeartHandshake, Sparkles } from 'lucide-react';
+import SEOHead from './SEOHead';
 
 // Founder and hero images
 const bhargavPhoto = 'https://images.pexels.com/photos/5452293/pexels-photo-5452293.jpeg';
@@ -25,6 +26,13 @@ const AboutUsPage = () => {
 
   return (
     <div className="bg-stone-50 text-stone-700">
+      <SEOHead
+        title="About Columbia Care Home - Our Story & Mission"
+        description="Learn about Columbia Care Home's mission to provide compassionate, professional care in a warm, home-like environment. Meet our founders and discover our commitment to senior care excellence."
+        keywords="about Columbia Care Home, senior care mission Maryland, care home founders, elder care philosophy, Columbia care home story"
+        image="https://www.columbiacarehome.com/assets/aboutus.avif"
+        url="https://www.columbiacarehome.com/about-us"
+      />
       {/* Hero Section */}
       <motion.section 
         className="relative py-32 bg-gradient-to-br from-emerald-50 via-stone-50 to-emerald-100"

@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, X, ChevronLeft, ChevronRight, Camera, Video, Home, Utensils, Bed, Users, Heart, Wind, MapPin } from 'lucide-react';
+import SEOHead from './SEOHead';
 
 // Hero background image
 import heroBgImage from '../assets/our-home-front-view.jpg';
@@ -489,6 +490,13 @@ const FacilityPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <SEOHead
+        title="Tour Our Beautiful Care Home Facility"
+        description="Explore our warm, safe, and welcoming care home in Columbia, Maryland. See our beautiful bedrooms, living areas, kitchen, and therapy facilities designed for comfort and care."
+        keywords="care home facility Columbia MD, assisted living facility Maryland, senior living facility Columbia, care home tour, residential care facility"
+        image="https://www.columbiacarehome.com/assets/our-home-front-view.jpg"
+        url="https://www.columbiacarehome.com/facility"
+      />
       {/* Hero Section with Background Image */}
       <div 
         className="relative text-white py-16 md:py-24 overflow-hidden bg-cover bg-center bg-no-repeat"

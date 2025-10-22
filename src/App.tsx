@@ -1,4 +1,5 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -26,18 +27,26 @@ import ResidentialCarePage from './components/ResidentialCarePage';
 import RecreationPage from './components/RecreationPage';
 import PersonalAssistancePage from './components/PersonalAssistancePage';
 import DietaryPage from './components/DietaryPage';
+import SEOHead from './components/SEOHead';
+import { localBusinessSchema } from './data/structuredData';
 
 function App() {
   const location = useLocation();
   const isProposal = location.pathname === '/proposal';
   return (
-    <>
+    <HelmetProvider>
       <ScrollToTop />
       <div className="min-h-screen">
         {!isProposal && <Header />}
         <Routes>
           <Route path="/" element={
             <>
+              <SEOHead
+                title="Columbia Care Home – Care that Feels Like Coming Home"
+                description="Columbia Care Home provides heartfelt, professional care in a warm, home-like environment. Discover senior care that truly feels like family in Columbia, Maryland."
+                keywords="assisted living Columbia MD, senior care Maryland, memory care Columbia, physical therapy Columbia, elder care Maryland, senior living Columbia"
+                structuredData={localBusinessSchema}
+              />
               <div id="home" className="scroll-mt-24">
                 <Hero />
               </div>
@@ -77,7 +86,7 @@ function App() {
         {!isProposal && <Footer />}
         {!isProposal && <MobileSocialBar />}
       </div>
-    </>
+    </HelmetProvider>
   );
 }
 

@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight, Heart, Home, Users, Shield, Utensils, Activity, Brain, Dumbbell, CheckCircle2 } from 'lucide-react';
+import SEOHead from './SEOHead';
 import dignifiedCareImage from '../assets/dignifiedpersonalassistance.avif';
 import comfortingHavenImage from '../assets/comforting_homelike_haven.avif';
 import nourishingImage from '../assets/Nourishing_Body_Soul.avif';
@@ -204,6 +205,13 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
 const AllServicesPage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
+      <SEOHead
+        title="Comprehensive Senior Care Services in Columbia, MD"
+        description="Discover our full range of senior care services including assisted living, memory care, physical therapy, and personal assistance. Professional care in a warm, home-like environment."
+        keywords="senior care services Columbia MD, assisted living services Maryland, memory care services, physical therapy Columbia, personal care services, senior living services"
+        image="https://www.columbiacarehome.com/assets/carehome.avif"
+        url="https://www.columbiacarehome.com/services"
+      />
       {/* Green Header with Stats */}
       <div className="bg-gradient-to-br from-emerald-600 to-teal-700 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
