@@ -543,7 +543,7 @@ const FacilityPage = () => {
           <div className="lg:hidden py-3">
             <div
               ref={scrollContainerRef}
-              className="flex gap-3 overflow-x-auto snap-x snap-mandatory scrollbar-hide -mx-4 px-4 pb-2"
+              className="flex gap-2.5 overflow-x-auto snap-x snap-mandatory scrollbar-hide -mx-4 px-4 pb-2"
               style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
             >
               {galleryData.map((category, index) => {
@@ -552,17 +552,17 @@ const FacilityPage = () => {
                   <motion.button
                     key={category.name}
                     onClick={() => handleTabChange(index)}
-                    className={`flex-shrink-0 snap-start flex flex-col items-center justify-center gap-2 px-5 py-4 rounded-2xl font-medium text-xs transition-all min-w-[110px] ${activeTab === index
+                    className={`flex-shrink-0 snap-start flex flex-col items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl font-medium text-[10px] transition-all min-w-[85px] ${activeTab === index
                         ? 'bg-gradient-to-br from-emerald-600 to-emerald-700 text-white shadow-lg'
                         : 'bg-gray-100 text-gray-600 active:scale-95'
                       }`}
                     whileTap={{ scale: 0.95 }}
                   >
-                    <Icon className={`w-7 h-7`} />
+                    <Icon className={`w-5 h-5`} />
                     <span className="whitespace-normal text-center leading-tight">{category.name}</span>
                     {activeTab === index && (
                       <motion.div
-                        className="w-8 h-0.5 bg-white rounded-full mt-1"
+                        className="w-6 h-0.5 bg-white rounded-full mt-0.5"
                         layoutId="activeTab"
                         transition={{ type: "spring", stiffness: 380, damping: 30 }}
                       />
@@ -572,7 +572,7 @@ const FacilityPage = () => {
               })}
             </div>
             {/* Swipe Indicator */}
-            <div className="flex justify-center items-center gap-2 mt-2 pb-2 text-xs text-gray-400">
+            <div className="flex justify-center items-center gap-2 mt-2 pb-1 text-xs text-gray-400">
               <ChevronLeft className="w-3 h-3 animate-pulse" />
               <span>Swipe to browse</span>
               <ChevronRight className="w-3 h-3 animate-pulse" />
