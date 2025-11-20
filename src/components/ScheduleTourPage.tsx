@@ -1,21 +1,20 @@
 import React, { useState } from 'react';
 import { motion, Variants } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowLeft, Calendar, Clock, User, Send, Mail, Phone, MessageSquare, CheckCircle2 
-} from 'lucide-react';
+import { ArrowLeft, Calendar, Clock, Mail, MessageSquare, Phone, Send, User, CheckCircle2 } from 'lucide-react';
+import SEOHead from './SEOHead';
 
 const ScheduleTourPage = () => {
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
     phone: '',
+    email: '',
     preferredDate: '',
     preferredTime: '',
     guestCount: '',
     message: ''
   });
-  
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -38,31 +37,33 @@ const ScheduleTourPage = () => {
 
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
-    visible: { 
+    visible: {
       opacity: 1,
-      transition: { staggerChildren: 0.1 } 
+      transition: { staggerChildren: 0.1 }
     },
   };
 
   const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
-      y: 0,
-      transition: { duration: 0.5, ease: "easeOut" }
-    },
+    visible: {
+      opacity: 1,
+      backgroundImage: `url('https://images.pexels.com/photos/768472/pexels-photo-768472.jpeg')`
+    }
   };
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <SEOHead
+        title="Schedule a Tour | Columbia Care Home"
+        description="Schedule a personal tour of Columbia Care Home. Experience our facilities, meet our team, and see why we are the best choice for your loved one."
+        keywords="schedule tour, nursing home tour, senior living visit, columbia care tour, facility tour"
+        url="/schedule-tour"
+      />
       {/* Hero Header */}
-      <div className="relative bg-gradient-to-br from-emerald-600 to-teal-700 text-white py-20 overflow-hidden">
-        {/* Background Image with opacity */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
-          style={{
-            backgroundImage: `url('https://images.pexels.com/photos/768472/pexels-photo-768472.jpeg')`
-          }}
+      <div className="relative bg-gray-900 py-20 overflow-hidden">
+        <div
+          className="absolute inset-0 opacity-40 bg-cover bg-center"
+          style={{ backgroundImage: "url('https://images.pexels.com/photos/768472/pexels-photo-768472.jpeg')" }}
         />
         {/* Green gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-emerald-600/70 to-teal-700/70" />
@@ -76,7 +77,7 @@ const ScheduleTourPage = () => {
               <ArrowLeft className="w-5 h-5" />
               Back to Home
             </Link>
-            <h1 className="text-4xl lg:text-5xl font-bold font-serif mb-4">
+            <h1 className="text-4xl lg:text-5xl font-bold font-serif mb-4 text-white">
               Schedule Your Personal Tour
             </h1>
             <p className="text-xl text-emerald-50 max-w-3xl mx-auto">
@@ -85,13 +86,13 @@ const ScheduleTourPage = () => {
           </motion.div>
         </div>
       </div>
-      
+
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
         <div className="grid lg:grid-cols-3 gap-12">
           {/* Left Column: Form */}
           <div className="lg:col-span-2">
-            <motion.div 
+            <motion.div
               className="bg-white rounded-2xl p-8 lg:p-12 shadow-xl border border-gray-100"
               initial="hidden"
               whileInView="visible"
@@ -99,7 +100,7 @@ const ScheduleTourPage = () => {
               variants={containerVariants}
             >
               {isSubmitted ? (
-                <motion.div 
+                <motion.div
                   className="flex flex-col items-center justify-center h-full text-center py-12"
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -124,7 +125,7 @@ const ScheduleTourPage = () => {
                     <label htmlFor="email" className="block text-sm font-medium text-stone-700 mb-2">Email Address *</label>
                     <div className="relative"><Mail className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-stone-400" /><input type="email" id="email" name="email" required value={formData.email} onChange={handleChange} className="w-full pl-10 pr-4 py-3 bg-stone-100 border border-stone-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-colors" placeholder="your.email@columbiacarehome.com" /></div>
                   </motion.div>
-                  
+
                   <div className="grid md:grid-cols-2 gap-6">
                     <motion.div variants={itemVariants}>
                       <label htmlFor="preferredDate" className="block text-sm font-medium text-stone-700 mb-2">Preferred Date *</label>
@@ -151,7 +152,7 @@ const ScheduleTourPage = () => {
 
           {/* Right Column: Info */}
           <div className="lg:col-span-1 space-y-8">
-            <motion.div 
+            <motion.div
               className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -166,7 +167,7 @@ const ScheduleTourPage = () => {
                 <li className="flex items-start gap-3"><CheckCircle2 className="w-5 h-5 text-emerald-600 mt-1 flex-shrink-0" /><span>A private consultation to discuss your family's specific needs and questions.</span></li>
               </ul>
             </motion.div>
-            <motion.div 
+            <motion.div
               className="bg-emerald-50 rounded-2xl p-8 text-center"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight, BrainCircuit, Lock, Puzzle } from 'lucide-react';
 import memoryCareImage from '../assets/mentalhealth.avif';
+import SEOHead from './SEOHead';
 
 interface FeatureCardProps {
   icon: React.ComponentType<{ className?: string }>;
@@ -48,6 +49,12 @@ const MemoryCarePage = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <SEOHead
+        title="Specialized Memory Care & Dementia Support | Columbia Care"
+        description="Secure and compassionate memory care environment for residents with Alzheimer's and dementia, focusing on safety, dignity, and cognitive support."
+        keywords="memory care, dementia care, alzheimers care, secure facility, cognitive support, senior safety"
+        url="/services/memory-care"
+      />
       {/* Hero Header */}
       <div className="bg-gradient-to-br from-emerald-600 to-teal-700 text-white py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -82,13 +89,13 @@ const MemoryCarePage = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <img 
-              src={memoryCareImage} 
-              alt="A caregiver providing supportive interaction for memory care" 
+            <img
+              loading="lazy" src={memoryCareImage}
+              alt="A caregiver providing supportive interaction for memory care"
               className="w-full h-full object-cover"
             />
           </motion.div>
-          <motion.div 
+          <motion.div
             className="space-y-6"
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}

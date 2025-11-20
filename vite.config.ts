@@ -12,6 +12,15 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom', 'react-router-dom', 'react-helmet-async'],
+          animations: ['framer-motion'],
+          ui: ['lucide-react'],
+        },
+      },
+    },
   },
   css: {
     postcss: {

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight, Bath, Pill, Shirt } from 'lucide-react';
 import dignifiedCareImage from '../assets/dignifiedpersonalassistance.avif';
+import SEOHead from './SEOHead';
 
 interface FeatureCardProps {
   icon: React.ComponentType<{ className?: string }>;
@@ -48,6 +49,12 @@ const PersonalAssistancePage = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <SEOHead
+        title="Personal Assistance & Daily Living Support | Columbia Care"
+        description="Dignified personal assistance with daily living activities, grooming, and medication management, tailored to individual needs."
+        keywords="personal assistance, daily living support, grooming, medication management, senior care, assisted living"
+        url="/services/personal-assistance"
+      />
       {/* Hero Header */}
       <div className="bg-gradient-to-br from-emerald-600 to-teal-700 text-white py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -82,13 +89,13 @@ const PersonalAssistancePage = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <img 
-              src={dignifiedCareImage} 
-              alt="Caregiver kindly assisting a resident with a blanket" 
+            <img
+              loading="lazy" src={dignifiedCareImage}
+              alt="Caregiver kindly assisting a resident with a blanket"
               className="w-full h-full object-cover"
             />
           </motion.div>
-          <motion.div 
+          <motion.div
             className="space-y-6"
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}

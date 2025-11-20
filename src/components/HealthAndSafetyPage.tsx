@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight, ShieldCheck, Siren, Stethoscope } from 'lucide-react';
 import proactiveHealthImage from '../assets/proactivehealthsafety.avif';
+import SEOHead from './SEOHead';
 
 interface FeatureCardProps {
   icon: React.ComponentType<{ className?: string }>;
@@ -48,6 +49,12 @@ const HealthAndSafetyPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <SEOHead
+        title="Health, Safety & Medical Oversight | Columbia Care"
+        description="Proactive health and safety measures including continuous monitoring, 24/7 support, and reliable emergency response for peace of mind."
+        keywords="senior health safety, medical oversight, 24/7 senior care, emergency response, elderly safety monitoring"
+        url="/services/health-safety"
+      />
       {/* Hero Header */}
       <div className="bg-gradient-to-br from-emerald-600 to-teal-700 text-white py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -82,13 +89,13 @@ const HealthAndSafetyPage = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <img 
-              src={proactiveHealthImage} 
-              alt="Nurse checking a resident's blood pressure" 
+            <img
+              loading="lazy" src={proactiveHealthImage}
+              alt="Nurse checking a resident's blood pressure"
               className="w-full h-full object-cover"
             />
           </motion.div>
-          <motion.div 
+          <motion.div
             className="space-y-6"
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}

@@ -1,10 +1,17 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import SEOHead from './SEOHead';
 import { ArrowLeft } from 'lucide-react';
 
 const TermsOfServicePage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
+      <SEOHead
+        title="Terms of Service | Columbia Care Home"
+        description="Review the Terms of Service for using the Columbia Care Home website and services."
+        keywords="terms of service, website terms, legal disclaimer, columbia care terms"
+        url="/terms-of-service"
+      />
       {/* Hero Section */}
       <div className="bg-gradient-to-br from-emerald-600 to-teal-700 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

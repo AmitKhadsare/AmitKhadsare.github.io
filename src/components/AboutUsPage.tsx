@@ -72,7 +72,7 @@ const AboutUsPage = () => {
             {/* Bhargav's Story */}
             <motion.div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center" variants={fadeIn}>
               <div>
-                <img src={bhargavPhoto} alt="Bhargav Patel" className="rounded-2xl shadow-xl w-full object-cover aspect-[4/5]" />
+                <img loading="lazy" src={bhargavPhoto} alt="Bhargav Patel" className="rounded-2xl shadow-xl w-full object-cover aspect-[4/5]" />
               </div>
               <div className="space-y-4">
                 <h3 className="font-serif text-3xl text-stone-800 font-bold">Bhargav Patel, PT, DPT</h3>
@@ -89,7 +89,7 @@ const AboutUsPage = () => {
             {/* Sheetal's Story */}
             <motion.div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center" variants={fadeIn}>
               <div className="md:order-last">
-                <img src={sheetalPhoto} alt="Sheetal Khadsare" className="rounded-2xl shadow-xl w-full object-cover aspect-[4/5]" />
+                <img loading="lazy" src={sheetalPhoto} alt="Sheetal Khadsare" className="rounded-2xl shadow-xl w-full object-cover aspect-[4/5]" />
               </div>
               <div className="space-y-4">
                  <h3 className="font-serif text-3xl text-stone-800 font-bold">Sheetal Khadsare, DPT</h3>

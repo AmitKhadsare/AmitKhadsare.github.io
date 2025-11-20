@@ -25,6 +25,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
+      <link rel="canonical" href={url} />
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
       <meta name="author" content="Columbia Care Home" />

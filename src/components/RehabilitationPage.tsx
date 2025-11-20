@@ -83,7 +83,7 @@ const RehabilitationPage = () => {
             transition={{ duration: 0.7 }}
           >
             <img 
-              src={physicalTherapyImage} 
+              loading="lazy" src={physicalTherapyImage} 
               alt="Therapist assisting a resident with exercises" 
               className="w-full h-full object-cover"
             />

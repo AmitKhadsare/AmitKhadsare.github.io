@@ -1,10 +1,17 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import SEOHead from './SEOHead';
 import { ArrowLeft } from 'lucide-react';
 
 const PrivacyPolicyPage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
+      <SEOHead
+        title="Privacy Policy | Columbia Care Home"
+        description="Read our Privacy Policy to understand how Columbia Care Home collects, uses, and protects your personal information."
+        keywords="privacy policy, data protection, senior care privacy, columbia care legal"
+        url="/privacy-policy"
+      />
       {/* Hero Section */}
       <div className="bg-gradient-to-br from-emerald-600 to-teal-700 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

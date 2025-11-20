@@ -1,34 +1,48 @@
+import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Users, Heart, Clock, ArrowLeft } from 'lucide-react';
-
-const benefitCards = [
-  {
-    icon: Heart,
-    title: "Rewarding Work",
-    description: "Make a meaningful difference every day in the lives of our residents and their families."
-  },
-  {
-    icon: Users,
-    title: "Supportive Environment",
-    description: "Join a close-knit team that values collaboration, respect, and mutual support."
-  },
-  {
-    icon: Clock,
-    title: "Professional Growth",
-    description: "We invest in our team with continuous training and opportunities for career advancement."
-  }
-];
+import { ArrowLeft, Heart, Star, Users, Clock } from 'lucide-react';
+import SEOHead from './SEOHead';
 
 const CareersPage = () => {
+  const benefitCards = [
+    {
+      icon: Heart,
+      title: "Comprehensive Benefits",
+      description: "We offer competitive health, dental, and vision insurance plans for our full-time employees."
+    },
+    {
+      icon: Star,
+      title: "Recognition Programs",
+      description: "We celebrate our staff's dedication through monthly awards and performance bonuses."
+    },
+    {
+      icon: Users,
+      title: "Supportive Environment",
+      description: "Join a close-knit team that values collaboration, respect, and mutual support."
+    },
+    {
+      icon: Clock,
+      title: "Professional Growth",
+      description: "We provide ongoing training and opportunities for career advancement within our organization."
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Header */}
-      <div className="bg-gradient-to-br from-emerald-600 to-teal-700 text-white py-16">
+      <SEOHead
+        title="Careers & Employment Opportunities | Columbia Care Home"
+        description="Join the Columbia Care Home team. We are looking for compassionate professionals dedicated to providing exceptional senior care. Explore current job openings."
+        keywords="careers, jobs, nursing jobs, caregiver jobs, senior care employment, columbia md jobs"
+        url="/careers"
+      />
+      {/* Hero Header */}
+      <div className="bg-gradient-to-br from-emerald-600 to-teal-700 text-white py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
             className="text-center"
           >
             <Link to="/" className="inline-flex items-center gap-2 text-emerald-100 hover:text-white mb-6">
@@ -46,7 +60,7 @@ const CareersPage = () => {
       {/* Main Content */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Why Work With Us Section */}
-        <motion.div 
+        <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -62,7 +76,7 @@ const CareersPage = () => {
           {benefitCards.map((card, index) => {
             const Icon = card.icon;
             return (
-              <motion.div 
+              <motion.div
                 key={card.title}
                 className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 text-center"
                 initial={{ opacity: 0, y: 20 }}
@@ -109,4 +123,4 @@ const CareersPage = () => {
   );
 };
 
-export default CareersPage; 
+export default CareersPage;

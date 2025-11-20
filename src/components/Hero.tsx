@@ -179,7 +179,7 @@ const Hero = () => {
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 <img
-                  src={carehomeImage}
+                  loading="lazy" src={carehomeImage}
                   alt="A compassionate caregiver with a resident"
                   className="rounded-2xl shadow-2xl w-full h-auto max-h-[500px] object-cover"
                 />

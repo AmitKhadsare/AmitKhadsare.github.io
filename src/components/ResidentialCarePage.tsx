@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight, BedDouble, ShieldCheck, Armchair } from 'lucide-react';
 import comfortingHavenImage from '../assets/comforting_homelike_haven.avif';
+import SEOHead from './SEOHead';
 
 interface FeatureCardProps {
   icon: React.ComponentType<{ className?: string }>;
@@ -48,6 +49,12 @@ const ResidentialCarePage = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <SEOHead
+        title="Residential Care & Senior Living | Columbia Care"
+        description="Comfortable and secure residential care services providing a homelike environment with 24/7 professional supervision and support."
+        keywords="residential care, senior living, elderly home, 24/7 care, retirement home, senior community"
+        url="/services/residential-care"
+      />
       {/* Hero Header */}
       <div className="bg-gradient-to-br from-emerald-600 to-teal-700 text-white py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -82,13 +89,13 @@ const ResidentialCarePage = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <img 
-              src={comfortingHavenImage} 
-              alt="A cozy and bright common area in the care home" 
+            <img
+              loading="lazy" src={comfortingHavenImage}
+              alt="A cozy and bright common area in the care home"
               className="w-full h-full object-cover"
             />
           </motion.div>
-          <motion.div 
+          <motion.div
             className="space-y-6"
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}

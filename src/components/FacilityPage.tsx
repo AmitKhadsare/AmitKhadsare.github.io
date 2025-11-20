@@ -153,14 +153,14 @@ const galleryData = [
     icon: Utensils,
     description: "Welcoming dining areas and our modern, fully-equipped kitchen",
     photos: [
-        { src: kitchen_main_view, label: "A full view of our modern and spacious kitchen." },
-        { src: kitchen_island_and_sink, label: "The central kitchen island and window-side sink area." },
-        { src: kitchen_sink_and_cooktop, label: "A closer look at the kitchen's modern cooktop and sink." },
-        { src: kitchen_appliances_and_island, label: "View of the stainless steel appliances and kitchen island." },
-        { src: kitchen_and_dining_area, label: "The open-plan kitchen flows seamlessly into the resident dining area." },
-        { src: kitchen_looking_towards_living_area, label: "View from the kitchen into the bright, open-concept dining and living space." },
-        { src: dining_area_looking_towards_living_room, label: "The resident dining area, adjacent to the living room and staircase." },
-        { src: main_hall_dining_area_and_deck_access, label: "The resident dining area with direct access to the outdoor deck." },
+      { src: kitchen_main_view, label: "A full view of our modern and spacious kitchen." },
+      { src: kitchen_island_and_sink, label: "The central kitchen island and window-side sink area." },
+      { src: kitchen_sink_and_cooktop, label: "A closer look at the kitchen's modern cooktop and sink." },
+      { src: kitchen_appliances_and_island, label: "View of the stainless steel appliances and kitchen island." },
+      { src: kitchen_and_dining_area, label: "The open-plan kitchen flows seamlessly into the resident dining area." },
+      { src: kitchen_looking_towards_living_area, label: "View from the kitchen into the bright, open-concept dining and living space." },
+      { src: dining_area_looking_towards_living_room, label: "The resident dining area, adjacent to the living room and staircase." },
+      { src: main_hall_dining_area_and_deck_access, label: "The resident dining area with direct access to the outdoor deck." },
     ]
   },
   {
@@ -333,7 +333,7 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({ photos, selectedIndex, on
             transition={{ duration: 0.3 }}
           >
             <img
-              src={currentPhoto.src}
+              loading="lazy" src={currentPhoto.src}
               alt={currentPhoto.label}
               className="w-full h-auto max-h-[70vh] object-contain rounded-lg shadow-2xl"
             />
@@ -392,8 +392,10 @@ const PhotoCard: React.FC<PhotoCardProps> = ({ photo, onClick }) => (
   >
     <div className="relative overflow-hidden">
       <img
-        src={photo.src}
+        loading="lazy" src={photo.src}
         alt={photo.label}
+        loading="lazy"
+        decoding="async"
         className="w-full h-48 md:h-56 lg:h-64 object-cover group-hover:scale-110 transition-transform duration-500"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -455,7 +457,7 @@ const FacilityPage = () => {
         const navHeight = isMobile ? 180 : 200; // Account for header + tab nav
         const elementPosition = galleryContentRef.current.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.pageYOffset - navHeight;
-        
+
         window.scrollTo({
           top: offsetPosition,
           behavior: 'smooth'
@@ -498,7 +500,7 @@ const FacilityPage = () => {
         url="https://www.columbiacarehome.com/facility"
       />
       {/* Hero Section with Background Image */}
-      <div 
+      <div
         className="relative text-white py-16 md:py-24 overflow-hidden bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroBgImage})` }}
       >
@@ -525,7 +527,7 @@ const FacilityPage = () => {
       </div>
 
       {/* Modern Mobile Navigation with Swipe Indicator */}
-      <div className="bg-white border-b border-gray-200 sticky top-0 lg:top-[80px] z-40 shadow-sm">
+      <div className="bg-white border-b border-gray-200 sticky top-16 sm:top-[72px] md:top-20 lg:top-24 xl:top-28 z-30 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Desktop Tabs */}
           <nav className="hidden lg:flex justify-center flex-wrap gap-2 py-4" aria-label="Gallery sections">
@@ -561,8 +563,8 @@ const FacilityPage = () => {
                     key={category.name}
                     onClick={() => handleTabChange(index)}
                     className={`flex-shrink-0 snap-start flex flex-col items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl font-medium text-[10px] transition-all min-w-[85px] ${activeTab === index
-                        ? 'bg-gradient-to-br from-emerald-600 to-emerald-700 text-white shadow-lg'
-                        : 'bg-gray-100 text-gray-600 active:scale-95'
+                      ? 'bg-gradient-to-br from-emerald-600 to-emerald-700 text-white shadow-lg'
+                      : 'bg-gray-100 text-gray-600 active:scale-95'
                       }`}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -646,11 +648,10 @@ const FacilityPage = () => {
                 <button
                   key={index}
                   onClick={() => handleTabChange(index)}
-                  className={`w-2 h-2 rounded-full transition-all ${
-                    activeTab === index 
-                      ? 'bg-emerald-600 w-8' 
-                      : 'bg-gray-300'
-                  }`}
+                  className={`w-2 h-2 rounded-full transition-all ${activeTab === index
+                    ? 'bg-emerald-600 w-8'
+                    : 'bg-gray-300'
+                    }`}
                   aria-label={`Go to ${galleryData[index].name}`}
                 />
               ))}

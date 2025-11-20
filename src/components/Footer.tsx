@@ -16,7 +16,7 @@ const FooterAccordionItem: React.FC<FooterAccordionItemProps> = ({ title, childr
     <div className="border-b border-gray-700">
       <button
         onClick={onToggle}
-        className="flex justify-between items-center w-full py-4 text-left text-white"
+        className="flex justify-between items-center w-full py-4 text-left text-white" aria-label="Toggle {title} section"
       >
         <h4 className="text-md font-semibold uppercase tracking-wider">{title}</h4>
         <motion.div
@@ -145,7 +145,7 @@ const Footer = () => {
                 href={social.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400"
+                className="text-gray-400" aria-label={social.name}
                 variants={iconHoverVariant}
                 whileHover="hover"
               >

@@ -12,6 +12,8 @@ import Article from './components/Article';
 import ScrollToTop from './components/ScrollToTop';
 import AboutUsPage from './components/AboutUsPage';
 import FaqPage from './components/FaqPage';
+import LoadingSpinner from './components/LoadingSpinner';
+import OrganizationSchema from './components/OrganizationSchema';
 import ScheduleTourPage from './components/ScheduleTourPage';
 import AllServicesPage from './components/AllServicesPage';
 import ContactPage from './components/ContactPage';
@@ -35,6 +37,7 @@ function App() {
   const isProposal = location.pathname === '/proposal';
   return (
     <HelmetProvider>
+      <OrganizationSchema />
       <ScrollToTop />
       <div className="min-h-screen">
         {!isProposal && <Header />}

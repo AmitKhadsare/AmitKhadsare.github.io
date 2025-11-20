@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight, Utensils, Leaf, Fish } from 'lucide-react';
 const nourishingImage = 'https://images.pexels.com/photos/793759/pexels-photo-793759.jpeg';
+import SEOHead from './SEOHead';
 
 interface FeatureCardProps {
   icon: React.ComponentType<{ className?: string }>;
@@ -48,6 +49,12 @@ const DietaryPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <SEOHead
+        title="Dietary Services & Nutrition | Columbia Care"
+        description="Delicious, dietitian-approved meals designed to support wellness and delight the senses. Specialized diet accommodation available."
+        keywords="dietary services, senior nutrition, elderly meal plans, healthy senior dining, dietitian approved meals"
+        url="/services/dietary"
+      />
       {/* Hero Header */}
       <div className="bg-gradient-to-br from-emerald-600 to-teal-700 text-white py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -82,13 +89,13 @@ const DietaryPage = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <img 
-              src={nourishingImage} 
-              alt="A delicious and healthy plate of food" 
+            <img
+              loading="lazy" src={nourishingImage}
+              alt="A delicious and healthy plate of food"
               className="w-full h-full object-cover"
             />
           </motion.div>
-          <motion.div 
+          <motion.div
             className="space-y-6"
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}

@@ -11,7 +11,7 @@ import { menuData } from '../data/navigationData';
 
 // Simplified CompactLogo component
 export const CompactLogo = () => (
-  <img src={logo} alt="Columbia Care Home" className="h-10 w-auto" />
+  <img src={logo} alt="Columbia Care Home" className="h-12 w-auto" />
 );
 
 const Header = () => {
@@ -72,7 +72,7 @@ const Header = () => {
             <img
               src={logo}
               alt="Columbia Care Home Logo"
-              className="h-10 sm:h-12 md:h-14 lg:h-16 xl:h-20 w-auto max-w-[140px] sm:max-w-[160px] md:max-w-[200px] lg:max-w-[240px] xl:max-w-[280px] object-contain"
+              className="h-12 sm:h-14 md:h-16 lg:h-20 xl:h-24 w-auto max-w-[200px] sm:max-w-[220px] md:max-w-[260px] lg:max-w-[300px] xl:max-w-[340px] object-contain"
             />
           </Link>
 
@@ -82,8 +82,8 @@ const Header = () => {
               to="/#home"
               // Special check for homepage (root path or hash link)
               className={location.pathname === '/' || location.hash === '#home'
-                  ? 'text-base font-semibold text-emerald-700 transition-colors'
-                  : 'text-base font-semibold text-gray-700 hover:text-emerald-700 transition-colors'
+                ? 'text-base font-semibold text-emerald-700 transition-colors'
+                : 'text-base font-semibold text-gray-700 hover:text-emerald-700 transition-colors'
               }
             >
               Home

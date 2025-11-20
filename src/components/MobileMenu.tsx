@@ -1,8 +1,9 @@
+
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
-import { X, Phone, Calendar, Home, ArrowLeft, ChevronRight } from 'lucide-react';
+import { X, Phone, Calendar, Home, ArrowLeft, ChevronRight, Building2, Video, BookOpen, Briefcase, Mail, Smile } from 'lucide-react';
 import { menuData } from '../data/navigationData';
 import logo from '../assets/logo1.svg';
 
@@ -62,12 +63,12 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                 <img
                   src={logo}
                   alt="Columbia Care Home"
-                  className="h-12 sm:h-14 w-auto max-w-[140px] sm:max-w-[160px] object-contain"
+                  className="h-12 sm:h-14 w-auto max-w-[200px] sm:max-w-[220px] object-contain"
                 />
               </HashLink>
-              <button onClick={onClose} className="p-2 rounded-full hover:bg-gray-100 transition-colors"><X className="w-6 h-6 text-gray-600" /></button>
+              <button onClick={onClose} className="p-2 rounded-full hover:bg-gray-100 transition-colors" aria-label="Close menu"><X className="w-6 h-6 text-gray-600" /></button>
             </div>
-            
+
             <div className="flex-1 overflow-hidden relative">
               <AnimatePresence initial={false}>
                 {!activeSubMenu && (
@@ -78,66 +79,128 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                           <div className="flex items-center gap-4"><Home className="w-6 h-6 text-emerald-700" /><span className="text-lg font-medium text-gray-800">Home</span></div>
                         </div>
                       </HashLink>
-                      {Object.keys(menuData).map((key) => {
-                        const item = menuData[key as keyof typeof menuData];
-                        const Icon = item.icon;
-                        return (
-                          <button key={item.title} onClick={() => setActiveSubMenu(key as keyof typeof menuData)} className="w-full text-left">
-                            <div className="flex items-center justify-between p-4 rounded-lg hover:bg-gray-100 transition-colors">
-                              <div className="flex items-center gap-4"><Icon className="w-6 h-6 text-emerald-700" /><span className="text-lg font-medium text-gray-800">{item.title}</span></div>
-                              <ChevronRight className="w-5 h-5 text-gray-400" />
-                            </div>
-                          </button>
-                        );
-                      })}
+
+                      {/* Added Facility Link */}
+                      <Link to="/facility" onClick={onClose} className="block w-full text-left">
+                        <div className="flex items-center justify-between p-4 rounded-lg hover:bg-gray-100 transition-colors">
+                          <div className="flex items-center gap-4">
+                            <Building2 className="w-6 h-6 text-emerald-700" />
+                            <span className="text-lg font-medium text-gray-800">Our Facility & Gallery</span>
+                          </div>
+                        </div>
+                      </Link>
+
+                      {/* Added 3D Tour Link */}
+                      <a href="https://my.matterport.com/show?play=1&lang=en-US&m=Ek5iHJBymGt" target="_blank" rel="noopener noreferrer" onClick={onClose} className="block w-full text-left">
+                        <div className="flex items-center justify-between p-4 rounded-lg hover:bg-gray-100 transition-colors">
+                          <div className="flex items-center gap-4">
+                            <Video className="w-6 h-6 text-emerald-700" />
+                            <span className="text-lg font-medium text-gray-800">3D Virtual Tour</span>
+                          </div>
+                          <span className="px-2 py-0.5 text-xs font-bold text-white bg-emerald-600 rounded-full">New</span>
+                        </div>
+                      </a>
+
+                      {/* Our Services (Drill-down) */}
+                      <button onClick={() => setActiveSubMenu('services')} className="w-full text-left">
+                        <div className="flex items-center justify-between p-4 rounded-lg hover:bg-gray-100 transition-colors">
+                          <div className="flex items-center gap-4">
+                            <menuData.services.icon className="w-6 h-6 text-emerald-700" />
+                            <span className="text-lg font-medium text-gray-800">{menuData.services.title}</span>
+                          </div>
+                          <ChevronRight className="w-5 h-5 text-gray-400" />
+                        </div>
+                      </button>
+
+                      {/* Our Story (Flattened from About Us) */}
+                      <Link to="/about-us" onClick={onClose} className="block w-full text-left">
+                        <div className="flex items-center justify-between p-4 rounded-lg hover:bg-gray-100 transition-colors">
+                          <div className="flex items-center gap-4">
+                            <BookOpen className="w-6 h-6 text-emerald-700" />
+                            <span className="text-lg font-medium text-gray-800">Our Story</span>
+                          </div>
+                        </div>
+                      </Link>
+
+                      {/* Careers (Flattened from About Us) */}
+                      <Link to="/careers" onClick={onClose} className="block w-full text-left">
+                        <div className="flex items-center justify-between p-4 rounded-lg hover:bg-gray-100 transition-colors">
+                          <div className="flex items-center gap-4">
+                            <Briefcase className="w-6 h-6 text-emerald-700" />
+                            <span className="text-lg font-medium text-gray-800">Careers</span>
+                          </div>
+                        </div>
+                      </Link>
+
+                      {/* Contact Us (Flattened from Connect) */}
+                      <Link to="/contact" onClick={onClose} className="block w-full text-left">
+                        <div className="flex items-center justify-between p-4 rounded-lg hover:bg-gray-100 transition-colors">
+                          <div className="flex items-center gap-4">
+                            <Mail className="w-6 h-6 text-emerald-700" />
+                            <span className="text-lg font-medium text-gray-800">Contact Us</span>
+                          </div>
+                        </div>
+                      </Link>
+
+
+
+                      {/* FAQ (Flattened from Connect) */}
+                      <Link to="/faq" onClick={onClose} className="block w-full text-left">
+                        <div className="flex items-center justify-between p-4 rounded-lg hover:bg-gray-100 transition-colors">
+                          <div className="flex items-center gap-4">
+                            <Smile className="w-6 h-6 text-emerald-700" />
+                            <span className="text-lg font-medium text-gray-800">FAQ</span>
+                          </div>
+                        </div>
+                      </Link>
                     </nav>
                   </motion.div>
                 )}
                 {activeSubMenu && activeSubMenuData && (
-                   <motion.div key={activeSubMenu} className="absolute w-full h-full flex flex-col" variants={subMenuVariants} initial="enter" animate="enter" exit="exit">
-                     <div className="flex-shrink-0 p-2 border-b border-gray-200">
-                       <button onClick={() => setActiveSubMenu(null)} className="flex items-center gap-2 p-2 w-full font-semibold text-emerald-700 hover:bg-gray-100 rounded-lg">
-                         <ArrowLeft className="w-5 h-5" />
-                         {activeSubMenuTitle}
-                       </button>
-                     </div>
-                     <nav className="flex-1 overflow-y-auto p-4">
-                       {'subMenu' in activeSubMenuData ? (
-                         (activeSubMenuData as any).subMenu.map((item: any) => {
-                           const Icon = item.icon;
-                           return (
-                             <Link key={item.name} to={item.path} onClick={onClose} className="block">
-                               <div className="flex items-center gap-4 p-4 rounded-lg hover:bg-gray-100 transition-colors">
-                                 <Icon className="w-6 h-6 text-emerald-700" />
-                                 <span className="text-lg font-medium text-gray-800">{item.name}</span>
-                               </div>
-                             </Link>
-                           );
-                         })
-                       ) : 'sections' in activeSubMenuData ? (
-                         (activeSubMenuData as any).sections.map((section: any) => (
-                           <div key={section.title} className="mb-6">
-                             <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3 px-4">{section.title}</h3>
-                             {section.links.map((link: any) => {
-                               const Icon = link.icon;
-                               const LinkComponent = link.path.includes('#') ? HashLink : Link;
-                               return (
-                                 <LinkComponent key={link.name} to={link.path} onClick={onClose} className="block">
-                                   <div className="flex items-center gap-4 p-4 rounded-lg hover:bg-gray-100 transition-colors">
-                                     <Icon className="w-6 h-6 text-emerald-700" />
-                                     <div>
-                                       <span className="text-lg font-medium text-gray-800">{link.name}</span>
-                                       <p className="text-sm text-gray-500">{link.description}</p>
-                                     </div>
-                                   </div>
-                                 </LinkComponent>
-                               );
-                             })}
-                           </div>
-                         ))
-                       ) : null}
-                     </nav>
-                   </motion.div>
+                  <motion.div key={activeSubMenu} className="absolute w-full h-full flex flex-col" variants={subMenuVariants} initial="enter" animate="enter" exit="exit">
+                    <div className="flex-shrink-0 p-2 border-b border-gray-200">
+                      <button onClick={() => setActiveSubMenu(null)} className="flex items-center gap-2 p-2 w-full font-semibold text-emerald-700 hover:bg-gray-100 rounded-lg">
+                        <ArrowLeft className="w-5 h-5" />
+                        {activeSubMenuTitle}
+                      </button>
+                    </div>
+                    <nav className="flex-1 overflow-y-auto p-4">
+                      {'subMenu' in activeSubMenuData ? (
+                        (activeSubMenuData as any).subMenu.map((item: any) => {
+                          const Icon = item.icon;
+                          return (
+                            <Link key={item.name} to={item.path} onClick={onClose} className="block">
+                              <div className="flex items-center gap-4 p-4 rounded-lg hover:bg-gray-100 transition-colors">
+                                <Icon className="w-6 h-6 text-emerald-700" />
+                                <span className="text-lg font-medium text-gray-800">{item.name}</span>
+                              </div>
+                            </Link>
+                          );
+                        })
+                      ) : 'sections' in activeSubMenuData ? (
+                        (activeSubMenuData as any).sections.map((section: any) => (
+                          <div key={section.title} className="mb-6">
+                            <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3 px-4">{section.title}</h3>
+                            {section.links.map((link: any) => {
+                              const Icon = link.icon;
+                              const LinkComponent = link.path.includes('#') ? HashLink : Link;
+                              return (
+                                <LinkComponent key={link.name} to={link.path} onClick={onClose} className="block">
+                                  <div className="flex items-center gap-4 p-4 rounded-lg hover:bg-gray-100 transition-colors">
+                                    <Icon className="w-6 h-6 text-emerald-700" />
+                                    <div>
+                                      <span className="text-lg font-medium text-gray-800">{link.name}</span>
+                                      <p className="text-sm text-gray-500">{link.description}</p>
+                                    </div>
+                                  </div>
+                                </LinkComponent>
+                              );
+                            })}
+                          </div>
+                        ))
+                      ) : null}
+                    </nav>
+                  </motion.div>
                 )}
                 {activeSubMenu === 'call' && (
                   <motion.div key="call" className="absolute w-full h-full flex flex-col" variants={subMenuVariants} initial="enter" animate="enter" exit="exit">

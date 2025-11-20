@@ -6,6 +6,7 @@ import {
   HeadphonesIcon
 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import SEOHead from './SEOHead';
 
 interface FAQItemProps {
   question: string;
@@ -110,6 +111,12 @@ const ContactPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <SEOHead
+        title="Contact Us | Columbia Care Home"
+        description="Get in touch with Columbia Care Home. Call us, email us, or schedule a visit. We are here to answer your questions about our senior care services."
+        keywords="contact columbia care, senior living contact, schedule tour, nursing home maryland, elderly care inquiry"
+        url="/contact"
+      />
       {/* Hero Section */}
       <div className="bg-gradient-to-br from-emerald-600 to-teal-700 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

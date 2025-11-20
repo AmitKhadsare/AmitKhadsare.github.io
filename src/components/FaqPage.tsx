@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
+import SEOHead from './SEOHead';
+import {
   ArrowLeft, ChevronDown, Search, Users, Shield, DollarSign, Utensils, Heart, Activity
 } from 'lucide-react';
 
@@ -171,7 +172,7 @@ const FAQPage = () => {
     }
     if (searchTerm) {
       return category.faqs.some(
-        faq => 
+        faq =>
           faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
           faq.answer.toLowerCase().includes(searchTerm.toLowerCase())
       );
@@ -179,8 +180,31 @@ const FAQPage = () => {
     return true;
   });
 
+  // Generate FAQPage structured data for SEO
+  const faqStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqCategories.flatMap(category =>
+      category.faqs.map(faq => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.answer
+        }
+      }))
+    )
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
+      <SEOHead
+        title="Frequently Asked Questions | Columbia Care"
+        description="Find answers to common questions about our senior care services, admission process, costs, and daily life at Columbia Care Home."
+        keywords="senior care faq, nursing home questions, assisted living answers, columbia care faq, elderly care information"
+        url="/faq"
+        structuredData={faqStructuredData}
+      />
       {/* Header */}
       <div className="bg-gradient-to-br from-emerald-600 to-teal-700 text-white py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -207,7 +231,7 @@ const FAQPage = () => {
 
       {/* Search and Filter */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8">
-        <motion.div 
+        <motion.div
           className="bg-white rounded-xl shadow-lg p-6"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -229,11 +253,10 @@ const FAQPage = () => {
           <div className="flex flex-wrap gap-2">
             <button
               onClick={() => setSelectedCategory('All')}
-              className={`px-4 py-2 rounded-full font-medium transition-colors ${
-                selectedCategory === 'All'
-                  ? 'bg-emerald-600 text-white'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-              }`}
+              className={`px-4 py-2 rounded-full font-medium transition-colors ${selectedCategory === 'All'
+                ? 'bg-emerald-600 text-white'
+                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                }`}
             >
               All Categories
             </button>
@@ -241,11 +264,10 @@ const FAQPage = () => {
               <button
                 key={category.name}
                 onClick={() => setSelectedCategory(category.name)}
-                className={`px-4 py-2 rounded-full font-medium transition-colors ${
-                  selectedCategory === category.name
-                    ? 'bg-emerald-600 text-white'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                }`}
+                className={`px-4 py-2 rounded-full font-medium transition-colors ${selectedCategory === category.name
+                  ? 'bg-emerald-600 text-white'
+                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  }`}
               >
                 {category.name}
               </button>
@@ -266,10 +288,10 @@ const FAQPage = () => {
               const Icon = category.icon;
               const filteredFAQs = searchTerm
                 ? category.faqs.filter(
-                    faq =>
-                      faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                      faq.answer.toLowerCase().includes(searchTerm.toLowerCase())
-                  )
+                  faq =>
+                    faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                    faq.answer.toLowerCase().includes(searchTerm.toLowerCase())
+                )
                 : category.faqs;
 
               if (filteredFAQs.length === 0) return null;
@@ -293,7 +315,7 @@ const FAQPage = () => {
                   <div className="space-y-3">
                     {filteredFAQs.map((faq, index) => {
                       const isOpen = openItems[`${category.name}-${index}`];
-                      
+
                       return (
                         <motion.div
                           key={index}
@@ -341,7 +363,7 @@ const FAQPage = () => {
         )}
 
         {/* Contact Section */}
-        <motion.div 
+        <motion.div
           className="mt-16 bg-emerald-50 rounded-2xl p-8 lg:p-12 text-center"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
