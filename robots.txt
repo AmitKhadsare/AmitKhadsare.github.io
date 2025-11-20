@@ -1,2 +1,7 @@
 User-agent: *
-Disallow: / 
+Allow: /
+
+# Sitemaps
+Sitemap: https://www.columbiacarehome.com/sitemap-index.xml
+Sitemap: https://www.columbiacarehome.com/sitemap.xml
+Sitemap: https://www.columbiacarehome.com/image-sitemap.xml
