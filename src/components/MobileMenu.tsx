@@ -90,16 +90,16 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                         </div>
                       </Link>
 
-                      {/* Added 3D Tour Link */}
-                      <a href="https://my.matterport.com/show?play=1&lang=en-US&m=Ek5iHJBymGt" target="_blank" rel="noopener noreferrer" onClick={onClose} className="block w-full text-left">
+                      {/* Added Virtual Tour Link */}
+                      <Link to="/virtual-tour" onClick={onClose} className="block w-full text-left">
                         <div className="flex items-center justify-between p-4 rounded-lg hover:bg-gray-100 transition-colors">
                           <div className="flex items-center gap-4">
                             <Video className="w-6 h-6 text-emerald-700" />
-                            <span className="text-lg font-medium text-gray-800">3D Virtual Tour</span>
+                            <span className="text-lg font-medium text-gray-800">Virtual Tour</span>
                           </div>
                           <span className="px-2 py-0.5 text-xs font-bold text-white bg-emerald-600 rounded-full">New</span>
                         </div>
-                      </a>
+                      </Link>
 
                       {/* Our Services (Drill-down) */}
                       <button onClick={() => setActiveSubMenu('services')} className="w-full text-left">

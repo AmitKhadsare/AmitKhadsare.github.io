@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion, Variants } from 'framer-motion';
-import { ArrowLeft, Stethoscope, ShieldCheck, HeartHandshake, Sparkles } from 'lucide-react';
+import { ArrowLeft, Stethoscope, ShieldCheck, HeartHandshake, Sparkles, Users } from 'lucide-react';
 import SEOHead from './SEOHead';
 import bhargavPhoto from '../assets/Bhargav_Patel.jpg';
 import sheetalPhoto from '../assets/Sheetal_Khadsare.jpeg';
@@ -30,7 +30,7 @@ const AboutUsPage = () => {
         title="About Columbia Care Home - Our Story & Mission"
         description="Learn about Columbia Care Home's mission to provide compassionate, professional care in a warm, home-like environment. Meet our founders and discover our commitment to senior care excellence."
         keywords="about Columbia Care Home, senior care mission Maryland, care home founders, elder care philosophy, Columbia care home story"
-        image="https://www.columbiacarehome.com/assets/aboutus.avif"
+        image="https://www.columbiacarehome.com/og-our-story.png"
         url="https://www.columbiacarehome.com/about-us"
       />
       {/* Hero Section */}
@@ -68,36 +68,82 @@ const AboutUsPage = () => {
             Meet Our Founders
           </motion.h2>
 
-          <div className="space-y-24">
+          <div className="space-y-32">
             {/* Bhargav's Story */}
-            <motion.div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center" variants={fadeIn}>
-              <div>
-                <img loading="lazy" src={bhargavPhoto} alt="Bhargav Patel" className="rounded-2xl shadow-xl w-full object-cover aspect-[4/5]" />
+            <motion.div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center relative" variants={fadeIn}>
+              <div className="relative group">
+                <div className="absolute -inset-4 bg-gradient-to-r from-emerald-100 to-teal-100 rounded-[2rem] opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-xl"></div>
+                <div className="absolute top-0 right-0 -mr-8 -mt-8 w-32 h-32 bg-emerald-100 rounded-full opacity-50 blur-2xl"></div>
+                <div className="absolute bottom-0 left-0 -ml-8 -mb-8 w-32 h-32 bg-teal-100 rounded-full opacity-50 blur-2xl"></div>
+                <img
+                  loading="lazy"
+                  src={bhargavPhoto}
+                  alt="Bhargav Patel"
+                  className="relative rounded-[2rem] shadow-2xl w-full object-cover aspect-[4/5] transform transition-transform duration-700 group-hover:scale-[1.02]"
+                />
+                <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-2xl shadow-xl border border-emerald-100 hidden md:block">
+                  <div className="flex items-center gap-3">
+                    <div className="bg-emerald-100 p-2 rounded-full">
+                      <Stethoscope className="w-6 h-6 text-emerald-600" />
+                    </div>
+                    <div>
+                      <p className="text-xs text-stone-500 font-semibold uppercase tracking-wider">Specialty</p>
+                      <p className="text-sm font-bold text-emerald-800">Physical Therapy</p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="space-y-4">
-                <h3 className="font-serif text-3xl text-stone-800 font-bold">Bhargav Patel, PT, DPT</h3>
-                <p className="text-emerald-700 font-semibold text-lg">Founder</p>
-                <p className="text-lg leading-relaxed">
+              <div className="space-y-6 relative">
+                <div className="absolute -top-10 -left-10 text-9xl font-serif text-emerald-50 -z-10 opacity-50">"</div>
+                <h3 className="font-serif text-4xl text-stone-800 font-bold">Bhargav Patel, PT, DPT</h3>
+                <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-emerald-100 text-emerald-800 rounded-full text-sm font-semibold">
+                  <Sparkles className="w-4 h-4" />
+                  <span>Founder</span>
+                </div>
+                <p className="text-lg leading-relaxed text-stone-600">
                   The vision for Columbia Care Home began with Bhargav Patel. As a licensed Doctor of Physical Therapy and the founder of At Home Rehab, Bhargav spent years dedicated to helping patients recover their mobility and independence.
                 </p>
-                <p className="text-lg leading-relaxed">
+                <p className="text-lg leading-relaxed text-stone-600">
                   It was through this direct experience that he identified a profound need in senior living: a place where proactive, expert-led therapy wasn't just an option, but the very core of the care philosophy. He was the driving force behind creating a home built on the principle that preserving movement is essential to preserving dignity.
                 </p>
               </div>
             </motion.div>
 
             {/* Sheetal's Story */}
-            <motion.div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center" variants={fadeIn}>
-              <div className="md:order-last">
-                <img loading="lazy" src={sheetalPhoto} alt="Sheetal Khadsare" className="rounded-2xl shadow-xl w-full object-cover aspect-[4/5]" />
+            <motion.div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center relative" variants={fadeIn}>
+              <div className="md:order-last relative group">
+                <div className="absolute -inset-4 bg-gradient-to-r from-teal-100 to-emerald-100 rounded-[2rem] opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-xl"></div>
+                <div className="absolute top-0 left-0 -ml-8 -mt-8 w-32 h-32 bg-teal-100 rounded-full opacity-50 blur-2xl"></div>
+                <div className="absolute bottom-0 right-0 -mr-8 -mb-8 w-32 h-32 bg-emerald-100 rounded-full opacity-50 blur-2xl"></div>
+                <img
+                  loading="lazy"
+                  src={sheetalPhoto}
+                  alt="Sheetal Khadsare"
+                  className="relative rounded-[2rem] shadow-2xl w-full object-cover aspect-[4/5] transform transition-transform duration-700 group-hover:scale-[1.02]"
+                />
+                <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl border border-teal-100 hidden md:block">
+                  <div className="flex items-center gap-3">
+                    <div className="bg-teal-100 p-2 rounded-full">
+                      <HeartHandshake className="w-6 h-6 text-teal-600" />
+                    </div>
+                    <div>
+                      <p className="text-xs text-stone-500 font-semibold uppercase tracking-wider">Focus</p>
+                      <p className="text-sm font-bold text-teal-800">Community Care</p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="space-y-4">
-                <h3 className="font-serif text-3xl text-stone-800 font-bold">Sheetal Khadsare, DPT</h3>
-                <p className="text-teal-700 font-semibold text-lg">Co-Founder</p>
-                <p className="text-lg leading-relaxed">
+              <div className="space-y-6 relative">
+                <div className="absolute -top-10 -right-10 text-9xl font-serif text-teal-50 -z-10 opacity-50">"</div>
+                <h3 className="font-serif text-4xl text-stone-800 font-bold">Sheetal Khadsare, DPT</h3>
+                <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-teal-100 text-teal-800 rounded-full text-sm font-semibold">
+                  <Users className="w-4 h-4" />
+                  <span>Co-Founder</span>
+                </div>
+                <p className="text-lg leading-relaxed text-stone-600">
                   Joining Bhargav in his mission, Sheetal Khadsare was instrumental in bringing the vision of Columbia Care Home to life. As a fellow Doctor of Physical Therapy, she shares his clinical expertise but brings a unique focus on creating a true community.
                 </p>
-                <p className="text-lg leading-relaxed">
+                <p className="text-lg leading-relaxed text-stone-600">
                   Sheetal is the heart of the home's warm, family-like atmosphere. She ensures that the high standard of clinical care is delivered with the compassion, respect, and personal attention that makes residents feel genuinely cared for.
                 </p>
               </div>

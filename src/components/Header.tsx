@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom'; // Import useLocation
 import { HashLink } from 'react-router-hash-link';
-import { Phone, MapPin, Menu as MenuIcon, ChevronDown, Video } from 'lucide-react';
+import { Phone, MapPin, Menu as MenuIcon, ChevronDown } from 'lucide-react';
 import logo from '../assets/logo1.svg';
 import MobileMenu from './MobileMenu';
 import MegaMenu from './MegaMenu';
@@ -121,6 +121,10 @@ const Header = () => {
             </Link>
             {/* --- END ADDED FACILITY LINK --- */}
 
+            <Link to="/virtual-tour" className={getLinkClass('/virtual-tour')}>
+              Virtual Tour
+            </Link>
+
             <Link to="/faq" className={getLinkClass('/faq')}>
               FAQ
             </Link>
@@ -129,18 +133,9 @@ const Header = () => {
             </Link>
           </nav>
 
-          {/* Desktop CTA Button */}
+          {/* Desktop CTA Button - REMOVED as per request */}
           <div className="hidden lg:block">
-            <a href="https://my.matterport.com/show?play=1&lang=en-US&m=Ek5iHJBymGt" target="_blank" rel="noopener noreferrer">
-              <motion.button
-                className="flex items-center gap-2 px-5 py-2 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-700 transition-colors shadow-sm hover:shadow-md"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Video size={18} />
-                3D Virtual Tour
-              </motion.button>
-            </a>
+            {/* 3D Tour button removed */}
           </div>
 
           {/* Mobile Menu Button */}

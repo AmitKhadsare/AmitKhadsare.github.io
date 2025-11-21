@@ -10,7 +10,7 @@ const CareHomeCarousel = () => {
   const slides = [
     {
       id: 1,
-      image: 'https://images.pexels.com/photos/6933776/pexels-photo-6933776.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1',
+      image: new URL('../assets/Facility/Our Main Hall (Living & Common Areas)/main-hall-living-room-seating.jpg', import.meta.url).href,
       title: 'Elegant Living Spaces',
       description: 'Our thoughtfully designed rooms offer a perfect blend of comfort and sophistication, with plenty of natural light and personalized touches.',
       badge: 'Premium Care'
@@ -31,13 +31,20 @@ const CareHomeCarousel = () => {
     },
     {
       id: 4,
-      image: 'https://images.pexels.com/photos/59321/pexels-photo-59321.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1',
-      title: 'Beautiful Gardens',
-      description: 'Our meticulously maintained gardens provide peaceful outdoor spaces for gentle walks and quiet reflection.',
-      badge: 'Serene Environment'
+      image: new URL('../assets/Facility/Our Home (Exterior)/our-home-deck-patio-set.jpg', import.meta.url).href,
+      title: 'Outdoor Deck & Patio',
+      description: 'Our spacious deck with comfortable seating offers a perfect spot to enjoy fresh air, sunshine, and peaceful wooded views.',
+      badge: 'Outdoor Living'
     },
     {
       id: 5,
+      image: new URL('../assets/Facility/Our Gym & Therapy/gym-main-view.jpg', import.meta.url).href,
+      title: 'On-Site Therapy & Wellness Center',
+      description: 'Our fully-equipped gym and therapy center, led by licensed physical therapists, helps residents maintain strength, mobility, and independence.',
+      badge: 'Expert Rehab'
+    },
+    {
+      id: 6,
       image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1',
       title: 'Exceptional Cuisine',
       description: 'Our executive chef prepares nutritious, restaurant-quality meals using fresh, seasonal ingredients.',
@@ -48,7 +55,7 @@ const CareHomeCarousel = () => {
   // Auto-play functionality
   useEffect(() => {
     if (!isAutoPlaying) return;
-    
+
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 5000);
@@ -85,7 +92,7 @@ const CareHomeCarousel = () => {
     <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       {/* Section Header */}
       <div className="text-center mb-10 lg:hidden">
-        <motion.h2 
+        <motion.h2
           className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-emerald-700 via-teal-700 to-stone-800 bg-clip-text text-transparent font-serif mb-4"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -94,7 +101,7 @@ const CareHomeCarousel = () => {
         >
           Experience Our Care
         </motion.h2>
-        <motion.p 
+        <motion.p
           className="text-lg text-gray-600 max-w-2xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -106,7 +113,7 @@ const CareHomeCarousel = () => {
       </div>
 
       {/* Carousel Container */}
-      <motion.div 
+      <motion.div
         className="relative overflow-hidden rounded-2xl shadow-2xl bg-white"
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}
@@ -132,16 +139,16 @@ const CareHomeCarousel = () => {
             >
               {/* Image with Gradient Overlay */}
               <div className="relative h-full w-full">
-                <img 
+                <img
                   src={slides[currentSlide].image}
                   alt={slides[currentSlide].title}
                   className="w-full h-full object-cover"
                 />
                 {/* Gradient Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-                
+
                 {/* Badge */}
-                <motion.div 
+                <motion.div
                   className="absolute top-6 right-6 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg"
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -153,7 +160,7 @@ const CareHomeCarousel = () => {
                 </motion.div>
 
                 {/* Content */}
-                <motion.div 
+                <motion.div
                   className="absolute bottom-0 left-0 right-0 p-8 md:p-12 lg:p-16"
                   initial={{ opacity: 0, y: 50 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -195,11 +202,10 @@ const CareHomeCarousel = () => {
             <button
               key={index}
               onClick={() => goToSlide(index)}
-              className={`transition-all duration-300 ${
-                index === currentSlide 
-                  ? 'w-8 h-2 bg-white' 
+              className={`transition-all duration-300 ${index === currentSlide
+                  ? 'w-8 h-2 bg-white'
                   : 'w-2 h-2 bg-white/60 hover:bg-white/80'
-              } rounded-full`}
+                } rounded-full`}
               aria-label={`Go to slide ${index + 1}`}
             />
           ))}
@@ -228,15 +234,14 @@ const CareHomeCarousel = () => {
           <motion.button
             key={index}
             onClick={() => goToSlide(index)}
-            className={`relative overflow-hidden rounded-lg transition-all duration-300 ${
-              index === currentSlide 
-                ? 'ring-4 ring-emerald-600 ring-offset-2' 
+            className={`relative overflow-hidden rounded-lg transition-all duration-300 ${index === currentSlide
+                ? 'ring-4 ring-emerald-600 ring-offset-2'
                 : 'opacity-70 hover:opacity-100'
-            }`}
+              }`}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <img 
+            <img
               src={slide.image}
               alt={`Thumbnail ${index + 1}`}
               className="w-32 h-20 object-cover"

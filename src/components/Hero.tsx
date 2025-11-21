@@ -1,10 +1,8 @@
 // src/components/Hero.tsx
 import { motion, Variants } from 'framer-motion';
-// Link is no longer needed for the main button, but might be used elsewhere
-// import { Link } from 'react-router-dom'; 
-import { Video } from 'lucide-react'; // Changed ArrowRight to Video for the button icon
+import { Video } from 'lucide-react';
 import { Heart, Shield, Users } from 'lucide-react';
-import carehomeImage from '../assets/carehome.avif'; // Ensure this path is correct
+import carehomeImage from '../assets/carehome.avif';
 
 const Hero = () => {
   const containerVariants: Variants = {
@@ -21,25 +19,25 @@ const Hero = () => {
   };
 
   const trustIndicators = [
-    { 
-      icon: Shield, 
-      title: "Licensed", 
+    {
+      icon: Shield,
+      title: "Licensed",
       subtitle: "State Certified",
-      detail: "Fully licensed by Maryland Department of Health", // Updated detail
+      detail: "Fully licensed by Maryland Department of Health",
       iconBg: "bg-emerald-900/80",
       iconFill: "text-emerald-400 fill-emerald-400/50"
     },
-    { 
-      icon: Heart, 
-      title: "24/7 Care", 
+    {
+      icon: Heart,
+      title: "24/7 Care",
       subtitle: "Always Available",
       detail: "Round-the-clock nursing support",
       iconBg: "bg-red-900/50",
       iconFill: "text-red-400 fill-red-400/50"
     },
-    { 
-      icon: Users, 
-      title: "Family Focused", 
+    {
+      icon: Users,
+      title: "Family Focused",
       subtitle: "Personal Approach",
       detail: "Your loved one is our family",
       iconBg: "bg-emerald-900/80",
@@ -84,7 +82,7 @@ const Hero = () => {
             variants={containerVariants}
           >
             <motion.div className="space-y-6" variants={itemVariants}>
-              <motion.h1 
+              <motion.h1
                 className="text-5xl lg:text-6xl font-bold leading-tight font-serif relative"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -104,13 +102,12 @@ const Hero = () => {
 
             {/* --- UPDATED CTA BUTTON --- */}
             <motion.div className="flex justify-center lg:justify-start" variants={itemVariants}>
-              <a href="https://my.matterport.com/show?play=1&lang=en-US&m=Ek5iHJBymGt" target="_blank" rel="noopener noreferrer">
+              <a href="/virtual-tour">
                 <motion.button
-                  className="group relative bg-emerald-600 text-white px-10 py-5 rounded-full font-semibold text-lg shadow-2xl overflow-hidden"
+                  className="group relative bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-10 py-5 rounded-full font-semibold text-lg shadow-2xl overflow-hidden"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  {/* Animated background gradient on hover */}
                   <motion.div
                     className="absolute inset-0 bg-gradient-to-r from-emerald-700 via-teal-600 to-emerald-700"
                     initial={{ x: "-100%" }}
@@ -118,18 +115,13 @@ const Hero = () => {
                     transition={{ duration: 0.3 }}
                   />
 
-                  {/* Button content */}
-                  <span className="relative z-10 flex items-center gap-2">
-                    Take the 3D Virtual Tour {/* <-- Text Changed */}
-                    <motion.div
-                      animate={{ x: [0, 5, 0] }}
-                      transition={{ duration: 1.5, repeat: Infinity }}
-                    >
-                      <Video className="w-5 h-5" /> {/* <-- Icon Changed */}
-                    </motion.div>
+                  <span className="relative z-10 flex items-center justify-center gap-3">
+                    <Video className="w-6 h-6" />
+                    <span className="flex flex-col items-start">
+                      <span className="text-xl font-bold">Take a Virtual Tour</span>
+                      <span className="text-sm text-emerald-100 font-normal">Video & 3D Experience</span>
+                    </span>
                   </span>
-
-                  {/* Shimmer effect */}
                   <motion.div
                     className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12"
                     initial={{ x: "-200%" }}
@@ -151,7 +143,7 @@ const Hero = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.5 + index * 0.1 }}
                 >
-                  <div 
+                  <div
                     className={`p-3 ${indicator.iconBg} rounded-full relative`}
                   >
                     <motion.div
@@ -187,20 +179,20 @@ const Hero = () => {
                   className="absolute inset-0 bg-gradient-to-t from-emerald-900/20 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"
                 />
               </motion.div>
-              
-              <motion.div 
+
+              <motion.div
                 className="absolute -top-6 -right-6 w-24 h-24 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-full opacity-20 blur-xl"
                 animate={{ scale: [1, 1.2, 1], rotate: [0, 90, 0] }}
                 transition={{ duration: 8, repeat: Infinity }}
               />
-              <motion.div 
+              <motion.div
                 className="absolute -bottom-6 -left-6 w-32 h-32 bg-gradient-to-br from-teal-400 to-emerald-500 rounded-full opacity-15 blur-xl"
                 animate={{ scale: [1.2, 1, 1.2], rotate: [0, -90, 0] }}
                 transition={{ duration: 10, repeat: Infinity }}
               />
             </div>
-            
-            <motion.div 
+
+            <motion.div
               className="absolute inset-0 bg-gradient-to-br from-emerald-500 to-slate-500 rounded-2xl transform rotate-3 scale-105 opacity-20"
               animate={{ rotate: [3, 6, 3] }}
               transition={{ duration: 15, repeat: Infinity }}
