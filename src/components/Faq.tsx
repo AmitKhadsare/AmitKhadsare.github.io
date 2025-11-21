@@ -44,7 +44,7 @@ interface FAQItemProps {
 
 const FAQItem: React.FC<FAQItemProps> = ({ item, isOpen, onClick }) => {
   const Icon = item.icon;
-  
+
   return (
     <motion.div
       className="bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100"
@@ -94,7 +94,7 @@ const UpdatedFAQSection = () => {
     <section id="faq" className="py-12 lg:py-16 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div 
+        <motion.div
           className="text-center mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -112,7 +112,7 @@ const UpdatedFAQSection = () => {
         </motion.div>
 
         {/* FAQ Grid - 2 columns on desktop */}
-        <motion.div 
+        <motion.div
           className="grid md:grid-cols-2 gap-4 lg:gap-6 mb-12"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -130,7 +130,7 @@ const UpdatedFAQSection = () => {
         </motion.div>
 
         {/* CTA Section */}
-        <motion.div 
+        <motion.div
           className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -145,8 +145,8 @@ const UpdatedFAQSection = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-4">
             <span className="font-semibold text-gray-800">Call Us:</span>
-            <a href="tel:201-885-9225" className="px-6 py-3 bg-white text-emerald-600 border-2 border-emerald-600 rounded-lg font-semibold hover:bg-emerald-50 transition-colors">(201) 885-9225</a>
             <a href="tel:301-500-0809" className="px-6 py-3 bg-white text-emerald-600 border-2 border-emerald-600 rounded-lg font-semibold hover:bg-emerald-50 transition-colors">(301) 500-0809</a>
+            <a href="tel:201-885-9225" className="px-6 py-3 bg-white text-emerald-600 border-2 border-emerald-600 rounded-lg font-semibold hover:bg-emerald-50 transition-colors">(201) 885-9225</a>
           </div>
         </motion.div>
       </div>

@@ -2,10 +2,10 @@ import { Link } from 'react-router-dom';
 import { motion, Variants } from 'framer-motion';
 import { ArrowLeft, Stethoscope, ShieldCheck, HeartHandshake, Sparkles } from 'lucide-react';
 import SEOHead from './SEOHead';
+import bhargavPhoto from '../assets/Bhargav_Patel.jpg';
+import sheetalPhoto from '../assets/Sheetal_Khadsare.jpeg';
 
-// Founder and hero images
-const bhargavPhoto = 'https://images.pexels.com/photos/5452293/pexels-photo-5452293.jpeg';
-const sheetalPhoto = 'https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2';
+// Hero background image
 const carePhoto = 'https://images.pexels.com/photos/7551623/pexels-photo-7551623.jpeg?auto=compress&cs=tinysrgb&w=1260';
 
 const AboutUsPage = () => {
@@ -34,7 +34,7 @@ const AboutUsPage = () => {
         url="https://www.columbiacarehome.com/about-us"
       />
       {/* Hero Section */}
-      <motion.section 
+      <motion.section
         className="relative py-32 bg-gradient-to-br from-emerald-50 via-stone-50 to-emerald-100"
         initial="hidden"
         animate="visible"
@@ -56,7 +56,7 @@ const AboutUsPage = () => {
       </motion.section>
 
       {/* Meet Our Founders Section */}
-      <motion.section 
+      <motion.section
         className="py-24 px-4"
         initial="hidden"
         whileInView="visible"
@@ -67,7 +67,7 @@ const AboutUsPage = () => {
           <motion.h2 variants={fadeIn} className="text-4xl font-bold text-center text-stone-800 font-serif mb-20">
             Meet Our Founders
           </motion.h2>
-          
+
           <div className="space-y-24">
             {/* Bhargav's Story */}
             <motion.div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center" variants={fadeIn}>
@@ -92,7 +92,7 @@ const AboutUsPage = () => {
                 <img loading="lazy" src={sheetalPhoto} alt="Sheetal Khadsare" className="rounded-2xl shadow-xl w-full object-cover aspect-[4/5]" />
               </div>
               <div className="space-y-4">
-                 <h3 className="font-serif text-3xl text-stone-800 font-bold">Sheetal Khadsare, DPT</h3>
+                <h3 className="font-serif text-3xl text-stone-800 font-bold">Sheetal Khadsare, DPT</h3>
                 <p className="text-teal-700 font-semibold text-lg">Co-Founder</p>
                 <p className="text-lg leading-relaxed">
                   Joining Bhargav in his mission, Sheetal Khadsare was instrumental in bringing the vision of Columbia Care Home to life. As a fellow Doctor of Physical Therapy, she shares his clinical expertise but brings a unique focus on creating a true community.
@@ -107,7 +107,7 @@ const AboutUsPage = () => {
       </motion.section>
 
       {/* Philosophy Section */}
-      <motion.section 
+      <motion.section
         className="py-24 bg-gradient-to-br from-stone-100 to-emerald-50 px-4"
         initial="hidden"
         whileInView="visible"
@@ -144,7 +144,7 @@ const AboutUsPage = () => {
       </motion.section>
 
       {/* Timeline Section */}
-      <motion.section 
+      <motion.section
         className="py-24 px-4"
         initial="hidden"
         whileInView="visible"

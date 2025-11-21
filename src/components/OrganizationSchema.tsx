@@ -22,8 +22,8 @@ const OrganizationSchema = () => {
         "description": "Columbia Care Home provides heartfelt, professional senior care in a warm, home-like environment. We offer assisted living, memory care, rehabilitation, and personalized care services in Columbia, Maryland.",
 
         // Contact Information
-        "telephone": "+1-201-885-9225",
-        "email": "info@columbiacarehome.com",
+        "telephone": "+1-301-500-0809",
+        "email": "columbiacarehomes@gmail.com",
 
         // Address
         "address": {

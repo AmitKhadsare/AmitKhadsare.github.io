@@ -68,7 +68,7 @@ const Footer = () => {
 
   const contactInfo = [
     { icon: <Phone size={16} />, text: '(201) 885-9225, (301) 500-0809' },
-    { icon: <Mail size={16} />, text: 'info@columbiacarehome.com' },
+    { icon: <Mail size={16} />, text: 'columbiacarehomes@gmail.com' },
     { icon: <MapPin size={16} />, text: '10610 Hickory Point Lane, Columbia, MD 21044' },
   ];
 
@@ -90,18 +90,18 @@ const Footer = () => {
 
   const locationContent = (
     <div className="space-y-4 text-center md:text-left">
-       <div className="hidden md:block">
-         <h3 className="text-xl font-bold text-white">Columbia Care Home</h3>
-         <p className="text-sm text-gray-400">Compassionate care, dignified living.</p>
-       </div>
-       <ul className="space-y-3 pt-3">
-         {contactInfo.map((item, index) => (
-           <li key={index} className="flex items-center justify-center md:justify-start space-x-3">
-             <span className="text-indigo-300">{item.icon}</span>
-             <span className="text-gray-400 text-sm">{item.text}</span>
-           </li>
-         ))}
-       </ul>
+      <div className="hidden md:block">
+        <h3 className="text-xl font-bold text-white">Columbia Care Home</h3>
+        <p className="text-sm text-gray-400">Compassionate care, dignified living.</p>
+      </div>
+      <ul className="space-y-3 pt-3">
+        {contactInfo.map((item, index) => (
+          <li key={index} className="flex items-center justify-center md:justify-start space-x-3">
+            <span className="text-indigo-300">{item.icon}</span>
+            <span className="text-gray-400 text-sm">{item.text}</span>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 
@@ -140,7 +140,7 @@ const Footer = () => {
         <div className="space-y-4 text-center md:text-left">
           <div className="flex items-center justify-center md:justify-start space-x-4">
             {socialLinks.map((social) => (
-              <motion.a 
+              <motion.a
                 key={social.name}
                 href={social.url}
                 target="_blank"
@@ -161,7 +161,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-800 text-gray-300 pt-16 pb-6">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Desktop Footer */}
         <div className="hidden md:grid md:grid-cols-4 gap-8">
           <div>
@@ -177,31 +177,31 @@ const Footer = () => {
 
         {/* Mobile Accordion Footer */}
         <div className="md:hidden">
-           <FooterAccordionItem
-             title="Get In Touch"
-             isOpen={openAccordion === 'location'}
-             onToggle={() => handleAccordionToggle('location')}
-           >
-              <ul className="space-y-3 pt-3">
-                {contactInfo.map((item, index) => (
-                  <li key={index} className="flex items-center justify-center space-x-3">
-                    <span className="text-indigo-300">{item.icon}</span>
-                    <span className="text-gray-400 text-sm">{item.text}</span>
-                  </li>
-                ))}
-              </ul>
-           </FooterAccordionItem>
+          <FooterAccordionItem
+            title="Get In Touch"
+            isOpen={openAccordion === 'location'}
+            onToggle={() => handleAccordionToggle('location')}
+          >
+            <ul className="space-y-3 pt-3">
+              {contactInfo.map((item, index) => (
+                <li key={index} className="flex items-center justify-center space-x-3">
+                  <span className="text-indigo-300">{item.icon}</span>
+                  <span className="text-gray-400 text-sm">{item.text}</span>
+                </li>
+              ))}
+            </ul>
+          </FooterAccordionItem>
 
-           {footerSections.map(section => (
-             <FooterAccordionItem
-               key={section.title}
-               title={section.title}
-               isOpen={openAccordion === section.title}
-               onToggle={() => handleAccordionToggle(section.title)}
-             >
+          {footerSections.map(section => (
+            <FooterAccordionItem
+              key={section.title}
+              title={section.title}
+              isOpen={openAccordion === section.title}
+              onToggle={() => handleAccordionToggle(section.title)}
+            >
               {section.content}
-             </FooterAccordionItem>
-           ))}
+            </FooterAccordionItem>
+          ))}
         </div>
 
         <div className="border-t border-gray-700 mt-12 mb-6"></div>
@@ -209,7 +209,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center text-sm">
           <p className="text-gray-500 mb-4 md:mb-0">
             © {new Date().getFullYear()} Columbia Care Home. All Rights Reserved.
-            </p>
+          </p>
           <div className="space-x-6">
             <Link to="/privacy-policy" className="text-gray-400 hover:text-white">Privacy Policy</Link>
             <Link to="/terms-of-service" className="text-gray-400 hover:text-white">Terms of Service</Link>

@@ -11,21 +11,37 @@ const ScheduleTourPage = () => {
     email: '',
     preferredDate: '',
     preferredTime: '',
-    guestCount: '',
     message: ''
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    console.log('Tour request submitted:', formData);
-    setTimeout(() => {
+
+    try {
+      const form = e.currentTarget;
+      const formDataToSend = new FormData(form);
+
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formDataToSend as any).toString(),
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+      } else {
+        alert('There was an error submitting your request. Please try again or call us directly.');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      alert('There was an error submitting your request. Please try again or call us directly.');
+    } finally {
       setIsSubmitting(false);
-      setIsSubmitted(true);
-    }, 1500);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -45,10 +61,7 @@ const ScheduleTourPage = () => {
 
   const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      backgroundImage: `url('https://images.pexels.com/photos/768472/pexels-photo-768472.jpeg')`
-    }
+    visible: { opacity: 1, y: 0 }
   };
 
   return (
@@ -65,7 +78,6 @@ const ScheduleTourPage = () => {
           className="absolute inset-0 opacity-40 bg-cover bg-center"
           style={{ backgroundImage: "url('https://images.pexels.com/photos/768472/pexels-photo-768472.jpeg')" }}
         />
-        {/* Green gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-emerald-600/70 to-teal-700/70" />
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -109,7 +121,17 @@ const ScheduleTourPage = () => {
                   <p className="text-lg text-stone-600">Your tour request has been sent. Our team will call you shortly to confirm your visit.</p>
                 </motion.div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form
+                  name="tour-request"
+                  method="POST"
+                  data-netlify="true"
+                  netlify-honeypot="bot-field"
+                  onSubmit={handleSubmit}
+                  className="space-y-6"
+                >
+                  <input type="hidden" name="form-name" value="tour-request" />
+                  <input type="hidden" name="bot-field" />
+
                   <div className="grid md:grid-cols-2 gap-6">
                     <motion.div variants={itemVariants}>
                       <label htmlFor="name" className="block text-sm font-medium text-stone-700 mb-2">Full Name *</label>
@@ -117,13 +139,13 @@ const ScheduleTourPage = () => {
                     </motion.div>
                     <motion.div variants={itemVariants}>
                       <label htmlFor="phone" className="block text-sm font-medium text-stone-700 mb-2">Phone Number *</label>
-                      <div className="relative"><Phone className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-stone-400" /><input type="tel" id="phone" name="phone" required value={formData.phone} onChange={handleChange} className="w-full pl-10 pr-4 py-3 bg-stone-100 border border-stone-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-colors" placeholder="(201) 885-9225" /></div>
+                      <div className="relative"><Phone className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-stone-400" /><input type="tel" id="phone" name="phone" required value={formData.phone} onChange={handleChange} className="w-full pl-10 pr-4 py-3 bg-stone-100 border border-stone-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-colors" placeholder="(301) 500-0809" /></div>
                     </motion.div>
                   </div>
 
                   <motion.div variants={itemVariants}>
                     <label htmlFor="email" className="block text-sm font-medium text-stone-700 mb-2">Email Address *</label>
-                    <div className="relative"><Mail className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-stone-400" /><input type="email" id="email" name="email" required value={formData.email} onChange={handleChange} className="w-full pl-10 pr-4 py-3 bg-stone-100 border border-stone-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-colors" placeholder="your.email@columbiacarehome.com" /></div>
+                    <div className="relative"><Mail className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-stone-400" /><input type="email" id="email" name="email" required value={formData.email} onChange={handleChange} className="w-full pl-10 pr-4 py-3 bg-stone-100 border border-stone-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-colors" placeholder="your.email@example.com" /></div>
                   </motion.div>
 
                   <div className="grid md:grid-cols-2 gap-6">
@@ -177,8 +199,8 @@ const ScheduleTourPage = () => {
               <h3 className="text-xl font-bold text-emerald-900 mb-2">Can't Wait?</h3>
               <p className="text-emerald-800 mb-4">Feel free to call us directly for immediate questions.</p>
               <div className="flex flex-col items-center gap-2">
-                <a href="tel:201-885-9225" className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-700 transition-colors">(201) 885-9225</a>
                 <a href="tel:301-500-0809" className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-700 transition-colors">(301) 500-0809</a>
+                <a href="tel:201-885-9225" className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-700 transition-colors">(201) 885-9225</a>
               </div>
             </motion.div>
           </div>

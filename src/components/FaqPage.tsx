@@ -376,8 +376,8 @@ const FAQPage = () => {
             Our caring team is here to help. Contact us directly for personalized answers to your specific questions.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <a href="tel:201-885-9225" className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-700 transition-colors">(201) 885-9225</a>
             <a href="tel:301-500-0809" className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-700 transition-colors">(301) 500-0809</a>
+            <a href="tel:201-885-9225" className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-700 transition-colors">(201) 885-9225</a>
           </div>
         </motion.div>
       </div>

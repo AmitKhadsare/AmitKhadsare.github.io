@@ -14,8 +14,8 @@ export const localBusinessSchema = {
     "https://www.columbiacarehome.com/assets/carehome.avif",
     "https://www.columbiacarehome.com/assets/our-home-front-view.jpg"
   ],
-  "telephone": ["(201) 885-9225", "(301) 500-0809"],
-  "email": "info@columbiacarehome.com",
+  "telephone": ["(301) 500-0809", "(201) 885-9225"],
+  "email": "columbiacarehomes@gmail.com",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "10610 Hickory Point Lane",
@@ -43,7 +43,7 @@ export const localBusinessSchema = {
       }
     },
     {
-      "@type": "City", 
+      "@type": "City",
       "name": "Ellicott City",
       "containedInPlace": {
         "@type": "State",
@@ -54,7 +54,7 @@ export const localBusinessSchema = {
       "@type": "City",
       "name": "Laurel",
       "containedInPlace": {
-        "@type": "State", 
+        "@type": "State",
         "name": "Maryland"
       }
     }
@@ -72,7 +72,7 @@ export const localBusinessSchema = {
         }
       },
       {
-        "@type": "Offer", 
+        "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
           "name": "Memory Care",
@@ -82,7 +82,7 @@ export const localBusinessSchema = {
       {
         "@type": "Offer",
         "itemOffered": {
-          "@type": "Service", 
+          "@type": "Service",
           "name": "Physical Therapy",
           "description": "Rehabilitation services to maintain mobility and independence"
         }
@@ -99,7 +99,7 @@ export const localBusinessSchema = {
   },
   "sameAs": [
     "https://www.facebook.com/columbiacarehome",
-    "https://www.instagram.com/columbiacarehome", 
+    "https://www.instagram.com/columbiacarehome",
     "https://www.linkedin.com/company/columbiacarehome"
   ],
   "foundingDate": "2025",
@@ -124,7 +124,7 @@ export const organizationSchema = {
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "10610 Hickory Point Lane",
-    "addressLocality": "Columbia", 
+    "addressLocality": "Columbia",
     "addressRegion": "MD",
     "postalCode": "21044",
     "addressCountry": "US"
@@ -156,7 +156,7 @@ export const serviceSchema = {
   }
 };
 
-export const breadcrumbSchema = (items: Array<{name: string, url: string}>) => ({
+export const breadcrumbSchema = (items: Array<{ name: string, url: string }>) => ({
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": items.map((item, index) => ({
@@ -167,7 +167,7 @@ export const breadcrumbSchema = (items: Array<{name: string, url: string}>) => (
   }))
 });
 
-export const faqSchema = (faqs: Array<{question: string, answer: string}>) => ({
+export const faqSchema = (faqs: Array<{ question: string, answer: string }>) => ({
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": faqs.map(faq => ({

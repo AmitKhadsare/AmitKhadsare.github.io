@@ -48,7 +48,7 @@ const SimplifiedContact: React.FC = () => {
     <section className="py-12 lg:py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div 
+        <motion.div
           className="text-center mb-12"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -67,22 +67,22 @@ const SimplifiedContact: React.FC = () => {
           <ContactCard
             icon={Phone}
             title="Call Us"
-            content="(201) 885-9225, (301) 500-0809"
-            href="tel:201-885-9225"
+            content="(301) 500-0809, (201) 885-9225"
+            href="tel:301-500-0809"
             delay={0.1}
             target="_blank"
             rel="noopener noreferrer"
           />
-          
+
           <ContactCard
             icon={Mail}
             title="Email Us"
-            content="info@columbiacarehome.com"
+            content="columbiacarehomes@gmail.com"
             subContent="Response within 24 hours"
-            href="mailto:info@columbiacarehome.com"
+            href="mailto:columbiacarehomes@gmail.com"
             delay={0.2}
           />
-          
+
           <ContactCard
             icon={MapPin}
             title="Visit Us"
@@ -96,7 +96,7 @@ const SimplifiedContact: React.FC = () => {
         </div>
 
         {/* CTA Section */}
-        <motion.div 
+        <motion.div
           className="bg-gradient-to-r from-emerald-600 to-teal-600 rounded-2xl p-8 lg:p-10 text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -110,7 +110,7 @@ const SimplifiedContact: React.FC = () => {
             <p className="text-lg text-white/90 mb-8">
               Schedule a personalized tour and discover how we create a warm, caring home for our residents.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/schedule-a-tour">
                 <motion.div
@@ -122,7 +122,7 @@ const SimplifiedContact: React.FC = () => {
                   Schedule a Tour
                 </motion.div>
               </Link>
-              
+
               <Link to="/contact">
                 <motion.div
                   className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-transparent text-white border-2 border-white/50 rounded-lg font-semibold hover:bg-white/10 hover:border-white transition-all cursor-pointer"
