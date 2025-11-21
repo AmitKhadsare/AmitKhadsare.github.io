@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Detection</title>
+</head>
+<body>
+  <!-- This file is hidden and only used for Netlify form detection -->
+  
+  <!-- Contact Form -->
+  <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="form-name" value="contact" />
+    <input type="hidden" name="bot-field" />
+    <input type="text" name="name" />
+    <input type="email" name="email" />
+    <input type="tel" name="phone" />
+    <select name="subject">
+      <option value="tour">Schedule a Tour</option>
+      <option value="info">General Information</option>
+      <option value="admission">Admission Inquiry</option>
+      <option value="other">Other</option>
+    </select>
+    <textarea name="message"></textarea>
+  </form>
+
+  <!-- Tour Request Form -->
+  <form name="tour-request" netlify netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="form-name" value="tour-request" />
+    <input type="hidden" name="bot-field" />
+    <input type="text" name="name" />
+    <input type="tel" name="phone" />
+    <input type="email" name="email" />
+    <input type="date" name="preferredDate" />
+    <select name="preferredTime">
+      <option value="Morning (9am-12pm)">Morning (9am-12pm)</option>
+      <option value="Afternoon (1pm-4pm)">Afternoon (1pm-4pm)</option>
+    </select>
+    <textarea name="message"></textarea>
+  </form>
+</body>
+</html>
