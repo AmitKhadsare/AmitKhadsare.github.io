@@ -297,6 +297,9 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({ photos, selectedIndex, on
   };
 
   useEffect(() => {
+    // SSR guard
+    if (typeof window === 'undefined') return;
+
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose();
       if (e.key === 'ArrowRight') onNavigate('next');
@@ -452,15 +455,19 @@ const FacilityPage = () => {
     }
     // Scroll to gallery content section
     setTimeout(() => {
-      if (galleryContentRef.current) {
+      const navHeight = 80; // Approximate height of fixed navbar
+
+      // SSR guard for window access
+      if (typeof window !== 'undefined' && galleryContentRef.current) {
         const isMobile = window.innerWidth < 1024;
-        const navHeight = isMobile ? 180 : 200; // Account for header + tab nav
+        // Adjust offset for mobile vs desktop if needed
+
         const elementPosition = galleryContentRef.current.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.pageYOffset - navHeight;
 
         window.scrollTo({
           top: offsetPosition,
-          behavior: 'smooth'
+          behavior: "smooth"
         });
       }
     }, 100);

@@ -1,0 +1,26 @@
+
+> vite-react-typescript-starter@0.0.0 build
+> npm run generate-sitemap && vite build
+
+
+> vite-react-typescript-starter@0.0.0 generate-sitemap
+> node scripts/generate-sitemap.js
+
+✅ Sitemap generated successfully at: C:\Users\bodhi\OneDrive\Desktop\Bhargav\project-bolt-sb1-yftq8g6p\project\public\sitemap.xml
+✅ Image sitemap generated successfully at: C:\Users\bodhi\OneDrive\Desktop\Bhargav\project-bolt-sb1-yftq8g6p\project\public\image-sitemap.xml
+✅ Sitemap index generated successfully at: C:\Users\bodhi\OneDrive\Desktop\Bhargav\project-bolt-sb1-yftq8g6p\project\public\sitemap-index.xml
+[2m2:04:20 pm[22m [1m[36m[vike][39m[22m[1m[33m[Warning][39m[22m Define Vike settings in +config.js instead of vite.config.js [4mhttps://vike.dev/migration/settings[24m
+[36mvite v7.0.0 [32mbuilding for production...[36m[39m
+transforming...
+[32m✓[39m 2111 modules transformed.
+[31m✗[39m Build failed in 4.39s
+[31merror during build:
+[31m[vike][1m[31m[Wrong Usage][31m[22m The Vite's configuration build.rollupOptions.output.manualChunks must be a function. Reach out if you need to set it to another value.[31m
+    at rollupOutput.manualChunks (file:///C:/Users/bodhi/OneDrive/Desktop/Bhargav/project-bolt-sb1-yftq8g6p/project/node_modules/vike/dist/esm/node/vite/plugins/build/pluginDistFileNames.js:50:41)
+    at Bundle.assignManualChunks (file:///C:/Users/bodhi/OneDrive/Desktop/Bhargav/project-bolt-sb1-yftq8g6p/project/node_modules/rollup/dist/es/shared/node-entry.js:20453:42)
+    at Bundle.generateChunks (file:///C:/Users/bodhi/OneDrive/Desktop/Bhargav/project-bolt-sb1-yftq8g6p/project/node_modules/rollup/dist/es/shared/node-entry.js:20485:20)
+    at Bundle.generate (file:///C:/Users/bodhi/OneDrive/Desktop/Bhargav/project-bolt-sb1-yftq8g6p/project/node_modules/rollup/dist/es/shared/node-entry.js:20404:39)
+    at file:///C:/Users/bodhi/OneDrive/Desktop/Bhargav/project-bolt-sb1-yftq8g6p/project/node_modules/rollup/dist/es/shared/node-entry.js:23270:27
+    at catchUnfinishedHookActions (file:///C:/Users/bodhi/OneDrive/Desktop/Bhargav/project-bolt-sb1-yftq8g6p/project/node_modules/rollup/dist/es/shared/node-entry.js:22640:16)
+    at buildEnvironment (file:///C:/Users/bodhi/OneDrive/Desktop/Bhargav/project-bolt-sb1-yftq8g6p/project/node_modules/vite/dist/node/chunks/dep-Bsx9IwL8.js:34110:52)
+    at Object.build (file:///C:/Users/bodhi/OneDrive/Desktop/Bhargav/project-bolt-sb1-yftq8g6p/project/node_modules/vite/dist/node/chunks/dep-Bsx9IwL8.js:34462:19)[39m

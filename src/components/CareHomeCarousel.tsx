@@ -203,8 +203,8 @@ const CareHomeCarousel = () => {
               key={index}
               onClick={() => goToSlide(index)}
               className={`transition-all duration-300 ${index === currentSlide
-                  ? 'w-8 h-2 bg-white'
-                  : 'w-2 h-2 bg-white/60 hover:bg-white/80'
+                ? 'w-8 h-2 bg-white'
+                : 'w-2 h-2 bg-white/60 hover:bg-white/80'
                 } rounded-full`}
               aria-label={`Go to slide ${index + 1}`}
             />
@@ -235,8 +235,8 @@ const CareHomeCarousel = () => {
             key={index}
             onClick={() => goToSlide(index)}
             className={`relative overflow-hidden rounded-lg transition-all duration-300 ${index === currentSlide
-                ? 'ring-4 ring-emerald-600 ring-offset-2'
-                : 'opacity-70 hover:opacity-100'
+              ? 'ring-4 ring-emerald-600 ring-offset-2'
+              : 'opacity-70 hover:opacity-100'
               }`}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -254,4 +254,14 @@ const CareHomeCarousel = () => {
   );
 };
 
-export default CareHomeCarousel;
+import ClientOnly from './ClientOnly';
+
+const CareHomeCarouselClient = CareHomeCarousel;
+
+export default function CareHomeCarouselWrapper() {
+  return (
+    <ClientOnly fallback={<div className="h-[600px] bg-gray-100 animate-pulse rounded-2xl" />}>
+      <CareHomeCarouselClient />
+    </ClientOnly>
+  );
+}

@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.columbiacarehome.com/</loc>
-    <lastmod>2025-11-21</lastmod>
+    <lastmod>2025-11-24</lastmod>
     <image:image>
       <image:loc>https://www.columbiacarehome.com/main.avif</image:loc>
     </image:image>
@@ -13,7 +13,7 @@
   </url>
   <url>
     <loc>https://www.columbiacarehome.com/about-us</loc>
-    <lastmod>2025-11-21</lastmod>
+    <lastmod>2025-11-24</lastmod>
     <image:image>
       <image:loc>https://www.columbiacarehome.com/assets/aboutus.avif</image:loc>
     </image:image>
@@ -23,7 +23,7 @@
   </url>
   <url>
     <loc>https://www.columbiacarehome.com/facility</loc>
-    <lastmod>2025-11-21</lastmod>
+    <lastmod>2025-11-24</lastmod>
     <image:image>
       <image:loc>https://www.columbiacarehome.com/assets/carehome.avif</image:loc>
     </image:image>
@@ -285,7 +285,7 @@
   </url>
   <url>
     <loc>https://www.columbiacarehome.com/rehabilitation</loc>
-    <lastmod>2025-11-21</lastmod>
+    <lastmod>2025-11-24</lastmod>
     <image:image>
       <image:loc>https://www.columbiacarehome.com/assets/physical_therapy.avif</image:loc>
     </image:image>
@@ -295,14 +295,14 @@
   </url>
   <url>
     <loc>https://www.columbiacarehome.com/memory-care</loc>
-    <lastmod>2025-11-21</lastmod>
+    <lastmod>2025-11-24</lastmod>
     <image:image>
       <image:loc>https://www.columbiacarehome.com/assets/mentalhealth.avif</image:loc>
     </image:image>
   </url>
   <url>
     <loc>https://www.columbiacarehome.com/personal-assistance</loc>
-    <lastmod>2025-11-21</lastmod>
+    <lastmod>2025-11-24</lastmod>
     <image:image>
       <image:loc>https://www.columbiacarehome.com/assets/dignifiedpersonalassistance.avif</image:loc>
     </image:image>
@@ -312,21 +312,21 @@
   </url>
   <url>
     <loc>https://www.columbiacarehome.com/residential-care</loc>
-    <lastmod>2025-11-21</lastmod>
+    <lastmod>2025-11-24</lastmod>
     <image:image>
       <image:loc>https://www.columbiacarehome.com/assets/comforting_homelike_haven.avif</image:loc>
     </image:image>
   </url>
   <url>
     <loc>https://www.columbiacarehome.com/dietary</loc>
-    <lastmod>2025-11-21</lastmod>
+    <lastmod>2025-11-24</lastmod>
     <image:image>
       <image:loc>https://www.columbiacarehome.com/assets/Nourishing_Body_Soul.avif</image:loc>
     </image:image>
   </url>
   <url>
     <loc>https://www.columbiacarehome.com/recreation</loc>
-    <lastmod>2025-11-21</lastmod>
+    <lastmod>2025-11-24</lastmod>
     <image:image>
       <image:loc>https://www.columbiacarehome.com/assets/vibrantlifeandwelness.avif</image:loc>
     </image:image>
@@ -339,14 +339,14 @@
   </url>
   <url>
     <loc>https://www.columbiacarehome.com/health-safety</loc>
-    <lastmod>2025-11-21</lastmod>
+    <lastmod>2025-11-24</lastmod>
     <image:image>
       <image:loc>https://www.columbiacarehome.com/assets/proactivehealthsafety.avif</image:loc>
     </image:image>
   </url>
   <url>
     <loc>https://www.columbiacarehome.com/family-partnership</loc>
-    <lastmod>2025-11-21</lastmod>
+    <lastmod>2025-11-24</lastmod>
     <image:image>
       <image:loc>https://www.columbiacarehome.com/assets/family.avif</image:loc>
     </image:image>

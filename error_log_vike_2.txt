@@ -1,0 +1,282 @@
+
+> vite-react-typescript-starter@0.0.0 build
+> npm run generate-sitemap && vite build
+
+
+> vite-react-typescript-starter@0.0.0 generate-sitemap
+> node scripts/generate-sitemap.js
+
+✅ Sitemap generated successfully at: C:\Users\bodhi\OneDrive\Desktop\Bhargav\project-bolt-sb1-yftq8g6p\project\public\sitemap.xml
+✅ Image sitemap generated successfully at: C:\Users\bodhi\OneDrive\Desktop\Bhargav\project-bolt-sb1-yftq8g6p\project\public\image-sitemap.xml
+✅ Sitemap index generated successfully at: C:\Users\bodhi\OneDrive\Desktop\Bhargav\project-bolt-sb1-yftq8g6p\project\public\sitemap-index.xml
+[2m2:06:24 pm[22m [1m[36m[vike][39m[22m[1m[33m[Warning][39m[22m Define Vike settings in +config.js instead of vite.config.js [4mhttps://vike.dev/migration/settings[24m
+[36mvite v7.0.0 [32mbuilding for production...[36m[39m
+transforming...
+[32m✓[39m 2111 modules transformed.
+rendering chunks...
+computing gzip size...
+[2mdist/client/[22m[32massets/static/mentalhealth.B80uw1-A.avif                                        [39m[1m[2m  9.58 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/vibrantlifeandwelness.g8nfuDyJ.avif                               [39m[1m[2m 13.77 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/logo1.BNsEPHxI.svg                                                [39m[1m[2m 28.39 kB[22m[1m[22m[2m │ gzip: 11.80 kB[22m
+[2mdist/client/[22m[32massets/static/Sheetal_Khadsare.5V_lLfcF.jpeg                                    [39m[1m[2m 32.78 kB[22m[1m[22m
+[2mdist/client/[22m[32m.vite/manifest.json                                                             [39m[1m[2m 38.47 kB[22m[1m[22m[2m │ gzip:  4.07 kB[22m
+[2mdist/client/[22m[32massets/static/physical_therapy.cyZCOowO.avif                                    [39m[1m[2m 49.90 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/comforting_homelike_haven.Co5n4a6P.avif                           [39m[1m[2m 60.19 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/family.CUCDsJs2.avif                                              [39m[1m[2m 68.65 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/proactivehealthsafety.D9R3CJAs.avif                               [39m[1m[2m 90.70 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/carehome.QGxuaH9M.avif                                            [39m[1m[2m 90.78 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/amenities-bedroom-1-private-bathroom.2ier9A3e.jpg                 [39m[1m[2m122.40 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/dignifiedpersonalassistance.CNDae5eY.avif                         [39m[1m[2m125.19 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/amenities-basement-bathroom.IEf-Pgcr.jpg                          [39m[1m[2m126.58 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/amenities-upstairs-master-walk-in-closet.BfttvRWz.jpg             [39m[1m[2m128.13 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/amenities-bedroom-1-walk-in-shower.BrF-iVSp.jpg                   [39m[1m[2m128.53 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/bedroom-basement-main.CJVE4jHE.jpg                                [39m[1m[2m129.42 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/main-hall-first-floor-room-entrance-2.DUHNXb0u.jpg                [39m[1m[2m131.67 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/amenities-upstairs-master-bathroom-vanity.D8cjoEsd.jpg            [39m[1m[2m132.28 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/bedroom-upstairs-master-suite-sitting-area.BXOuP69e.jpg           [39m[1m[2m140.60 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/amenities-upstairs-shared-bathroom.CkLH7X2V.jpg                   [39m[1m[2m141.34 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/main-hall-open-concept-view.BitiaJ9u.jpg                          [39m[1m[2m141.37 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/bedroom-upstairs-master-suite-seating.Ducd1hOO.jpg                [39m[1m[2m144.32 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/bedroom-basement-view-to-hall.3oPZ24Qf.jpg                        [39m[1m[2m147.50 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/amenities-upstairs-master-bathroom-tub.EqLe3ZD7.jpg               [39m[1m[2m147.77 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/bedroom-upstairs-master-suite-looking-in.D0Ehc1Kb.jpg             [39m[1m[2m150.17 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/amenities-upstairs-master-kitchenette.8_r3hPeB.jpg                [39m[1m[2m152.81 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/bedroom-1-main-view.DaR4Yrju.jpg                                  [39m[1m[2m153.31 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/bedroom-3-view-to-hall.1s_I3CoU.jpg                               [39m[1m[2m154.49 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/amenities-storage-closet.Dg1iEEyI.jpg                             [39m[1m[2m155.05 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/amenities-upstairs-master-bathroom-shower.CFlaOPLd.jpg            [39m[1m[2m159.28 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/main-hall-first-floor-room-entrance-1.DJYXl960.jpg                [39m[1m[2m162.80 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/main-hall-entrance-hallway.DeX48pd5.jpg                           [39m[1m[2m163.54 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/bedroom-upstairs-lavender.CEW4PAq_.jpg                            [39m[1m[2m165.74 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/bedroom-upstairs-master-suite-room-divider.CS2UNo6I.jpg           [39m[1m[2m167.25 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/bedroom-upstairs-maroon-main-view.CL68bATL.jpg                    [39m[1m[2m167.37 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/bedroom-upstairs-maroon-view-to-hall.DupKd4ec.jpg                 [39m[1m[2m167.50 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/kitchen-main-view.CxbWexmD.jpg                                    [39m[1m[2m169.49 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/bedroom-upstairs-maroon-and-closet.BGznfWnK.jpg                   [39m[1m[2m170.52 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/amenities-basement-bonus-room.M4wyFFq9.jpg                        [39m[1m[2m170.77 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/bedroom-upstairs-master-suite-view-to-amenities.DFDFbK3D.jpg      [39m[1m[2m173.24 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/bedroom-upstairs-master-suite-and-bathroom-entrance.BhlW4R2q.jpg  [39m[1m[2m173.36 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/main-hall-upstairs-hallway.C7rAb_jK.jpg                           [39m[1m[2m182.70 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/kitchen-looking-towards-living-area.B4mNRNWN.jpg                  [39m[1m[2m182.72 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/bedroom-upstairs-master-suite-window-nook.BfOOKhfA.jpg            [39m[1m[2m182.88 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/kitchen-appliances-and-island.BGdv8YwE.jpg                        [39m[1m[2m182.99 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/bedroom-upstairs-peach-main-view.COiuhF_G.jpg                     [39m[1m[2m183.13 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/kitchen-and-dining-area.C8Q4g9pY.jpg                              [39m[1m[2m183.53 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/gym-physical-therapy-tools.ng8xM5Qx.jpg                           [39m[1m[2m184.63 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/bedroom-upstairs-peach-view-to-hall.BZBKmgPj.jpg                  [39m[1m[2m185.97 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/main-hall-upstairs-landing.BMDadrok.jpg                           [39m[1m[2m186.25 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/bedroom-upstairs-master-suite-full-view.B2bGpHTp.jpg              [39m[1m[2m187.95 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/kitchen-island-and-sink.Dbj-kgZd.jpg                              [39m[1m[2m189.51 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/bedroom-upstairs-lavender-tv-and-hallway.DToS7Ttw.jpg             [39m[1m[2m189.92 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/bedroom-1-natural-light.B_GZAI1E.jpg                              [39m[1m[2m193.24 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/bedroom-3-main-view.BkQZbBGl.jpg                                  [39m[1m[2m194.39 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/bedroom-1-view-to-hall.9mueq3NG.jpg                               [39m[1m[2m194.39 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/dining-area-looking-towards-living-room.oEFQ3dcP.jpg              [39m[1m[2m195.26 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/bedroom-upstairs-master-suite.bIJ2RvFO.jpg                        [39m[1m[2m198.88 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/gym-rehab-equipment.cPZP_bPe.jpg                                  [39m[1m[2m199.14 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/gym-therapy-and-cardio-zone.CvWJwzcg.jpg                          [39m[1m[2m199.57 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/bedroom-upstairs-master-suite-and-hallway.CQ1r3xay.jpg            [39m[1m[2m200.61 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/bedroom-upstairs-master-suite-tv.CfC4Pfk0.jpg                     [39m[1m[2m200.63 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/bedroom-3-bay-windows.BpOIb7Zl.jpg                                [39m[1m[2m210.13 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/amenities-laundry-room.Duq5i-Ki.jpg                               [39m[1m[2m211.03 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/main-hall-dining-area-and-deck-access.DFLFYKPy.jpg                [39m[1m[2m214.89 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/main-hall-upstairs-windows.DOgQle3J.jpg                           [39m[1m[2m216.86 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/main-hall-view-towards-stairs.Doj8hl7F.jpg                        [39m[1m[2m217.50 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/main-hall-living-room-and-kitchen.Dg33iNqz.jpg                    [39m[1m[2m219.32 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/main-hall-front-entrance.KxkMGOcJ.jpg                             [39m[1m[2m224.54 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/main-hall-upstairs-overlook.BtH_vz58.jpg                          [39m[1m[2m227.34 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/bedroom-upstairs-master-suite-sitting-room.TQNq3uja.jpg           [39m[1m[2m234.66 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/gym-main-view.DsUhzcxh.jpg                                        [39m[1m[2m234.84 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/Nourishing_Body_Soul.Cm_fC8vO.avif                                [39m[1m[2m242.19 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/kitchen-sink-and-cooktop.D9f3bp93.jpg                             [39m[1m[2m243.44 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/gym-training-area-and-exit.CQogtOUk.jpg                           [39m[1m[2m244.31 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/main-hall-fireplace-and-tv-area.BOmb13Ka.jpg                      [39m[1m[2m245.01 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/main-hall-living-area-and-windows.BTsEIMjv.jpg                    [39m[1m[2m257.54 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/main-hall-living-room-seating.7paeSfbU.jpg                        [39m[1m[2m261.88 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/our-home-deck-patio-set.CAeRLojE.jpg                              [39m[1m[2m266.96 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/our-home-deck-and-house-exterior.DnzrQAnr.jpg                     [39m[1m[2m336.41 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/our-home-deck-seating-area.Da5LnebV.jpg                           [39m[1m[2m391.09 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/our-home-backyard-and-deck.atTUPITr.jpg                           [39m[1m[2m470.13 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/our-home-front-view.yWVQeHZa.jpg                                  [39m[1m[2m470.23 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/our-home-front-exterior-and-driveway.DpbhNKIt.jpg                 [39m[1m[2m477.58 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/our-home-deck-with-wooded-view.R7eOffr9.jpg                       [39m[1m[2m480.03 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/our-home-driveway-and-entrance.8WNFe_Lr.jpg                       [39m[1m[2m506.49 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/our-home-backyard-under-deck.B4b9wYaV.jpg                         [39m[1m[2m537.11 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/aerial-property-overview.CoBqllDO.jpg                             [39m[1m[2m541.97 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/aerial-backyard-and-deck.BvbmcDwI.jpg                             [39m[1m[2m542.13 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/aerial-rear-of-home.BgJc9RUz.jpg                                  [39m[1m[2m567.58 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/aerial-top-down-front-property.CPuiIntq.jpg                       [39m[1m[2m571.91 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/aerial-birds-eye-view-front.BsFzBdOO.jpg                          [39m[1m[2m608.26 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/aerial-backyard-wooded-lot.BmaVGD8-.jpg                           [39m[1m[2m620.59 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/aerial-high-angle-front-view.wc7KhnCf.jpg                         [39m[1m[2m627.15 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/aerial-front-of-home.Dad9aAd3.jpg                                 [39m[1m[2m638.27 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/aerial-front-and-driveway.GeqqvuCn.jpg                            [39m[1m[2m665.04 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/aerial-front-wooded-surroundings.DQOmsnJf.jpg                     [39m[1m[2m668.12 kB[22m[1m[22m
+[2mdist/client/[22m[32massets/static/Bhargav_Patel.CSispYiw.jpg                                        [39m[1m[2m731.83 kB[22m[1m[22m
+[2mdist/client/[22m[36massets/chunks/chunk-CZzEhGFp.js                                                 [39m[1m[2m  0.46 kB[22m[1m[22m[2m │ gzip:  0.32 kB[22m
+[2mdist/client/[22m[36massets/chunks/chunk-BXl3LOEh.js                                                 [39m[1m[2m  1.11 kB[22m[1m[22m[2m │ gzip:  0.65 kB[22m
+[2mdist/client/[22m[36massets/chunks/chunk-Bs--n-WX.js                                                 [39m[1m[2m  3.17 kB[22m[1m[22m[2m │ gzip:  1.42 kB[22m
+[2mdist/client/[22m[36massets/chunks/chunk-BHOhjTdI.js                                                 [39m[1m[2m  3.77 kB[22m[1m[22m[2m │ gzip:  1.61 kB[22m
+[2mdist/client/[22m[36massets/chunks/chunk-mTWU5PVz.js                                                 [39m[1m[2m  4.33 kB[22m[1m[22m[2m │ gzip:  1.76 kB[22m
+[2mdist/client/[22m[36massets/chunks/chunk-CYI26njF.js                                                 [39m[1m[2m  4.70 kB[22m[1m[22m[2m │ gzip:  1.85 kB[22m
+[2mdist/client/[22m[36massets/chunks/chunk-CWji91ri.js                                                 [39m[1m[2m  4.92 kB[22m[1m[22m[2m │ gzip:  1.91 kB[22m
+[2mdist/client/[22m[36massets/chunks/chunk-BnS3X2zV.js                                                 [39m[1m[2m  4.98 kB[22m[1m[22m[2m │ gzip:  1.89 kB[22m
+[2mdist/client/[22m[36massets/chunks/chunk-BAnT4n-9.js                                                 [39m[1m[2m  5.02 kB[22m[1m[22m[2m │ gzip:  1.95 kB[22m
+[2mdist/client/[22m[36massets/chunks/chunk-Yg5a8cpN.js                                                 [39m[1m[2m  5.04 kB[22m[1m[22m[2m │ gzip:  1.95 kB[22m
+[2mdist/client/[22m[36massets/chunks/chunk-BdAfmm6D.js                                                 [39m[1m[2m  5.12 kB[22m[1m[22m[2m │ gzip:  2.03 kB[22m
+[2mdist/client/[22m[36massets/chunks/chunk-BJjpa9Np.js                                                 [39m[1m[2m  5.13 kB[22m[1m[22m[2m │ gzip:  1.98 kB[22m
+[2mdist/client/[22m[36massets/chunks/chunk-BpCNP3lE.js                                                 [39m[1m[2m  5.22 kB[22m[1m[22m[2m │ gzip:  2.05 kB[22m
+[2mdist/client/[22m[36massets/chunks/chunk-UQIHa0KM.js                                                 [39m[1m[2m  8.39 kB[22m[1m[22m[2m │ gzip:  2.74 kB[22m
+[2mdist/client/[22m[36massets/chunks/chunk-CVwOIIyK.js                                                 [39m[1m[2m  8.78 kB[22m[1m[22m[2m │ gzip:  2.88 kB[22m
+[2mdist/client/[22m[36massets/chunks/chunk-CgogE5Jr.js                                                 [39m[1m[2m 10.02 kB[22m[1m[22m[2m │ gzip:  2.84 kB[22m
+[2mdist/client/[22m[36massets/chunks/chunk-CrX5RSwK.js                                                 [39m[1m[2m 11.86 kB[22m[1m[22m[2m │ gzip:  4.50 kB[22m
+[2mdist/client/[22m[36massets/chunks/chunk-BRx189du.js                                                 [39m[1m[2m 12.12 kB[22m[1m[22m[2m │ gzip:  3.23 kB[22m
+[2mdist/client/[22m[36massets/chunks/chunk-Bz_Kh8eQ.js                                                 [39m[1m[2m 13.50 kB[22m[1m[22m[2m │ gzip:  4.04 kB[22m
+[2mdist/client/[22m[36massets/chunks/chunk-Dm5z5rpv.js                                                 [39m[1m[2m 28.94 kB[22m[1m[22m[2m │ gzip:  8.65 kB[22m
+[2mdist/client/[22m[36massets/entries/entry-server-routing.BJj3_0m7.js                                 [39m[1m[2m 34.23 kB[22m[1m[22m[2m │ gzip: 11.98 kB[22m
+[2mdist/client/[22m[36massets/entries/pages.nHukg5fH.js                                                [39m[1m[2m 73.32 kB[22m[1m[22m[2m │ gzip: 16.95 kB[22m
+[2mdist/client/[22m[36massets/chunks/chunk-DF99Csjn.js                                                 [39m[1m[2m114.19 kB[22m[1m[22m[2m │ gzip: 37.91 kB[22m
+[2mdist/client/[22m[36massets/chunks/chunk-DmLKo2ny.js                                                 [39m[1m[2m212.07 kB[22m[1m[22m[2m │ gzip: 67.01 kB[22m
+[32m✓ built in 4.63s[39m
+[36mvite v7.0.0 [32mbuilding SSR bundle for production...[36m[39m
+transforming...
+[32m✓[39m 141 modules transformed.
+rendering chunks...
+[2mdist/server/[22m[32mpackage.json                                                                    [39m[1m[2m  0.02 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/mentalhealth.B80uw1-A.avif                                        [39m[1m[2m  9.58 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/vibrantlifeandwelness.g8nfuDyJ.avif                               [39m[1m[2m 13.77 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/logo1.BNsEPHxI.svg                                                [39m[1m[2m 28.39 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/Sheetal_Khadsare.5V_lLfcF.jpeg                                    [39m[1m[2m 32.78 kB[22m[1m[22m
+[2mdist/server/[22m[32m.vite/manifest.json                                                             [39m[1m[2m 35.98 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/physical_therapy.cyZCOowO.avif                                    [39m[1m[2m 49.90 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/comforting_homelike_haven.Co5n4a6P.avif                           [39m[1m[2m 60.19 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/family.CUCDsJs2.avif                                              [39m[1m[2m 68.65 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/proactivehealthsafety.D9R3CJAs.avif                               [39m[1m[2m 90.70 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/carehome.QGxuaH9M.avif                                            [39m[1m[2m 90.78 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/amenities-bedroom-1-private-bathroom.2ier9A3e.jpg                 [39m[1m[2m122.40 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/dignifiedpersonalassistance.CNDae5eY.avif                         [39m[1m[2m125.19 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/amenities-basement-bathroom.IEf-Pgcr.jpg                          [39m[1m[2m126.58 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/amenities-upstairs-master-walk-in-closet.BfttvRWz.jpg             [39m[1m[2m128.13 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/amenities-bedroom-1-walk-in-shower.BrF-iVSp.jpg                   [39m[1m[2m128.53 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/bedroom-basement-main.CJVE4jHE.jpg                                [39m[1m[2m129.42 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/main-hall-first-floor-room-entrance-2.DUHNXb0u.jpg                [39m[1m[2m131.67 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/amenities-upstairs-master-bathroom-vanity.D8cjoEsd.jpg            [39m[1m[2m132.28 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/bedroom-upstairs-master-suite-sitting-area.BXOuP69e.jpg           [39m[1m[2m140.60 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/amenities-upstairs-shared-bathroom.CkLH7X2V.jpg                   [39m[1m[2m141.34 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/main-hall-open-concept-view.BitiaJ9u.jpg                          [39m[1m[2m141.37 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/bedroom-upstairs-master-suite-seating.Ducd1hOO.jpg                [39m[1m[2m144.32 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/bedroom-basement-view-to-hall.3oPZ24Qf.jpg                        [39m[1m[2m147.50 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/amenities-upstairs-master-bathroom-tub.EqLe3ZD7.jpg               [39m[1m[2m147.77 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/bedroom-upstairs-master-suite-looking-in.D0Ehc1Kb.jpg             [39m[1m[2m150.17 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/amenities-upstairs-master-kitchenette.8_r3hPeB.jpg                [39m[1m[2m152.81 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/bedroom-1-main-view.DaR4Yrju.jpg                                  [39m[1m[2m153.31 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/bedroom-3-view-to-hall.1s_I3CoU.jpg                               [39m[1m[2m154.49 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/amenities-storage-closet.Dg1iEEyI.jpg                             [39m[1m[2m155.05 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/amenities-upstairs-master-bathroom-shower.CFlaOPLd.jpg            [39m[1m[2m159.28 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/main-hall-first-floor-room-entrance-1.DJYXl960.jpg                [39m[1m[2m162.80 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/main-hall-entrance-hallway.DeX48pd5.jpg                           [39m[1m[2m163.54 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/bedroom-upstairs-lavender.CEW4PAq_.jpg                            [39m[1m[2m165.74 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/bedroom-upstairs-master-suite-room-divider.CS2UNo6I.jpg           [39m[1m[2m167.25 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/bedroom-upstairs-maroon-main-view.CL68bATL.jpg                    [39m[1m[2m167.37 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/bedroom-upstairs-maroon-view-to-hall.DupKd4ec.jpg                 [39m[1m[2m167.50 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/kitchen-main-view.CxbWexmD.jpg                                    [39m[1m[2m169.49 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/bedroom-upstairs-maroon-and-closet.BGznfWnK.jpg                   [39m[1m[2m170.52 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/amenities-basement-bonus-room.M4wyFFq9.jpg                        [39m[1m[2m170.77 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/bedroom-upstairs-master-suite-view-to-amenities.DFDFbK3D.jpg      [39m[1m[2m173.24 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/bedroom-upstairs-master-suite-and-bathroom-entrance.BhlW4R2q.jpg  [39m[1m[2m173.36 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/main-hall-upstairs-hallway.C7rAb_jK.jpg                           [39m[1m[2m182.70 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/kitchen-looking-towards-living-area.B4mNRNWN.jpg                  [39m[1m[2m182.72 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/bedroom-upstairs-master-suite-window-nook.BfOOKhfA.jpg            [39m[1m[2m182.88 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/kitchen-appliances-and-island.BGdv8YwE.jpg                        [39m[1m[2m182.99 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/bedroom-upstairs-peach-main-view.COiuhF_G.jpg                     [39m[1m[2m183.13 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/kitchen-and-dining-area.C8Q4g9pY.jpg                              [39m[1m[2m183.53 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/gym-physical-therapy-tools.ng8xM5Qx.jpg                           [39m[1m[2m184.63 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/bedroom-upstairs-peach-view-to-hall.BZBKmgPj.jpg                  [39m[1m[2m185.97 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/main-hall-upstairs-landing.BMDadrok.jpg                           [39m[1m[2m186.25 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/bedroom-upstairs-master-suite-full-view.B2bGpHTp.jpg              [39m[1m[2m187.95 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/kitchen-island-and-sink.Dbj-kgZd.jpg                              [39m[1m[2m189.51 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/bedroom-upstairs-lavender-tv-and-hallway.DToS7Ttw.jpg             [39m[1m[2m189.92 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/bedroom-1-natural-light.B_GZAI1E.jpg                              [39m[1m[2m193.24 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/bedroom-3-main-view.BkQZbBGl.jpg                                  [39m[1m[2m194.39 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/bedroom-1-view-to-hall.9mueq3NG.jpg                               [39m[1m[2m194.39 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/dining-area-looking-towards-living-room.oEFQ3dcP.jpg              [39m[1m[2m195.26 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/bedroom-upstairs-master-suite.bIJ2RvFO.jpg                        [39m[1m[2m198.88 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/gym-rehab-equipment.cPZP_bPe.jpg                                  [39m[1m[2m199.14 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/gym-therapy-and-cardio-zone.CvWJwzcg.jpg                          [39m[1m[2m199.57 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/bedroom-upstairs-master-suite-and-hallway.CQ1r3xay.jpg            [39m[1m[2m200.61 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/bedroom-upstairs-master-suite-tv.CfC4Pfk0.jpg                     [39m[1m[2m200.63 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/bedroom-3-bay-windows.BpOIb7Zl.jpg                                [39m[1m[2m210.13 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/amenities-laundry-room.Duq5i-Ki.jpg                               [39m[1m[2m211.03 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/main-hall-dining-area-and-deck-access.DFLFYKPy.jpg                [39m[1m[2m214.89 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/main-hall-upstairs-windows.DOgQle3J.jpg                           [39m[1m[2m216.86 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/main-hall-view-towards-stairs.Doj8hl7F.jpg                        [39m[1m[2m217.50 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/main-hall-living-room-and-kitchen.Dg33iNqz.jpg                    [39m[1m[2m219.32 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/main-hall-front-entrance.KxkMGOcJ.jpg                             [39m[1m[2m224.54 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/main-hall-upstairs-overlook.BtH_vz58.jpg                          [39m[1m[2m227.34 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/bedroom-upstairs-master-suite-sitting-room.TQNq3uja.jpg           [39m[1m[2m234.66 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/gym-main-view.DsUhzcxh.jpg                                        [39m[1m[2m234.84 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/Nourishing_Body_Soul.Cm_fC8vO.avif                                [39m[1m[2m242.19 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/kitchen-sink-and-cooktop.D9f3bp93.jpg                             [39m[1m[2m243.44 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/gym-training-area-and-exit.CQogtOUk.jpg                           [39m[1m[2m244.31 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/main-hall-fireplace-and-tv-area.BOmb13Ka.jpg                      [39m[1m[2m245.01 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/main-hall-living-area-and-windows.BTsEIMjv.jpg                    [39m[1m[2m257.54 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/main-hall-living-room-seating.7paeSfbU.jpg                        [39m[1m[2m261.88 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/our-home-deck-patio-set.CAeRLojE.jpg                              [39m[1m[2m266.96 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/our-home-deck-and-house-exterior.DnzrQAnr.jpg                     [39m[1m[2m336.41 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/our-home-deck-seating-area.Da5LnebV.jpg                           [39m[1m[2m391.09 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/our-home-backyard-and-deck.atTUPITr.jpg                           [39m[1m[2m470.13 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/our-home-front-view.yWVQeHZa.jpg                                  [39m[1m[2m470.23 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/our-home-front-exterior-and-driveway.DpbhNKIt.jpg                 [39m[1m[2m477.58 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/our-home-deck-with-wooded-view.R7eOffr9.jpg                       [39m[1m[2m480.03 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/our-home-driveway-and-entrance.8WNFe_Lr.jpg                       [39m[1m[2m506.49 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/our-home-backyard-under-deck.B4b9wYaV.jpg                         [39m[1m[2m537.11 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/aerial-property-overview.CoBqllDO.jpg                             [39m[1m[2m541.97 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/aerial-backyard-and-deck.BvbmcDwI.jpg                             [39m[1m[2m542.13 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/aerial-rear-of-home.BgJc9RUz.jpg                                  [39m[1m[2m567.58 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/aerial-top-down-front-property.CPuiIntq.jpg                       [39m[1m[2m571.91 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/aerial-birds-eye-view-front.BsFzBdOO.jpg                          [39m[1m[2m608.26 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/aerial-backyard-wooded-lot.BmaVGD8-.jpg                           [39m[1m[2m620.59 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/aerial-high-angle-front-view.wc7KhnCf.jpg                         [39m[1m[2m627.15 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/aerial-front-of-home.Dad9aAd3.jpg                                 [39m[1m[2m638.27 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/aerial-front-and-driveway.GeqqvuCn.jpg                            [39m[1m[2m665.04 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/aerial-front-wooded-surroundings.DQOmsnJf.jpg                     [39m[1m[2m668.12 kB[22m[1m[22m
+[2mdist/server/[22m[32massets/static/Bhargav_Patel.CSispYiw.jpg                                        [39m[1m[2m731.83 kB[22m[1m[22m
+[2mdist/server/[22m[36mchunks/chunk-D_J3fy_g.js                                                        [39m[1m[2m  0.64 kB[22m[1m[22m
+[2mdist/server/[22m[36mentry.mjs                                                                       [39m[1m[2m  3.36 kB[22m[1m[22m
+[2mdist/server/[22m[36mchunks/chunk-jpK97KyX.js                                                        [39m[1m[2m  4.36 kB[22m[1m[22m
+[2mdist/server/[22m[36mchunks/chunk-BD9tSKIx.js                                                        [39m[1m[2m  5.04 kB[22m[1m[22m
+[2mdist/server/[22m[36mchunks/chunk-C16i_21m.js                                                        [39m[1m[2m  6.31 kB[22m[1m[22m
+[2mdist/server/[22m[36mchunks/chunk-CttCJk5o.js                                                        [39m[1m[2m  7.05 kB[22m[1m[22m
+[2mdist/server/[22m[36mchunks/chunk-Cqq7ivzA.js                                                        [39m[1m[2m  7.36 kB[22m[1m[22m
+[2mdist/server/[22m[36mchunks/chunk-D6GaaTJ2.js                                                        [39m[1m[2m  7.41 kB[22m[1m[22m
+[2mdist/server/[22m[36mchunks/chunk-DW5rq-RT.js                                                        [39m[1m[2m  7.42 kB[22m[1m[22m
+[2mdist/server/[22m[36mchunks/chunk-CY_fwQuW.js                                                        [39m[1m[2m  7.45 kB[22m[1m[22m
+[2mdist/server/[22m[36mchunks/chunk-C5TdXCMY.js                                                        [39m[1m[2m  7.57 kB[22m[1m[22m
+[2mdist/server/[22m[36mchunks/chunk-CsqQw1nn.js                                                        [39m[1m[2m  7.58 kB[22m[1m[22m
+[2mdist/server/[22m[36mchunks/chunk-CxAzqLoL.js                                                        [39m[1m[2m  7.62 kB[22m[1m[22m
+[2mdist/server/[22m[36mchunks/chunk-o8FX5e2Q.js                                                        [39m[1m[2m 12.54 kB[22m[1m[22m
+[2mdist/server/[22m[36mchunks/chunk-BG3jJCZd.js                                                        [39m[1m[2m 12.75 kB[22m[1m[22m
+[2mdist/server/[22m[36mchunks/chunk-CeP41uB_.js                                                        [39m[1m[2m 15.82 kB[22m[1m[22m
+[2mdist/server/[22m[36mchunks/chunk-D58P0MuW.js                                                        [39m[1m[2m 17.46 kB[22m[1m[22m
+[2mdist/server/[22m[36mchunks/chunk-BDUNz5d5.js                                                        [39m[1m[2m 17.63 kB[22m[1m[22m
+[2mdist/server/[22m[36mchunks/chunk-d1hc7WRa.js                                                        [39m[1m[2m 22.10 kB[22m[1m[22m
+[2mdist/server/[22m[36mchunks/chunk-D46UMx70.js                                                        [39m[1m[2m 55.56 kB[22m[1m[22m
+[2mdist/server/[22m[36mentries/pages.mjs                                                               [39m[1m[2m120.45 kB[22m[1m[22m
+[36mvike v0.4.247[39m [32mpre-rendering HTML...[39m
+file:///C:/Users/bodhi/OneDrive/Desktop/Bhargav/project-bolt-sb1-yftq8g6p/project/dist/server/entries/pages.mjs:3
+import { Helmet, HelmetProvider } from "react-helmet-async";
+         ^^^^^^
+SyntaxError: Named export 'Helmet' not found. The requested module 'react-helmet-async' is a CommonJS module, which may not support all module.exports as named exports.
+CommonJS modules can always be imported via the default export, for example using:
+
+import pkg from 'react-helmet-async';
+const { Helmet, HelmetProvider } = pkg;
+
+    at ModuleJob._instantiate (node:internal/modules/esm/module_job:182:21)
+    at ModuleJob.run (node:internal/modules/esm/module_job:266:5)
+    at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)
+    at loadAndParseVirtualFilePageEntry (file:///C:/Users/bodhi/OneDrive/Desktop/Bhargav/project-bolt-sb1-yftq8g6p/project/node_modules/vike/dist/esm/shared/page-configs/loadAndParseVirtualFilePageEntry.js:11:41)
+    at file:///C:/Users/bodhi/OneDrive/Desktop/Bhargav/project-bolt-sb1-yftq8g6p/project/node_modules/vike/dist/esm/node/prerender/runPrerender.js:178:34
+[1m┌───────────────────────────────────────────────────────────────────────────────────┐
+│ To fix this error, see https://vike.dev/broken-npm-package#named-export-not-found │
+└───────────────────────────────────────────────────────────────────────────────────┘[22m
