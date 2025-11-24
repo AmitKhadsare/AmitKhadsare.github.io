@@ -15,26 +15,25 @@ import LoadingSpinner from './components/LoadingSpinner';
 import OrganizationSchema from './components/OrganizationSchema';
 import { localBusinessSchema } from './data/structuredData';
 
-// Lazy load page components
-const Article = React.lazy(() => import('./components/Article'));
-const AboutUsPage = React.lazy(() => import('./components/AboutUsPage'));
-const FaqPage = React.lazy(() => import('./components/FaqPage'));
-const ScheduleTourPage = React.lazy(() => import('./components/ScheduleTourPage'));
-const AllServicesPage = React.lazy(() => import('./components/AllServicesPage'));
-const ContactPage = React.lazy(() => import('./components/ContactPage'));
-const FacilityPage = React.lazy(() => import('./components/FacilityPage'));
-const CareersPage = React.lazy(() => import('./components/CareersPage'));
-const RehabilitationPage = React.lazy(() => import('./components/RehabilitationPage'));
-const MemoryCarePage = React.lazy(() => import('./components/MemoryCarePage'));
-const FamilyPartnershipPage = React.lazy(() => import('./components/FamilyPartnershipPage'));
-const HealthAndSafetyPage = React.lazy(() => import('./components/HealthAndSafetyPage'));
-const ResidentialCarePage = React.lazy(() => import('./components/ResidentialCarePage'));
-const PrivacyPolicyPage = React.lazy(() => import('./components/PrivacyPolicyPage'));
-const TermsOfServicePage = React.lazy(() => import('./components/TermsOfServicePage'));
-const RecreationPage = React.lazy(() => import('./components/RecreationPage'));
-const PersonalAssistancePage = React.lazy(() => import('./components/PersonalAssistancePage'));
-const DietaryPage = React.lazy(() => import('./components/DietaryPage'));
-const VirtualTourPage = React.lazy(() => import('./components/VirtualTourPage'));
+import Article from './components/Article';
+import AboutUsPage from './components/AboutUsPage';
+import FaqPage from './components/FaqPage';
+import ScheduleTourPage from './components/ScheduleTourPage';
+import AllServicesPage from './components/AllServicesPage';
+import ContactPage from './components/ContactPage';
+import FacilityPage from './components/FacilityPage';
+import CareersPage from './components/CareersPage';
+import RehabilitationPage from './components/RehabilitationPage';
+import MemoryCarePage from './components/MemoryCarePage';
+import FamilyPartnershipPage from './components/FamilyPartnershipPage';
+import HealthAndSafetyPage from './components/HealthAndSafetyPage';
+import ResidentialCarePage from './components/ResidentialCarePage';
+import PrivacyPolicyPage from './components/PrivacyPolicyPage';
+import TermsOfServicePage from './components/TermsOfServicePage';
+import RecreationPage from './components/RecreationPage';
+import PersonalAssistancePage from './components/PersonalAssistancePage';
+import DietaryPage from './components/DietaryPage';
+import VirtualTourPage from './components/VirtualTourPage';
 
 // Loading component
 const PageLoader = () => (
@@ -53,54 +52,52 @@ function App() {
       <ScrollToTop />
       <div className="min-h-screen">
         {!isProposal && <Header />}
-        <Suspense fallback={<PageLoader />}>
-          <Routes>
-            <Route path="/" element={
-              <>
-                <SEOHead
-                  title="Columbia Care Home – Care that Feels Like Coming Home"
-                  description="Columbia Care Home provides heartfelt, professional care in a warm, home-like environment. Discover senior care that truly feels like family in Columbia, Maryland."
-                  keywords="assisted living Columbia MD, senior care Maryland, memory care Columbia, physical therapy Columbia, elder care Maryland, senior living Columbia"
-                  structuredData={localBusinessSchema}
-                />
-                <div id="home" className="scroll-mt-24">
-                  <Hero />
-                </div>
-                <div id="about" className="scroll-mt-24">
-                  <About />
-                </div>
-                <div id="services" className="scroll-mt-24">
-                  <Services />
-                </div>
-                <div id="faq" className="scroll-mt-24">
-                  <Faq />
-                </div>
-                <div id="contact" className="scroll-mt-24">
-                  <Contact />
-                </div>
-              </>
-            } />
-            <Route path="/article" element={<Article />} />
-            <Route path="/about-us" element={<AboutUsPage />} />
-            <Route path="/faq" element={<FaqPage />} />
-            <Route path="/schedule-a-tour" element={<ScheduleTourPage />} />
-            <Route path="/services" element={<AllServicesPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="/facility" element={<FacilityPage />} />
-            <Route path="/careers" element={<CareersPage />} />
-            <Route path="/rehabilitation" element={<RehabilitationPage />} />
-            <Route path="/memory-care" element={<MemoryCarePage />} />
-            <Route path="/family-partnership" element={<FamilyPartnershipPage />} />
-            <Route path="/health-safety" element={<HealthAndSafetyPage />} />
-            <Route path="/residential-care" element={<ResidentialCarePage />} />
-            <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
-            <Route path="/terms-of-service" element={<TermsOfServicePage />} />
-            <Route path="/recreation" element={<RecreationPage />} />
-            <Route path="/personal-assistance" element={<PersonalAssistancePage />} />
-            <Route path="/dietary" element={<DietaryPage />} />
-            <Route path="/virtual-tour" element={<VirtualTourPage />} />
-          </Routes>
-        </Suspense>
+        <Routes>
+          <Route path="/" element={
+            <>
+              <SEOHead
+                title="Columbia Care Home – Care that Feels Like Coming Home"
+                description="Columbia Care Home provides heartfelt, professional care in a warm, home-like environment. Discover senior care that truly feels like family in Columbia, Maryland."
+                keywords="assisted living Columbia MD, senior care Maryland, memory care Columbia, physical therapy Columbia, elder care Maryland, senior living Columbia"
+                structuredData={localBusinessSchema}
+              />
+              <div id="home" className="scroll-mt-24">
+                <Hero />
+              </div>
+              <div id="about" className="scroll-mt-24">
+                <About />
+              </div>
+              <div id="services" className="scroll-mt-24">
+                <Services />
+              </div>
+              <div id="faq" className="scroll-mt-24">
+                <Faq />
+              </div>
+              <div id="contact" className="scroll-mt-24">
+                <Contact />
+              </div>
+            </>
+          } />
+          <Route path="/article" element={<Article />} />
+          <Route path="/about-us" element={<AboutUsPage />} />
+          <Route path="/faq" element={<FaqPage />} />
+          <Route path="/schedule-a-tour" element={<ScheduleTourPage />} />
+          <Route path="/services" element={<AllServicesPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/facility" element={<FacilityPage />} />
+          <Route path="/careers" element={<CareersPage />} />
+          <Route path="/rehabilitation" element={<RehabilitationPage />} />
+          <Route path="/memory-care" element={<MemoryCarePage />} />
+          <Route path="/family-partnership" element={<FamilyPartnershipPage />} />
+          <Route path="/health-safety" element={<HealthAndSafetyPage />} />
+          <Route path="/residential-care" element={<ResidentialCarePage />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+          <Route path="/terms-of-service" element={<TermsOfServicePage />} />
+          <Route path="/recreation" element={<RecreationPage />} />
+          <Route path="/personal-assistance" element={<PersonalAssistancePage />} />
+          <Route path="/dietary" element={<DietaryPage />} />
+          <Route path="/virtual-tour" element={<VirtualTourPage />} />
+        </Routes>
         {!isProposal && <Footer />}
         {!isProposal && <MobileSocialBar />}
       </div>
