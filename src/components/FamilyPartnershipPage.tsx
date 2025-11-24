@@ -53,7 +53,8 @@ const FamilyPartnershipPage = () => {
         title="Family Partnership & Support | Columbia Care"
         description="We view our relationship with families as a true partnership, offering regular care conferences, open communication, and family support."
         keywords="family partnership, senior care family support, care conferences, open communication, family involvement"
-        url="/services/family-partnership"
+        image="https://www.columbiacarehome.com/og-family-partnership.jpg"
+        url="/family-partnership"
       />
       {/* Hero Header */}
       <div className="bg-gradient-to-br from-emerald-600 to-teal-700 text-white py-20">

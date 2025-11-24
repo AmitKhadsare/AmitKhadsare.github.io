@@ -31,10 +31,10 @@ const CareHomeCarousel = () => {
     },
     {
       id: 4,
-      image: new URL('../assets/Facility/Our Home (Exterior)/our-home-deck-patio-set.jpg', import.meta.url).href,
-      title: 'Outdoor Deck & Patio',
-      description: 'Our spacious deck with comfortable seating offers a perfect spot to enjoy fresh air, sunshine, and peaceful wooded views.',
-      badge: 'Outdoor Living'
+      image: new URL('../assets/Facility/Our Home (Exterior)/our-home-deck-with-wooded-view.jpg', import.meta.url).href,
+      title: 'Serene Outdoor Retreat',
+      description: 'Relax on our spacious deck surrounded by peaceful wooded views, offering the perfect sanctuary for fresh air and tranquil moments in nature.',
+      badge: 'Nature Views'
     },
     {
       id: 5,

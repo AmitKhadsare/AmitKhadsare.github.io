@@ -53,7 +53,8 @@ const ResidentialCarePage = () => {
         title="Residential Care & Senior Living | Columbia Care"
         description="Comfortable and secure residential care services providing a homelike environment with 24/7 professional supervision and support."
         keywords="residential care, senior living, elderly home, 24/7 care, retirement home, senior community"
-        url="/services/residential-care"
+        image="https://www.columbiacarehome.com/og-residential-care.jpg"
+        url="/residential-care"
       />
       {/* Hero Header */}
       <div className="bg-gradient-to-br from-emerald-600 to-teal-700 text-white py-20">

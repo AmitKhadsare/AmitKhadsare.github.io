@@ -53,7 +53,8 @@ const MemoryCarePage = () => {
         title="Specialized Memory Care & Dementia Support | Columbia Care"
         description="Secure and compassionate memory care environment for residents with Alzheimer's and dementia, focusing on safety, dignity, and cognitive support."
         keywords="memory care, dementia care, alzheimers care, secure facility, cognitive support, senior safety"
-        url="/services/memory-care"
+        image="https://www.columbiacarehome.com/og-memory-care.jpg"
+        url="/memory-care"
       />
       {/* Hero Header */}
       <div className="bg-gradient-to-br from-emerald-600 to-teal-700 text-white py-20">

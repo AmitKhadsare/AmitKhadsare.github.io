@@ -70,6 +70,7 @@ const ScheduleTourPage = () => {
         title="Schedule a Tour | Columbia Care Home"
         description="Schedule a personal tour of Columbia Care Home. Experience our facilities, meet our team, and see why we are the best choice for your loved one."
         keywords="schedule tour, nursing home tour, senior living visit, columbia care tour, facility tour"
+        image="https://www.columbiacarehome.com/og-schedule.jpg"
         url="/schedule-tour"
       />
       {/* Hero Header */}

@@ -53,7 +53,8 @@ const HealthAndSafetyPage = () => {
         title="Health, Safety & Medical Oversight | Columbia Care"
         description="Proactive health and safety measures including continuous monitoring, 24/7 support, and reliable emergency response for peace of mind."
         keywords="senior health safety, medical oversight, 24/7 senior care, emergency response, elderly safety monitoring"
-        url="/services/health-safety"
+        image="https://www.columbiacarehome.com/og-health-safety.jpg"
+        url="/health-safety"
       />
       {/* Hero Header */}
       <div className="bg-gradient-to-br from-emerald-600 to-teal-700 text-white py-20">

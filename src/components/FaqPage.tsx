@@ -29,7 +29,7 @@ const faqCategories: FAQCategory[] = [
       },
       {
         question: "Do you accept insurance or Medicare/Medicaid?",
-        answer: "We accept long-term care insurance and private pay. While we don't directly bill Medicare/Medicaid, we can provide documentation for reimbursement. Our admissions team can help you understand your payment options."
+        answer: "We accept private pay. While we don't directly bill Medicare/Medicaid, we can provide documentation for reimbursement. Our admissions team can help you understand your payment options."
       },
       {
         question: "What is the admission process?",
@@ -202,6 +202,7 @@ const FAQPage = () => {
         title="Frequently Asked Questions | Columbia Care"
         description="Find answers to common questions about our senior care services, admission process, costs, and daily life at Columbia Care Home."
         keywords="senior care faq, nursing home questions, assisted living answers, columbia care faq, elderly care information"
+        image="https://www.columbiacarehome.com/og-faq.jpg"
         url="/faq"
         structuredData={faqStructuredData}
       />

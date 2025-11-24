@@ -135,7 +135,7 @@ const AboutUsPage = () => {
               </div>
               <div className="space-y-6 relative">
                 <div className="absolute -top-10 -right-10 text-9xl font-serif text-teal-50 -z-10 opacity-50">"</div>
-                <h3 className="font-serif text-4xl text-stone-800 font-bold">Sheetal Khadsare, DPT</h3>
+                <h3 className="font-serif text-4xl text-stone-800 font-bold">Sheetal Khadsare, PT DPT</h3>
                 <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-teal-100 text-teal-800 rounded-full text-sm font-semibold">
                   <Users className="w-4 h-4" />
                   <span>Co-Founder</span>

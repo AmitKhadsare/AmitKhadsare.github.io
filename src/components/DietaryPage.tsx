@@ -53,7 +53,8 @@ const DietaryPage = () => {
         title="Dietary Services & Nutrition | Columbia Care"
         description="Delicious, dietitian-approved meals designed to support wellness and delight the senses. Specialized diet accommodation available."
         keywords="dietary services, senior nutrition, elderly meal plans, healthy senior dining, dietitian approved meals"
-        url="/services/dietary"
+        image="https://www.columbiacarehome.com/og-dietary.jpg"
+        url="/dietary"
       />
       {/* Hero Header */}
       <div className="bg-gradient-to-br from-emerald-600 to-teal-700 text-white py-20">

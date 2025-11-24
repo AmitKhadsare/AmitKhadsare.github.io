@@ -53,7 +53,8 @@ const RecreationPage = () => {
         title="Recreation & Wellness Activities | Columbia Care"
         description="Vibrant life and wellness programs fostering joy, connection, and purpose through engaging daily activities and social events."
         keywords="senior recreation, wellness activities, elderly social events, therapeutic recreation, senior community activities"
-        url="/services/recreation"
+        image="https://www.columbiacarehome.com/og-recreation.jpg"
+        url="/recreation"
       />
       {/* Hero Header */}
       <div className="bg-gradient-to-br from-emerald-600 to-teal-700 text-white py-20">

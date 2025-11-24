@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight, HeartPulse, ShieldCheck, TrendingUp } from 'lucide-react';
 import physicalTherapyImage from '../assets/physical_therapy.avif';
+import SEOHead from './SEOHead';
 
 interface FeatureCardProps {
   icon: React.ComponentType<{ className?: string }>;
@@ -48,6 +49,13 @@ const RehabilitationPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <SEOHead
+        title="Rehabilitation & Physical Therapy | Columbia Care"
+        description="Expert on-site physical therapy and rehabilitation services designed to restore mobility, build strength, and enhance quality of life."
+        keywords="rehabilitation services, physical therapy, senior rehab, mobility support, geriatric therapy"
+        image="https://www.columbiacarehome.com/og-rehabilitation.jpg"
+        url="/rehabilitation"
+      />
       {/* Hero Header - Matching FAQ/Contact Page Style */}
       <div className="bg-gradient-to-br from-emerald-600 to-teal-700 text-white py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -82,13 +90,13 @@ const RehabilitationPage = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <img 
-              loading="lazy" src={physicalTherapyImage} 
-              alt="Therapist assisting a resident with exercises" 
+            <img
+              loading="lazy" src={physicalTherapyImage}
+              alt="Therapist assisting a resident with exercises"
               className="w-full h-full object-cover"
             />
           </motion.div>
-          <motion.div 
+          <motion.div
             className="space-y-6"
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}

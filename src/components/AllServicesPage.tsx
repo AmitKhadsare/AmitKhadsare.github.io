@@ -137,7 +137,7 @@ interface ServiceCardProps {
 const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
   const Icon = service.icon;
   const colorClass = getColorClasses(service.color);
-  
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -148,14 +148,14 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
     >
       {/* Image with smart positioning */}
       <div className="relative h-56 overflow-hidden">
-        <img 
+        <img
           src={service.image}
           alt={service.title}
           className={`w-full h-full object-cover ${service.imagePosition} group-hover:scale-105 transition-transform duration-300`}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
       </div>
-      
+
       {/* Content */}
       <div className="p-6 flex flex-col flex-grow">
         {/* Icon and Title */}
@@ -167,12 +167,12 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
             {service.title}
           </h3>
         </div>
-        
+
         {/* Description */}
         <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-4">
           {service.description}
         </p>
-        
+
         {/* Features List */}
         <div className="space-y-3 mb-6 flex-grow">
           {service.features.map((feature: string, idx: number) => (
@@ -182,7 +182,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
             </div>
           ))}
         </div>
-        
+
         {/* CTA */}
         {service.path ? (
           <Link to={service.path} className="w-full">
@@ -209,7 +209,7 @@ const AllServicesPage = () => {
         title="Comprehensive Senior Care Services in Columbia, MD"
         description="Discover our full range of senior care services including assisted living, memory care, physical therapy, and personal assistance. Professional care in a warm, home-like environment."
         keywords="senior care services Columbia MD, assisted living services Maryland, memory care services, physical therapy Columbia, personal care services, senior living services"
-        image="https://www.columbiacarehome.com/assets/carehome.avif"
+        image="https://www.columbiacarehome.com/og-services.jpg"
         url="https://www.columbiacarehome.com/services"
       />
       {/* Green Header with Stats */}
@@ -226,7 +226,7 @@ const AllServicesPage = () => {
               <ArrowLeft className="w-5 h-5" />
               Back to Home
             </button>
-            
+
             {/* Page Title */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 font-serif leading-tight">
               Our Comprehensive Services
@@ -234,7 +234,7 @@ const AllServicesPage = () => {
             <p className="text-lg sm:text-xl text-emerald-50 max-w-3xl mb-12 leading-relaxed mx-auto">
               Every service we offer is designed with one goal in mind: to provide a nurturing, supportive, and enriching environment where our residents can thrive.
             </p>
-            
+
             {/* Statistics */}
             <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
               <motion.div
@@ -276,7 +276,7 @@ const AllServicesPage = () => {
       </div>
 
       {/* CTA Section */}
-      <motion.div 
+      <motion.div
         className="bg-emerald-50 py-16"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}

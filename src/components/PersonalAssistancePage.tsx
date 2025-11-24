@@ -53,7 +53,8 @@ const PersonalAssistancePage = () => {
         title="Personal Assistance & Daily Living Support | Columbia Care"
         description="Dignified personal assistance with daily living activities, grooming, and medication management, tailored to individual needs."
         keywords="personal assistance, daily living support, grooming, medication management, senior care, assisted living"
-        url="/services/personal-assistance"
+        image="https://www.columbiacarehome.com/og-personal-assistance.jpg"
+        url="/personal-assistance"
       />
       {/* Hero Header */}
       <div className="bg-gradient-to-br from-emerald-600 to-teal-700 text-white py-20">

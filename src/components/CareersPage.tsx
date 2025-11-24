@@ -34,6 +34,7 @@ const CareersPage = () => {
         title="Careers & Employment Opportunities | Columbia Care Home"
         description="Join the Columbia Care Home team. We are looking for compassionate professionals dedicated to providing exceptional senior care. Explore current job openings."
         keywords="careers, jobs, nursing jobs, caregiver jobs, senior care employment, columbia md jobs"
+        image="https://www.columbiacarehome.com/og-careers.jpg"
         url="/careers"
       />
       {/* Hero Header */}

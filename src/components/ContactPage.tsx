@@ -145,6 +145,7 @@ const ContactPage: React.FC = () => {
         title="Contact Us | Columbia Care Home"
         description="Get in touch with Columbia Care Home. Call us, email us, or schedule a visit. We are here to answer your questions about our senior care services."
         keywords="contact columbia care, senior living contact, schedule tour, nursing home maryland, elderly care inquiry"
+        image="https://www.columbiacarehome.com/og-contact.jpg"
         url="/contact"
       />
       {/* Hero Section */}

@@ -8,7 +8,7 @@ const About = () => (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       {/* Mobile Layout: Text first, then carousel */}
       <div className="lg:hidden space-y-8">
-        <motion.div 
+        <motion.div
           className="space-y-6 text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -32,7 +32,7 @@ const About = () => (
             </p>
           </div>
         </motion.div>
-        
+
         {/* Carousel on mobile */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -42,8 +42,8 @@ const About = () => (
         >
           <CareHomeCarousel />
         </motion.div>
-        
-        <motion.div 
+
+        <motion.div
           className="space-y-6 text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -57,15 +57,15 @@ const About = () => (
             <p className="text-base lg:text-lg text-gray-700 leading-relaxed">
               At the heart of this vision are{' '}
               <span className="font-bold text-emerald-700">Bhargav Patel</span> and{' '}
-              <span className="font-bold text-teal-700">Sheetal Khadsare</span>, 
-              both qualified physiotherapists who bring medical expertise and boundless compassion 
+              <span className="font-bold text-teal-700">Sheetal Khadsare</span>,
+              both qualified Physical Therapists who bring medical expertise and boundless compassion
               to create a space where residents thrive like family.
             </p>
           </div>
           <div className="pt-4">
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Link to="/about-us">
-                <motion.button 
+                <motion.button
                   className="group relative px-8 py-4 lg:px-10 lg:py-5 bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-700 text-white rounded-full font-bold text-lg lg:text-xl shadow-2xl overflow-hidden hover:shadow-emerald-500/30 transition-all w-full sm:w-auto"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
@@ -77,7 +77,7 @@ const About = () => (
                 </motion.button>
               </Link>
               <Link to="/facility">
-                <motion.button 
+                <motion.button
                   className="group relative px-8 py-4 lg:px-10 lg:py-5 bg-gradient-to-r from-slate-600 via-gray-600 to-slate-700 text-white rounded-full font-bold text-lg lg:text-xl shadow-2xl overflow-hidden hover:shadow-slate-500/30 transition-all w-full sm:w-auto"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
@@ -96,7 +96,7 @@ const About = () => (
       {/* Desktop Layout: Side by side */}
       <div className="hidden lg:grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
         <CareHomeCarousel />
-        <motion.div 
+        <motion.div
           className="space-y-8 lg:pl-8"
           initial={{ opacity: 0, x: 20 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -126,15 +126,15 @@ const About = () => (
             <p className="text-lg text-gray-700 leading-relaxed">
               At the heart of this vision are{' '}
               <span className="font-bold text-emerald-700">Bhargav Patel</span> and{' '}
-              <span className="font-bold text-teal-700">Sheetal Khadsare</span>, 
-              both qualified physiotherapists who bring medical expertise and boundless compassion 
+              <span className="font-bold text-teal-700">Sheetal Khadsare</span>,
+              both qualified physical therapists who bring medical expertise and boundless compassion
               to create a space where residents thrive like family.
             </p>
           </div>
           <div className="pt-4">
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Link to="/about-us">
-                <motion.button 
+                <motion.button
                   className="group relative px-10 py-5 bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-700 text-white rounded-full font-bold text-xl shadow-2xl overflow-hidden hover:shadow-emerald-500/30 transition-all"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
@@ -146,7 +146,7 @@ const About = () => (
                 </motion.button>
               </Link>
               <Link to="/facility">
-                <motion.button 
+                <motion.button
                   className="group relative px-10 py-5 bg-gradient-to-r from-slate-600 via-gray-600 to-slate-700 text-white rounded-full font-bold text-xl shadow-2xl overflow-hidden hover:shadow-slate-500/30 transition-all"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}

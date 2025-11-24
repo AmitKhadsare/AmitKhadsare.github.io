@@ -1,6 +1,5 @@
 import React, { Suspense } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -47,7 +46,7 @@ function App() {
   const isProposal = location.pathname === '/proposal';
 
   return (
-    <HelmetProvider>
+    <>
       <OrganizationSchema />
       <ScrollToTop />
       <div className="min-h-screen">
@@ -101,7 +100,7 @@ function App() {
         {!isProposal && <Footer />}
         {!isProposal && <MobileSocialBar />}
       </div>
-    </HelmetProvider>
+    </>
   );
 }
 

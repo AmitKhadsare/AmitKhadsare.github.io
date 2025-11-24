@@ -1,0 +1,39 @@
+
+> vite-react-typescript-starter@0.0.0 build
+> npm run generate-sitemap && vite build
+
+
+> vite-react-typescript-starter@0.0.0 generate-sitemap
+> node scripts/generate-sitemap.js
+
+✅ Sitemap generated successfully at: C:\Users\bodhi\OneDrive\Desktop\Bhargav\project-bolt-sb1-yftq8g6p\project\public\sitemap.xml
+✅ Sitemap index generated successfully at: C:\Users\bodhi\OneDrive\Desktop\Bhargav\project-bolt-sb1-yftq8g6p\project\public\sitemap-index.xml
+✅ Image sitemap generated successfully at: C:\Users\bodhi\OneDrive\Desktop\Bhargav\project-bolt-sb1-yftq8g6p\project\public\image-sitemap.xml
+[2m6:41:08 pm[22m [1m[36m[vike][39m[22m[1m[33m[Warning][39m[22m Define Vike settings in +config.js instead of vite.config.js [4mhttps://vike.dev/migration/settings[24m
+[36mvite v7.0.0 [32mbuilding for production...[36m[39m
+transforming...
+[32m✓[39m 88 modules transformed.
+[31m✗[39m Build failed in 221ms
+[31merror during build:
+[31m[vite:esbuild] Transform failed with 1 error:
+C:/Users/bodhi/OneDrive/Desktop/Bhargav/project-bolt-sb1-yftq8g6p/project/src/App.tsx:50:20: ERROR: Unexpected ">"[31m
+file: [36mC:/Users/bodhi/OneDrive/Desktop/Bhargav/project-bolt-sb1-yftq8g6p/project/src/App.tsx:50:20[31m
+[33m
+[33mUnexpected ">"[33m
+48 |    return (
+49 |        <OrganizationSchema />
+50 |        <ScrollToTop />
+   |                      ^
+51 |        <div className="min-h-screen">
+52 |          {!isProposal && <Header />}
+[31m
+    at failureErrorWithLog (C:\Users\bodhi\OneDrive\Desktop\Bhargav\project-bolt-sb1-yftq8g6p\project\node_modules\esbuild\lib\main.js:1463:15)
+    at C:\Users\bodhi\OneDrive\Desktop\Bhargav\project-bolt-sb1-yftq8g6p\project\node_modules\esbuild\lib\main.js:734:50
+    at responseCallbacks.<computed> (C:\Users\bodhi\OneDrive\Desktop\Bhargav\project-bolt-sb1-yftq8g6p\project\node_modules\esbuild\lib\main.js:601:9)
+    at handleIncomingPacket (C:\Users\bodhi\OneDrive\Desktop\Bhargav\project-bolt-sb1-yftq8g6p\project\node_modules\esbuild\lib\main.js:656:12)
+    at Socket.readFromStdout (C:\Users\bodhi\OneDrive\Desktop\Bhargav\project-bolt-sb1-yftq8g6p\project\node_modules\esbuild\lib\main.js:579:7)
+    at Socket.emit (node:events:518:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Socket.Readable.push (node:internal/streams/readable:392:5)
+    at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)[39m
