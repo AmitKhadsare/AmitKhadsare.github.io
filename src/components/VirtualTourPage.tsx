@@ -11,7 +11,7 @@ const VirtualTourPage = () => {
                 title="Virtual Tour | Columbia Care Home"
                 description="Take a virtual tour of Columbia Care Home. Watch our video walkthrough and explore our facility in immersive 3D to see our beautiful, caring environment."
                 keywords="virtual tour, 3D tour, video tour, facility tour, Columbia care home tour, nursing home tour Maryland"
-                image="https://www.columbiacarehome.com/og-virtual-tour.png"
+                image="https://www.columbiacarehome.com/og-virtual-tour.jpg"
                 url="/virtual-tour"
             />
 

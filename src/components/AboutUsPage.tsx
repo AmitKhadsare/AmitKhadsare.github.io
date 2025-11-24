@@ -30,7 +30,7 @@ const AboutUsPage = () => {
         title="About Columbia Care Home - Our Story & Mission"
         description="Learn about Columbia Care Home's mission to provide compassionate, professional care in a warm, home-like environment. Meet our founders and discover our commitment to senior care excellence."
         keywords="about Columbia Care Home, senior care mission Maryland, care home founders, elder care philosophy, Columbia care home story"
-        image="https://www.columbiacarehome.com/og-our-story.png"
+        image="https://www.columbiacarehome.com/og-our-story.jpg"
         url="https://www.columbiacarehome.com/about-us"
       />
       {/* Hero Section */}
