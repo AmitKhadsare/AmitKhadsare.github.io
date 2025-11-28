@@ -2,8 +2,11 @@
 import { routes } from '../src/data/routes.js';
 
 export default function onBeforePrerenderStart() {
-    const routePaths = routes.map(route => route.path);
+    const urlList = routes.map(route => route.path);
 
-    console.log('[onBeforePrerenderStart] Providing URLs for pre-rendering:', routePaths);
-    return routePaths;
+    // Use a Set to automatically remove any duplicate URLs
+    const uniqueUrls = [...new Set(urlList)];
+
+    console.log('[onBeforePrerenderStart] Providing URLs for pre-rendering:', uniqueUrls);
+    return uniqueUrls;
 }
