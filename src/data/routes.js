@@ -25,7 +25,7 @@ const staticRoutes = [
 ];
 
 // Dynamic blog post routes
-const blogRoutes = blogs.map(blog => ({
+export const blogRoutes = blogs.map(blog => ({
     path: `/blog/${blog.slug}`,
     priority: '0.7',
     changefreq: 'monthly'
@@ -33,3 +33,4 @@ const blogRoutes = blogs.map(blog => ({
 
 // Combine all routes
 export const routes = [...staticRoutes, ...blogRoutes];
+export { staticRoutes };
