@@ -125,6 +125,10 @@ const Header = () => {
               Virtual Tour
             </Link>
 
+            <Link to="/blog" className={getLinkClass('/blog')}>
+              Blog
+            </Link>
+
             <Link to="/faq" className={getLinkClass('/faq')}>
               FAQ
             </Link>

@@ -33,6 +33,8 @@ import RecreationPage from './components/RecreationPage';
 import PersonalAssistancePage from './components/PersonalAssistancePage';
 import DietaryPage from './components/DietaryPage';
 import VirtualTourPage from './components/VirtualTourPage';
+import BlogIndexPage from './components/BlogIndexPage';
+import BlogPostPage from './components/BlogPostPage';
 
 // Loading component
 const PageLoader = () => (
@@ -96,6 +98,8 @@ function App() {
           <Route path="/personal-assistance" element={<PersonalAssistancePage />} />
           <Route path="/dietary" element={<DietaryPage />} />
           <Route path="/virtual-tour" element={<VirtualTourPage />} />
+          <Route path="/blog" element={<BlogIndexPage />} />
+          <Route path="/blog/:slug" element={<BlogPostPage />} />
         </Routes>
         {!isProposal && <Footer />}
         {!isProposal && <MobileSocialBar />}

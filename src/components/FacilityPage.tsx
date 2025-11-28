@@ -667,106 +667,35 @@ const FacilityPage = () => {
         </AnimatePresence>
       </div>
 
-      {/* Virtual Tour Section - YouTube + 3D Tour */}
+      {/* Virtual Tour CTA Section */}
       <div className="bg-gradient-to-br from-gray-50 to-emerald-50 py-12 md:py-20 border-t border-gray-200">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-8 md:mb-12"
           >
-            <div className="inline-flex items-center justify-center w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-emerald-100 to-emerald-200 rounded-2xl mb-6">
-              <Video className="w-7 h-7 md:w-8 md:h-8 text-emerald-600" />
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-emerald-100 to-emerald-200 rounded-2xl mb-6">
+              <Video className="w-8 h-8 text-emerald-600" />
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 font-serif mb-3 md:mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 font-serif mb-4">
               Experience Our Home Virtually
             </h2>
-            <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed px-4">
-              Take a complete tour from the comfort of your home
+            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+              Take a comprehensive video tour and explore our facility in immersive 3D from the comfort of your own home.
             </p>
+            <Link to="/virtual-tour">
+              <motion.button
+                className="inline-flex items-center gap-2 px-8 py-4 bg-emerald-600 text-white rounded-full font-bold text-lg shadow-lg hover:bg-emerald-700 transition-colors"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Video className="w-5 h-5" />
+                Take the Virtual Tour
+              </motion.button>
+            </Link>
           </motion.div>
-
-          {/* Video Tour Card */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="mb-8 md:mb-12"
-          >
-            <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100">
-              <div className="p-4 md:p-6 bg-gradient-to-r from-emerald-600 to-teal-600">
-                <div className="flex items-center gap-3 text-white">
-                  <div className="bg-white/20 backdrop-blur-sm p-2 rounded-lg">
-                    <Video className="w-5 h-5 md:w-6 md:h-6" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-lg md:text-xl">Video Home Tour</h3>
-                    <p className="text-emerald-50 text-xs md:text-sm">Guided walkthrough of our facility</p>
-                  </div>
-                </div>
-              </div>
-              <div className="relative aspect-video bg-gray-900">
-                <iframe
-                  className="absolute inset-0 w-full h-full"
-                  src="https://www.youtube.com/embed/ZyAEwLR1lsE"
-                  title="Columbia Care Home Tour"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
-              </div>
-              <div className="p-4 md:p-6 bg-gray-50">
-                <p className="text-sm md:text-base text-gray-600 text-center">
-                  Watch our comprehensive video tour showcasing every room, amenity, and the warm atmosphere of our home
-                </p>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* 3D Interactive Tour Card */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-          >
-            <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 p-6 md:p-8">
-              <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8">
-                <div className="flex-shrink-0">
-                  <div className="w-20 h-20 md:w-24 md:h-24 bg-gradient-to-br from-teal-100 to-emerald-200 rounded-2xl flex items-center justify-center">
-                    <Camera className="w-10 h-10 md:w-12 md:h-12 text-emerald-600" />
-                  </div>
-                </div>
-                <div className="flex-1 text-center md:text-left">
-                  <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2 md:mb-3">
-                    Interactive 3D Tour
-                  </h3>
-                  <p className="text-sm md:text-base text-gray-600 mb-4 md:mb-6 leading-relaxed">
-                    Explore every corner at your own pace with our immersive 360° virtual tour. Walk through rooms, zoom in on details, and get a true feel for our home.
-                  </p>
-                  <a href="https://my.matterport.com/show?play=1&lang=en-US&m=Ek5iHJBymGt" target="_blank" rel="noopener noreferrer">
-                    <motion.button
-                      className="px-6 py-3 md:px-8 md:py-4 bg-gradient-to-r from-emerald-600 to-emerald-700 text-white rounded-full font-bold text-sm md:text-base shadow-lg hover:shadow-xl transition-all inline-flex items-center gap-2 md:gap-3"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <Camera className="w-4 h-4 md:w-5 md:h-5" />
-                      Launch 3D Tour
-                    </motion.button>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Decorative Element */}
-          <div className="text-center mt-8 md:mt-12">
-            <p className="text-xs md:text-sm text-gray-500 italic">
-              Can't make it in person? These virtual tours give you a comprehensive view of our beautiful home
-            </p>
-          </div>
         </div>
       </div>
 

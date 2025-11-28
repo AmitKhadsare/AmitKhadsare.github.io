@@ -8,6 +8,7 @@
     "build": "npm run generate-sitemap && vite build",
     "generate-sitemap": "node scripts/generate-sitemap.js",
     "seo-audit": "node scripts/seo-audit.js",
+    "indexnow": "node scripts/submit-indexnow.js",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
