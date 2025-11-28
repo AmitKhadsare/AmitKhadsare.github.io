@@ -122,6 +122,16 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                         </div>
                       </Link>
 
+                      {/* Blog Link */}
+                      <Link to="/blog" onClick={onClose} className="block w-full text-left">
+                        <div className="flex items-center justify-between p-4 rounded-lg hover:bg-gray-100 transition-colors">
+                          <div className="flex items-center gap-4">
+                            <BookOpen className="w-6 h-6 text-emerald-700" />
+                            <span className="text-lg font-medium text-gray-800">Blog</span>
+                          </div>
+                        </div>
+                      </Link>
+
                       {/* Careers (Flattened from About Us) */}
                       <Link to="/careers" onClick={onClose} className="block w-full text-left">
                         <div className="flex items-center justify-between p-4 rounded-lg hover:bg-gray-100 transition-colors">
@@ -141,17 +151,6 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                           </div>
                         </div>
                       </Link>
-
-                      {/* Blog Link */}
-                      <Link to="/blog" onClick={onClose} className="block w-full text-left">
-                        <div className="flex items-center justify-between p-4 rounded-lg hover:bg-gray-100 transition-colors">
-                          <div className="flex items-center gap-4">
-                            <BookOpen className="w-6 h-6 text-emerald-700" />
-                            <span className="text-lg font-medium text-gray-800">Blog</span>
-                          </div>
-                        </div>
-                      </Link>
-
 
 
                       {/* FAQ (Flattened from Connect) */}
