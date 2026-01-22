@@ -90,27 +90,27 @@ const ContactPage: React.FC = () => {
     setErrorMessage(null);
 
     try {
-      // Create JSON payload for Web3Forms
-      const data = {
-        access_key: WEB3FORMS_ACCESS_KEY,
-        ...formData,
-        from_name: 'Columbia Care Home Website',
-        subject: `New Contact: ${formData.subject || 'General Inquiry'}`,
-        botcheck: false // Honeypot
-      };
-
-      const response = await fetch('https://api.web3forms.com/submit', {
+      // FormSubmit.co AJAX Endpoint
+      const response = await fetch('https://formsubmit.co/ajax/columbiacarehomes@gmail.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json'
         },
-        body: JSON.stringify(data)
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          subject: formData.subject,
+          message: formData.message,
+          _subject: `New Contact: ${formData.subject || 'General Inquiry'}`,
+          _captcha: "false"
+        })
       });
 
       const result = await response.json();
 
-      if (result.success) {
+      if (response.ok) {
         setIsSubmitted(true);
         setFormData({
           name: '',
