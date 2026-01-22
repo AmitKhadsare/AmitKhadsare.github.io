@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import {
   Phone, Mail, MapPin, Clock, Car,
@@ -7,6 +8,9 @@ import {
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import SEOHead from './SEOHead';
+
+
+// Access Key for Web3Forms removed - using FormSubmit.co
 
 interface FAQItemProps {
   question: string;
@@ -78,22 +82,35 @@ const ContactPage: React.FC = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setErrorMessage(null);
 
     try {
-      const form = e.currentTarget;
-      const formDataToSend = new FormData(form);
+      // Create JSON payload for Web3Forms
+      const data = {
+        access_key: WEB3FORMS_ACCESS_KEY,
+        ...formData,
+        from_name: 'Columbia Care Home Website',
+        subject: `New Contact: ${formData.subject || 'General Inquiry'}`,
+        botcheck: false // Honeypot
+      };
 
-      const response = await fetch('/', {
+      const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formDataToSend as any).toString(),
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(data)
       });
 
-      if (response.ok) {
+      const result = await response.json();
+
+      if (result.success) {
         setIsSubmitted(true);
         setFormData({
           name: '',
@@ -103,11 +120,12 @@ const ContactPage: React.FC = () => {
           message: ''
         });
       } else {
-        alert('There was an error submitting the form. Please try again or call us directly.');
+        console.error('Submission failed:', result);
+        setErrorMessage(result.message || 'Something went wrong. Please try again later.');
       }
     } catch (error) {
-      console.error('Form submission error:', error);
-      alert('There was an error submitting the form. Please try again or call us directly.');
+      console.error('Submission error:', error);
+      setErrorMessage('Something went wrong. Please check your connection and try again.');
     } finally {
       setIsSubmitting(false);
     }
@@ -243,16 +261,9 @@ const ContactPage: React.FC = () => {
                 </div>
               ) : (
                 <form
-                  name="contact"
-                  method="POST"
-                  data-netlify="true"
-                  netlify-honeypot="bot-field"
                   onSubmit={handleSubmit}
                   className="space-y-6"
                 >
-                  {/* Hidden fields for Netlify */}
-                  <input type="hidden" name="form-name" value="contact" />
-                  <input type="hidden" name="bot-field" />
 
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
@@ -336,6 +347,13 @@ const ContactPage: React.FC = () => {
                       placeholder="Please tell us how we can help you..."
                     />
                   </div>
+
+                  {errorMessage && (
+                    <div className="p-4 bg-red-50 text-red-700 rounded-lg flex items-center gap-2">
+                      <AlertCircle className="w-5 h-5 flex-shrink-0" />
+                      <p>{errorMessage}</p>
+                    </div>
+                  )}
 
                   <button
                     type="submit"
