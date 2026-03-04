@@ -4,25 +4,25 @@ const GOOGLE_MAPS_URL = 'https://share.google/R93mjMWSOCFljsFlE';
 
 const testimonials = [
     {
-        initials: 'SM',
-        name: 'Sunita M.',
-        relationship: 'Family Member of Resident',
+        initials: 'SV',
+        name: 'Stephanie Vitrano',
+        relationship: 'Family Member',
         rating: 5,
-        text: 'We looked at many places in Howard County before finding Columbia Care Home. The difference was immediate — it actually feels like a home, not a facility. The staff knew my mother\'s name, her habits, and her moods within the first week. The care is personal in a way you can\'t get from a larger place.'
+        text: 'The caring and supportive team at Columbia Care Home is beyond amazing. The founding principles of the home are evident in their approach and they are also very calming and helpful to us as a family.'
     },
     {
-        initials: 'RK',
-        name: 'Rakesh K.',
-        relationship: 'Son of Resident',
-        rating: 5,
-        text: 'My father needed significant support after his hip replacement, and the rehabilitation team here has been exceptional. Because the founders are Physical Therapists themselves, there is a clinical thoughtfulness to everything — from how his room is set up to the specific exercises they work on each day. His recovery has been better than any of us expected.'
-    },
-    {
-        initials: 'PP',
-        name: 'Priya P.',
+        initials: 'AB',
+        name: 'Anita Belkowitz',
         relationship: 'Daughter of Resident',
         rating: 5,
-        text: 'My mother has memory care needs, and finding the right home was incredibly stressful. Columbia Care Home gave us access to Bhargav, the founder, directly. He walked us through everything. It\'s been six months and my mother is genuinely happy — she has a routine, a small community, and consistent caregivers who truly know her.'
+        text: 'The care my father, who has been diagnosed with late stage Parkinson’s, is receiving at Columbia Care Home is phenomenal. Bhargav, the owner, along with his wife and aides have been a blessing to our family. The attention to detail is exceptional.'
+    },
+    {
+        initials: 'JH',
+        name: 'Janet Henschke',
+        relationship: 'Family Member',
+        rating: 5,
+        text: "What a blessing!! After multiple hospital stays and in home care, we found Columbia Care Homes..our familys first impression was one of a sigh of relief ....they've captured the essence of a true home away from home."
     }
 ];
 

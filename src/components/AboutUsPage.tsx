@@ -153,6 +153,9 @@ const AboutUsPage = () => {
         </div>
       </motion.section>
 
+      {/* Real Google Reviews Section */}
+      <Testimonials />
+
       {/* Philosophy Section */}
       <motion.section
         className="py-24 bg-gradient-to-br from-stone-100 to-emerald-50 px-4"
@@ -239,10 +242,6 @@ const AboutUsPage = () => {
           </Link>
         </div>
       </section>
-
-      {/* Real Google Reviews */}
-      <Testimonials />
-
     </div>
   );
 };
