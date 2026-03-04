@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import {
   Phone, Mail, MapPin, Clock, Car,
-  Send, ChevronDown, ChevronUp,
+  Send,
   AlertCircle, Users, Shield, Accessibility,
   HeadphonesIcon
 } from 'lucide-react';
@@ -11,13 +11,6 @@ import SEOHead from './SEOHead';
 
 
 // Access Key for Web3Forms removed - using FormSubmit.co
-
-interface FAQItemProps {
-  question: string;
-  answer: string;
-  isOpen: boolean;
-  onClick: () => void;
-}
 
 interface InfoCardProps {
   icon: React.ComponentType<{ className?: string }>;
@@ -34,27 +27,7 @@ interface FormData {
   message: string;
 }
 
-// FAQ Component
-const FAQItem: React.FC<FAQItemProps> = ({ question, answer, isOpen, onClick }) => (
-  <div className="border-b border-gray-200">
-    <button
-      onClick={onClick}
-      className="w-full py-6 px-2 flex items-center justify-between text-left hover:text-emerald-700 transition-colors"
-    >
-      <h3 className="text-lg font-semibold pr-8">{question}</h3>
-      {isOpen ? (
-        <ChevronUp className="w-5 h-5 text-emerald-600 flex-shrink-0" />
-      ) : (
-        <ChevronDown className="w-5 h-5 text-gray-400 flex-shrink-0" />
-      )}
-    </button>
-    {isOpen && (
-      <div className="pb-6 px-2">
-        <p className="text-gray-600 leading-relaxed">{answer}</p>
-      </div>
-    )}
-  </div>
-);
+
 
 // Info Card Component
 const InfoCard: React.FC<InfoCardProps> = ({ icon: Icon, title, children, className = "" }) => (
@@ -72,7 +45,6 @@ const InfoCard: React.FC<InfoCardProps> = ({ icon: Icon, title, children, classN
 );
 
 const ContactPage: React.FC = () => {
-  const [openFAQ, setOpenFAQ] = useState<number>(0);
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -138,24 +110,7 @@ const ContactPage: React.FC = () => {
     });
   };
 
-  const faqs = [
-    {
-      question: "How do I schedule a tour of your facility?",
-      answer: "You can schedule a tour by calling us at (201) 885-9225 or (301) 500-0809, or using our online scheduling form. Tours are available Monday through Saturday from 9 AM to 5 PM. We recommend scheduling at least 24 hours in advance."
-    },
-    {
-      question: "What should I bring when visiting for the first time?",
-      answer: "Please bring a valid ID and any questions you may have about our services. If you're visiting a resident, you may also want to bring any items they've requested. All visitors must sign in at the front desk for security purposes."
-    },
-    {
-      question: "Are there specific visiting hours?",
-      answer: "Family and friends are welcome to visit daily from 9 AM to 8 PM. We encourage visits as they're important for our residents' well-being. Special arrangements can be made for visits outside regular hours in case of special circumstances."
-    },
-    {
-      question: "Is parking available on-site?",
-      answer: "Yes, we have ample free parking available for visitors. Handicap-accessible parking spaces are located near the main entrance. Our parking area is well-lit and monitored for safety."
-    }
-  ];
+
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -426,24 +381,6 @@ const ContactPage: React.FC = () => {
                   Get Directions
                 </a>
               </div>
-            </div>
-          </div>
-        </div>
-
-        {/* FAQ Section */}
-        <div className="mt-16">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
-          <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
-            <div className="divide-y divide-gray-200">
-              {faqs.map((faq, index) => (
-                <FAQItem
-                  key={index}
-                  question={faq.question}
-                  answer={faq.answer}
-                  isOpen={openFAQ === index}
-                  onClick={() => setOpenFAQ(openFAQ === index ? -1 : index)}
-                />
-              ))}
             </div>
           </div>
         </div>

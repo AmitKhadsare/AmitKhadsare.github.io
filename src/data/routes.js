@@ -8,7 +8,6 @@ const staticRoutes = [
     { path: '/contact', priority: '0.8', changefreq: 'monthly' },
     { path: '/facility', priority: '0.8', changefreq: 'monthly' },
     { path: '/schedule-a-tour', priority: '0.8', changefreq: 'monthly' },
-    { path: '/faq', priority: '0.7', changefreq: 'monthly' },
     { path: '/rehabilitation', priority: '0.8', changefreq: 'monthly' },
     { path: '/memory-care', priority: '0.8', changefreq: 'monthly' },
     { path: '/personal-assistance', priority: '0.8', changefreq: 'monthly' },

@@ -56,14 +56,12 @@ const Footer = () => {
     { name: 'Home', path: '/#home' },
     { name: 'Our Promise', path: '/#about' },
     { name: 'How We Care', path: '/#services' },
-    { name: 'FAQ', path: '/#faq' },
     { name: 'Start the Conversation', path: '/#contact' },
   ];
 
   const resourceLinks = [
     { name: 'Our Story', path: '/about-us' },
     { name: 'Schedule a Tour', path: '/schedule-a-tour' },
-    { name: 'Read Our FAQ', path: '/faq' },
   ];
 
   const contactInfo = [

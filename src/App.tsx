@@ -1,22 +1,18 @@
-import React, { Suspense } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
 import Services from './components/Services';
-import Faq from './components/Faq';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import MobileSocialBar from './components/MobileSocialBar';
 import ScrollToTop from './components/ScrollToTop';
 import SEOHead from './components/SEOHead';
-import LoadingSpinner from './components/LoadingSpinner';
 import OrganizationSchema from './components/OrganizationSchema';
 import { localBusinessSchema } from './data/structuredData';
 
 import Article from './components/Article';
 import AboutUsPage from './components/AboutUsPage';
-import FaqPage from './components/FaqPage';
 import ScheduleTourPage from './components/ScheduleTourPage';
 import AllServicesPage from './components/AllServicesPage';
 import ContactPage from './components/ContactPage';
@@ -36,12 +32,6 @@ import VirtualTourPage from './components/VirtualTourPage';
 import BlogIndexPage from './components/BlogIndexPage';
 import BlogPostPage from './components/BlogPostPage';
 
-// Loading component
-const PageLoader = () => (
-  <div className="min-h-screen flex items-center justify-center bg-warm-50">
-    <LoadingSpinner />
-  </div>
-);
 
 function App() {
   const location = useLocation();
@@ -71,9 +61,6 @@ function App() {
               <div id="services" className="scroll-mt-24">
                 <Services />
               </div>
-              <div id="faq" className="scroll-mt-24">
-                <Faq />
-              </div>
               <div id="contact" className="scroll-mt-24">
                 <Contact />
               </div>
@@ -81,7 +68,6 @@ function App() {
           } />
           <Route path="/article" element={<Article />} />
           <Route path="/about-us" element={<AboutUsPage />} />
-          <Route path="/faq" element={<FaqPage />} />
           <Route path="/schedule-a-tour" element={<ScheduleTourPage />} />
           <Route path="/services" element={<AllServicesPage />} />
           <Route path="/contact" element={<ContactPage />} />

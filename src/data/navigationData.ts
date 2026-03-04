@@ -1,4 +1,4 @@
-import { Home, Users, Shield, Mail, BookOpen, Building2, Briefcase, Heart, Utensils, Activity, Dumbbell, BrainCircuit, Grid3X3, Smile, Calendar } from 'lucide-react';
+import { Home, Users, Shield, Mail, BookOpen, Building2, Briefcase, Heart, Utensils, Activity, Dumbbell, BrainCircuit, Grid3X3, Calendar } from 'lucide-react';
 
 export const menuData = {
   services: {
@@ -53,12 +53,11 @@ export const menuData = {
     ]
   },
   connect: {
-      title: 'Connect',
-      icon: Mail,
-      subMenu: [
-        { name: 'Contact Us', path: '/contact', icon: Mail },
-        { name: 'Schedule a Tour', path: '/schedule-a-tour', icon: Calendar },
-        { name: 'FAQ', path: '/faq', icon: Smile },
-      ]
+    title: 'Connect',
+    icon: Mail,
+    subMenu: [
+      { name: 'Contact Us', path: '/contact', icon: Mail },
+      { name: 'Schedule a Tour', path: '/schedule-a-tour', icon: Calendar },
+    ]
   }
 };
