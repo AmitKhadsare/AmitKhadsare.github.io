@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { motion, Variants } from 'framer-motion';
 import { ArrowLeft, Stethoscope, ShieldCheck, HeartHandshake, Sparkles, Users } from 'lucide-react';
 import SEOHead from './SEOHead';
+import Testimonials from './Testimonials';
 import bhargavPhoto from '../assets/Bhargav_Patel.jpg';
 import sheetalPhoto from '../assets/Sheetal_Khadsare.jpeg';
 
@@ -238,6 +239,10 @@ const AboutUsPage = () => {
           </Link>
         </div>
       </section>
+
+      {/* Real Google Reviews */}
+      <Testimonials />
+
     </div>
   );
 };
