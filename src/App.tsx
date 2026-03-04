@@ -29,18 +29,16 @@ import DietaryPage from './components/DietaryPage';
 import VirtualTourPage from './components/VirtualTourPage';
 import BlogIndexPage from './components/BlogIndexPage';
 import BlogPostPage from './components/BlogPostPage';
-import ClientPortalPage from './components/ClientPortalPage';
 
 
 function App() {
   const location = useLocation();
-  const isProposal = location.pathname === '/proposal';
 
   return (
     <>
       <ScrollToTop />
       <div className="min-h-screen">
-        {!isProposal && <Header />}
+        <Header />
         <Routes>
           <Route path="/" element={
             <>
@@ -83,10 +81,9 @@ function App() {
           <Route path="/virtual-tour" element={<VirtualTourPage />} />
           <Route path="/blog" element={<BlogIndexPage />} />
           <Route path="/blog/:slug" element={<BlogPostPage />} />
-          <Route path="/proposal" element={<ClientPortalPage />} />
         </Routes>
-        {!isProposal && <Footer />}
-        {!isProposal && <MobileSocialBar />}
+        <Footer />
+        <MobileSocialBar />
       </div>
     </>
   );

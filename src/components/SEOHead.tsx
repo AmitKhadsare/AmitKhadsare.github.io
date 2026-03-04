@@ -8,10 +8,8 @@ interface SEOHeadProps {
   keywords?: string;
   image?: string;
   url?: string;
-  type?: string;
   structuredData?: any;
   googleSiteVerification?: string;
-  noIndex?: boolean;
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
@@ -22,8 +20,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   url,
   type = "website",
   structuredData,
-  googleSiteVerification = "qoIlCCKaSRQEXzZyMJMkMwVMjW4m7yxlMoyqhi9Ylkw",
-  noIndex = false
+  googleSiteVerification = "qoIlCCKaSRQEXzZyMJMkMwVMjW4m7yxlMoyqhi9Ylkw"
 }) => {
   const location = useLocation();
   const fullTitle = title.includes('Columbia Care Home') ? title : `${title} | Columbia Care Home`;
@@ -86,7 +83,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <link rel="canonical" href={absoluteUrl} />
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
-      {noIndex && <meta name="robots" content="noindex, nofollow" />}
       <meta name="author" content="Columbia Care Home" />
       {googleSiteVerification && <meta name="google-site-verification" content={googleSiteVerification} />}
 
