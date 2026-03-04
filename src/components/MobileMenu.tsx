@@ -153,15 +153,6 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                       </Link>
 
 
-                      {/* FAQ (Flattened from Connect) */}
-                      <Link to="/faq" onClick={onClose} className="block w-full text-left">
-                        <div className="flex items-center justify-between p-4 rounded-lg hover:bg-gray-100 transition-colors">
-                          <div className="flex items-center gap-4">
-                            <Smile className="w-6 h-6 text-emerald-700" />
-                            <span className="text-lg font-medium text-gray-800">FAQ</span>
-                          </div>
-                        </div>
-                      </Link>
                     </nav>
                   </motion.div>
                 )}

@@ -10,7 +10,6 @@ import ScrollToTop from './components/ScrollToTop';
 import SEOHead from './components/SEOHead';
 import { localBusinessSchema } from './data/structuredData';
 
-import Article from './components/Article';
 import AboutUsPage from './components/AboutUsPage';
 import ScheduleTourPage from './components/ScheduleTourPage';
 import AllServicesPage from './components/AllServicesPage';
@@ -64,7 +63,6 @@ function App() {
               </div>
             </>
           } />
-          <Route path="/article" element={<Article />} />
           <Route path="/about-us" element={<AboutUsPage />} />
           <Route path="/schedule-a-tour" element={<ScheduleTourPage />} />
           <Route path="/services" element={<AllServicesPage />} />
