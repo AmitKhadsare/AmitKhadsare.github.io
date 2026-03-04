@@ -1,58 +1,15 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight, BrainCircuit, Lock, Puzzle } from 'lucide-react';
 import memoryCareImage from '../assets/mentalhealth.avif';
 import SEOHead from './SEOHead';
 
-interface FeatureCardProps {
-  icon: React.ComponentType<{ className?: string }>;
-  title: string;
-  description: string;
-  delay?: number;
-}
-
-const FeatureCard: React.FC<FeatureCardProps> = ({ icon: Icon, title, description, delay = 0 }) => (
-  <motion.div
-    className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 text-center"
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    transition={{ delay }}
-  >
-    <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
-      <Icon className="w-8 h-8 text-indigo-700" />
-    </div>
-    <h3 className="text-xl font-semibold text-gray-900 mb-2">{title}</h3>
-    <p className="text-gray-600">{description}</p>
-  </motion.div>
-);
-
 const MemoryCarePage = () => {
-  const features = [
-    {
-      icon: Lock,
-      title: "Secure & Safe Environment",
-      description: "Our memory care wing is designed with enhanced safety features, including secure exits and monitored spaces."
-    },
-    {
-      icon: BrainCircuit,
-      title: "Cognitive Enhancement",
-      description: "We use evidence-based programs, including sensory and reminiscence therapies, to support cognitive function."
-    },
-    {
-      icon: Puzzle,
-      title: "Specially Trained Staff",
-      description: "Our team receives ongoing, specialized training in dementia and Alzheimer's care to provide expert, patient support."
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-gray-50">
       <SEOHead
-        title="Specialized Memory Care & Dementia Support | Columbia Care"
-        description="Secure and compassionate memory care environment for residents with Alzheimer's and dementia, focusing on safety, dignity, and cognitive support."
-        keywords="memory care, dementia care, alzheimers care, secure facility, cognitive support, senior safety"
+        title="Physical Therapist-Led Memory Care & Dementia Support | Columbia MD"
+        description="Compassionate Level 3 memory care for residents with Alzheimer's and dementia. Structured routines designed by Doctors of Physical Therapy to reduce anxiety and maintain mobility in an intimate 8-bed home."
         image="https://www.columbiacarehome.com/og-memory-care.jpg"
         url="/memory-care"
       />
@@ -70,10 +27,10 @@ const MemoryCarePage = () => {
               Back to All Services
             </Link>
             <h1 className="text-4xl lg:text-5xl font-bold font-serif mb-4">
-              Specialized Memory Care
+              Clinical Memory Care
             </h1>
             <p className="text-xl text-emerald-50 max-w-3xl mx-auto">
-              A secure, supportive, and engaging environment for residents with Alzheimer's and dementia.
+              A secure, clinically-supervised residence designed specifically to reduce anxiety and preserve dignity for those with Alzheimer's and dementia.
             </p>
           </motion.div>
         </div>
@@ -92,7 +49,7 @@ const MemoryCarePage = () => {
           >
             <img
               loading="lazy" src={memoryCareImage}
-              alt="A caregiver providing supportive interaction for memory care"
+              alt="A peaceful, secure seating area at Columbia Care Home's 8-bed residence"
               className="w-full h-full object-cover"
             />
           </motion.div>
@@ -103,43 +60,60 @@ const MemoryCarePage = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <h2 className="text-3xl font-bold text-gray-900 font-serif">Care that Cherishes Every Moment</h2>
+            <h2 className="text-3xl font-bold text-gray-900 font-serif">A Home Designed for Cognitive Security</h2>
             <p className="text-lg text-gray-600 leading-relaxed">
-              Caring for a loved one with memory loss requires a special kind of compassion and expertise. Our Specialized Memory Care program is designed to provide a safe, structured, and nurturing environment that minimizes confusion and anxiety.
+              Caring for a loved one with memory loss requires more than just a locked door—it requires a profound understanding of how the environment impacts cognitive health. At Columbia Care Home, our 8-bed layout is a medical advantage. Unlike large facilities where cavernous hallways can trigger "sundowning" and agitation, our home offers a familiar, navigable scale that fosters calm.
             </p>
             <p className="text-lg text-gray-600 leading-relaxed">
-              We focus on "person-centered" care, which means we get to know each resident's life story, preferences, and routines. This allows us to create moments of joy, connection, and purpose, helping residents live a dignified and fulfilling life at every stage.
+              Founded by Doctors of Physical Therapy, our program is built on **structured daily routines** specifically designed to maintain mobility and reduce the anxiety often associated with dementia. We don't just provide "person-centered" care; we provide clinically-informed support that acknowledges each resident's unique life history and physical needs.
             </p>
           </motion.div>
         </div>
 
-        {/* Features Section */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">Our Memory Care Program</h2>
-        </div>
-        <div className="grid md:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <FeatureCard
-              key={feature.title}
-              icon={feature.icon}
-              title={feature.title}
-              description={feature.description}
-              delay={index * 0.1}
-            />
-          ))}
+        {/* Clinical Explainer Section */}
+        <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden mb-24">
+          <div className="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+            <div className="p-10">
+              <div className="w-16 h-16 bg-emerald-50 rounded-full flex items-center justify-center mb-6">
+                <Lock className="w-8 h-8 text-emerald-700" />
+              </div>
+              <h3 className="text-xl font-bold font-serif text-gray-900 mb-4">Secure Independence</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Wandering is a natural response to the anxiety of memory loss. Our property at 10610 Hickory Point Lane is fully secured, allowing residents the freedom to pace and explore safely without the restrictive feel of a traditional 'locked ward'.
+              </p>
+            </div>
+            <div className="p-10">
+              <div className="w-16 h-16 bg-emerald-50 rounded-full flex items-center justify-center mb-6">
+                <BrainCircuit className="w-8 h-8 text-emerald-700" />
+              </div>
+              <h3 className="text-xl font-bold font-serif text-gray-900 mb-4">Sundowning Management</h3>
+              <p className="text-gray-600 leading-relaxed">
+                As physical therapists, we know that unregulated energy leads to evening agitation. Our daytime mobility routines are clinically designed to stimulate the body, significantly reducing the severity of 'sundowning' and promoting restful sleep.
+              </p>
+            </div>
+            <div className="p-10">
+              <div className="w-16 h-16 bg-emerald-50 rounded-full flex items-center justify-center mb-6">
+                <Puzzle className="w-8 h-8 text-emerald-700" />
+              </div>
+              <h3 className="text-xl font-bold font-serif text-gray-900 mb-4">The 1-to-4 Protocol</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Memory care requires deep familiarity. With only 8 residents in our home, our unmatched staffing ratio ensures that our caregivers know exactly how to redirect your loved one's anxiety based on their specific personality and history.
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* CTA Section */}
-        <div className="mt-24 bg-white rounded-2xl shadow-lg border border-gray-100 p-8 lg:p-12 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Schedule a Private Consultation
+        <div className="mt-12 bg-emerald-800 rounded-2xl shadow-2xl p-8 lg:p-12 text-center">
+          <h2 className="text-3xl font-bold font-serif text-white mb-4">
+            Consult With Our Clinical Founders
           </h2>
-          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            We understand this journey can be challenging. Let's talk about how our specialized program can support your family.
+          <p className="text-lg text-emerald-100 mb-8 max-w-2xl mx-auto">
+            Memory care placement is a serious medical decision. Speak directly with Bhargav or Sheetal to discuss if our 8-bed clinical model is the right fit.
           </p>
           <Link to="/contact">
             <motion.button
-              className="group px-8 py-4 bg-emerald-600 text-white rounded-full font-bold text-lg shadow-lg hover:shadow-emerald-500/30"
+              className="group px-8 py-4 bg-white text-emerald-900 rounded-full font-bold text-lg shadow-lg hover:shadow-xl"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

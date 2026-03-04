@@ -104,5 +104,5 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## Support
 
 For support or questions about this website, please contact:
-- Email: info@columbiacarehome.com
+- Email: columbiacarehomes@gmail.com
 - Phone: (555) 123-4567

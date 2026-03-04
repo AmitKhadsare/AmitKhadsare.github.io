@@ -1,4 +1,6 @@
 import type { Config } from 'vike/types';
 
-// Minimal config - prerendering is handled by onBeforePrerenderStart hook
-export default {} satisfies Config;
+// Minimal config - prerendering is enabled globally
+export default {
+    prerender: true
+} satisfies Config;

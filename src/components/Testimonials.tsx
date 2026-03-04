@@ -38,7 +38,7 @@ const Testimonials = () => {
                         What Columbia Families Are Saying
                     </h2>
                     <p className="text-lg text-stone-600 max-w-2xl mx-auto">
-                        These are real reviews from families who entrusted us with the care of their loved ones. We don't use stock photos or write our own testimonials.
+                        We are honored to share these genuine experiences from the families who have found professional support and a true sense of belonging at Columbia Care Home.
                     </p>
                 </div>
 

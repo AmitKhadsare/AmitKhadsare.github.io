@@ -1,12 +1,11 @@
 // src/components/Hero.tsx
 import { motion, Variants } from 'framer-motion';
-import { Video } from 'lucide-react';
 import { Heart, Shield, Users } from 'lucide-react';
 import carehomeImage from '../assets/carehome.avif';
 
 const Hero = () => {
   const containerVariants: Variants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0.01 }, // Using 0.01 instead of 0 for SEO indexing visibility
     visible: {
       opacity: 1,
       transition: { staggerChildren: 0.2, delayChildren: 0.3 },
@@ -14,32 +13,32 @@ const Hero = () => {
   };
 
   const itemVariants: Variants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0.01, y: 20 },
     visible: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 100 } },
   };
 
   const trustIndicators = [
     {
       icon: Shield,
-      title: "Licensed",
-      subtitle: "State Certified",
-      detail: "Fully licensed by Maryland Department of Health",
+      title: "Level 3 Licensed",
+      subtitle: "Complex Care Ready",
+      detail: "State-licensed for high-acuity needs",
       iconBg: "bg-emerald-900/80",
       iconFill: "text-emerald-400 fill-emerald-400/50"
     },
     {
       icon: Heart,
-      title: "24/7 Care",
-      subtitle: "Always Available",
-      detail: "Round-the-clock nursing support",
-      iconBg: "bg-red-900/50",
-      iconFill: "text-red-400 fill-red-400/50"
+      title: "Physical Therapist-Owned",
+      subtitle: "Clinical Oversight",
+      detail: "Led by Doctors of Physical Therapy",
+      iconBg: "bg-emerald-900/80",
+      iconFill: "text-emerald-400 fill-emerald-400/50"
     },
     {
       icon: Users,
-      title: "Family Focused",
-      subtitle: "Personal Approach",
-      detail: "Your loved one is our family",
+      title: "Strict 1:4 Staffing",
+      subtitle: "Unmatched Attention",
+      detail: "Maximum of 8 residents total",
       iconBg: "bg-emerald-900/80",
       iconFill: "text-emerald-400 fill-emerald-400/50"
     }
@@ -89,46 +88,45 @@ const Hero = () => {
                 transition={{ duration: 0.8, type: "spring" }}
               >
                 <span className="bg-gradient-to-r from-emerald-400 via-teal-400 to-emerald-400 bg-clip-text text-transparent block">
-                  A Home of Comfort,
+                  Physical Therapist-Owned
                 </span>
                 <span className="bg-gradient-to-r from-emerald-400 via-teal-400 to-emerald-400 bg-clip-text text-transparent block">
-                  A Heart of Care.
+                  Assisted Living in Howard County.
                 </span>
               </motion.h1>
               <p className="text-xl text-stone-300 leading-relaxed max-w-lg mx-auto lg:mx-0">
-                Find peace of mind knowing your loved one is in a safe, nurturing home where they are treated with dignity, respect, and the personalized attention they deserve.
+                Columbia Care Home provides assisted living and memory care in Columbia, Maryland, serving families throughout Howard County including Ellicott City, Clarksville, and Laurel.
+              </p>
+              <p className="text-stone-300/80 leading-relaxed max-w-lg mx-auto lg:mx-0">
+                We combine the clinical rigor of a Level 3 Assisted Living license with the profound intimacy of a true 8-bed family home at 10610 Hickory Point Lane. No corporate corridors. Outstanding 1-to-4 care ratios.
               </p>
             </motion.div>
 
             {/* --- UPDATED CTA BUTTON --- */}
             <motion.div className="flex justify-center lg:justify-start" variants={itemVariants}>
-              <a href="/virtual-tour">
-                <motion.button
-                  className="group relative bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-10 py-5 rounded-full font-semibold text-lg shadow-2xl overflow-hidden"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <motion.div
-                    className="absolute inset-0 bg-gradient-to-r from-emerald-700 via-teal-600 to-emerald-700"
-                    initial={{ x: "-100%" }}
-                    whileHover={{ x: 0 }}
-                    transition={{ duration: 0.3 }}
-                  />
+              <a
+                href="/contact"
+                className="group relative bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-10 py-5 rounded-full font-semibold text-lg shadow-2xl overflow-hidden block w-fit"
+              >
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-r from-emerald-700 via-teal-600 to-emerald-700"
+                  initial={{ x: "-100%" }}
+                  whileHover={{ x: 0 }}
+                  transition={{ duration: 0.3 }}
+                />
 
-                  <span className="relative z-10 flex items-center justify-center gap-3">
-                    <Video className="w-6 h-6" />
-                    <span className="flex flex-col items-start">
-                      <span className="text-xl font-bold">Take a Virtual Tour</span>
-                      <span className="text-sm text-emerald-100 font-normal">Video & 3D Experience</span>
-                    </span>
+                <span className="relative z-10 flex items-center justify-center gap-3">
+                  <span className="flex flex-col items-start">
+                    <span className="text-xl font-bold">Speak Directly with Our Clinical Team</span>
+                    <span className="text-sm text-emerald-100 font-normal">Skip the placement agencies.</span>
                   </span>
-                  <motion.div
-                    className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12"
-                    initial={{ x: "-200%" }}
-                    animate={{ x: "200%" }}
-                    transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
-                  />
-                </motion.button>
+                </span>
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12"
+                  initial={{ x: "-200%" }}
+                  animate={{ x: "200%" }}
+                  transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
+                />
               </a>
             </motion.div>
             {/* --- END UPDATED CTA BUTTON --- */}
@@ -172,7 +170,7 @@ const Hero = () => {
               >
                 <img
                   loading="lazy" src={carehomeImage}
-                  alt="A compassionate caregiver with a resident"
+                  alt="The serene, residential exterior of Columbia Care Home at 10610 Hickory Point Lane"
                   className="rounded-2xl shadow-2xl w-full h-auto max-h-[500px] object-cover"
                 />
                 <motion.div

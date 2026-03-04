@@ -1,15 +1,6 @@
-import { Facebook, Twitter, Instagram, Linkedin, Youtube } from 'lucide-react';
-
-const socialLinks = [
-  { name: 'Facebook', url: 'https://facebook.com', icon: Facebook, color: 'bg-[#1877F2]' },
-  { name: 'Twitter', url: 'https://twitter.com', icon: Twitter, color: 'bg-[#1DA1F2]' },
-  { name: 'Instagram', url: 'https://instagram.com', icon: Instagram, color: 'bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500' },
-  { name: 'LinkedIn', url: 'https://linkedin.com', icon: Linkedin, color: 'bg-[#0A66C2]' },
-  { name: 'YouTube', url: 'https://youtube.com', icon: Youtube, color: 'bg-[#FF0000]' },
-];
-
 const MobileSocialBar = () => {
-  return (
+  return null;
+  /* return (
     <div className="md:hidden fixed bottom-0 left-0 right-0 bg-gradient-to-r from-[#081e22] to-teal-950 shadow-lg z-40">
       <div className="flex justify-center items-center py-3">
         <div className="flex space-x-4">
@@ -28,7 +19,7 @@ const MobileSocialBar = () => {
         </div>
       </div>
     </div>
-  );
+  ); */
 };
 
 export default MobileSocialBar;

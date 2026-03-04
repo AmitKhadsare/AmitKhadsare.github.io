@@ -115,11 +115,11 @@ const ContactPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <SEOHead
-        title="Contact Us | Columbia Care Home"
+        title="Contact Columbia Care Home | Assisted Living in Columbia MD"
         description="Get in touch with Columbia Care Home. Call us, email us, or schedule a visit. We are here to answer your questions about our senior care services."
-        keywords="contact columbia care, senior living contact, schedule tour, nursing home maryland, elderly care inquiry"
         image="https://www.columbiacarehome.com/og-contact.jpg"
         url="/contact"
+        type="ContactPage"
       />
       {/* Hero Section */}
       <div className="bg-gradient-to-br from-emerald-600 to-teal-700 text-white py-20">
@@ -131,8 +131,11 @@ const ContactPage: React.FC = () => {
             className="text-center"
           >
             <h1 className="text-4xl lg:text-5xl font-bold mb-4">Get in Touch</h1>
-            <p className="text-xl text-white/90 max-w-2xl mx-auto">
+            <p className="text-xl text-white/90 max-w-2xl mx-auto mb-6">
               We're here to answer your questions and help you take the next step in finding quality care for your loved one.
+            </p>
+            <p className="text-emerald-50/80 max-w-3xl mx-auto leading-relaxed">
+              Families in Columbia, Ellicott City, and throughout Howard County can contact Columbia Care Home to learn about our assisted living and memory care services.
             </p>
           </motion.div>
         </div>
@@ -153,7 +156,7 @@ const ContactPage: React.FC = () => {
             </InfoCard>
 
             <InfoCard icon={Mail} title="Email Us">
-              <p className="font-semibold text-emerald-700">columbiacarehomes@gmail.com</p>
+              <a href="mailto:columbiacarehomes@gmail.com" className="font-semibold text-emerald-700 hover:underline">columbiacarehomes@gmail.com</a>
               <p className="text-sm">Response within 24 hours</p>
             </InfoCard>
 
@@ -313,6 +316,7 @@ const ContactPage: React.FC = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
+                    aria-label="Send message to Columbia Care Home"
                     className="w-full md:w-auto px-8 py-3 bg-emerald-600 text-white font-semibold rounded-lg hover:bg-emerald-700 transition-colors inline-flex items-center justify-center gap-2 disabled:bg-emerald-400 disabled:cursor-not-allowed"
                   >
                     <Send className="w-5 h-5" />

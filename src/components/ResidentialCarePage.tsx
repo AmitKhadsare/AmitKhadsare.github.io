@@ -1,58 +1,15 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, ArrowRight, BedDouble, ShieldCheck, Armchair } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Home, Users, Stethoscope } from 'lucide-react';
 import comfortingHavenImage from '../assets/comforting_homelike_haven.avif';
 import SEOHead from './SEOHead';
 
-interface FeatureCardProps {
-  icon: React.ComponentType<{ className?: string }>;
-  title: string;
-  description: string;
-  delay?: number;
-}
-
-const FeatureCard: React.FC<FeatureCardProps> = ({ icon: Icon, title, description, delay = 0 }) => (
-  <motion.div
-    className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 text-center"
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    transition={{ delay }}
-  >
-    <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
-      <Icon className="w-8 h-8 text-emerald-700" />
-    </div>
-    <h3 className="text-xl font-semibold text-gray-900 mb-2">{title}</h3>
-    <p className="text-gray-600">{description}</p>
-  </motion.div>
-);
-
 const ResidentialCarePage = () => {
-  const features = [
-    {
-      icon: BedDouble,
-      title: "Personalized Rooms",
-      description: "Each room is thoughtfully arranged to meet the unique needs of the resident, with options for layout, comfort features, and accessibility adjustments based on individual care requirements."
-    },
-    {
-      icon: ShieldCheck,
-      title: "Safe & Secure",
-      description: "We prioritize resident safety with thoughtful features throughout the facility, including secure access, trained staff on-site 24/7, and emergency support available when needed."
-    },
-    {
-      icon: Armchair,
-      title: "Comfortable Living",
-      description: "From cozy common areas to beautifully maintained outdoor spaces, every detail is designed for resident comfort."
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-gray-50">
       <SEOHead
-        title="Residential Care & Senior Living | Columbia Care"
-        description="Comfortable and secure residential care services providing a homelike environment with 24/7 professional supervision and support."
-        keywords="residential care, senior living, elderly home, 24/7 care, retirement home, senior community"
+        title="Level 3 Residential Care & Senior Living | Columbia MD"
+        description="Authentic, 8-bed residential senior care in Columbia, MD. Level 3 medical expertise led by Doctors of Physical Therapy in an intimate family home environment."
         image="https://www.columbiacarehome.com/og-residential-care.jpg"
         url="/residential-care"
       />
@@ -70,10 +27,10 @@ const ResidentialCarePage = () => {
               Back to All Services
             </Link>
             <h1 className="text-4xl lg:text-5xl font-bold font-serif mb-4">
-              Residential Care Services
+              Residential Care Redefined
             </h1>
             <p className="text-xl text-emerald-50 max-w-3xl mx-auto">
-              A secure, vibrant, and truly homelike environment with 24/7 professional supervision.
+              A secure, clinically-supervised home at Hickory Point Lane where 8 residents receive the level of personal attention corporate facilities simply cannot provide.
             </p>
           </motion.div>
         </div>
@@ -92,7 +49,7 @@ const ResidentialCarePage = () => {
           >
             <img
               loading="lazy" src={comfortingHavenImage}
-              alt="A cozy and bright common area in the care home"
+              alt="The bright, accessible, single-floor living space at 10610 Hickory Point Lane"
               className="w-full h-full object-cover"
             />
           </motion.div>
@@ -103,43 +60,60 @@ const ResidentialCarePage = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <h2 className="text-3xl font-bold text-gray-900 font-serif">More than a care home - A place to belong</h2>
+            <h2 className="text-3xl font-bold text-gray-900 font-serif">A Multi-Generational Home, Not a Facility</h2>
             <p className="text-lg text-gray-600 leading-relaxed">
-              We believe a senior living facility should feel less like a facility and more like a home. Our residential care services are built around this core principle. We provide a clean, secure, and beautifully maintained environment where residents feel comfortable, safe, and part of a true community.
+              We believe senior living should feel like a true home, not a hotel. Our residence at 10610 Hickory Point Lane is a spacious, light-filled 2007 home specifically chosen for its layout. With single-floor navigation and wide common areas, we've minimized the physical barriers that often lead to falls and confusion in larger institutional settings.
             </p>
             <p className="text-lg text-gray-600 leading-relaxed">
-              With professional staff available 24/7, families have peace of mind knowing that support is always just a moment away, while residents enjoy the freedom to live their lives with confidence and dignity.
+              Founded by Doctors of Physical Therapy, our Level 3 medical expertise allows us to provide a level of oversight that is both clinically rigorous and deeply personal. With an incredible **1-to-8 caregiver ratio**, we ensure that every resident's medical, physical, and emotional needs are met with a degree of attention that massive 100-bed complexes legally and logistically cannot match.
             </p>
           </motion.div>
         </div>
 
-        {/* Features Section */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">Our Living Environment</h2>
-        </div>
-        <div className="grid md:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <FeatureCard
-              key={feature.title}
-              icon={feature.icon}
-              title={feature.title}
-              description={feature.description}
-              delay={index * 0.1}
-            />
-          ))}
+        {/* The 8-Bed Clinical Reality */}
+        <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden mb-24">
+          <div className="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+            <div className="p-10">
+              <div className="w-16 h-16 bg-teal-50 rounded-full flex items-center justify-center mb-6">
+                <Home className="w-8 h-8 text-teal-700" />
+              </div>
+              <h3 className="text-xl font-bold font-serif text-gray-900 mb-4">Single-Floor Navigation</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Falls are the primary mechanism of decline in seniors. By utilizing a spacious 2007 residential property, we provide an environment without elevators or complex floor plans. Every common area and bedroom is immediately accessible.
+              </p>
+            </div>
+            <div className="p-10">
+              <div className="w-16 h-16 bg-teal-50 rounded-full flex items-center justify-center mb-6">
+                <Stethoscope className="w-8 h-8 text-teal-700" />
+              </div>
+              <h3 className="text-xl font-bold font-serif text-gray-900 mb-4">Level 3 Medical Oversight</h3>
+              <p className="text-gray-600 leading-relaxed">
+                We don't just provide 'room and board.' As a Level 3 licensed home managed by Doctors of Physical Therapy, we are state-certified to handle complex medical protocols, medication administration, and significant physical assistance.
+              </p>
+            </div>
+            <div className="p-10">
+              <div className="w-16 h-16 bg-teal-50 rounded-full flex items-center justify-center mb-6">
+                <Users className="w-8 h-8 text-teal-700" />
+              </div>
+              <h3 className="text-xl font-bold font-serif text-gray-900 mb-4">The 1-to-8 Maximum</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Corporate facilities often stretch one aide across 20+ residents. At Columbia Care Home, our strict 8-bed limit guarantees that your loved one has immediate, personalized assistance the moment they need to stand, walk, or eat.
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* CTA Section */}
-        <div className="mt-24 bg-white rounded-2xl shadow-lg border border-gray-100 p-8 lg:p-12 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            See Our Home for Yourself
+        <div className="mt-12 bg-teal-800 rounded-2xl shadow-2xl p-8 lg:p-12 text-center">
+          <h2 className="text-3xl font-bold font-serif text-white mb-4">
+            Discuss Your Loved One's Needs
           </h2>
-          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            The best way to experience our community is with a personal visit. We invite you to schedule a tour today.
+          <p className="text-lg text-teal-100 mb-8 max-w-2xl mx-auto">
+            Bypass the placement agencies and speak directly with the clinical founders of our home.
           </p>
-          <Link to="/schedule-a-tour">
+          <Link to="/contact">
             <motion.button
-              className="group px-8 py-4 bg-emerald-600 text-white rounded-full font-bold text-lg shadow-lg hover:shadow-emerald-500/30"
+              className="group px-8 py-4 bg-white text-teal-900 rounded-full font-bold text-lg shadow-lg hover:shadow-xl"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

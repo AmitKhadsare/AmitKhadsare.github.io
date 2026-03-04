@@ -9,7 +9,6 @@ const PrivacyPolicyPage = () => {
       <SEOHead
         title="Privacy Policy | Columbia Care Home"
         description="Read our Privacy Policy to understand how Columbia Care Home collects, uses, and protects your personal information."
-        keywords="privacy policy, data protection, senior care privacy, columbia care legal"
         url="/privacy-policy"
       />
       {/* Hero Section */}

@@ -53,7 +53,7 @@ export const localBusinessSchema = {
       "closes": "16:00"
     }
   ],
-  "priceRange": "$$$$",
+  "priceRange": "$$$",
   "areaServed": {
     "@type": "GeoCircle",
     "geoMidpoint": {
@@ -72,7 +72,8 @@ export const localBusinessSchema = {
         "itemOffered": {
           "@type": "Service",
           "name": "Assisted Living",
-          "description": "Personalized assistance with daily living activities in a home-like environment"
+          "description": "Personalized assistance with daily living activities in a home-like environment",
+          "image": "https://www.columbiacarehome.com/og-residential.jpg"
         }
       },
       {
@@ -80,15 +81,17 @@ export const localBusinessSchema = {
         "itemOffered": {
           "@type": "Service",
           "name": "Memory Care",
-          "description": "Specialized care for residents with Alzheimer's and dementia"
+          "description": "Specialized care for residents with Alzheimer's and dementia",
+          "image": "https://www.columbiacarehome.com/og-memory.jpg"
         }
       },
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Rehabilitation Services",
-          "description": "Physical, occupational, and speech therapy services"
+          "name": "Rehabilitation",
+          "description": "Professional physical, occupational, and speech therapy led by Doctors of Physical Therapy",
+          "image": "https://www.columbiacarehome.com/og-rehabilitation.jpg"
         }
       },
       {
@@ -96,7 +99,8 @@ export const localBusinessSchema = {
         "itemOffered": {
           "@type": "Service",
           "name": "Residential Care",
-          "description": "24/7 professional care in a comfortable residential setting"
+          "description": "24/7 professional care in a comfortable residential setting led by Doctors of Physical Therapy",
+          "image": "https://www.columbiacarehome.com/og-residential.jpg"
         }
       }
     ]
@@ -118,9 +122,8 @@ export const localBusinessSchema = {
     }
   ],
   "sameAs": [
-    "https://www.facebook.com/columbiacarehome",
-    "https://www.instagram.com/columbiacarehome",
-    "https://www.linkedin.com/company/columbiacarehome"
+    "https://www.google.com/maps/place/Columbia+Care+Home",
+    "https://www.facebook.com/ColumbiaCareHome"
   ],
   "slogan": "Care that Feels Like Coming Home"
 };
@@ -185,3 +188,60 @@ export const breadcrumbSchema = (items: Array<{ name: string, url: string }>) =>
   }))
 });
 
+
+export const jobPostingSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "JobPosting",
+      "@id": "https://www.columbiacarehome.com/careers#caregiver",
+      "title": "Caregiver / Resident Assistant",
+      "description": "Join our team providing compassionate care to seniors in a home-like environment. Assist with daily living activities, medication reminders, and companionship.",
+      "hiringOrganization": {
+        "@type": "Organization",
+        "name": "Columbia Care Home",
+        "sameAs": "https://www.columbiacarehome.com"
+      },
+      "employmentType": "FULL_TIME",
+      "jobLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "10610 Hickory Point Lane",
+          "addressLocality": "Columbia",
+          "addressRegion": "MD",
+          "postalCode": "21044",
+          "addressCountry": "US"
+        }
+      },
+      "directApply": true,
+      "occupationalCategory": "31-1120.00", // Home Health Aides
+      "validThrough": new Date(new Date().getFullYear() + 1, 0, 1).toISOString()
+    },
+    {
+      "@type": "JobPosting",
+      "@id": "https://www.columbiacarehome.com/careers#cna",
+      "title": "Certified Nursing Assistant (CNA) / GNA",
+      "description": "Provide professional nursing care to residents. Monitor health status, coordinate with physical therapists, and document clinical observations.",
+      "hiringOrganization": {
+        "@type": "Organization",
+        "name": "Columbia Care Home",
+        "sameAs": "https://www.columbiacarehome.com"
+      },
+      "employmentType": ["FULL_TIME", "PART_TIME"],
+      "jobLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "10610 Hickory Point Lane",
+          "addressLocality": "Columbia",
+          "addressRegion": "MD",
+          "postalCode": "21044",
+          "addressCountry": "US"
+        }
+      },
+      "directApply": true,
+      "validThrough": new Date(new Date().getFullYear() + 1, 0, 1).toISOString()
+    }
+  ]
+};

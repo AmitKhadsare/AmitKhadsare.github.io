@@ -1,5 +1,4 @@
-// Block inheritance of the root onBeforePrerenderStart hook
-// This ensures that pages/blog/+Page.tsx doesn't try to render static routes
+// pages/blog/+onBeforePrerenderStart.ts
 export default function onBeforePrerenderStart() {
-    return [];
+    return ['/blog'];
 }

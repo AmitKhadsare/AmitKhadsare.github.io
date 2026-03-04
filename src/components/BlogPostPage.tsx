@@ -1,9 +1,10 @@
 // src/components/BlogPostPage.tsx
+import React from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Calendar, User, ArrowLeft, Clock } from 'lucide-react';
 import SEOHead from './SEOHead';
-import { blogs } from '../data/blogs.js';
+import { blogs } from '../data/blogs';
 
 const BlogPostPage = () => {
     const { slug } = useParams();
@@ -29,7 +30,8 @@ const BlogPostPage = () => {
                     "datePublished": post.date,
                     "author": {
                         "@type": "Person",
-                        "name": post.author
+                        "name": "Columbia Care Home Clinical Team",
+                        "jobTitle": "Doctors of Physical Therapy"
                     },
                     "publisher": {
                         "@type": "Organization",

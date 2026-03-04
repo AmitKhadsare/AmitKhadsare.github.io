@@ -1,8 +1,8 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Heart, Star, Users, Clock } from 'lucide-react';
 import SEOHead from './SEOHead';
+import { jobPostingSchema } from '../data/structuredData';
 
 const CareersPage = () => {
   const benefitCards = [
@@ -31,11 +31,11 @@ const CareersPage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <SEOHead
-        title="Careers & Employment Opportunities | Columbia Care Home"
+        title="Senior Care Careers in Columbia MD | Columbia Care Home"
         description="Join the Columbia Care Home team. We are looking for compassionate professionals dedicated to providing exceptional senior care. Explore current job openings."
-        keywords="careers, jobs, nursing jobs, caregiver jobs, senior care employment, columbia md jobs"
         image="https://www.columbiacarehome.com/og-careers.jpg"
         url="/careers"
+        structuredData={jobPostingSchema}
       />
       {/* Hero Header */}
       <div className="bg-gradient-to-br from-emerald-600 to-teal-700 text-white py-20">
@@ -106,11 +106,11 @@ const CareersPage = () => {
               Registered Nurses • Licensed Practical Nurses • Certified Nursing Assistants • Caregivers • Activities Coordinators • Dining Staff
             </p>
             <p>
-              If you believe in our mission of providing dignified, family-focused care, we would love to hear from you.
+              If you believe in our mission of providing dignified, family-focused care, we would love to hear from you. Even when roles are filled, we maintain a shortlist of qualified caregivers, CNAs, and nurses for upcoming opportunities.
             </p>
             <div className="pt-6">
               <a
-                href="mailto:careers@columbiacarehome.com"
+                href="mailto:columbiacarehomes@gmail.com?subject=Career Application"
                 className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-700 transition-colors shadow-md hover:shadow-lg"
               >
                 <Users className="w-5 h-5" />

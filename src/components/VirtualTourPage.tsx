@@ -8,9 +8,8 @@ const VirtualTourPage = () => {
     return (
         <div className="min-h-screen bg-gray-50">
             <SEOHead
-                title="Virtual Tour | Columbia Care Home"
+                title="Virtual Tour of Columbia Care Home | Assisted Living in Columbia MD"
                 description="Take a virtual tour of Columbia Care Home. Watch our video walkthrough and explore our facility in immersive 3D to see our beautiful, caring environment."
-                keywords="virtual tour, 3D tour, video tour, facility tour, Columbia care home tour, nursing home tour Maryland"
                 image="https://www.columbiacarehome.com/og-virtual-tour.jpg"
                 url="/virtual-tour"
             />
@@ -73,6 +72,7 @@ const VirtualTourPage = () => {
                                     className="absolute inset-0 w-full h-full"
                                     src="https://www.youtube.com/embed/ZyAEwLR1lsE?rel=0&modestbranding=1"
                                     title="Columbia Care Home Video Tour"
+                                    loading="lazy"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                     allowFullScreen
                                 ></iframe>
@@ -142,6 +142,7 @@ const VirtualTourPage = () => {
                                     className="absolute inset-0 w-full h-full"
                                     src="https://my.matterport.com/show?play=1&lang=en-US&m=Ek5iHJBymGt"
                                     title="Columbia Care Home 3D Virtual Tour"
+                                    loading="lazy"
                                     allow="xr-spatial-tracking; gyroscope; accelerometer"
                                     allowFullScreen
                                 ></iframe>

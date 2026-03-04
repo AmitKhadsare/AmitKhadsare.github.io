@@ -73,7 +73,6 @@ const RehabilitationPage = () => {
       <SEOHead
         title="Rehabilitation & Physical Therapy Services | Columbia Care Home"
         description="Physical, Occupational, and Speech Therapy led by Doctors of Physical Therapy in our Level 3 licensed, 8-bed care home in Columbia, MD. Integrated, personalized rehabilitation — not an add-on."
-        keywords="physical therapy Columbia MD, occupational therapy assisted living Howard County, speech therapy senior care, Level 3 assisted living Maryland, rehabilitation care home Columbia"
         url="/rehabilitation"
         type="website"
       />

@@ -1,4 +1,22 @@
-import { blogs } from './blogs.js';
+import fs from 'fs';
+import path from 'path';
+
+// Helper to get blogs in Node.js environment (for sitemap generation)
+// In Vite environment, this will be handled by blogs.ts
+let blogs = [];
+try {
+    // Try to import from blogs.ts (works in Vite)
+    const blogsModule = await import('./blogs.ts');
+    blogs = blogsModule.blogs;
+} catch (e) {
+    // Fallback for Node.js (generate-sitemap.js)
+    const contentDir = path.join(process.cwd(), 'src/content/blog');
+    if (fs.existsSync(contentDir)) {
+        blogs = fs.readdirSync(contentDir)
+            .filter(file => file.endsWith('.md'))
+            .map(file => ({ slug: file.replace('.md', '') }));
+    }
+}
 
 // Static routes
 const staticRoutes = [

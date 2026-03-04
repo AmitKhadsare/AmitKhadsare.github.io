@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MapPin, Phone, Mail, Facebook, Twitter, Instagram, Linkedin, Youtube, ChevronDown } from 'lucide-react';
+import { MapPin, Phone, Mail, ChevronDown } from 'lucide-react';
 
 interface FooterAccordionItemProps {
   title: string;
@@ -16,7 +16,7 @@ const FooterAccordionItem: React.FC<FooterAccordionItemProps> = ({ title, childr
     <div className="border-b border-gray-700">
       <button
         onClick={onToggle}
-        className="flex justify-between items-center w-full py-4 text-left text-white" aria-label="Toggle {title} section"
+        className="flex justify-between items-center w-full py-4 text-left text-white" aria-label={`Toggle ${title} section`}
       >
         <h4 className="text-md font-semibold uppercase tracking-wider">{title}</h4>
         <motion.div
@@ -62,28 +62,25 @@ const Footer = () => {
   const resourceLinks = [
     { name: 'Our Story', path: '/about-us' },
     { name: 'Schedule a Tour', path: '/schedule-a-tour' },
+    { name: 'Latest From Blog', path: '/blog' },
+    { name: 'Our Facility', path: '/facility' },
+  ];
+
+  const servicesLinks = [
+    { name: 'Rehabilitation', path: '/rehabilitation' },
+    { name: 'Memory Care', path: '/memory-care' },
+    { name: 'Personal Assistance', path: '/personal-assistance' },
+    { name: 'Residential Care', path: '/residential-care' },
   ];
 
   const contactInfo = [
-    { icon: <Phone size={16} />, text: '(201) 885-9225, (301) 500-0809' },
+    { icon: <Phone size={16} />, text: '(301) 500-0809, (201) 885-9225' },
     { icon: <Mail size={16} />, text: 'columbiacarehomes@gmail.com' },
     { icon: <MapPin size={16} />, text: '10610 Hickory Point Lane, Columbia, MD 21044' },
   ];
 
-  const socialLinks = [
-    { name: 'Facebook', icon: <Facebook size={20} />, url: '#' },
-    { name: 'Twitter', icon: <Twitter size={20} />, url: '#' },
-    { name: 'Instagram', icon: <Instagram size={20} />, url: '#' },
-    { name: 'Linkedin', icon: <Linkedin size={20} />, url: '#' },
-    { name: 'Youtube', icon: <Youtube size={20} />, url: '#' },
-  ];
-
   const linkHoverVariant = {
     hover: { color: '#A5B4FC', transition: { duration: 0.3 } },
-  };
-
-  const iconHoverVariant = {
-    hover: { scale: 1.2, color: '#A5B4FC', transition: { duration: 0.2 } },
   };
 
   const locationContent = (
@@ -105,7 +102,7 @@ const Footer = () => {
 
   const footerSections = [
     {
-      title: 'On This Page',
+      title: 'Navigation',
       content: (
         <div className="space-y-2 text-center md:text-left">
           {navLinks.map((link) => (
@@ -113,6 +110,20 @@ const Footer = () => {
               <HashLink smooth to={link.path} className="text-gray-400 text-sm block py-1">
                 {link.name}
               </HashLink>
+            </motion.div>
+          ))}
+        </div>
+      )
+    },
+    {
+      title: 'Expert Services',
+      content: (
+        <div className="space-y-2 text-center md:text-left">
+          {servicesLinks.map((link) => (
+            <motion.div key={link.name} variants={linkHoverVariant} whileHover="hover">
+              <Link to={link.path} className="text-gray-400 text-sm block py-1">
+                {link.name}
+              </Link>
             </motion.div>
           ))}
         </div>
@@ -129,28 +140,6 @@ const Footer = () => {
               </Link>
             </motion.div>
           ))}
-        </div>
-      )
-    },
-    {
-      title: 'Connect With Us',
-      content: (
-        <div className="space-y-4 text-center md:text-left">
-          <div className="flex items-center justify-center md:justify-start space-x-4">
-            {socialLinks.map((social) => (
-              <motion.a
-                key={social.name}
-                href={social.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400" aria-label={social.name}
-                variants={iconHoverVariant}
-                whileHover="hover"
-              >
-                {social.icon}
-              </motion.a>
-            ))}
-          </div>
         </div>
       )
     }

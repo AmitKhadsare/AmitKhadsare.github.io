@@ -133,7 +133,6 @@ async function onRenderHtml(pageContext: any) {
         <link rel="manifest" href="/site.webmanifest" />
         
         <!-- Meta Tags -->
-        <meta name="author" content="Columbia Care Home" />
         <meta name="robots" content="index, follow" />
         <meta name="googlebot" content="index, follow" />
         <meta name="bingbot" content="index, follow" />

@@ -1,11 +1,11 @@
-// pages/blog/@slug/+Page.tsx
+import React from 'react';
 import '../../../src/index.css';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Calendar, User, Tag, ArrowLeft, Clock } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import SEOHead from '../../../src/components/SEOHead';
-import { blogs } from '../../../src/data/blogs.js';
+import { blogs } from '../../../src/data/blogs';
 
 const BlogPostPage = () => {
     const { slug } = useParams<{ slug: string }>();
@@ -22,35 +22,6 @@ const BlogPostPage = () => {
     const wordCount = post.content.split(/\s+/).length;
     const readingTime = Math.ceil(wordCount / 200);
 
-    // Schema.org BlogPosting JSON-LD
-    const blogPostingSchema = {
-        '@context': 'https://schema.org',
-        '@type': 'BlogPosting',
-        headline: post.title,
-        description: post.excerpt,
-        image: `https://www.columbiacarehome.com${post.image}`,
-        datePublished: post.date,
-        dateModified: post.date,
-        author: {
-            '@type': 'Organization',
-            name: post.author,
-            url: 'https://www.columbiacarehome.com'
-        },
-        publisher: {
-            '@type': 'Organization',
-            name: 'Columbia Care Home',
-            logo: {
-                '@type': 'ImageObject',
-                url: 'https://www.columbiacarehome.com/og-image.jpg'
-            }
-        },
-        mainEntityOfPage: {
-            '@type': 'WebPage',
-            '@id': `https://www.columbiacarehome.com/blog/${post.slug}`
-        },
-        keywords: post.tags.join(', ')
-    };
-
     return (
         <div className="min-h-screen bg-gray-50">
             <SEOHead
@@ -59,14 +30,17 @@ const BlogPostPage = () => {
                 keywords={post.tags.join(', ')}
                 image={`https://www.columbiacarehome.com${post.image}`}
                 url={`https://www.columbiacarehome.com/blog/${post.slug}`}
+                type="article"
+                structuredData={{
+                    datePublished: post.date,
+                    dateModified: post.date,
+                    author: {
+                        '@type': 'Person',
+                        name: 'Columbia Care Home Clinical Team',
+                        jobTitle: 'Doctors of Physical Therapy'
+                    }
+                }}
             />
-
-            {/* JSON-LD Schema */}
-            <Helmet>
-                <script type="application/ld+json">
-                    {JSON.stringify(blogPostingSchema)}
-                </script>
-            </Helmet>
 
             {/* Hero Section */}
             <div className="bg-gradient-to-br from-emerald-600 to-teal-700 text-white py-12 md:py-16">
@@ -166,7 +140,7 @@ const BlogPostPage = () => {
                         Schedule a personalized tour of Columbia Care Home and see how our physiotherapy-led approach makes a difference.
                     </p>
                     <Link
-                        to="/schedule-a-tour"
+                        to="/contact"
                         className="inline-block px-8 py-4 bg-white text-emerald-700 rounded-full font-bold text-lg shadow-lg hover:bg-emerald-50 transition-colors"
                     >
                         Schedule Your Visit

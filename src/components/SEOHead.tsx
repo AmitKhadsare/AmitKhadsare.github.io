@@ -1,3 +1,4 @@
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useLocation } from 'react-router-dom';
 import { localBusinessSchema } from '../data/structuredData';
@@ -5,7 +6,6 @@ import { localBusinessSchema } from '../data/structuredData';
 interface SEOHeadProps {
   title: string;
   description: string;
-  keywords?: string;
   image?: string;
   url?: string;
   type?: string;
@@ -16,7 +16,6 @@ interface SEOHeadProps {
 const SEOHead: React.FC<SEOHeadProps> = ({
   title,
   description,
-  keywords,
   image = "https://www.columbiacarehome.com/og-image.jpg",
   url,
   type = "website",
@@ -58,23 +57,46 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   };
 
   // Combine all structured data into a unified @graph
+  const graph = [
+    localBusinessSchema,
+    breadcrumbSchema,
+    {
+      "@type": "WebSite",
+      "@id": `${baseUrl}/#website`,
+      "url": baseUrl,
+      "name": "Columbia Care Home",
+      "publisher": { "@id": "https://www.columbiacarehome.com/#organization" }
+    },
+    {
+      "@type": type === 'article' ? 'BlogPosting' : (type === 'website' ? 'WebPage' : (type || 'WebPage')),
+      "@id": `${absoluteUrl}#webpage`,
+      "url": absoluteUrl,
+      "name": fullTitle,
+      "headline": title.split(' | ')[0],
+      "description": description,
+      "image": image,
+      "isPartOf": { "@id": `${baseUrl}/#website` },
+      "breadcrumb": { "@id": `${absoluteUrl}#breadcrumb` },
+      "inLanguage": "en-US",
+    }
+  ];
+
+  if (structuredData) {
+    if (structuredData['@graph']) {
+      graph.push(...structuredData['@graph']);
+    } else if (Array.isArray(structuredData)) {
+      graph.push(...structuredData);
+    } else {
+      graph.push({
+        ...structuredData,
+        "@id": structuredData["@id"] || `${absoluteUrl}#primary`
+      });
+    }
+  }
+
   const graphData = {
     "@context": "https://schema.org",
-    "@graph": [
-      localBusinessSchema,
-      breadcrumbSchema,
-      {
-        "@type": type === 'article' ? 'BlogPosting' : 'WebPage',
-        "@id": `${absoluteUrl}#webpage`,
-        "url": absoluteUrl,
-        "name": fullTitle,
-        "description": description,
-        "isPartOf": { "@id": "https://www.columbiacarehome.com/#organization" },
-        "breadcrumb": { "@id": `${absoluteUrl}#breadcrumb` },
-        "inLanguage": "en-US",
-        ...(structuredData && { ...structuredData, "@id": structuredData["@id"] || `${absoluteUrl}#primary` })
-      }
-    ]
+    "@graph": graph
   };
 
   return (
@@ -83,7 +105,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <title>{fullTitle}</title>
       <link rel="canonical" href={absoluteUrl} />
       <meta name="description" content={description} />
-      {keywords && <meta name="keywords" content={keywords} />}
       <meta name="author" content="Columbia Care Home" />
       {googleSiteVerification && <meta name="google-site-verification" content={googleSiteVerification} />}
 

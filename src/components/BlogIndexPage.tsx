@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Calendar, User, ArrowRight } from 'lucide-react';
 import SEOHead from './SEOHead';
-import { blogs } from '../data/blogs.js';
+import { blogs } from '../data/blogs';
 
 const BlogIndexPage = () => {
     return (
@@ -11,7 +11,6 @@ const BlogIndexPage = () => {
             <SEOHead
                 title="Blog - Expert Senior Care Insights | Columbia Care Home"
                 description="Read expert insights on senior care, physiotherapy, fall prevention, and aging with dignity from the licensed physical therapists at Columbia Care Home in Columbia, MD."
-                keywords="senior care blog, physiotherapy insights, fall prevention, aging in place, Columbia MD senior living"
                 image="https://www.columbiacarehome.com/og-image.jpg"
                 url="https://www.columbiacarehome.com/blog"
             />

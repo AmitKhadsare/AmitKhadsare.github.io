@@ -2,12 +2,15 @@
 import { staticRoutes } from '../src/data/routes.js';
 
 export default function onBeforePrerenderStart() {
-    // Only return static routes here. Blog routes are handled by pages/blog/@slug/+onBeforePrerenderStart.ts
-    const urlList = staticRoutes.map(route => route.path);
+    // Exclude routes that have their own dedicated Vike page folders
+    const excludedRoutes = ['/', '/contact', '/careers', '/blog'];
 
-    // Use a Set to automatically remove any duplicate URLs
+    const urlList = staticRoutes
+        .map(route => route.path)
+        .filter(path => !excludedRoutes.includes(path));
+
     const uniqueUrls = [...new Set(urlList)];
 
-    console.log('[onBeforePrerenderStart] Providing URLs for pre-rendering (static):', uniqueUrls);
+    console.log('[onBeforePrerenderStart] Providing URLs for catch-all pre-rendering:', uniqueUrls);
     return uniqueUrls;
 }

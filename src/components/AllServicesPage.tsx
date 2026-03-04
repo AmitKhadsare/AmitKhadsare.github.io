@@ -4,13 +4,13 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight, Heart, Home, Users, Shield, Utensils, Activity, Brain, Dumbbell, CheckCircle2 } from 'lucide-react';
 import SEOHead from './SEOHead';
 import dignifiedCareImage from '../assets/dignifiedpersonalassistance.avif';
-import comfortingHavenImage from '../assets/comforting_homelike_haven.avif';
-import nourishingImage from '../assets/Nourishing_Body_Soul.avif';
-import vibrantLifeImage from '../assets/vibrantlifeandwelness.avif';
 import proactiveHealthImage from '../assets/proactivehealthsafety.avif';
-import physicalTherapyImage from '../assets/physical_therapy.avif';
-import familyImage from '../assets/family.avif';
+import physicalTherapyImage from '../assets/Facility/Our Gym & Therapy/gym-therapy-and-cardio-zone.jpg';
+import familyImage from '../assets/Facility/Our Kitchen/dining-area-looking-towards-living-room.jpg';
 import memoryCareImage from '../assets/mentalhealth.avif';
+import kitchenImage from '../assets/Facility/Our Kitchen/kitchen-main-view.jpg';
+import livingRoomImage from '../assets/Facility/Our Main Hall (Living & Common Areas)/main-hall-living-area-and-windows.jpg';
+import fireplaceImage from '../assets/Facility/Our Main Hall (Living & Common Areas)/main-hall-fireplace-and-tv-area.jpg';
 
 interface Service {
   id: number;
@@ -24,24 +24,24 @@ interface Service {
   path?: string;
 }
 
-// Service data with professional names, descriptions, and features
+// Service data synchronized with deep-dive overhauls
 const services: Service[] = [
   {
     id: 1,
-    title: 'Comprehensive Rehabilitation Services',
-    description: 'Our licensed physical therapists provide personalized rehabilitation programs focusing on mobility, strength, and independence.',
-    features: ['In-Home Physical Therapy', 'On-Site Therapy Center', 'Personalized Treatment Plans'],
+    title: 'DPT-Owned Rehabilitation',
+    description: 'Expert-led recovery from our Doctors of Physical Therapy. We bridge the gap between hospital settings and home with pro-active mobile and on-site rehab.',
+    features: ['Founder-Led Therapy', 'Clinical Fall Prevention', 'Mobility Restoration'],
     icon: Dumbbell,
     image: physicalTherapyImage,
-    imagePosition: 'object-[center_30%]',
+    imagePosition: 'object-center',
     color: 'blue',
     path: '/rehabilitation'
   },
   {
     id: 2,
     title: 'Dignified Personal Assistance',
-    description: 'Professional caregivers provide respectful support with activities of daily living while preserving dignity and independence.',
-    features: ['24/7 Personal Care', 'Medication Management', 'Mobility Support'],
+    description: 'Respectful support with daily living that preserves independence. Licensed caregivers providing help for those who need a light hand or full physical support.',
+    features: ['24/7 Personal Care', 'Medication Management', 'Dignity-First Support'],
     icon: Heart,
     image: dignifiedCareImage,
     imagePosition: 'object-[center_25%]',
@@ -51,66 +51,66 @@ const services: Service[] = [
   {
     id: 3,
     title: 'Residential Care Services',
-    description: 'Secure, comfortable living environments with 24/7 supervised care in a warm, homelike setting.',
-    features: ['24/7 Supervision', 'Emergency Response', 'Personalized Rooms'],
+    description: 'The safety of 24/7 supervision in a real, intimate home setting. We provide a secure, comforting haven for seniors who prefer a smaller group size.',
+    features: ['8-Resident Max', 'Intimate Home Environment', '24/7 Awake Staff'],
     icon: Home,
-    image: comfortingHavenImage,
+    image: fireplaceImage,
     imagePosition: 'object-center',
     color: 'emerald',
     path: '/residential-care'
   },
   {
     id: 4,
-    title: 'Dietary & Meal Services',
-    description: 'Registered dietitians create nutritious meals tailored to individual dietary needs and preferences.',
-    features: ['Specialized Diets', 'Fresh Daily Meals', 'Nutritionist Approved'],
+    title: 'Clinical-Led Nutrition & Dietary',
+    description: 'Nutrition as medicine. Fresh, heart-healthy meals prepared in our open kitchen, tailored to clinical requirements and individual joy.',
+    features: ['Heart-Healthy Menus', 'Open Concept Kitchen', 'Therapeutic Nutrition'],
     icon: Utensils,
-    image: nourishingImage,
-    imagePosition: 'object-[center_40%]',
+    image: kitchenImage,
+    imagePosition: 'object-center',
     color: 'orange',
     path: '/dietary'
   },
   {
     id: 5,
-    title: 'Therapeutic Recreation Services',
-    description: 'Certified therapists design engaging programs promoting physical fitness and social interaction.',
-    features: ['Daily Activities', 'Exercise Programs', 'Social Events'],
+    title: 'Life Enrichment & Activities',
+    description: 'Meaningful engagement designed to keep the mind active and prevent isolation. Tailored small-group interaction that honors the individual.',
+    features: ['Cognitive Vitality', 'Small Group Setting', 'Social Intimacy'],
     icon: Activity,
-    image: vibrantLifeImage,
-    imagePosition: 'object-[center_30%]',
+    image: livingRoomImage,
+    imagePosition: 'object-center',
     color: 'purple',
     path: '/recreation'
   },
   {
     id: 6,
-    title: 'Proactive Health & Safety',
-    description: 'On-site medical oversight with 24/7 nursing staff and coordination with healthcare providers.',
-    features: ['Medical Oversight', 'Health Monitoring', 'Emergency Response'],
+    title: 'Medical Oversight & Safety',
+    description: 'Safety built on clinical foundations. RN oversight and 24/7 monitoring in a home that exceeds standard assisted living safety protocols.',
+    features: ['RN Clinical Oversight', 'Fall Prevention', 'Proactive Monitoring'],
     icon: Shield,
     image: proactiveHealthImage,
-    imagePosition: 'object-[center_35%]',
+    imagePosition: 'object-center',
     color: 'teal',
     path: '/health-safety'
   },
   {
     id: 7,
-    title: 'Family Partnership Program',
-    description: 'Open communication through care conferences and dedicated support for family involvement.',
-    features: ['Family Communication', 'Regular Updates', 'Transparent Care'],
+    title: 'Direct Family Communication',
+    description: 'Direct communication with the clinicians caring for your loved one. You have a seat at the table with direct access to the RN and DPT clinicians managing your loved one’s care.',
+    features: ['Direct Clinician Access', 'Clear Transparency', 'Family Partnerships'],
     icon: Users,
     image: familyImage,
-    imagePosition: 'object-[center_25%]',
+    imagePosition: 'object-center',
     color: 'indigo',
     path: '/family-partnership'
   },
   {
     id: 8,
     title: 'Specialized Memory Care',
-    description: 'Secure memory care unit with specially trained staff for residents with dementia.',
-    features: ['Secure Environment', 'Cognitive Programs', 'Specialized Staff'],
+    description: 'Sensitive, secure memory care delivered by staff trained in dementia-specific clinical approaches and compassionate engagement.',
+    features: ['Cognitive Support', 'Secure Environment', 'Clinical Dementia Care'],
     icon: Brain,
     image: memoryCareImage,
-    imagePosition: 'object-[center_30%]',
+    imagePosition: 'object-center',
     color: 'purple',
     path: '/memory-care'
   }
@@ -206,9 +206,8 @@ const AllServicesPage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <SEOHead
-        title="Comprehensive Senior Care Services in Columbia, MD"
+        title="Senior Care & Assisted Living Services | Columbia MD"
         description="Discover our full range of senior care services including assisted living, memory care, physical therapy, and personal assistance. Professional care in a warm, home-like environment."
-        keywords="senior care services Columbia MD, assisted living services Maryland, memory care services, physical therapy Columbia, personal care services, senior living services"
         image="https://www.columbiacarehome.com/og-services.jpg"
         url="https://www.columbiacarehome.com/services"
       />
@@ -229,10 +228,10 @@ const AllServicesPage = () => {
 
             {/* Page Title */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 font-serif leading-tight">
-              Senior Care & Assisted Living Services
+              Assisted Living & Clinical Senior Care in a <span className="text-emerald-200">Small Home Setting</span>
             </h1>
             <p className="text-lg sm:text-xl text-emerald-50 max-w-3xl mb-12 leading-relaxed mx-auto">
-              Every service we offer is designed with one goal in mind: to provide a nurturing, supportive, and enriching environment where our residents can thrive.
+              Every service we offer is designed to bridge the gap between institutional clinical care and the warmth of a real home.
             </p>
 
             {/* Statistics */}
@@ -242,8 +241,8 @@ const AllServicesPage = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
               >
-                <div className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-2">8</div>
-                <div className="text-emerald-100 text-sm sm:text-base lg:text-lg">Core Services</div>
+                <div className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-2">DPT</div>
+                <div className="text-emerald-100 text-sm sm:text-base lg:text-lg">Founder Owned</div>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -251,15 +250,15 @@ const AllServicesPage = () => {
                 transition={{ delay: 0.3 }}
               >
                 <div className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-2">24/7</div>
-                <div className="text-emerald-100 text-sm sm:text-base lg:text-lg">Care Available</div>
+                <div className="text-emerald-100 text-sm sm:text-base lg:text-lg">RN Oversight</div>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
               >
-                <div className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-2">100%</div>
-                <div className="text-emerald-100 text-sm sm:text-base lg:text-lg">Family Focused</div>
+                <div className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-2">8</div>
+                <div className="text-emerald-100 text-sm sm:text-base lg:text-lg">Max Capacity</div>
               </motion.div>
             </div>
           </motion.div>
@@ -289,10 +288,17 @@ const AllServicesPage = () => {
           <p className="text-base sm:text-lg text-gray-600 mb-8">
             Schedule a personalized tour to see how our comprehensive services can support your loved one's journey.
           </p>
-          <button className="inline-flex items-center gap-3 px-8 py-4 bg-emerald-600 text-white font-semibold rounded-full hover:bg-emerald-700 transition-colors shadow-lg hover:shadow-xl text-base sm:text-lg">
-            Schedule Your Tour
-            <ArrowRight className="w-5 h-5" />
-          </button>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <button className="w-full sm:w-auto inline-flex items-center gap-3 px-8 py-4 bg-emerald-600 text-white font-semibold rounded-full hover:bg-emerald-700 transition-colors shadow-lg hover:shadow-xl text-base sm:text-lg">
+              Schedule Your Tour
+              <ArrowRight className="w-5 h-5" />
+            </button>
+            <Link to="/contact" className="w-full sm:w-auto">
+              <button className="w-full sm:w-auto inline-flex items-center gap-3 px-8 py-4 bg-white text-emerald-700 border-2 border-emerald-600 font-semibold rounded-full hover:bg-emerald-50 transition-colors text-base sm:text-lg">
+                Speak With a Care Advisor
+              </button>
+            </Link>
+          </div>
         </div>
       </motion.div>
     </div>

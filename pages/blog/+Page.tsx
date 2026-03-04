@@ -4,9 +4,12 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Calendar, User, Tag, ArrowRight } from 'lucide-react';
 import SEOHead from '../../src/components/SEOHead';
-import { blogs } from '../../src/data/blogs.js';
+import { blogs } from '../../src/data/blogs';
 
 const BlogIndexPage = () => {
+    // Sort blogs by date in descending order (most recent first)
+    const sortedBlogs = [...blogs].sort((a, b) => b.date.localeCompare(a.date));
+
     return (
         <div className="min-h-screen bg-gray-50">
             <SEOHead
@@ -39,7 +42,7 @@ const BlogIndexPage = () => {
             {/* Blog Posts Grid */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {blogs.map((post, index) => (
+                    {sortedBlogs.map((post, index) => (
                         <motion.article
                             key={post.id}
                             initial={{ opacity: 0, y: 20 }}

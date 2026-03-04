@@ -78,7 +78,7 @@
   "name": "Columbia Care Home",
   "address": "10610 Hickory Point Lane, Columbia, MD 21044",
   "telephone": ["(201) 885-9225", "(301) 500-0809"],
-  "email": "info@columbiacarehome.com",
+  "email": "columbiacarehomes@gmail.com",
   "areaServed": ["Columbia", "Ellicott City", "Laurel"],
   "hasOfferCatalog": {
     "itemListElement": [

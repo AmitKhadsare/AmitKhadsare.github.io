@@ -9,7 +9,6 @@ const TermsOfServicePage = () => {
       <SEOHead
         title="Terms of Service | Columbia Care Home"
         description="Review the Terms of Service for using the Columbia Care Home website and services."
-        keywords="terms of service, website terms, legal disclaimer, columbia care terms"
         url="/terms-of-service"
       />
       {/* Hero Section */}
@@ -41,17 +40,17 @@ const TermsOfServicePage = () => {
 
             <h2>1. Agreement to Terms</h2>
             <p>By accessing our website at https://www.columbiacarehome.com, you are agreeing to be bound by these terms of service, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws.</p>
-            
+
             <h2>2. Use License</h2>
             <p>Permission is granted to temporarily download one copy of the materials (information or software) on Columbia Care Home's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title.</p>
-            
+
             <h2>3. Disclaimer</h2>
             <p>The materials on Columbia Care Home's website are provided on an 'as is' basis. Columbia Care Home makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.</p>
-            
+
             <h2>4. Governing Law</h2>
             <p>These terms and conditions are governed by and construed in accordance with the laws of South Carolina and you irrevocably submit to the exclusive jurisdiction of the courts in that State or location.</p>
-            
-             <p className="mt-8 p-4 bg-yellow-50 border border-yellow-200 rounded-lg"><strong>Disclaimer:</strong> This is a template Terms of Service and is not legal advice. Please consult with a legal professional to tailor this document to your specific needs.</p>
+
+            <p className="mt-8 p-4 bg-yellow-50 border border-yellow-200 rounded-lg"><strong>Disclaimer:</strong> This is a template Terms of Service and is not legal advice. Please consult with a legal professional to tailor this document to your specific needs.</p>
           </div>
         </motion.div>
       </div>

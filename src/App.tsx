@@ -8,7 +8,6 @@ import Footer from './components/Footer';
 import MobileSocialBar from './components/MobileSocialBar';
 import ScrollToTop from './components/ScrollToTop';
 import SEOHead from './components/SEOHead';
-import { localBusinessSchema } from './data/structuredData';
 
 import AboutUsPage from './components/AboutUsPage';
 import ScheduleTourPage from './components/ScheduleTourPage';
@@ -41,10 +40,8 @@ function App() {
           <Route path="/" element={
             <>
               <SEOHead
-                title="Columbia Care Home – Care that Feels Like Coming Home"
+                title="Assisted Living & Memory Care in Columbia MD | Columbia Care Home"
                 description="Columbia Care Home provides heartfelt, professional care in a warm, home-like environment. Discover senior care that truly feels like family in Columbia, Maryland."
-                keywords="assisted living Columbia MD, senior care Maryland, memory care Columbia, physical therapy Columbia, elder care Maryland, senior living Columbia"
-                structuredData={localBusinessSchema}
               />
               <div id="home" className="scroll-mt-24">
                 <Hero />
