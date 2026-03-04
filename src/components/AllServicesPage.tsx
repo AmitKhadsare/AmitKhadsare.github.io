@@ -229,7 +229,7 @@ const AllServicesPage = () => {
 
             {/* Page Title */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 font-serif leading-tight">
-              Our Comprehensive Services
+              Senior Care & Assisted Living Services
             </h1>
             <p className="text-lg sm:text-xl text-emerald-50 max-w-3xl mb-12 leading-relaxed mx-auto">
               Every service we offer is designed with one goal in mind: to provide a nurturing, supportive, and enriching environment where our residents can thrive.

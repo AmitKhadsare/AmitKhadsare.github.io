@@ -2,7 +2,6 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Calendar, User, ArrowLeft, Clock } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
 import SEOHead from './SEOHead';
 import { blogs } from '../data/blogs.js';
 
@@ -26,32 +25,22 @@ const BlogPostPage = () => {
                 image={post.image}
                 type="article"
                 url={`https://www.columbiacarehome.com/blog/${post.slug}`}
+                structuredData={{
+                    "datePublished": post.date,
+                    "author": {
+                        "@type": "Person",
+                        "name": post.author
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "Columbia Care Home",
+                        "logo": {
+                            "@type": "ImageObject",
+                            "url": "https://www.columbiacarehome.com/logo.png"
+                        }
+                    }
+                }}
             />
-
-            <Helmet>
-                <script type="application/ld+json">
-                    {JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "BlogPosting",
-                        "headline": post.title,
-                        "image": post.image,
-                        "datePublished": post.date,
-                        "author": {
-                            "@type": "Person",
-                            "name": post.author
-                        },
-                        "publisher": {
-                            "@type": "Organization",
-                            "name": "Columbia Care Home",
-                            "logo": {
-                                "@type": "ImageObject",
-                                "url": "https://www.columbiacarehome.com/logo.png"
-                            }
-                        },
-                        "description": post.excerpt
-                    })}
-                </script>
-            </Helmet>
 
             {/* Header Section */}
             <div className="relative h-[60vh] min-h-[400px] w-full overflow-hidden">

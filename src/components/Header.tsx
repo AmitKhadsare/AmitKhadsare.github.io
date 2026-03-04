@@ -71,7 +71,7 @@ const Header = () => {
           <Link to="/" className="flex-shrink-0 py-2">
             <img
               src={logo}
-              alt="Columbia Care Home Logo"
+              alt="Columbia Care Home"
               className="h-12 sm:h-14 md:h-16 lg:h-20 xl:h-24 w-auto max-w-[200px] sm:max-w-[220px] md:max-w-[260px] lg:max-w-[300px] xl:max-w-[340px] object-contain"
             />
           </Link>

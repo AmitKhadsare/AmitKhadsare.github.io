@@ -459,7 +459,6 @@ const FacilityPage = () => {
 
       // SSR guard for window access
       if (typeof window !== 'undefined' && galleryContentRef.current) {
-        const isMobile = window.innerWidth < 1024;
         // Adjust offset for mobile vs desktop if needed
 
         const elementPosition = galleryContentRef.current.getBoundingClientRect().top;
@@ -524,7 +523,7 @@ const FacilityPage = () => {
               <span className="font-medium text-sm md:text-base">Back to Home</span>
             </Link>
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 font-serif">
-              Tour Our Beautiful Home
+              Tour Our Senior Care Facility
             </h1>
             <p className="text-base md:text-xl lg:text-2xl text-emerald-50 max-w-3xl mx-auto leading-relaxed">
               Explore every corner of our warm, safe, and welcoming environment

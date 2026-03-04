@@ -1,20 +1,24 @@
 // Structured Data for Columbia Care Home
 
 export const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": "SeniorCareFacility",
   "@id": "https://www.columbiacarehome.com/#organization",
   "name": "Columbia Care Home",
   "alternateName": "Columbia Care",
   "description": "Columbia Care Home provides heartfelt, professional care in a warm, home-like environment. We offer assisted living, memory care, and rehabilitation services in Columbia, Maryland.",
   "url": "https://www.columbiacarehome.com",
-  "logo": "https://www.columbiacarehome.com/assets/logo1.svg",
-  "image": [
-    "https://www.columbiacarehome.com/main.avif",
-    "https://www.columbiacarehome.com/assets/carehome.avif",
-    "https://www.columbiacarehome.com/assets/our-home-front-view.jpg"
-  ],
-  "telephone": ["(301) 500-0809", "(201) 885-9225"],
+  "logo": {
+    "@type": "ImageObject",
+    "@id": "https://www.columbiacarehome.com/#logo",
+    "url": "https://www.columbiacarehome.com/logo.png",
+    "width": 250,
+    "height": 60,
+    "caption": "Columbia Care Home Logo"
+  },
+  "image": {
+    "@id": "https://www.columbiacarehome.com/#mainImage"
+  },
+  "telephone": "+1-301-500-0809",
   "email": "columbiacarehomes@gmail.com",
   "address": {
     "@type": "PostalAddress",
@@ -26,39 +30,39 @@ export const localBusinessSchema = {
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": "39.2037",
-    "longitude": "-76.8610"
+    "latitude": 39.2037,
+    "longitude": -76.8610
   },
-  "openingHours": "Mo-Su 00:00-23:59",
-  "priceRange": "$$",
-  "currenciesAccepted": "USD",
-  "paymentAccepted": "Cash, Check, Insurance",
-  "areaServed": [
+  "openingHoursSpecification": [
     {
-      "@type": "City",
-      "name": "Columbia",
-      "containedInPlace": {
-        "@type": "State",
-        "name": "Maryland"
-      }
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "18:00"
     },
     {
-      "@type": "City",
-      "name": "Ellicott City",
-      "containedInPlace": {
-        "@type": "State",
-        "name": "Maryland"
-      }
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "17:00"
     },
     {
-      "@type": "City",
-      "name": "Laurel",
-      "containedInPlace": {
-        "@type": "State",
-        "name": "Maryland"
-      }
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Sunday",
+      "opens": "10:00",
+      "closes": "16:00"
     }
   ],
+  "priceRange": "$$$$",
+  "areaServed": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": 39.2037,
+      "longitude": -76.8610
+    },
+    "geoRadius": "50000"
+  },
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "Senior Care Services",
@@ -68,7 +72,7 @@ export const localBusinessSchema = {
         "itemOffered": {
           "@type": "Service",
           "name": "Assisted Living",
-          "description": "Professional care in a warm, home-like environment"
+          "description": "Personalized assistance with daily living activities in a home-like environment"
         }
       },
       {
@@ -76,34 +80,48 @@ export const localBusinessSchema = {
         "itemOffered": {
           "@type": "Service",
           "name": "Memory Care",
-          "description": "Specialized care for residents with dementia and Alzheimer's"
+          "description": "Specialized care for residents with Alzheimer's and dementia"
         }
       },
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Physical Therapy",
-          "description": "Rehabilitation services to maintain mobility and independence"
+          "name": "Rehabilitation Services",
+          "description": "Physical, occupational, and speech therapy services"
         }
       },
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Personal Care",
-          "description": "Dignified assistance with daily activities"
+          "name": "Residential Care",
+          "description": "24/7 professional care in a comfortable residential setting"
         }
       }
     ]
   },
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+1-201-885-9225",
+      "contactType": "customer service",
+      "areaServed": "US",
+      "availableLanguage": ["English"]
+    },
+    {
+      "@type": "ContactPoint",
+      "telephone": "+1-301-500-0809",
+      "contactType": "admissions",
+      "areaServed": "US",
+      "availableLanguage": ["English"]
+    }
+  ],
   "sameAs": [
     "https://www.facebook.com/columbiacarehome",
     "https://www.instagram.com/columbiacarehome",
     "https://www.linkedin.com/company/columbiacarehome"
   ],
-  "foundingDate": "2025",
-  "numberOfEmployees": "5-15",
   "slogan": "Care that Feels Like Coming Home"
 };
 

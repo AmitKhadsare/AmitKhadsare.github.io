@@ -8,7 +8,6 @@ import Footer from './components/Footer';
 import MobileSocialBar from './components/MobileSocialBar';
 import ScrollToTop from './components/ScrollToTop';
 import SEOHead from './components/SEOHead';
-import OrganizationSchema from './components/OrganizationSchema';
 import { localBusinessSchema } from './data/structuredData';
 
 import Article from './components/Article';
@@ -39,7 +38,6 @@ function App() {
 
   return (
     <>
-      <OrganizationSchema />
       <ScrollToTop />
       <div className="min-h-screen">
         {!isProposal && <Header />}

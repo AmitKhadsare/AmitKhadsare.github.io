@@ -47,7 +47,7 @@ const AboutUsPage = () => {
             Back to Home
           </Link>
           <h1 className="text-4xl lg:text-6xl font-bold text-stone-800 font-serif mb-4">
-            A Legacy of Compassion, A Future of Care.
+            About Columbia Care Home
           </h1>
           <p className="text-xl text-stone-600">
             Learn about the family, vision, and values that make Columbia Care Home a true home.
