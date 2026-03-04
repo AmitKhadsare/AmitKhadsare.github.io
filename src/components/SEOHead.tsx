@@ -8,6 +8,7 @@ interface SEOHeadProps {
   keywords?: string;
   image?: string;
   url?: string;
+  type?: string;
   structuredData?: any;
   googleSiteVerification?: string;
 }
