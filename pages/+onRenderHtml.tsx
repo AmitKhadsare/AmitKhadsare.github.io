@@ -125,6 +125,16 @@ async function onRenderHtml(pageContext: any) {
         ${helmet ? dangerouslySkipEscape(helmet.link.toString()) : ''}
         ${helmet ? dangerouslySkipEscape(helmet.script.toString()) : ''}
         
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-6HXBL9X955"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-6HXBL9X955');
+        </script>
+
         <!-- Static assets from original index.html -->
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
