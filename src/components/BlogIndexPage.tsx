@@ -83,9 +83,10 @@ const BlogIndexPage = () => {
 
                                 {/* Title */}
                                 <Link to={`/blog/${post.slug}`} className="block mb-3">
-                                    <h2 className="text-xl md:text-2xl font-bold text-stone-900 font-serif leading-tight group-hover:text-emerald-700 transition-colors">
-                                        {post.title}
-                                    </h2>
+                                    <h2
+                                        className="text-xl md:text-2xl font-bold text-stone-900 font-serif leading-tight group-hover:text-emerald-700 transition-colors"
+                                        dangerouslySetInnerHTML={{ __html: post.title }}
+                                    />
                                 </Link>
 
                                 {/* Excerpt */}

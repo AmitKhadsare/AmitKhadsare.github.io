@@ -14,7 +14,7 @@ interface SEOHeadProps {
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
-  title,
+  title: rawTitle,
   description,
   image = "https://www.columbiacarehome.com/og-image.jpg",
   url,
@@ -23,6 +23,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   googleSiteVerification = "qoIlCCKaSRQEXzZyMJMkMwVMjW4m7yxlMoyqhi9Ylkw"
 }) => {
   const location = useLocation();
+  const stripHtml = (html: string) => html.replace(/<[^>]*>?/gm, '');
+  const title = stripHtml(rawTitle);
   const fullTitle = title.includes('Columbia Care Home') ? title : `${title} | Columbia Care Home`;
 
   const baseUrl = "https://www.columbiacarehome.com";

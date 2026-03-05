@@ -12,17 +12,17 @@ tags:
   - Senior Health
 ---
 
-<p class="lead text-xl text-stone-600 font-serif italic mb-10">The assisted living industry is largely driven by real estate developers and corporate hospitality administrators. While they may hire capable medical directors, the foundational philosophy is often a hotel-first approach. At Columbia Care Home, care is built on a fundamentally different premise: the founders are Doctors of Physical Therapy (DPT).</p>
+<p class="lead text-xl text-stone-600 font-serif italic">The assisted living industry is largely driven by real estate developers and corporate hospitality administrators. While they may hire capable medical directors, the foundational philosophy is often a hotel-first approach. At Columbia Care Home, care is built on a fundamentally different premise: the founders are Doctors of Physical Therapy (DPT).</p>
 
-<figure class="my-12">
+<figure>
   <img src="/images/blog/gym-therapy.jpg" alt="On-site therapy suite at Columbia Care Home" class="w-full rounded-2xl shadow-xl border border-stone-200" />
   <figcaption class="text-center text-stone-500 mt-4 text-sm font-medium">A dedicated therapy environment allows for seamless, clinical-grade mobility work without leaving the comfort of home.</figcaption>
 </figure>
 
 ## The Administrator vs. The Clinician
-When a corporate administrator looks at a senior, they often see a resident to be "managed" via room assignments and meal schedules. When a physical therapist looks at a senior, they perform a continuous clinical assessment.
+When a corporate administrator looks at a senior, they often see a resident to be <span class="blog-accent">managed</span> via room assignments and meal schedules. When a physical therapist looks at a senior, they perform a continuous clinical assessment.
 
-<div class="my-12 overflow-hidden border border-stone-200 rounded-3xl shadow-2xl bg-white">
+<div class="overflow-hidden border border-stone-200 rounded-3xl shadow-2xl bg-white">
   <div class="bg-emerald-900 px-6 py-4">
     <h3 class="text-white font-serif text-xl m-0">Leadership Perspective Comparison</h3>
   </div>
@@ -62,9 +62,9 @@ When a corporate administrator looks at a senior, they often see a resident to b
 </div>
 
 ## What "DPT-Owned" Actually Means for Your Loved One
-Operating a Level 3 Assisted Living Facility as physical therapists rewrites the daily experience of aging. It shifts the focus from "supervising" decline to "preserving" function.
+Operating a Level 3 Assisted Living Facility as physical therapists rewrites the daily experience of aging. It shifts the focus from <span class="blog-accent">supervising</span> decline to <span class="blog-accent">preserving</span> function.
 
-### 1. The "Clinical Eye" for Daily Care
+### 1. The <span class="blog-accent">Clinical Eye</span> for Daily Care
 Every interaction at our home at **10610 Hickory Point Lane** is a data point. Our caregivers are trained directly by the founders to notice the smallest deviations in balance, posture, or cognitive clarity. By identifying micro-declines early, we can often intervene before a catastrophic medical event occurs.
 
 ### 2. Proactive Fall Prevention
@@ -73,14 +73,14 @@ Falls are the leading cause of injury among older adults. We don't wait for a fa
 ### 3. Mobility-Driven Memory Care
 For residents living with dementia, agitation and "sundowning" are often exacerbated by unspent physical energy. By implementing daytime mobility routines and supervised physical engagement, we help manage anxiety naturally, promoting more restful sleep cycles without over-reliance on sedation.
 
-<div class="my-16 grid grid-cols-1 md:grid-cols-2 gap-0 overflow-hidden rounded-3xl border border-stone-200 shadow-lg">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-0 overflow-hidden rounded-3xl border border-stone-200 shadow-lg">
   <div class="p-10 bg-white">
     <h3 class="text-emerald-900 font-serif font-bold text-2xl mb-6 flex items-center gap-3">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-      The Recovery Loop
+      The <span class="blog-accent">Recovery Loop</span>
     </h3>
     <p class="text-stone-700 leading-relaxed mb-6 italic">
-      In many facilities, therapy is an "outside service" that happens for an hour a few times a week. At Columbia Care Home, therapeutic principles are embedded into the very rhythm of the day—from how a resident rises in the morning to how they engage in communal life.
+      In many facilities, therapy is an <span class="blog-accent">outside service</span> that happens for an hour a few times a week. At Columbia Care Home, therapeutic principles are embedded into the very rhythm of the day—from how a resident rises in the morning to how they engage in communal life.
     </p>
     <div class="bg-emerald-50 p-4 rounded-xl border border-emerald-100 text-emerald-900 font-medium">
       "Preserving movement is the single most effective way to preserve human dignity."
@@ -101,7 +101,7 @@ For residents living with dementia, agitation and "sundowning" are often exacerb
 ## Bridging the Gap: From Rehab to Resident Life
 Many of our residents come to us after a hospital stay or a stint in a rehabilitation center. The clinical oversight of our facility prevents the "post-rehab slide" where seniors lose the progress they made in therapy once they return to a standard assisted living environment. We provide the continuity that preserves their hard-won mobility.
 
-<div class="mt-12 p-8 bg-emerald-50 rounded-2xl border border-emerald-100 text-center">
+<div class="p-8 bg-emerald-50 rounded-2xl border border-emerald-100 text-center">
   <h3 class="text-emerald-900 font-serif font-bold text-2xl mb-6 italic">Speak with Our Clinical Founders</h3>
   <p class="text-stone-600 mb-8 max-w-2xl mx-auto italic">We’re happy to answer questions — even if you’re still exploring options. Discuss your loved one's specific mobility and care needs directly with a Doctor of Physical Therapy. Learn how our clinical-first approach produces better daily outcomes.</p>
   <div class="flex flex-col sm:flex-row gap-4 justify-center">

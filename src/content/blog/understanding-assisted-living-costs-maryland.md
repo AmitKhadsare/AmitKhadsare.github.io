@@ -12,17 +12,17 @@ tags:
   - Family Resources
 ---
 
-<p class="lead text-xl text-stone-600 font-serif italic mb-10">One of the most shock-inducing moments for families transitioning a loved one into assisted living is the first invoice. In Maryland, assisted living costs typically range from $4,500 to over $10,000 per month, depending on care level and facility model. In affluent areas like Howard County, the financial structure of senior care can sometimes feel confusing or difficult to compare.</p>
+<p class="lead text-xl text-stone-600 font-serif italic">One of the most shock-inducing moments for families transitioning a loved one into assisted living is the first invoice. In Maryland, assisted living costs typically range from $4,500 to over $10,000 per month, depending on care level and facility model. In affluent areas like Howard County, the financial structure of senior care can sometimes feel confusing or difficult to compare.</p>
 
-<figure class="my-12">
+<figure>
   <img src="/images/blog/dining-area.jpg" alt="A warm, residential dining room at Columbia Care Home" class="w-full rounded-2xl shadow-xl border border-stone-200" />
   <figcaption class="text-center text-stone-500 mt-4 text-sm font-medium">In a residential assisted living model, your investment goes directly into shared life and intimate care, not corporate administration.</figcaption>
 </figure>
 
-## The "Base Rate" Illusion
+## The <span class="blog-accent">Base Rate</span> Illusion
 When families tour a massive, resort-style facility, they are often quoted an attractive "base rate." The base rate is often the advertised starting price, but it usually does not include the daily care services many seniors actually require.
 
-> **The Hidden Math of Care:** Often, what starts as a $6,000 monthly quote in a large facility quickly balloons to $10,000+ once care services such as medication management, mobility assistance, and night checks are added.
+> **<span class="blog-accent">The Hidden Math of Care</span>:** Often, what starts as a $6,000 monthly quote in a large facility quickly balloons to $10,000+ once care services such as medication management, mobility assistance, and night checks are added.
 
 Exact pricing varies by provider, but many Maryland facilities charge additional monthly fees for services such as:
 - **Medication Management:** +$500 to $1,500/month
@@ -34,7 +34,7 @@ Exact pricing varies by provider, but many Maryland facilities charge additional
 ## Comparing Value: Corporate vs. All-Inclusive
 To understand the true senior care costs in Maryland, you have to look past the lobby and into the direct care hours provided.
 
-<div class="my-12 overflow-hidden border border-stone-200 rounded-3xl shadow-2xl bg-white">
+<div class="overflow-hidden border border-stone-200 rounded-3xl shadow-2xl bg-white">
   <div class="bg-emerald-900 px-6 py-4">
     <h3 class="text-white font-serif text-xl m-0">Pricing Comparison Table</h3>
   </div>
@@ -85,11 +85,11 @@ Smaller residential assisted living homes often operate with fewer layers of cor
 - **Health Preservation:** Proactive monitoring by therapists can help reduce the likelihood of costly ER visits and rehabilitation stays.
 - **Clinical Consistency:** Low staff turnover means we know a resident’s baseline health, preventing minor issues from becoming major medical costs.
 
-<div class="my-16 grid grid-cols-1 md:grid-cols-2 gap-0 overflow-hidden rounded-3xl border border-stone-200 shadow-lg">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-0 overflow-hidden rounded-3xl border border-stone-200 shadow-lg">
   <div class="p-10 bg-white">
     <h3 class="text-emerald-900 font-serif font-bold text-2xl mb-6 flex items-center gap-3">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg>
-      Fee Watchlist
+      <span class="blog-accent">Fee Watchlist</span>
     </h3>
     <ul class="space-y-4 m-0 p-0 list-none">
       <li class="flex items-start gap-3 bg-stone-50 p-4 rounded-xl border border-stone-100 transition-all hover:bg-white hover:shadow-md">
@@ -125,10 +125,10 @@ Smaller residential assisted living homes often operate with fewer layers of cor
   </div>
 </div>
 
-## Evaluating "True Value" for Assisted Living Howard County
+## Evaluating <span class="blog-accent">True Value</span> for Assisted Living Howard County
 When comparing assisted living Howard County options in Columbia or Ellicott City, do not just compare base rates. Compare the difference between being one resident among many in a large facility versus living in a small home with only eight residents. Consider the clinical value of licensed professionals overseeing daily care.
 
-At Columbia Care Home, we believe in **radical pricing transparency**. One rate covers the high-acuity, Level 3 support your loved one deserves, led by experts who understand the intersection of healthcare and home.
+At Columbia Care Home, we believe in <span class="blog-accent">radical pricing transparency</span>. One rate covers the high-acuity, Level 3 support your loved one deserves, led by experts who understand the intersection of healthcare and home.
 
 ## Questions Families Should Ask About Pricing
 Before choosing a facility, families should ask a few key questions about pricing to understand the true monthly cost, not just the advertised rate:
@@ -138,7 +138,7 @@ Before choosing a facility, families should ask a few key questions about pricin
 - How often do rates increase?
 - Are night checks or medication management billed separately?
 
-<div class="mt-12 p-8 bg-emerald-50 rounded-2xl border border-emerald-100 text-center">
+<div class="p-8 bg-emerald-50 rounded-2xl border border-emerald-100 text-center">
   <h3 class="text-emerald-900 font-serif font-bold text-2xl mb-6">Request a Transparent Quote</h3>
   <p class="text-stone-600 mb-8 max-w-2xl mx-auto">We’re happy to answer questions — even if you’re still exploring options. Families are welcome to speak directly with our founders to receive a clear explanation of care options and pricing for your loved one's specific needs.</p>
   <div class="flex flex-col sm:flex-row gap-4 justify-center">

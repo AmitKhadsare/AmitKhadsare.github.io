@@ -1,6 +1,6 @@
 ---
 id: "0"
-title: "Inside Columbia Care Home: A Home-First Approach to Design and Care"
+title: "Inside Columbia Care Home: A <span class="blog-accent">Home-First</span> Approach to Design and Care"
 excerpt: "See how Columbia Care Home pairs therapeutic intent with warm residential design to make every day feel like home."
 author: "Columbia Care Home Team"
 date: "2025-11-28"
@@ -12,9 +12,9 @@ tags:
   - Columbia MD
 ---
 
-<p class="lead">At Columbia Care Home, "home" is a deliberate design decision—not an afterthought. Combining the clinical insight of our founders (licensed physical therapists) with residential architecture, our home is crafted so that every hallway, window, and communal seat supports mobility, builds social connection, and preserves dignity. This article walks you through the building's architecture, interior choices, functional design, and outdoor spaces—with exact visual landmarks for a virtual or in-person visit.</p>
+<p class="lead">At Columbia Care Home, <span class="blog-accent">home</span> is a deliberate design decision—not an afterthought. Combining the clinical insight of our founders (licensed physical therapists) with residential architecture, our home is crafted so that every hallway, window, and communal seat supports mobility, builds social connection, and preserves dignity. This article walks you through the building's architecture, interior choices, functional design, and outdoor spaces—with exact visual landmarks for a virtual or in-person visit.</p>
 
-<figure class="my-10">
+<figure>
   <img src="/images/blog/exterior-front.jpg" alt="Exterior view of Columbia Care Home, front entrance and landscaping" class="w-full rounded-xl shadow-lg" />
   <figcaption class="text-center text-stone-500 mt-3 text-sm italic">Columbia Care Home's front façade and covered entry — welcoming scale, residential proportions.</figcaption>
 </figure>
@@ -22,11 +22,11 @@ tags:
 ## Architectural Overview: Layout That Respects Autonomy
 The arrival sequence sets the tone. Our front entry is intentionally domestic in scale—a covered porch that avoids institutional grandeur and invites a calm transition from street to home.
 
-Inside, the circulation is designed for legibility. Short corridors, clear sightlines, and consistent flooring reduce cognitive load for residents and simplify staff workflows. Room clusters are organized around shared living and dining "neighborhoods" to encourage incidental social interaction while preserving privacy.
+Inside, the circulation is designed for legibility. Short corridors, clear sightlines, and consistent flooring reduce cognitive load for residents and simplify staff workflows. Room clusters are organized around shared living and dining <span class="blog-accent">neighborhoods</span> to encourage incidental social interaction while preserving privacy.
 
 Therapy and staff zones are strategically placed adjacent to living areas, allowing for quick support without interrupting the natural flow of resident life.
 
-<figure class="my-10">
+<figure>
   <img src="/images/blog/entrance-foyer.jpg" alt="Warm entryway that helps visitors and residents feel instantly welcome" class="w-full rounded-xl shadow-lg" />
   <figcaption class="text-center text-stone-500 mt-3 text-sm italic">Our foyer offers a warm welcome, helping visitors and residents feel instantly at home.</figcaption>
 </figure>
@@ -34,7 +34,7 @@ Therapy and staff zones are strategically placed adjacent to living areas, allow
 ## Interior Design: Warmth, Light & Intimacy
 We use a palette of soft, warm neutrals—creams, warm grays, and muted greens—layered with textures like woven upholstery and wood veneers. This creates a domestic aesthetic that feels cozy rather than clinical. Contrast is used carefully, such as floor-to-wall thresholds, to aid safety and visibility.
 
-<figure class="my-10">
+<figure>
   <img src="/images/blog/living-room-seating.jpg" alt="Cozy communal living room with multiple seating clusters and large windows" class="w-full rounded-xl shadow-lg" />
   <figcaption class="text-center text-stone-500 mt-3 text-sm italic">Communal living room: small seating clusters encourage conversation and reduce noise.</figcaption>
 </figure>
@@ -43,7 +43,7 @@ Daylight is a priority. Large windows and skylights bring sunlight deep into com
 
 Acoustics are managed through soft furnishings and area rugs, reducing reverberation to create calm conversation levels without isolation.
 
-<figure class="my-10">
+<figure>
   <img src="/images/blog/dining-area.jpg" alt="Bright residential-style dining room set for a communal meal" class="w-full rounded-xl shadow-lg" />
   <figcaption class="text-center text-stone-500 mt-3 text-sm italic">Dining area designed for family-style meals and social dining.</figcaption>
 </figure>
@@ -51,7 +51,7 @@ Acoustics are managed through soft furnishings and area rugs, reducing reverbera
 ## Resident Rooms: Privacy With Accessible Independence
 Our private and semi-private rooms are designed with uncluttered circulation zones and clear bed-to-bath paths. Built-in storage, shelving, and soft-close cabinetry allow residents to bring personal items and photos—critical for a sense of place.
 
-<figure class="my-10">
+<figure>
   <img src="/images/blog/bedroom-suite.jpg" alt="Private resident bedroom with accessible clearances and warm lighting" class="w-full rounded-xl shadow-lg" />
   <figcaption class="text-center text-stone-500 mt-3 text-sm italic">Resident room: balance of privacy, comfort and access for mobility devices.</figcaption>
 </figure>
@@ -59,13 +59,13 @@ Our private and semi-private rooms are designed with uncluttered circulation zon
 Lighting includes ambient, task, and night-light layers with reachable controls to support circadian rhythms and reduce fall risks. Accessible detailing is everywhere: 32–36 inch doorways, 60-inch turning radii, lever handles, and low thresholds with non-slip flooring.
 
 ## Therapy & Mobility Spaces: Movement Built Into the Plan
-<blockquote class="border-l-4 border-emerald-600 pl-6 py-4 my-8 bg-emerald-50 italic text-emerald-900 rounded-r-lg">
+<blockquote class="border-l-4 border-emerald-600 pl-6 py-4 bg-emerald-50 italic text-emerald-900 rounded-r-lg">
   "As physical therapists, we designed this home around movement and dignity."
 </blockquote>
 
 Our dedicated therapy room features low-shelf storage, open floor area for gait training, mirrored walls for posture work, and space for one-on-one consultation. But therapy extends beyond the gym—mini-therapy zones near living areas encourage incidental activity.
 
-<figure class="my-10">
+<figure>
   <img src="/images/blog/gym-therapy.jpg" alt="Therapy room equipped for physical rehabilitation and mobility exercises" class="w-full rounded-xl shadow-lg" />
   <figcaption class="text-center text-stone-500 mt-3 text-sm italic">On-site therapy supports ongoing rehabilitation and independence.</figcaption>
 </figure>
@@ -75,7 +75,7 @@ Flooring transitions from shock-absorbing resilient material in therapy zones to
 ## Safety by Design: Subtle, Effective, Respectful
 Safety features protect residents without feeling medical. Bathrooms feature roll-in showers with bench seats, handheld sprayers, and discreet grab bars that match hardware finishes. We use curbless thresholds and properly rated slip-resistant tile.
 
-<figure class="my-10">
+<figure>
   <img src="/images/blog/accessible-bathroom.jpg" alt="Accessible bathroom with roll-in shower and support rails" class="w-full rounded-xl shadow-lg" />
   <figcaption class="text-center text-stone-500 mt-3 text-sm italic">Bathroom design supports independence while minimizing fall risk.</figcaption>
 </figure>
@@ -85,7 +85,7 @@ Night visibility is enhanced by low-level path lighting and motion-sensing night
 ## Community & Common Spaces: Life Happens Here
 Flexible activity rooms convert from crafts to exercise classes, while small social nooks offer places for quiet interaction. Dining is treated as a ritual, with design supporting both large gatherings and small family meals.
 
-<figure class="my-10">
+<figure>
   <img src="/images/blog/therapy-activity-room.jpg" alt="Multi-use activity room with movable seating and storage" class="w-full rounded-xl shadow-lg" />
   <figcaption class="text-center text-stone-500 mt-3 text-sm italic">Activity spaces adapt for crafts, group exercise and family events.</figcaption>
 </figure>
@@ -93,7 +93,7 @@ Flexible activity rooms convert from crafts to exercise classes, while small soc
 ## Outdoor & Landscape Design: Garden Therapy & Gentle Movement
 Our therapeutic landscaping includes raised planters, sensory gardens, and shaded seating. Paths are even and non-slip with gentle slopes, encouraging walkability. Landscape buffers create private outdoor moments while framing views from common rooms.
 
-<figure class="my-10">
+<figure>
   <img src="/images/blog/patio-deck.jpg" alt="Garden patio with raised planters and bench seating" class="w-full rounded-xl shadow-lg" />
   <figcaption class="text-center text-stone-500 mt-3 text-sm italic">Outdoor spaces promote calm, fresh air and gentle exercise.</figcaption>
 </figure>
@@ -109,7 +109,7 @@ Our therapeutic landscaping includes raised planters, sensory gardens, and shade
 ## Virtual Tour & Remote Discovery
 The virtual tour is a window into everyday life here and a first step before a site visit. We invite you to explore the front entry, main living room, therapy gym, private rooms, and outdoor walks to capture the essence of our home.
 
-<figure class="my-10">
+<figure>
   <a href="/virtual-tour" class="block group relative overflow-hidden rounded-xl shadow-lg">
     <img src="/images/blog/virtual-tour-preview.jpg" alt="Screenshot preview of Columbia Care Home 3D virtual tour" class="w-full transform group-hover:scale-105 transition-transform duration-500" />
     <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors flex items-center justify-center">
@@ -122,7 +122,7 @@ The virtual tour is a window into everyday life here and a first step before a s
 ## Closing: A Home Designed Around People
 Architecture matters for quality of life. At Columbia Care Home, every design decision—from door widths to window seats, from therapy layout to garden pathways—was made to protect independence, encourage connection, and honor dignity. We invite you to take the virtual tour or come visit to feel the difference in person.
 
-<div class="mt-12 p-8 bg-emerald-50 rounded-2xl border border-emerald-100 text-center">
+<div class="p-8 bg-emerald-50 rounded-2xl border border-emerald-100 text-center">
   <h3 class="text-emerald-900 font-serif font-bold text-2xl mb-6">Experience the Difference</h3>
   
   <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">

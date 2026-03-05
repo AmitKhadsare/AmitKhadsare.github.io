@@ -12,14 +12,14 @@ tags:
   - Care Home Decision
 ---
 
-<p class="lead text-xl text-stone-600 font-serif italic mb-10">Families in Howard County are often overwhelmed with choices. The most common starting point is touring massive corporate facilities with hotel-style lobbies. But beneath the polished surface, a critical question remains: "Who is actually going to be watching my parent when I'm not here?"</p>
+<p class="lead text-xl text-stone-600 font-serif italic">Families in Howard County are often overwhelmed with choices. The most common starting point is touring massive corporate facilities with hotel-style lobbies. But beneath the polished surface, a critical question remains: <span class="blog-accent">Who is actually going to be watching my parent when I'm not here?</span></p>
 
-<figure class="my-12">
+<figure>
   <img src="/images/blog/wide-hallways.jpg" alt="A wide, accessible hallway at Columbia Care Home" class="w-full rounded-2xl shadow-xl border border-stone-200" />
   <figcaption class="text-center text-stone-500 mt-4 text-sm font-medium">In a smaller setting, clinical barriers are removed, allowing for more natural movement and closer supervision.</figcaption>
 </figure>
 
-## The "Mega-Facility" Reality
+## The <span class="blog-accent">Mega-Facility</span> Reality
 Large corporate facilities excel at first impressions. They offer expansive dining halls, organized bus trips, and a bustling social atmosphere. For a highly independent senior who simply wants to downsize and socialize, this model is often an excellent fit.
 
 However, when a senior begins to experience cognitive decline, mobility issues, or requires memory care supervision, the massive scale can become a profound liability. If several residents need help standing, walking, or using the restroom at the same time, staff must prioritize requests—which often means waiting for several minutes before assistance arrives.
@@ -27,7 +27,7 @@ However, when a senior begins to experience cognitive decline, mobility issues, 
 ## Quick Comparison: Corporate vs. Residential
 To understand the true difference in care, look at the ratio of staff members to individual residents.
 
-<div class="my-12 overflow-hidden border border-stone-200 rounded-3xl shadow-2xl bg-white">
+<div class="overflow-hidden border border-stone-200 rounded-3xl shadow-2xl bg-white">
   <div class="bg-emerald-900 px-6 py-4">
     <h3 class="text-white font-serif text-xl m-0">Care Environment Comparison</h3>
   </div>
@@ -67,9 +67,9 @@ To understand the true difference in care, look at the ratio of staff members to
 </div>
 
 ## The Residential Assisted Living Alternative
-Columbia Care Home, located at **10610 Hickory Point Lane**, was deliberately designed to be the exact opposite of a corporate institution. As a licensed Level 3 Assisted Living facility, we focus on an intimate environment where caregivers are never "one hallway away."
+Columbia Care Home, located at **10610 Hickory Point Lane**, was deliberately designed to be the exact opposite of a corporate institution. As a licensed Level 3 Assisted Living facility, we focus on an intimate environment where caregivers are never <span class="blog-accent">one hallway away</span>.
 
-<div class="my-16 grid grid-cols-1 md:grid-cols-2 gap-0 overflow-hidden rounded-3xl border border-stone-200 shadow-lg">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-0 overflow-hidden rounded-3xl border border-stone-200 shadow-lg">
   <div class="p-10 bg-white">
     <h3 class="text-emerald-900 font-serif font-bold text-2xl mb-6 flex items-center gap-3 italic">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 005.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
@@ -99,7 +99,7 @@ If a parent is seeking a country-club lifestyle and requires minimal supervision
 
 At Columbia Care Home, we prioritize personalized engagement from day one, helping families find peace of mind knowing their parent is living with dignity and expert support.
 
-<div class="mt-12 p-8 bg-emerald-50 rounded-2xl border border-emerald-100 text-center">
+<div class="p-8 bg-emerald-50 rounded-2xl border border-emerald-100 text-center">
   <h3 class="text-emerald-900 font-serif font-bold text-2xl mb-6 italic">Discover the Residential Advantage</h3>
   <p class="text-stone-600 mb-8 max-w-2xl mx-auto italic">We’re happy to answer questions — even if you’re still exploring options. The best way to understand the clinical difference of an 8-bed home is to experience it in person. Speak with our founders to see if our home is the right landing place for your loved one.</p>
   <div class="flex flex-col sm:flex-row gap-4 justify-center">
