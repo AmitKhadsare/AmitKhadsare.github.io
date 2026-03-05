@@ -6,26 +6,76 @@ import { ExternalLink } from 'lucide-react';
 // --- Assets ---
 import aerial_front_of_home from '../assets/Facility/Drone Aerial Photos/aerial-front-of-home.jpg';
 import our_home_front_view from '../assets/Facility/Our Home (Exterior)/our-home-front-view.jpg';
+import main_hall_entrance_hallway from '../assets/Facility/Our Main Hall (Living & Common Areas)/main-hall-entrance-hallway.jpg';
+import main_hall_living_area_and_windows from '../assets/Facility/Our Main Hall (Living & Common Areas)/main-hall-living-area-and-windows.jpg';
 import main_hall_open_concept_view from '../assets/Facility/Our Main Hall (Living & Common Areas)/main-hall-open-concept-view.jpg';
 import kitchen_main_view from '../assets/Facility/Our Kitchen/kitchen-main-view.jpg';
 import main_hall_living_room_and_kitchen from '../assets/Facility/Our Main Hall (Living & Common Areas)/main-hall-living-room-and-kitchen.jpg';
-import bedroom_1_main_view from '../assets/Facility/Our Bedrooms/bedroom-1-main-view.jpg';
 import bedroom_upstairs_master_suite_full_view from '../assets/Facility/Our Bedrooms/bedroom-upstairs-master-suite-full-view.jpg';
-import our_home_deck_and_house_exterior from '../assets/Facility/Our Home (Exterior)/our-home-deck-and-house-exterior.jpg';
+import bedroom_3_bay_windows from '../assets/Facility/Our Bedrooms/bedroom-3-bay-windows.jpg';
+import amenities_upstairs_master_bathroom_vanity from '../assets/Facility/Home Features & Amenities/amenities-upstairs-master-bathroom-vanity.jpg';
+import amenities_bedroom_1_walk_in_shower from '../assets/Facility/Home Features & Amenities/amenities-bedroom-1-walk-in-shower.jpg';
 import gym_main_view from '../assets/Facility/Our Gym & Therapy/gym-main-view.jpg';
+import our_home_deck_seating_area from '../assets/Facility/Our Home (Exterior)/our-home-deck-seating-area.jpg';
 import aerial_backyard_and_deck from '../assets/Facility/Drone Aerial Photos/aerial-backyard-and-deck.jpg';
 
 const STORY_IMAGES = [
-    { src: aerial_front_of_home, alt: "Aerial overview of Columbia Care Home" },
-    { src: our_home_front_view, alt: "The elegant, welcoming entrance" },
-    { src: main_hall_open_concept_view, alt: "The Heart of the Home: Main Hall" },
-    { src: kitchen_main_view, alt: "Modern kitchen and gathering area" },
-    { src: main_hall_living_room_and_kitchen, alt: "Open-concept social living space" },
-    { src: bedroom_1_main_view, alt: "Private, sun-lit first floor bedroom" },
-    { src: bedroom_upstairs_master_suite_full_view, alt: "Spacious master suite layout" },
-    { src: our_home_deck_and_house_exterior, alt: "Serene backyard deck and patio" },
-    { src: gym_main_view, alt: "On-site physical therapy and fitness gym" },
-    { src: aerial_backyard_and_deck, alt: "Peaceful property surroundings" }
+    {
+        src: aerial_front_of_home,
+        alt: "Large front lawn providing a beautiful first impression for families and guests."
+    },
+    {
+        src: our_home_front_view,
+        alt: "Our residential facade provides a familiar, non-institutional atmosphere."
+    },
+    {
+        src: main_hall_entrance_hallway,
+        alt: "Wide, well-lit hallways designed to accommodate walkers and ensure safe mobility."
+    },
+    {
+        src: main_hall_living_area_and_windows,
+        alt: "Our sun-drenched main hall where high ceilings and large windows create an airy, open feeling."
+    },
+    {
+        src: main_hall_open_concept_view,
+        alt: "Abundant natural light helps maintain healthy circadian rhythms and cognitive wellness."
+    },
+    {
+        src: kitchen_main_view,
+        alt: "Bright and clean kitchen environment maintaining high clinical standards."
+    },
+    {
+        src: main_hall_living_room_and_kitchen,
+        alt: "Open-concept design ensures residents are always part of the home's daily activities."
+    },
+    {
+        src: bedroom_upstairs_master_suite_full_view,
+        alt: "The full expanse of the bedroom, including the main bed and adjoining sitting area."
+    },
+    {
+        src: bedroom_3_bay_windows,
+        alt: "A spacious ground-floor bedroom featuring beautiful, large bay windows."
+    },
+    {
+        src: amenities_upstairs_master_bathroom_vanity,
+        alt: "Spacious master bathroom vanity with modern, easy-to-use fixtures."
+    },
+    {
+        src: amenities_bedroom_1_walk_in_shower,
+        alt: "Walk-in shower with safety seating, a standard in our clinical safety protocol."
+    },
+    {
+        src: gym_main_view,
+        alt: "Our professional therapy gym, the center of our clinical DPT-led rehabilitation programs."
+    },
+    {
+        src: our_home_deck_seating_area,
+        alt: "Spacious outdoor deck with comfortable seating where residents enjoy fresh air and family visits."
+    },
+    {
+        src: aerial_backyard_and_deck,
+        alt: "Our massive resident deck, a cornerstone of our 'open home' philosophy."
+    }
 ];
 
 const HeroVisual = () => {
@@ -34,7 +84,7 @@ const HeroVisual = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prev) => (prev + 1) % STORY_IMAGES.length);
-        }, 5000); // Luxurious 5-second interval
+        }, 5000);
         return () => clearInterval(interval);
     }, []);
 
@@ -68,7 +118,7 @@ const HeroVisual = () => {
                         src={STORY_IMAGES[currentIndex].src}
                         alt={STORY_IMAGES[currentIndex].alt}
                         className="w-full h-full object-cover"
-                        loading={currentIndex === 0 ? "eager" : "lazy"}
+                        loading={currentIndex <= 1 ? "eager" : "lazy"}
                     />
                 </motion.div>
             </AnimatePresence>
