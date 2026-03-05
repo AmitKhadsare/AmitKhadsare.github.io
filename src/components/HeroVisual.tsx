@@ -1,159 +1,101 @@
 // src/components/HeroVisual.tsx
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink } from 'lucide-react';
 
 // --- Assets ---
 import aerial_front_of_home from '../assets/Facility/Drone Aerial Photos/aerial-front-of-home.jpg';
 import our_home_front_view from '../assets/Facility/Our Home (Exterior)/our-home-front-view.jpg';
-import main_hall_living_area_and_windows from '../assets/Facility/Our Main Hall (Living & Common Areas)/main-hall-living-area-and-windows.jpg';
 import main_hall_open_concept_view from '../assets/Facility/Our Main Hall (Living & Common Areas)/main-hall-open-concept-view.jpg';
-import main_hall_living_room_and_kitchen from '../assets/Facility/Our Main Hall (Living & Common Areas)/main-hall-living-room-and-kitchen.jpg';
-import main_hall_fireplace_and_tv_area from '../assets/Facility/Our Main Hall (Living & Common Areas)/main-hall-fireplace-and-tv-area.jpg';
 import kitchen_main_view from '../assets/Facility/Our Kitchen/kitchen-main-view.jpg';
-import kitchen_island_and_sink from '../assets/Facility/Our Kitchen/kitchen-island-and-sink.jpg';
+import main_hall_living_room_and_kitchen from '../assets/Facility/Our Main Hall (Living & Common Areas)/main-hall-living-room-and-kitchen.jpg';
 import bedroom_1_main_view from '../assets/Facility/Our Bedrooms/bedroom-1-main-view.jpg';
-import bedroom_3_bay_windows from '../assets/Facility/Our Bedrooms/bedroom-3-bay-windows.jpg';
 import bedroom_upstairs_master_suite_full_view from '../assets/Facility/Our Bedrooms/bedroom-upstairs-master-suite-full-view.jpg';
-import bedroom_upstairs_lavender from '../assets/Facility/Our Bedrooms/bedroom-upstairs-lavender.jpg';
 import our_home_deck_and_house_exterior from '../assets/Facility/Our Home (Exterior)/our-home-deck-and-house-exterior.jpg';
-import our_home_deck_seating_area from '../assets/Facility/Our Home (Exterior)/our-home-deck-seating-area.jpg';
 import gym_main_view from '../assets/Facility/Our Gym & Therapy/gym-main-view.jpg';
-import gym_rehab_equipment from '../assets/Facility/Our Gym & Therapy/gym-rehab-equipment.jpg';
 import aerial_backyard_and_deck from '../assets/Facility/Drone Aerial Photos/aerial-backyard-and-deck.jpg';
 
-const HERO_IMAGES = [
-    { src: aerial_front_of_home, alt: "Aerial view of Columbia Care Home" },
-    { src: our_home_front_view, alt: "Welcoming front exterior" },
-    { src: main_hall_open_concept_view, alt: "Open concept main living hall" },
-    { src: main_hall_living_area_and_windows, alt: "Sun-drenched common spaces" },
-    { src: main_hall_fireplace_and_tv_area, alt: "Cozy fireside social nook" },
-    { src: kitchen_main_view, alt: "Modern resident kitchen" },
-    { src: kitchen_island_and_sink, alt: "Central kitchen gathering point" },
-    { src: main_hall_living_room_and_kitchen, alt: "Homelike social atmosphere" },
-    { src: bedroom_1_main_view, alt: "Private first floor suite" },
-    { src: bedroom_upstairs_master_suite_full_view, alt: "Luxurious upstairs private suite" },
-    { src: bedroom_3_bay_windows, alt: "Bright bedroom with bay windows" },
-    { src: bedroom_upstairs_lavender, alt: "Calming upstairs bedroom" },
-    { src: gym_main_view, alt: "Clinical PT-led therapy gym" },
-    { src: gym_rehab_equipment, alt: "Specialized rehabilitation tools" },
-    { src: our_home_deck_and_house_exterior, alt: "Safe outdoor resident deck" },
-    { src: our_home_deck_seating_area, alt: "Peaceful deck seating" },
-    { src: aerial_backyard_and_deck, alt: "Property overview and wooded lot" }
-];
-
-const PULSE_SEQUENCE = [
-    // Flashes (High energy)
-    { index: 0, duration: 250 },
-    { index: 1, duration: 150 },
-    { index: 2, duration: 150 },
-    { index: 3, duration: 150 },
-    { index: 4, duration: 150 },
-    { index: 5, duration: 150 },
-    // Focus (Registering variety)
-    { index: 6, duration: 300 },
-    { index: 8, duration: 300 },
-    { index: 12, duration: 300 },
-    { index: 14, duration: 300 },
-    // Land (High detail impact)
-    { index: 2, duration: 800 }, // Back to Main Hall
-    { index: 15, duration: 800 }, // Deck view
+const STORY_IMAGES = [
+    { src: aerial_front_of_home, alt: "Aerial overview of Columbia Care Home" },
+    { src: our_home_front_view, alt: "The elegant, welcoming entrance" },
+    { src: main_hall_open_concept_view, alt: "The Heart of the Home: Main Hall" },
+    { src: kitchen_main_view, alt: "Modern kitchen and gathering area" },
+    { src: main_hall_living_room_and_kitchen, alt: "Open-concept social living space" },
+    { src: bedroom_1_main_view, alt: "Private, sun-lit first floor bedroom" },
+    { src: bedroom_upstairs_master_suite_full_view, alt: "Spacious master suite layout" },
+    { src: our_home_deck_and_house_exterior, alt: "Serene backyard deck and patio" },
+    { src: gym_main_view, alt: "On-site physical therapy and fitness gym" },
+    { src: aerial_backyard_and_deck, alt: "Peaceful property surroundings" }
 ];
 
 const HeroVisual = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [phase, setPhase] = useState<'intro' | 'cinematic'>('intro');
-    const introStepRef = useRef(0);
 
     useEffect(() => {
-        let timeout: any;
-
-        const runPulsingIntro = () => {
-            if (introStepRef.current < PULSE_SEQUENCE.length) {
-                const step = PULSE_SEQUENCE[introStepRef.current];
-                setCurrentIndex(step.index);
-
-                timeout = setTimeout(() => {
-                    introStepRef.current += 1;
-                    runPulsingIntro();
-                }, step.duration);
-            } else {
-                setPhase('cinematic');
-            }
-        };
-
-        if (phase === 'intro') {
-            runPulsingIntro();
-        } else {
-            // Calm Loop
-            const interval = setInterval(() => {
-                setCurrentIndex((prev) => (prev + 1) % HERO_IMAGES.length);
-            }, 4500);
-            return () => clearInterval(interval);
-        }
-
-        return () => clearTimeout(timeout);
-    }, [phase]);
+        const interval = setInterval(() => {
+            setCurrentIndex((prev) => (prev + 1) % STORY_IMAGES.length);
+        }, 5000); // Luxurious 5-second interval
+        return () => clearInterval(interval);
+    }, []);
 
     return (
         <motion.div
-            className="relative overflow-hidden rounded-2xl aspect-[4/3] lg:aspect-auto lg:h-[500px] shadow-2xl border-4 border-slate-800/50 w-full"
-            whileHover={{ scale: 1.01 }}
-            transition={{ type: "spring", stiffness: 300 }}
+            className="relative overflow-hidden rounded-2xl aspect-[4/3] lg:aspect-auto lg:h-[520px] shadow-2xl border-4 border-slate-800/50 w-full bg-slate-900"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1 }}
         >
             <AnimatePresence mode="wait">
                 <motion.div
                     key={currentIndex}
                     className="absolute inset-0"
-                    initial={phase === 'intro' ? { opacity: 1 } : { opacity: 0, scale: 1.1 }}
+                    initial={{ opacity: 0, scale: 1.1 }}
                     animate={{
                         opacity: 1,
-                        scale: phase === 'intro' ? 1 : 1.05,
-                        x: phase === 'intro' ? 0 : [-5, 5, -5],
-                        y: phase === 'intro' ? 0 : [-3, 3, -3]
+                        scale: 1.05,
+                        x: [-3, 3, -3],
+                        y: [-2, 2, -2]
                     }}
-                    exit={{ opacity: 0, transition: { duration: phase === 'intro' ? 0 : 1 } }}
+                    exit={{ opacity: 0, transition: { duration: 1.5 } }}
                     transition={{
-                        opacity: { duration: phase === 'intro' ? 0 : 1, ease: "easeInOut" },
-                        scale: { duration: phase === 'intro' ? 0.1 : 8, ease: "linear" },
+                        opacity: { duration: 1.5, ease: "easeInOut" },
+                        scale: { duration: 10, ease: "linear" },
                         x: { duration: 15, repeat: Infinity, ease: "easeInOut" },
                         y: { duration: 20, repeat: Infinity, ease: "easeInOut" }
                     }}
                 >
                     <img
-                        src={HERO_IMAGES[currentIndex].src}
-                        alt={HERO_IMAGES[currentIndex].alt}
+                        src={STORY_IMAGES[currentIndex].src}
+                        alt={STORY_IMAGES[currentIndex].alt}
                         className="w-full h-full object-cover"
+                        loading={currentIndex === 0 ? "eager" : "lazy"}
                     />
                 </motion.div>
             </AnimatePresence>
 
-            {/* Content Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent pointer-events-none" />
+            {/* Sophisticated Content Overlays */}
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent pointer-events-none" />
+            <div className="absolute inset-0 bg-slate-900/10 pointer-events-none" />
 
-            {/* Badge - Only Appears in Cinematic Phase */}
-            <AnimatePresence>
-                {phase === 'cinematic' && (
-                    <motion.div
-                        className="absolute bottom-6 right-6 z-20"
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.8 }}
-                    >
-                        <a
-                            href="/virtual-tour"
-                            className="flex items-center gap-2 bg-emerald-600/90 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg hover:bg-emerald-500 transition-colors group"
-                        >
-                            <span className="relative flex h-2 w-2">
-                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-300"></span>
-                            </span>
-                            Experience Our Home
-                            <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                        </a>
-                    </motion.div>
-                )}
-            </AnimatePresence>
+            {/* Floating Badge */}
+            <motion.div
+                className="absolute bottom-6 right-6 z-20"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1 }}
+            >
+                <a
+                    href="/virtual-tour"
+                    className="flex items-center gap-2 bg-emerald-600/90 backdrop-blur-md text-white px-5 py-2.5 rounded-full text-sm font-semibold shadow-lg hover:bg-emerald-500 transition-all group border border-white/10"
+                >
+                    <span className="relative flex h-2 w-2">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-300"></span>
+                    </span>
+                    Take a Virtual Tour
+                    <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                </a>
+            </motion.div>
         </motion.div>
     );
 };
