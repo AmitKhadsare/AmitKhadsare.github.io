@@ -1,6 +1,6 @@
 // src/components/Hero.tsx
 import { motion, Variants } from 'framer-motion';
-import { Heart, Shield, Users, Video } from 'lucide-react';
+import { Heart, Shield, Users, MessageSquare } from 'lucide-react';
 import HeroVisual from './HeroVisual';
 
 const Hero = () => {
@@ -81,19 +81,28 @@ const Hero = () => {
             variants={containerVariants}
           >
             <motion.div className="space-y-6" variants={itemVariants}>
-              <motion.h1
-                className="text-5xl lg:text-6xl font-bold leading-tight font-serif relative"
-                initial={{ opacity: 0, y: 30 }}
+              <motion.div
+                className="relative inline-block"
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, type: "spring" }}
+                transition={{ duration: 0.6 }}
               >
-                <span className="bg-gradient-to-r from-emerald-400 via-teal-400 to-emerald-400 bg-clip-text text-transparent block">
-                  Physical Therapist-Owned
-                </span>
-                <span className="bg-gradient-to-r from-emerald-400 via-teal-400 to-emerald-400 bg-clip-text text-transparent block">
-                  Assisted Living in Howard County.
-                </span>
-              </motion.h1>
+                <div className="flex items-center gap-2 mb-2 justify-center lg:justify-start">
+                  <span className="h-[1px] w-6 bg-emerald-500/50 hidden sm:block"></span>
+                  <span className="text-emerald-400 font-bold tracking-[0.2em] uppercase text-xs sm:text-sm">
+                    Physical Therapist-Owned
+                  </span>
+                  <span className="h-[1px] w-6 bg-emerald-500/50 hidden sm:block"></span>
+                </div>
+                <h1 className="text-4xl lg:text-5xl font-bold leading-[1.1] font-serif">
+                  <span className="text-white block">
+                    Assisted Living in
+                  </span>
+                  <span className="text-white block">
+                    Howard County.
+                  </span>
+                </h1>
+              </motion.div>
               <p className="text-xl text-stone-300 leading-relaxed max-w-lg mx-auto lg:mx-0">
                 Columbia Care Home provides assisted living and memory care in Columbia, Maryland, serving families throughout Howard County including Ellicott City, Clarksville, and Laurel.
               </p>
@@ -102,11 +111,11 @@ const Hero = () => {
               </p>
             </motion.div>
 
-            {/* --- UPDATED CTA BUTTON --- */}
+            {/* --- OPTIMIZED CTA BUTTON --- */}
             <motion.div className="flex justify-center lg:justify-start" variants={itemVariants}>
               <a
-                href="/virtual-tour"
-                className="group relative bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-10 py-5 rounded-full font-semibold text-lg shadow-2xl overflow-hidden block w-fit"
+                href="/contact"
+                className="group relative bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-4 sm:px-10 sm:py-5 rounded-full font-semibold shadow-2xl overflow-hidden block w-fit"
               >
                 <motion.div
                   className="absolute inset-0 bg-gradient-to-r from-emerald-700 via-teal-600 to-emerald-700"
@@ -115,11 +124,11 @@ const Hero = () => {
                   transition={{ duration: 0.3 }}
                 />
 
-                <span className="relative z-10 flex items-center justify-center gap-3">
-                  <Video className="w-6 h-6 text-emerald-100 flex-shrink-0" />
+                <span className="relative z-10 flex items-center justify-center gap-3 sm:gap-4">
+                  <MessageSquare className="w-5 h-5 sm:w-6 sm:h-6 text-emerald-100 flex-shrink-0" />
                   <span className="flex flex-col items-center lg:items-start text-center lg:text-left">
-                    <span className="text-xl font-bold">Take a Virtual Tour</span>
-                    <span className="text-sm text-emerald-100 font-normal">Step inside our vision of personalized care.</span>
+                    <span className="text-lg sm:text-xl font-bold leading-tight">Contact Our Clinical Team</span>
+                    <span className="text-xs sm:text-sm text-emerald-100 font-normal">Direct Physical Therapist Access</span>
                   </span>
                 </span>
                 <motion.div
@@ -130,14 +139,14 @@ const Hero = () => {
                 />
               </a>
             </motion.div>
-            {/* --- END UPDATED CTA BUTTON --- */}
+            {/* --- END OPTIMIZED CTA BUTTON --- */}
 
             {/* Trust Indicators */}
             <motion.div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-8" variants={itemVariants}>
               {trustIndicators.map((indicator, index) => (
                 <motion.div
                   key={index}
-                  className="group relative flex items-center space-x-3 p-4 bg-slate-800/50 rounded-lg shadow-sm overflow-hidden backdrop-blur-sm border border-slate-700/50"
+                  className="group relative flex flex-col sm:flex-row items-center sm:items-start space-y-3 sm:space-y-0 sm:space-x-4 p-5 bg-slate-800/50 rounded-xl shadow-sm overflow-hidden backdrop-blur-sm border border-slate-700/50 text-center sm:text-left"
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.5 + index * 0.1 }}
