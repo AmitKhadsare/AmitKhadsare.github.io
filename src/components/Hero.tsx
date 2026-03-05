@@ -1,33 +1,9 @@
 // src/components/Hero.tsx
-import { useState, useEffect } from 'react';
-import { motion, Variants, AnimatePresence } from 'framer-motion';
-import { Heart, Shield, Users, Video, ExternalLink } from 'lucide-react';
-
-// Hero Assets
-import our_home_front_view from '../assets/Facility/Our Home (Exterior)/our-home-front-view.jpg';
-import main_hall_open_concept_view from '../assets/Facility/Our Main Hall (Living & Common Areas)/main-hall-open-concept-view.jpg';
-import bedroom_upstairs_master_suite from '../assets/Facility/Our Bedrooms/bedroom-upstairs-master-suite.jpg';
-import gym_main_view from '../assets/Facility/Our Gym & Therapy/gym-main-view.jpg';
-import our_home_deck_and_house_exterior from '../assets/Facility/Our Home (Exterior)/our-home-deck-and-house-exterior.jpg';
+import { motion, Variants } from 'framer-motion';
+import { Heart, Shield, Users, Video } from 'lucide-react';
+import HeroVisual from './HeroVisual';
 
 const Hero = () => {
-  const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
-
-  const heroPhotos = [
-    { src: our_home_front_view, alt: "Welcoming front view of Columbia Care Home" },
-    { src: main_hall_open_concept_view, alt: "Spacious, open-concept living area" },
-    { src: bedroom_upstairs_master_suite, alt: "Luxurious upstairs master suite" },
-    { src: gym_main_view, alt: "Professional on-site physical therapy gym" },
-    { src: our_home_deck_and_house_exterior, alt: "Safe, expansive resident deck and backyard" }
-  ];
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentPhotoIndex((prev) => (prev + 1) % heroPhotos.length);
-    }, 8000); // 8 seconds per image
-    return () => clearInterval(timer);
-  }, []);
-
   const containerVariants: Variants = {
     hidden: { opacity: 0.01 },
     visible: {
@@ -185,102 +161,9 @@ const Hero = () => {
             </motion.div>
           </motion.div>
 
-          {/* Cinematic Carousel Section */}
+          {/* New Modular Visual Component */}
           <motion.div className="flex-1 relative order-1 lg:order-2 w-full" variants={itemVariants}>
-            <div className="relative z-10">
-              <motion.div
-                className="relative overflow-hidden rounded-2xl aspect-[4/3] lg:aspect-auto lg:h-[500px] shadow-2xl border-4 border-slate-800/50"
-                whileHover={{ scale: 1.01 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                <AnimatePresence mode="wait">
-                  <motion.div
-                    key={currentPhotoIndex}
-                    className="absolute inset-0"
-                    initial={{ opacity: 0, scale: 1.1 }}
-                    animate={{
-                      opacity: 1,
-                      scale: 1,
-                      x: [-5, 5, -5],
-                      y: [-5, 5, -5]
-                    }}
-                    exit={{ opacity: 0, transition: { duration: 1.5 } }}
-                    transition={{
-                      opacity: { duration: 1.5, ease: "easeInOut" },
-                      scale: { duration: 10, ease: "linear" },
-                      x: { duration: 15, repeat: Infinity, ease: "easeInOut" },
-                      y: { duration: 20, repeat: Infinity, ease: "easeInOut" }
-                    }}
-                  >
-                    <img
-                      src={heroPhotos[currentPhotoIndex].src}
-                      alt={heroPhotos[currentPhotoIndex].alt}
-                      className="w-full h-full object-cover"
-                    />
-                  </motion.div>
-                </AnimatePresence>
-
-                {/* Overlay Gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent pointer-events-none" />
-
-                {/* Live Walkthrough Badge */}
-                <motion.div
-                  className="absolute bottom-6 right-6 z-20"
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 1 }}
-                >
-                  <a
-                    href="/virtual-tour"
-                    className="flex items-center gap-2 bg-emerald-600/90 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg hover:bg-emerald-500 transition-colors group"
-                  >
-                    <span className="relative flex h-2 w-2">
-                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                      <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-300"></span>
-                    </span>
-                    Live Walkthrough Available
-                    <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                  </a>
-                </motion.div>
-
-                {/* Carousel Progress Bars */}
-                <div className="absolute bottom-6 left-6 flex gap-2 z-20">
-                  {heroPhotos.map((_, idx) => (
-                    <div
-                      key={idx}
-                      className="h-1 w-8 bg-white/20 rounded-full overflow-hidden"
-                    >
-                      {currentPhotoIndex === idx && (
-                        <motion.div
-                          className="h-full bg-emerald-400"
-                          initial={{ width: 0 }}
-                          animate={{ width: "100%" }}
-                          transition={{ duration: 8, ease: "linear" }}
-                        />
-                      )}
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-
-              {/* Decorative background glows */}
-              <motion.div
-                className="absolute -top-6 -right-6 w-24 h-24 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-full opacity-20 blur-xl"
-                animate={{ scale: [1, 1.2, 1], rotate: [0, 90, 0] }}
-                transition={{ duration: 8, repeat: Infinity }}
-              />
-              <motion.div
-                className="absolute -bottom-6 -left-6 w-32 h-32 bg-gradient-to-br from-teal-400 to-emerald-500 rounded-full opacity-15 blur-xl"
-                animate={{ scale: [1.2, 1, 1.2], rotate: [0, -90, 0] }}
-                transition={{ duration: 10, repeat: Infinity }}
-              />
-            </div>
-
-            <motion.div
-              className="absolute inset-0 bg-gradient-to-br from-emerald-500 to-slate-500 rounded-2xl transform rotate-3 scale-105 opacity-20 -z-10"
-              animate={{ rotate: [3, 6, 3] }}
-              transition={{ duration: 15, repeat: Infinity }}
-            />
+            <HeroVisual />
           </motion.div>
         </div>
       </div>
