@@ -140,34 +140,6 @@ const Hero = () => {
               </a>
             </motion.div>
             {/* --- END OPTIMIZED CTA BUTTON --- */}
-
-            {/* Trust Indicators */}
-            <motion.div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-8" variants={itemVariants}>
-              {trustIndicators.map((indicator, index) => (
-                <motion.div
-                  key={index}
-                  className="group relative flex flex-col sm:flex-row items-center sm:items-start space-y-3 sm:space-y-0 sm:space-x-4 p-5 bg-slate-800/50 rounded-xl shadow-sm overflow-hidden backdrop-blur-sm border border-slate-700/50 text-center sm:text-left"
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.5 + index * 0.1 }}
-                >
-                  <div
-                    className={`p-3 ${indicator.iconBg} rounded-full relative`}
-                  >
-                    <motion.div
-                      className="absolute inset-0 bg-white/20 rounded-full"
-                      animate={{ scale: [1, 1.2, 1] }}
-                      transition={{ duration: 2, repeat: Infinity }}
-                    />
-                    <indicator.icon className={`${indicator.iconFill} relative z-10`} size={24} />
-                  </div>
-                  <div className="relative z-10">
-                    <div className="font-semibold text-stone-200">{indicator.title}</div>
-                    <div className="text-sm text-stone-400">{indicator.subtitle}</div>
-                  </div>
-                </motion.div>
-              ))}
-            </motion.div>
           </motion.div>
 
           {/* New Modular Visual Component */}
@@ -175,6 +147,37 @@ const Hero = () => {
             <HeroVisual />
           </motion.div>
         </div>
+
+        {/* Trust Indicators - Now below visual/content for better desktop alignment */}
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-12 sm:mt-16 border-t border-slate-800/50 pt-12 sm:pt-16"
+          variants={itemVariants}
+        >
+          {trustIndicators.map((indicator, index) => (
+            <motion.div
+              key={index}
+              className="group relative flex flex-col sm:flex-row items-center sm:items-start space-y-3 sm:space-y-0 sm:space-x-4 p-6 bg-slate-800/40 rounded-2xl shadow-sm overflow-hidden backdrop-blur-md border border-slate-700/30 text-center sm:text-left hover:bg-slate-800/60 transition-colors"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5 + index * 0.1 }}
+            >
+              <div
+                className={`p-4 ${indicator.iconBg} rounded-full relative`}
+              >
+                <motion.div
+                  className="absolute inset-0 bg-white/20 rounded-full"
+                  animate={{ scale: [1, 1.2, 1] }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                />
+                <indicator.icon className={`${indicator.iconFill} relative z-10`} size={24} />
+              </div>
+              <div className="relative z-10">
+                <div className="font-bold text-lg text-stone-200">{indicator.title}</div>
+                <div className="text-stone-400 font-medium">{indicator.subtitle}</div>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </motion.section>
   );
