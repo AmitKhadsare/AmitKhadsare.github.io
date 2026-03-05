@@ -1,6 +1,6 @@
 // src/components/Hero.tsx
 import { motion, Variants } from 'framer-motion';
-import { Heart, Shield, Users } from 'lucide-react';
+import { Heart, Shield, Users, Video } from 'lucide-react';
 import carehomeImage from '../assets/carehome.avif';
 
 const Hero = () => {
@@ -105,7 +105,7 @@ const Hero = () => {
             {/* --- UPDATED CTA BUTTON --- */}
             <motion.div className="flex justify-center lg:justify-start" variants={itemVariants}>
               <a
-                href="/contact"
+                href="/virtual-tour"
                 className="group relative bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-10 py-5 rounded-full font-semibold text-lg shadow-2xl overflow-hidden block w-fit"
               >
                 <motion.div
@@ -116,9 +116,10 @@ const Hero = () => {
                 />
 
                 <span className="relative z-10 flex items-center justify-center gap-3">
-                  <span className="flex flex-col items-start">
-                    <span className="text-xl font-bold">Speak Directly with Our Clinical Team</span>
-                    <span className="text-sm text-emerald-100 font-normal">Skip the placement agencies.</span>
+                  <Video className="w-6 h-6 text-emerald-100 flex-shrink-0" />
+                  <span className="flex flex-col items-center lg:items-start text-center lg:text-left">
+                    <span className="text-xl font-bold">Take a Virtual Tour</span>
+                    <span className="text-sm text-emerald-100 font-normal">Step inside our vision of personalized care.</span>
                   </span>
                 </span>
                 <motion.div
