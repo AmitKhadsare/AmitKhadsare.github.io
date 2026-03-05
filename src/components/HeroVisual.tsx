@@ -95,23 +95,21 @@ const HeroVisual = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}
         >
-            <AnimatePresence mode="wait">
+            <AnimatePresence>
                 <motion.div
                     key={currentIndex}
                     className="absolute inset-0"
-                    initial={{ opacity: 0, scale: 1.1 }}
+                    initial={{ opacity: 0, scale: 1.1, x: -5 }}
                     animate={{
                         opacity: 1,
-                        scale: 1.05,
-                        x: [-3, 3, -3],
-                        y: [-2, 2, -2]
+                        scale: 1,
+                        x: 0
                     }}
-                    exit={{ opacity: 0, transition: { duration: 1.5 } }}
+                    exit={{ opacity: 0 }}
                     transition={{
                         opacity: { duration: 1.5, ease: "easeInOut" },
-                        scale: { duration: 10, ease: "linear" },
-                        x: { duration: 15, repeat: Infinity, ease: "easeInOut" },
-                        y: { duration: 20, repeat: Infinity, ease: "easeInOut" }
+                        scale: { duration: 6, ease: "linear" }, // Slightly longer to maintain motion during cross-fade
+                        x: { duration: 6, ease: "linear" }
                     }}
                 >
                     <img
