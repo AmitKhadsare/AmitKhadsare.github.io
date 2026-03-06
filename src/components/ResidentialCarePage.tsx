@@ -1,15 +1,15 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight, Home, Users, Stethoscope } from 'lucide-react';
-import comfortingHavenImage from '../assets/comforting_homelike_haven.avif';
+import residentialHomeImage from '../assets/Facility/Our Home (Exterior)/our-home-front-view.jpg';
 import SEOHead from './SEOHead';
 
 const ResidentialCarePage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <SEOHead
-        title="Level 3 Residential Care & Senior Living | Columbia MD"
-        description="Authentic, 8-bed residential senior care in Columbia, MD. Level 3 medical expertise led by Doctors of Physical Therapy in an intimate family home environment."
+        title="Level 3 Residential Care in Columbia, MD | Columbia Care Home"
+        description="Our physical therapist-led 8-resident home in Columbia, MD provides specialized Level 3 residential care for seniors with complex medical and mobility needs."
         image="https://www.columbiacarehome.com/og-residential-care.jpg"
         url="/residential-care"
       />
@@ -27,10 +27,10 @@ const ResidentialCarePage = () => {
               Back to All Services
             </Link>
             <h1 className="text-4xl lg:text-5xl font-bold font-serif mb-4">
-              Residential Care Redefined
+              Level 3 Residential Care in Columbia, MD
             </h1>
             <p className="text-xl text-emerald-50 max-w-3xl mx-auto">
-              A secure, clinically-supervised home at Hickory Point Lane where 8 residents receive the level of personal attention corporate facilities simply cannot provide.
+              Residential Care Redefined in a specialized 8-Resident Home led by Doctors of Physical Therapy.
             </p>
           </motion.div>
         </div>
@@ -48,8 +48,8 @@ const ResidentialCarePage = () => {
             transition={{ duration: 0.7 }}
           >
             <img
-              loading="lazy" src={comfortingHavenImage}
-              alt="The bright, accessible, single-floor living space at 10610 Hickory Point Lane"
+              loading="lazy" src={residentialHomeImage}
+              alt="Welcoming front view of Columbia Care Home, an intimate 8-resident residential care home in Columbia, MD"
               className="w-full h-full object-cover"
             />
           </motion.div>
@@ -60,12 +60,17 @@ const ResidentialCarePage = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <h2 className="text-3xl font-bold text-gray-900 font-serif">A Multi-Generational Home, Not a Facility</h2>
-            <p className="text-lg text-gray-600 leading-relaxed">
-              We believe senior living should feel like a true home, not a hotel. Our residence at 10610 Hickory Point Lane is a spacious, light-filled 2007 home specifically chosen for its layout. With single-floor navigation and wide common areas, we've minimized the physical barriers that often lead to falls and confusion in larger institutional settings.
+            <p className="text-lg text-gray-600 leading-relaxed italic border-l-4 border-emerald-500 pl-4 py-2 bg-emerald-50/30 rounded-r-lg">
+              Developed by Doctors of Physical Therapy Bhargav Patel and Sheetal Khadsare, whose clinical backgrounds in geriatric rehabilitation shape our approach to residential care.
             </p>
             <p className="text-lg text-gray-600 leading-relaxed">
-              Founded by Doctors of Physical Therapy, our Level 3 medical expertise allows us to provide a level of oversight that is both clinically rigorous and deeply personal. With an incredible **1-to-8 caregiver ratio**, we ensure that every resident's medical, physical, and emotional needs are met with a degree of attention that massive 100-bed complexes legally and logistically cannot match.
+              Unlike traditional assisted living homes operated by non-clinical staff, Columbia Care Home was founded and is guided by <span className="text-emerald-700 font-semibold">Doctors of Physical Therapy</span> with deep experience in geriatric rehabilitation. Our home functions as a highly personalized form of assisted living, designed for seniors throughout Howard County who need daily support but deserve a peaceful residential environment rather than a large institutional facility.
+            </p>
+            <p className="text-lg text-gray-600 leading-relaxed">
+              Maryland’s <span className="text-emerald-700 font-semibold">Level 3 assisted living license</span> allows us to care for residents with significant medical needs, mobility challenges, and advanced assistance requirements. This same clinical rigor and attention to detail extends to our <Link to="/memory-care" className="text-emerald-700 font-semibold hover:underline">Specialized Memory Care</Link> and <Link to="/rehabilitation" className="text-emerald-700 font-semibold hover:underline">Rehabilitation Services</Link>.
+            </p>
+            <p className="text-lg text-gray-600 leading-relaxed">
+              With our site-wide <span className="text-emerald-700 font-semibold">1:4 staffing protocol</span>, we ensure that every resident's medical, physical, and emotional needs are met with a degree of attention that massive 100-bed complexes simply cannot match. For more on how we manage these transitions, read our guide on <Link to="/blog/guide-to-transitioning-assisted-living-columbia-md" className="text-emerald-700 font-bold underline decoration-emerald-200 hover:decoration-emerald-500 transition-colors">transitioning to assisted living</Link>.
             </p>
           </motion.div>
         </div>
@@ -95,9 +100,9 @@ const ResidentialCarePage = () => {
               <div className="w-16 h-16 bg-teal-50 rounded-full flex items-center justify-center mb-6">
                 <Users className="w-8 h-8 text-teal-700" />
               </div>
-              <h3 className="text-xl font-bold font-serif text-gray-900 mb-4">The 1-to-8 Maximum</h3>
+              <h3 className="text-xl font-bold font-serif text-gray-900 mb-4">The 1-to-4 Protocol</h3>
               <p className="text-gray-600 leading-relaxed">
-                Corporate facilities often stretch one aide across 20+ residents. At Columbia Care Home, our strict 8-bed limit guarantees that your loved one has immediate, personalized assistance the moment they need to stand, walk, or eat.
+                Corporate facilities often stretch one aide across 20+ residents. At Columbia Care Home, our strict 8-bed limit and 1:4 staffing ratio guarantee that your loved one has immediate, personalized assistance the moment they need to stand, walk, or eat.
               </p>
             </div>
           </div>
@@ -106,10 +111,10 @@ const ResidentialCarePage = () => {
         {/* CTA Section */}
         <div className="mt-12 bg-teal-800 rounded-2xl shadow-2xl p-8 lg:p-12 text-center">
           <h2 className="text-3xl font-bold font-serif text-white mb-4">
-            Discuss Your Loved One's Needs
+            Speak Directly With Our Founders
           </h2>
           <p className="text-lg text-teal-100 mb-8 max-w-2xl mx-auto">
-            Bypass the placement agencies and speak directly with the clinical founders of our home.
+            Discuss your clinical care needs without a middleman. Schedule a private tour of our 8-resident home today.
           </p>
           <Link to="/contact">
             <motion.button

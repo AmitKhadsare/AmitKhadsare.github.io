@@ -1,15 +1,15 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight, BrainCircuit, Lock, Puzzle } from 'lucide-react';
-import memoryCareImage from '../assets/mentalhealth.avif';
+import memoryCareImage from '../assets/Facility/Our Main Hall (Living & Common Areas)/main-hall-living-room-seating.jpg';
 import SEOHead from './SEOHead';
 
 const MemoryCarePage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <SEOHead
-        title="Physical Therapist-Led Memory Care & Dementia Support | Columbia MD"
-        description="Compassionate Level 3 memory care for residents with Alzheimer's and dementia. Structured routines designed by Doctors of Physical Therapy to reduce anxiety and maintain mobility in an intimate 8-bed home."
+        title="Physical Therapist-Led Memory Care in Columbia, MD | Columbia Care Home"
+        description="Our physical therapist-led 8-resident home in Columbia, MD provides specialized memory care for seniors with dementia, sundowning, and behavioral anxiety."
         image="https://www.columbiacarehome.com/og-memory-care.jpg"
         url="/memory-care"
       />
@@ -27,10 +27,10 @@ const MemoryCarePage = () => {
               Back to All Services
             </Link>
             <h1 className="text-4xl lg:text-5xl font-bold font-serif mb-4">
-              Clinical Memory Care
+              Specialized Memory Care in Columbia, MD
             </h1>
             <p className="text-xl text-emerald-50 max-w-3xl mx-auto">
-              A secure, clinically-supervised residence designed specifically to reduce anxiety and preserve dignity for those with Alzheimer's and dementia.
+              Behavioral Oversight in an 8-Resident Clinical Home led by Doctors of Physical Therapy.
             </p>
           </motion.div>
         </div>
@@ -60,12 +60,14 @@ const MemoryCarePage = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <h2 className="text-3xl font-bold text-gray-900 font-serif">A Home Designed for Cognitive Security</h2>
-            <p className="text-lg text-gray-600 leading-relaxed">
-              Caring for a loved one with memory loss requires more than just a locked door—it requires a profound understanding of how the environment impacts cognitive health. At Columbia Care Home, our 8-bed layout is a medical advantage. Unlike large facilities where cavernous hallways can trigger "sundowning" and agitation, our home offers a familiar, navigable scale that fosters calm.
+            <p className="text-lg text-gray-600 leading-relaxed italic border-l-4 border-emerald-500 pl-4 py-2 bg-emerald-50/30 rounded-r-lg">
+              Developed by Doctors of Physical Therapy Bhargav Patel and Sheetal Khadsare, whose clinical backgrounds in geriatric rehabilitation shape our approach to dementia care.
             </p>
             <p className="text-lg text-gray-600 leading-relaxed">
-              Founded by Doctors of Physical Therapy, our program is built on **structured daily routines** specifically designed to maintain mobility and reduce the anxiety often associated with dementia. We don't just provide "person-centered" care; we provide clinically-informed support that acknowledges each resident's unique life history and physical needs.
+              Unlike large facilities where 100+ residents create a high-stimulus environment that triggers sunsetting anxiety, our home is built for <span className="text-emerald-700 font-semibold">physiological safety</span>. Every hallway and common area is scaled to prevent the cognitive overwhelm that leads to exit-seeking behaviors in seniors with dementia.
+            </p>
+            <p className="text-lg text-gray-600 leading-relaxed">
+              The decision to seek memory care in Howard County often comes during a crisis—usually a fall or an unmanageable sundowning episode. Our approach focuses on stabilizing these behaviors through <span className="text-emerald-700 font-semibold">consistent mobility oversight</span> and daytime regulation, utilizing our clinical <Link to="/blog/managing-sundowning-memory-care-columbia-md" className="text-emerald-700 font-bold underline decoration-emerald-200 hover:decoration-emerald-500 transition-colors">sundowning protocol</Link> to reduce the need for heavy chemical sedation. Our daytime mobility routines are based on the same principles used in our <Link to="/rehabilitation" className="text-emerald-700 font-semibold hover:underline">rehabilitation</Link> and <Link to="/residential-care" className="text-emerald-700 font-semibold hover:underline">residential care</Link> protocols.
             </p>
           </motion.div>
         </div>
@@ -95,7 +97,7 @@ const MemoryCarePage = () => {
               <div className="w-16 h-16 bg-emerald-50 rounded-full flex items-center justify-center mb-6">
                 <Puzzle className="w-8 h-8 text-emerald-700" />
               </div>
-              <h3 className="text-xl font-bold font-serif text-gray-900 mb-4">The 1-to-4 Protocol</h3>
+              <h3 className="text-xl font-bold font-serif text-gray-900 mb-4">The Howard County 1:4 Protocol</h3>
               <p className="text-gray-600 leading-relaxed">
                 Memory care requires deep familiarity. With only 8 residents in our home, our unmatched staffing ratio ensures that our caregivers know exactly how to redirect your loved one's anxiety based on their specific personality and history.
               </p>
@@ -106,10 +108,10 @@ const MemoryCarePage = () => {
         {/* CTA Section */}
         <div className="mt-12 bg-emerald-800 rounded-2xl shadow-2xl p-8 lg:p-12 text-center">
           <h2 className="text-3xl font-bold font-serif text-white mb-4">
-            Consult With Our Clinical Founders
+            Discuss Your Loved One’s Care Needs
           </h2>
           <p className="text-lg text-emerald-100 mb-8 max-w-2xl mx-auto">
-            Memory care placement is a serious medical decision. Speak directly with Bhargav or Sheetal to discuss if our 8-bed clinical model is the right fit.
+            Memory care is a clinical decision, not just a lifestyle choice. Speak directly with our founders to determine if our 8-resident care model is the right medical fit for your family.
           </p>
           <Link to="/contact">
             <motion.button
