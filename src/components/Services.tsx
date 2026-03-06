@@ -257,27 +257,53 @@ const Services: React.FC<{ displayAll?: boolean }> = ({ displayAll = false }) =>
             className="inline-block px-4 py-2 bg-gradient-to-r from-emerald-600 to-teal-700 text-white rounded-full text-sm font-semibold mb-6"
             whileHover={{ scale: 1.05 }}
           >
-            ✨ Our Services
+            Clinical Capabilities
           </motion.div>
-          <h2 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-emerald-700 via-teal-700 to-stone-800 bg-clip-text text-transparent leading-tight font-serif mb-6">
-            How We Care For You
+          <h2 className="text-4xl lg:text-5xl font-bold text-stone-900 leading-tight font-serif mb-6">
+            Built for <span className="text-emerald-700">High-Acuity</span> Needs
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Our comprehensive services are designed to nurture, support, and enrich the lives of our residents.
+          <p className="text-xl text-stone-600 max-w-3xl mx-auto leading-relaxed">
+            Most residential homes cannot handle severe physical or cognitive decline. Because we are led by physical therapists, we are uniquely equipped to manage complex cases.
           </p>
         </motion.div>
 
-        {/* Services Grid - Desktop: 3 columns, Mobile: 1 column */}
+        {/* High-Acuity Solutions Grid */}
         <motion.div
-          className="grid grid-cols-1 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-3 gap-8"
           variants={containerVariants}
         >
-          {/* First 3 Service Cards */}
-          {services.slice(0, 3).map((service, index) => (
-            <motion.div key={index} variants={itemVariants}>
-              <ServiceCard service={service} />
-            </motion.div>
-          ))}
+          <motion.div variants={itemVariants} className="bg-white p-8 rounded-2xl shadow-sm border border-stone-100 hover:shadow-md transition-shadow">
+            <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center mb-6">
+              <BrainCircuit className="w-6 h-6 text-emerald-700" />
+            </div>
+            <h3 className="text-xl font-bold text-stone-900 font-serif mb-3">Sundowning & Anxiety</h3>
+            <p className="text-stone-600 mb-6">We use biomechanical daytime routines and environmental controls to reduce late-day anxiety, minimizing the need for heavy chemical sedatives.</p>
+            <Link to="/memory-care" className="text-emerald-700 font-semibold flex items-center gap-2 hover:text-emerald-800">
+              Read our approach <ArrowRight className="w-4 h-4" />
+            </Link>
+          </motion.div>
+
+          <motion.div variants={itemVariants} className="bg-white p-8 rounded-2xl shadow-sm border border-stone-100 hover:shadow-md transition-shadow">
+            <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center mb-6">
+              <Activity className="w-6 h-6 text-emerald-700" />
+            </div>
+            <h3 className="text-xl font-bold text-stone-900 font-serif mb-3">Complex Mobility</h3>
+            <p className="text-stone-600 mb-6">From 2-person transfers to severe fall-risk management, our staff is trained directly by Doctors of Physical Therapy to handle significant physical decline securely.</p>
+            <Link to="/rehabilitation" className="text-emerald-700 font-semibold flex items-center gap-2 hover:text-emerald-800">
+              View rehab protocols <ArrowRight className="w-4 h-4" />
+            </Link>
+          </motion.div>
+
+          <motion.div variants={itemVariants} className="bg-white p-8 rounded-2xl shadow-sm border border-stone-100 hover:shadow-md transition-shadow">
+            <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center mb-6">
+              <Shield className="w-6 h-6 text-emerald-700" />
+            </div>
+            <h3 className="text-xl font-bold text-stone-900 font-serif mb-3">Aging In Place</h3>
+            <p className="text-stone-600 mb-6">Many facilities discharge residents when care becomes "too difficult." Our Level 3 license and 1:4 ratio ensure we can support your loved one through late-stage decline.</p>
+            <Link to="/residential-care" className="text-emerald-700 font-semibold flex items-center gap-2 hover:text-emerald-800">
+              Explore residential care <ArrowRight className="w-4 h-4" />
+            </Link>
+          </motion.div>
         </motion.div>
 
         {/* View All Button */}

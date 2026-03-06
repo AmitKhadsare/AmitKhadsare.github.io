@@ -96,18 +96,18 @@ const Hero = () => {
                 </div>
                 <h1 className="text-4xl lg:text-5xl font-bold leading-[1.1] font-serif">
                   <span className="text-white block">
-                    Assisted Living in
+                    A Higher Standard of
                   </span>
                   <span className="text-white block">
-                    Howard County.
+                    Memory & Residential Care.
                   </span>
                 </h1>
               </motion.div>
               <p className="text-xl text-stone-300 leading-relaxed max-w-lg mx-auto lg:mx-0">
-                Columbia Care Home provides assisted living and memory care in Columbia, Maryland, serving families throughout Howard County including Ellicott City, Clarksville, and Laurel.
+                Created by Doctors of Physical Therapy. The clinical rigor of a high-acuity facility, contained within a peaceful, 8-bed residential home.
               </p>
               <p className="text-stone-300/80 leading-relaxed max-w-lg mx-auto lg:mx-0">
-                We combine the clinical rigor of a Level 3 Assisted Living license with the profound intimacy of a true 8-bed family home at 10610 Hickory Point Lane. No corporate corridors. Outstanding 1-to-4 care ratios.
+                We reject the corporate approach to aging. No echoing hallways, no understaffed wings. Just intimate, physiological care where your loved one is treated with absolute dignity.
               </p>
             </motion.div>
 
