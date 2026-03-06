@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import { useState, useRef } from 'react';
 import { Star, ExternalLink } from 'lucide-react';
 
 const GOOGLE_MAPS_URL = 'https://share.google/R93mjMWSOCFljsFlE';
