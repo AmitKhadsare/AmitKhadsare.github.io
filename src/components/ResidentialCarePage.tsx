@@ -70,7 +70,7 @@ const ResidentialCarePage = () => {
               Maryland’s <span className="text-emerald-700 font-semibold">Level 3 assisted living license</span> allows us to care for residents with significant medical needs, mobility challenges, and advanced assistance requirements. This same clinical rigor and attention to detail extends to our <Link to="/memory-care" className="text-emerald-700 font-semibold hover:underline">Specialized Memory Care</Link> and <Link to="/rehabilitation" className="text-emerald-700 font-semibold hover:underline">Rehabilitation Services</Link>.
             </p>
             <p className="text-lg text-gray-600 leading-relaxed">
-              With our site-wide <span className="text-emerald-700 font-semibold">1:4 staffing protocol</span>, we ensure that every resident's medical, physical, and emotional needs are met with a degree of attention that massive 100-bed complexes simply cannot match. For more on how we manage these transitions, read our guide on <Link to="/blog/guide-to-transitioning-assisted-living-columbia-md" className="text-emerald-700 font-bold underline decoration-emerald-200 hover:decoration-emerald-500 transition-colors">transitioning to assisted living</Link>.
+              With our site-wide <span className="text-emerald-700 font-semibold">1:3 staffing protocol</span> and dedicated <span className="text-emerald-700 font-semibold">overnight awake staff</span>, we ensure that every resident's medical, physical, and emotional needs are met with a degree of attention that massive 100-bed complexes simply cannot match. For more on how we manage these transitions, read our guide on <Link to="/blog/guide-to-transitioning-assisted-living-columbia-md" className="text-emerald-700 font-bold underline decoration-emerald-200 hover:decoration-emerald-500 transition-colors">transitioning to assisted living</Link>.
             </p>
           </motion.div>
         </div>
@@ -100,9 +100,9 @@ const ResidentialCarePage = () => {
               <div className="w-16 h-16 bg-teal-50 rounded-full flex items-center justify-center mb-6">
                 <Users className="w-8 h-8 text-teal-700" />
               </div>
-              <h3 className="text-xl font-bold font-serif text-gray-900 mb-4">The 1-to-4 Protocol</h3>
+              <h3 className="text-xl font-bold font-serif text-gray-900 mb-4">The 1-to-3 Protocol</h3>
               <p className="text-gray-600 leading-relaxed">
-                Corporate facilities often stretch one aide across 20+ residents. At Columbia Care Home, our strict 8-bed limit and 1:4 staffing ratio guarantee that your loved one has immediate, personalized assistance the moment they need to stand, walk, or eat.
+                Corporate facilities often stretch one aide across 20+ residents. At Columbia Care Home, our strict 8-bed limit, 1:3 staffing ratio, and 24/7 overnight awake staff guarantee that your loved one has immediate, personalized assistance the moment they need to stand, walk, or eat.
               </p>
             </div>
           </div>

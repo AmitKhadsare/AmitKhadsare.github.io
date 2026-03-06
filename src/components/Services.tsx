@@ -288,7 +288,7 @@ const Services: React.FC<{ displayAll?: boolean }> = ({ displayAll = false }) =>
               <Shield className="w-6 h-6 text-emerald-700" />
             </div>
             <h3 className="text-xl font-bold text-stone-900 font-serif mb-3">Aging In Place</h3>
-            <p className="text-stone-600 mb-6">Many facilities discharge residents when care becomes "too difficult." Our Level 3 license and 1:4 ratio ensure we can support your loved one through late-stage decline.</p>
+            <p className="text-stone-600 mb-6">Many facilities discharge residents when care becomes "too difficult." Our Level 3 license, 1:3 ratio, and overnight awake staff ensure we can support your loved one through late-stage decline.</p>
             <Link to="/residential-care" className="text-emerald-700 font-semibold flex items-center gap-2 hover:text-emerald-800">
               Explore residential care <ArrowRight className="w-4 h-4" />
             </Link>

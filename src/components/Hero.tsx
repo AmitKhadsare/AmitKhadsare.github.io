@@ -36,9 +36,9 @@ const Hero = () => {
     },
     {
       icon: Users,
-      title: "Strict 1:4 Staffing",
+      title: "Strict 1:3 Staffing",
       subtitle: "Unmatched Attention",
-      detail: "Maximum of 8 residents total",
+      detail: "1:3 Day Ratio | Overnight Awake Staff",
       iconBg: "bg-emerald-900/80",
       iconFill: "text-emerald-400 fill-emerald-400/50"
     }
@@ -104,7 +104,7 @@ const Hero = () => {
                 </h1>
               </motion.div>
               <p className="text-xl text-stone-300 leading-relaxed max-w-lg mx-auto lg:mx-0">
-                Created by Doctors of Physical Therapy, Columbia Care Home combines high-acuity clinical oversight with the calm environment of an intimate 8-resident residential home and a strict 1:4 caregiver-to-resident ratio.
+                Created by Doctors of Physical Therapy, Columbia Care Home combines high-acuity clinical oversight with the calm environment of an intimate 8-resident residential home, a strict 1:3 caregiver ratio, and 24/7 overnight awake staff.
               </p>
               <p className="text-stone-300/80 leading-relaxed max-w-lg mx-auto lg:mx-0">
                 Our care model prioritizes individualized attention over institutional scale. Instead of large corridors and rotating staff, residents receive consistent supervision, mobility support, and personal care within a calm residential environment.

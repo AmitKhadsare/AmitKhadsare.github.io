@@ -257,8 +257,8 @@ const AllServicesPage = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
               >
-                <div className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-2">8</div>
-                <div className="text-emerald-100 text-sm sm:text-base lg:text-lg">Max Capacity</div>
+                <div className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-2">1:3</div>
+                <div className="text-emerald-100 text-sm sm:text-base lg:text-lg">Staffing Ratio</div>
               </motion.div>
             </div>
           </motion.div>

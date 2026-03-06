@@ -61,7 +61,7 @@ To understand the true senior care costs in Maryland, you have to look past the 
         <tr>
           <td class="p-6 font-semibold text-stone-900">Staffing Ratios</td>
           <td class="p-6">Typically 1:12 or higher</td>
-          <td class="p-6 bg-emerald-50/30 text-emerald-800 font-bold italic">1:4 (Immediate Attention)</td>
+          <td class="p-6 bg-emerald-50/30 text-emerald-800 font-bold italic">1:3 (Immediate Attention)</td>
         </tr>
         <tr>
           <td class="p-6 font-semibold text-stone-900">Annual Rate Changes</td>

@@ -47,7 +47,7 @@ const HealthAndSafetyPage = () => {
     {
       icon: BellRing,
       title: "Rapid Clinical Response",
-      description: "With a 1:4 staffing ratio, assistance isn't just a button-press away—caregivers are physically present and attuned to resident needs, ensuring the fastest possible response in any situation."
+      description: "With a 1:3 staffing ratio and 24/7 overnight awake staff, assistance isn't just a button-press away—caregivers are physically present and attuned to resident needs, ensuring the fastest possible response in any situation."
     }
   ];
 
@@ -129,7 +129,7 @@ const HealthAndSafetyPage = () => {
               RN Oversight • Fall Prevention • Clinical Monitoring
             </p>
             <p className="text-xl text-emerald-50 max-w-3xl mx-auto leading-relaxed mb-6">
-              Providing families peace of mind through RN-managed oversight, therapist-led safety protocols, and a 1:4 proactive care ratio.
+              Providing families peace of mind through RN-managed oversight, therapist-led safety protocols, 24/7 overnight awake staff, and a 1:3 proactive care ratio.
             </p>
           </motion.div>
         </div>

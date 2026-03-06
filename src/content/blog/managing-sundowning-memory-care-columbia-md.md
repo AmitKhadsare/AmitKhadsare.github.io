@@ -97,12 +97,12 @@ At our home located at **10610 Hickory Point Lane**, we use a proactive, mechani
     </div>
   </div>
   <div class="p-10 bg-emerald-900 text-white flex flex-col justify-center">
-    <h3 class="text-emerald-200 font-serif font-bold text-2xl mb-4 italic text-center uppercase tracking-widest text-sm">The 1:4 Advantage</h3>
+    <h3 class="text-emerald-200 font-serif font-bold text-2xl mb-4 italic text-center uppercase tracking-widest text-sm">The 1:3 Advantage</h3>
     <p class="text-emerald-50/90 leading-relaxed text-lg mb-6">
-      When agitation does occur, a strict 1:4 caregiver-to-resident ratio matters immensely. It allows our staff the time to walk *with* the resident, hold their hand, and gently redirect their focus without the pressure of 15 other call bells ringing.
+      When agitation does occur, a strict 1:3 caregiver-to-resident ratio and 24/7 overnight awake staff matter immensely. It allows our staff the time to walk *with* the resident, hold their hand, and gently redirect their focus without the pressure of 15 other call bells ringing.
     </p>
     <div class="flex items-center gap-4 bg-emerald-800/50 p-4 rounded-xl border border-emerald-700">
-      <div class="w-12 h-12 rounded-full bg-emerald-600 flex items-center justify-center font-bold text-xl">1:4</div>
+      <div class="w-12 h-12 rounded-full bg-emerald-600 flex items-center justify-center font-bold text-xl">1:3</div>
       <div class="text-xs font-bold uppercase tracking-widest text-emerald-100">Intimate Care Supervision</div>
     </div>
   </div>

@@ -97,9 +97,9 @@ const MemoryCarePage = () => {
               <div className="w-16 h-16 bg-emerald-50 rounded-full flex items-center justify-center mb-6">
                 <Puzzle className="w-8 h-8 text-emerald-700" />
               </div>
-              <h3 className="text-xl font-bold font-serif text-gray-900 mb-4">The Howard County 1:4 Protocol</h3>
+              <h3 className="text-xl font-bold font-serif text-gray-900 mb-4">The Howard County 1:3 Protocol</h3>
               <p className="text-gray-600 leading-relaxed">
-                Memory care requires deep familiarity. With only 8 residents in our home, our unmatched staffing ratio ensures that our caregivers know exactly how to redirect your loved one's anxiety based on their specific personality and history.
+                Memory care requires deep familiarity. With only 8 residents in our home, our unmatched staffing ratio and 24/7 overnight awake staff ensure that our caregivers know exactly how to redirect your loved one's anxiety based on their specific personality and history.
               </p>
             </div>
           </div>

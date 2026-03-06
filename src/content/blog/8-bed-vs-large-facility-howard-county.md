@@ -44,7 +44,7 @@ To understand the true difference in care, look at the ratio of staff members to
         <tr>
           <td class="p-6 font-semibold text-stone-900">Staffing Ratio</td>
           <td class="p-6">Typically 1:15 or 1:20</td>
-          <td class="p-6 bg-emerald-50/30 text-emerald-800 font-bold italic">Strict 1:4 Protocol</td>
+          <td class="p-6 bg-emerald-50/30 text-emerald-800 font-bold italic">Strict 1:3 Protocol</td>
         </tr>
         <tr>
           <td class="p-6 font-semibold text-stone-900">Navigation</td>
@@ -83,12 +83,12 @@ Columbia Care Home, located at **10610 Hickory Point Lane**, was deliberately de
     </div>
   </div>
   <div class="p-10 bg-emerald-900 text-white flex flex-col justify-center">
-    <h3 class="text-emerald-200 font-serif font-bold text-2xl mb-4 italic uppercase tracking-widest text-sm text-center">The 1:4 Protocol</h3>
+    <h3 class="text-emerald-200 font-serif font-bold text-2xl mb-4 italic uppercase tracking-widest text-sm text-center">The 1:3 Protocol</h3>
     <p class="text-emerald-50/90 leading-relaxed text-lg mb-4">
-      Unlike institutional models, our caregivers are always within reach. Our internal protocol maintains a ratio that ensures immediate attention for transfers, medication, and emotional support.
+      Unlike institutional models, our caregivers are always within reach. Our internal protocol maintains a ratio that ensures immediate attention for transfers, medication, and emotional support — even at night with our awake staff.
     </p>
     <div class="mt-8 pt-6 border-t border-emerald-800 flex items-center gap-4">
-      <div class="w-12 h-12 rounded-full bg-emerald-700 flex items-center justify-center font-bold text-xl uppercase tracking-tighter">1:4</div>
+      <div class="w-12 h-12 rounded-full bg-emerald-700 flex items-center justify-center font-bold text-xl uppercase tracking-tighter">1:3</div>
       <div class="text-sm font-medium tracking-wide uppercase opacity-75">Enhanced Care Supervision</div>
     </div>
   </div>

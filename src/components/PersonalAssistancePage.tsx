@@ -58,8 +58,8 @@ const PersonalAssistancePage = () => {
     },
     {
       icon: Users,
-      title: "The 1:4 Care Advantage",
-      description: "In our 8-resident home, caregivers are never 'too busy.' With a 1:4 ratio, assistance is immediate, personal, and never rushed."
+      title: "The 1:3 Care Advantage",
+      description: "In our 8-resident home, caregivers are never 'too busy.' With a 1:3 ratio and 24/7 overnight awake staff, assistance is immediate, personal, and never rushed."
     },
     {
       icon: Heart,
@@ -172,7 +172,7 @@ const PersonalAssistancePage = () => {
               className="relative w-full rounded-2xl shadow-xl z-10"
             />
             <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-xl z-20 hidden md:block border border-gray-100">
-              <div className="text-3xl font-bold text-emerald-700 mb-1">1:4</div>
+              <div className="text-3xl font-bold text-emerald-700 mb-1">1:3</div>
               <div className="text-sm font-bold text-gray-500 uppercase tracking-wider">Staff Ratio</div>
             </div>
           </motion.div>
@@ -262,7 +262,7 @@ const PersonalAssistancePage = () => {
             A Better Baseline for Care
           </h2>
           <p className="text-xl text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed">
-            Your loved one deserves care that is both clinically sound and emotionally supportive. Let's discuss how our 1:4 ratio and therapist-led team can give your family peace of mind.
+            Your loved one deserves care that is both clinically sound and emotionally supportive. Let's discuss how our 1:3 ratio, overnight awake staff, and therapist-led team can give your family peace of mind.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link to="/contact" className="w-full sm:w-auto px-10 py-5 bg-emerald-600 text-white rounded-full font-bold text-lg shadow-xl hover:shadow-emerald-500/40 transition-all text-center">
