@@ -1,3 +1,4 @@
+import React, { useState, useRef } from 'react';
 import { Star, ExternalLink } from 'lucide-react';
 
 const GOOGLE_MAPS_URL = 'https://share.google/R93mjMWSOCFljsFlE';
@@ -27,6 +28,17 @@ const testimonials = [
 ];
 
 const Testimonials = () => {
+    const [activeIndex, setActiveIndex] = useState(0);
+    const scrollRef = useRef<HTMLDivElement>(null);
+
+    const handleScroll = () => {
+        if (scrollRef.current) {
+            const { scrollLeft, clientWidth } = scrollRef.current;
+            const index = Math.round(scrollLeft / clientWidth);
+            setActiveIndex(index);
+        }
+    };
+
     return (
         <section className="py-20 bg-gradient-to-br from-stone-100 to-emerald-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -43,12 +55,16 @@ const Testimonials = () => {
                 </div>
 
                 {/* Cards Container with Mobile Carousel */}
-                <div className="relative">
-                    <div className="flex md:grid md:grid-cols-3 gap-6 overflow-x-auto md:overflow-x-visible snap-x snap-mandatory pb-12 md:pb-0 hide-scrollbar -mx-4 px-4 sm:mx-0 sm:px-0">
+                <div className="relative mb-12">
+                    <div
+                        ref={scrollRef}
+                        onScroll={handleScroll}
+                        className="flex md:grid md:grid-cols-3 gap-6 overflow-x-auto md:overflow-x-visible snap-x snap-mandatory pb-4 md:pb-0 hide-scrollbar -mx-4 px-4 sm:mx-0 sm:px-0"
+                    >
                         {testimonials.map((t, index) => (
                             <div
                                 key={index}
-                                className="flex-shrink-0 w-[85vw] md:w-auto snap-center bg-white rounded-2xl shadow-sm border border-stone-100 p-8 hover:shadow-md transition-all duration-300 flex flex-col"
+                                className="flex-shrink-0 w-[82vw] md:w-auto snap-center bg-white rounded-2xl shadow-sm border border-stone-100 p-8 hover:shadow-md transition-all duration-300 flex flex-col"
                             >
                                 {/* Stars */}
                                 <div className="flex space-x-1 mb-5">
@@ -73,6 +89,17 @@ const Testimonials = () => {
                                     </div>
                                 </div>
                             </div>
+                        ))}
+                    </div>
+
+                    {/* Pagination Dots (Mobile Only) */}
+                    <div className="flex md:hidden justify-center gap-2 mt-4">
+                        {testimonials.map((_, i) => (
+                            <div
+                                key={i}
+                                className={`h-1.5 transition-all duration-300 rounded-full ${activeIndex === i ? 'w-8 bg-emerald-600' : 'w-2 bg-stone-300'
+                                    }`}
+                            />
                         ))}
                     </div>
                 </div>
