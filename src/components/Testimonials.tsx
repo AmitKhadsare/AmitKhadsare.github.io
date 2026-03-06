@@ -42,37 +42,39 @@ const Testimonials = () => {
                     </p>
                 </div>
 
-                {/* Cards */}
-                <div className="grid md:grid-cols-3 gap-8 mb-12">
-                    {testimonials.map((t, index) => (
-                        <div
-                            key={index}
-                            className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300 flex flex-col"
-                        >
-                            {/* Stars */}
-                            <div className="flex space-x-1 mb-5">
-                                {[...Array(t.rating)].map((_, i) => (
-                                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                                ))}
-                            </div>
-
-                            {/* Review Text */}
-                            <p className="text-stone-700 leading-relaxed italic flex-1 mb-6">
-                                "{t.text}"
-                            </p>
-
-                            {/* Reviewer Identity */}
-                            <div className="flex items-center gap-4 border-t border-stone-100 pt-5">
-                                <div className="w-11 h-11 rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0">
-                                    <span className="text-emerald-700 font-bold text-sm">{t.initials}</span>
+                {/* Cards Container with Mobile Carousel */}
+                <div className="relative">
+                    <div className="flex md:grid md:grid-cols-3 gap-6 overflow-x-auto md:overflow-x-visible snap-x snap-mandatory pb-12 md:pb-0 hide-scrollbar -mx-4 px-4 sm:mx-0 sm:px-0">
+                        {testimonials.map((t, index) => (
+                            <div
+                                key={index}
+                                className="flex-shrink-0 w-[85vw] md:w-auto snap-center bg-white rounded-2xl shadow-sm border border-stone-100 p-8 hover:shadow-md transition-all duration-300 flex flex-col"
+                            >
+                                {/* Stars */}
+                                <div className="flex space-x-1 mb-5">
+                                    {[...Array(t.rating)].map((_, i) => (
+                                        <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                                    ))}
                                 </div>
-                                <div>
-                                    <p className="font-semibold text-stone-800 text-sm">{t.name}</p>
-                                    <p className="text-stone-500 text-xs">{t.relationship}</p>
+
+                                {/* Review Text */}
+                                <p className="text-stone-700 leading-relaxed italic flex-1 mb-6 text-base md:text-lg">
+                                    "{t.text}"
+                                </p>
+
+                                {/* Reviewer Identity */}
+                                <div className="flex items-center gap-4 border-t border-stone-100 pt-5">
+                                    <div className="w-11 h-11 rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0">
+                                        <span className="text-emerald-700 font-bold text-sm">{t.initials}</span>
+                                    </div>
+                                    <div>
+                                        <p className="font-bold text-stone-900 text-sm">{t.name}</p>
+                                        <p className="text-stone-500 text-[10px] uppercase tracking-wider font-semibold">{t.relationship}</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
 
                 {/* Google Verification Badge */}
