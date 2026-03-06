@@ -32,7 +32,7 @@ const AuthorityInsight = () => {
                         </p>
 
                         <p className="text-emerald-100/80 leading-relaxed text-lg pb-4">
-                            We believe families deserve complete transparency about how dementia anxiety is managed. Read our Doctors' protocol on managing sundowning without heavy chemical sedation.
+                            We believe families deserve transparency about how complex aging challenges are managed in residential care settings. Read our Doctors' protocol on managing sundowning without heavy chemical sedation.
                         </p>
 
                         <Link to="/blog/managing-sundowning-memory-care-columbia-md" className="inline-block">

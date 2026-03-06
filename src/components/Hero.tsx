@@ -90,7 +90,7 @@ const Hero = () => {
                 <div className="flex items-center gap-2 mb-2 justify-center lg:justify-start">
                   <span className="h-[1px] w-6 bg-emerald-500/50 hidden sm:block"></span>
                   <span className="text-emerald-400 font-bold tracking-[0.2em] uppercase text-xs sm:text-sm">
-                    Physical Therapist-Owned
+                    Physical Therapist-Led
                   </span>
                   <span className="h-[1px] w-6 bg-emerald-500/50 hidden sm:block"></span>
                 </div>
@@ -99,15 +99,15 @@ const Hero = () => {
                     A Higher Standard of
                   </span>
                   <span className="text-white block">
-                    Memory & Residential Care.
+                    Residential Assisted Living.
                   </span>
                 </h1>
               </motion.div>
               <p className="text-xl text-stone-300 leading-relaxed max-w-lg mx-auto lg:mx-0">
-                Created by Doctors of Physical Therapy. The clinical rigor of a high-acuity facility, contained within a peaceful, 8-bed residential home.
+                Created by Doctors of Physical Therapy, Columbia Care Home combines high-acuity clinical oversight with the calm environment of an intimate 8-resident residential home and a strict 1:4 caregiver-to-resident ratio.
               </p>
               <p className="text-stone-300/80 leading-relaxed max-w-lg mx-auto lg:mx-0">
-                We reject the corporate approach to aging. No echoing hallways, no understaffed wings. Just intimate, physiological care where your loved one is treated with absolute dignity.
+                Our care model prioritizes individualized attention over institutional scale. Instead of large corridors and rotating staff, residents receive consistent supervision, mobility support, and personal care within a calm residential environment.
               </p>
             </motion.div>
 

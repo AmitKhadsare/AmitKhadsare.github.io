@@ -41,8 +41,8 @@ function App() {
           <Route path="/" element={
             <>
               <SEOHead
-                title="Assisted Living & Memory Care in Columbia MD | Columbia Care Home"
-                description="Columbia Care Home provides heartfelt, professional care in a warm, home-like environment. Discover senior care that truly feels like family in Columbia, Maryland."
+                title="Physical Therapist-Led Assisted Living in Columbia, MD | Columbia Care Home"
+                description="Columbia Care Home is a physical therapist-led assisted living home offering personalized care in an intimate 8-resident residential setting. Our Level 3 licensed care model supports seniors with complex mobility and cognitive needs while maintaining dignity and independence."
               />
               <div id="home" className="scroll-mt-24">
                 <Hero />

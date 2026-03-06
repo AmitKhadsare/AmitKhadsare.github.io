@@ -105,10 +105,10 @@ const SimplifiedContact: React.FC = () => {
         >
           <div className="max-w-3xl mx-auto">
             <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4">
-              Ready to See Our Community?
+              Discuss Your Loved One’s Care Needs
             </h3>
             <p className="text-lg text-white/90 mb-8">
-              Schedule a personalized tour and discover how we create a warm, caring home for our residents.
+              Speak directly with our clinical team to determine if our 8-resident care model is the right fit.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

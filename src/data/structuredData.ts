@@ -5,7 +5,7 @@ export const localBusinessSchema = {
   "@id": "https://www.columbiacarehome.com/#organization",
   "name": "Columbia Care Home",
   "alternateName": "Columbia Care",
-  "description": "Columbia Care Home provides heartfelt, professional care in a warm, home-like environment. We offer assisted living, memory care, and rehabilitation services in Columbia, Maryland.",
+  "description": "Columbia Care Home is a physical therapist-led assisted living residence providing high-acuity residential care for seniors with complex mobility and cognitive needs.",
   "url": "https://www.columbiacarehome.com",
   "logo": {
     "@type": "ImageObject",
@@ -80,17 +80,17 @@ export const localBusinessSchema = {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Memory Care",
-          "description": "Specialized care for residents with Alzheimer's and dementia",
-          "image": "https://www.columbiacarehome.com/og-memory.jpg"
+          "name": "High-Acuity Residential Care",
+          "description": "24/7 professional care for seniors with complex medical and physical needs",
+          "image": "https://www.columbiacarehome.com/og-residential.jpg"
         }
       },
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Rehabilitation",
-          "description": "Professional physical, occupational, and speech therapy led by Doctors of Physical Therapy",
+          "name": "Mobility Support & Rehabilitation",
+          "description": "Professional physical and occupational therapy led by Doctors of Physical Therapy",
           "image": "https://www.columbiacarehome.com/og-rehabilitation.jpg"
         }
       },
@@ -98,21 +98,14 @@ export const localBusinessSchema = {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Residential Care",
-          "description": "24/7 professional care in a comfortable residential setting led by Doctors of Physical Therapy",
-          "image": "https://www.columbiacarehome.com/og-residential.jpg"
+          "name": "Memory Support",
+          "description": "Specialized cognitive support and behavioral management for residents with dementia",
+          "image": "https://www.columbiacarehome.com/og-memory.jpg"
         }
       }
     ]
   },
   "contactPoint": [
-    {
-      "@type": "ContactPoint",
-      "telephone": "+1-201-885-9225",
-      "contactType": "customer service",
-      "areaServed": "US",
-      "availableLanguage": ["English"]
-    },
     {
       "@type": "ContactPoint",
       "telephone": "+1-301-500-0809",
@@ -137,7 +130,7 @@ export const organizationSchema = {
   "logo": "https://www.columbiacarehome.com/assets/logo1.svg",
   "contactPoint": {
     "@type": "ContactPoint",
-    "telephone": "+1-201-885-9225",
+    "telephone": "+1-301-500-0809",
     "contactType": "customer service",
     "areaServed": "US",
     "availableLanguage": "English"

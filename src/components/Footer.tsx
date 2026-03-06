@@ -87,7 +87,7 @@ const Footer = () => {
     <div className="space-y-4 text-center md:text-left">
       <div className="hidden md:block">
         <h3 className="text-xl font-bold text-white">Columbia Care Home</h3>
-        <p className="text-sm text-gray-400">Compassionate care, dignified living.</p>
+        <p className="text-sm text-gray-400">Physical Therapist-Led Assisted Living in an Intimate Residential Setting.</p>
       </div>
       <ul className="space-y-3 pt-3">
         {contactInfo.map((item, index) => (

@@ -23,16 +23,16 @@ const About = () => (
         </h2>
 
         <p className="text-xl text-stone-600 leading-relaxed font-serif italic max-w-3xl mx-auto">
-          "When you tour a 100-bed facility, you see beautiful dining halls. What you don't see is how they operate at 5:00 PM when staffing drops and 30 residents need critical redirection simultaneously."
+          "When families tour large facilities, they often see beautiful common spaces. What is harder to see is how individualized care becomes when dozens of residents require attention at the same time."
         </p>
 
         <div className="text-lg text-stone-700 leading-relaxed space-y-6 text-left max-w-3xl mx-auto bg-stone-50 p-8 rounded-2xl border border-stone-100 shadow-inner">
           <p>
-            Columbia Care Home was founded by <strong className="text-stone-900">Bhargav Patel</strong> and <strong className="text-stone-900">Sheetal Khadsare</strong>, Doctors of Physical Therapy who spent years treating seniors in massive corporate facilities. They saw firsthand the catastrophic falls, the heavy chemical sedation used to manage behaviors, and the loss of dignity that happens when care is industrialized.
+            Columbia Care Home was founded by <strong className="text-stone-900">Bhargav Patel</strong> and <strong className="text-stone-900">Sheetal Khadsare</strong>, Doctors of Physical Therapy who spent years treating seniors in massive corporate facilities. They saw firsthand how difficult it was for large facilities to consistently provide individualized mobility supervision and behavioral support for residents with complex needs.
           </p>
           <p>
             They built this <strong className="text-emerald-700">8-bed residential model</strong> to provide a radical alternative:
-            a strict 1:4 caregiver ratio where clinical oversight is proactive, not reactive. We don't wait for sunset to manage anxiety. We use a physiological, biomechanical approach to aging that keeps your loved one safe, active, and medication-free whenever possible.
+            a strict 1:4 caregiver ratio where clinical oversight is proactive, not reactive. Our care model focuses on proactive mobility routines, structured daily rhythms, and close supervision to support both physical and cognitive well-being.
           </p>
         </div>
 
