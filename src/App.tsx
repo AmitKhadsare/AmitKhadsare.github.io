@@ -10,6 +10,7 @@ import MobileSocialBar from './components/MobileSocialBar';
 import ScrollToTop from './components/ScrollToTop';
 import SEOHead from './components/SEOHead';
 import AuthorityInsight from './components/AuthorityInsight';
+import AwardsRecognition from './components/AwardsRecognition';
 
 import AboutUsPage from './components/AboutUsPage';
 import ScheduleTourPage from './components/ScheduleTourPage';
@@ -61,6 +62,7 @@ function App() {
               <div id="contact" className="scroll-mt-24">
                 <Contact />
               </div>
+              <AwardsRecognition />
             </>
           } />
           <Route path="/about-us" element={<AboutUsPage />} />
