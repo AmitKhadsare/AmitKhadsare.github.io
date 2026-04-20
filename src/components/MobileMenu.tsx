@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
-import { X, Phone, Calendar, Home, ArrowLeft, ChevronRight, Building2, Video, BookOpen, Briefcase, Mail, Smile } from 'lucide-react';
+import { X, Phone, Calendar, Home, ArrowLeft, ChevronRight, Building2, Video, BookOpen, Briefcase, Mail, Heart } from 'lucide-react';
 import { menuData } from '../data/navigationData';
 import logo from '../assets/logo1.svg';
 
@@ -118,6 +118,16 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                           <div className="flex items-center gap-4">
                             <BookOpen className="w-6 h-6 text-emerald-700" />
                             <span className="text-lg font-medium text-gray-800">Our Story</span>
+                          </div>
+                        </div>
+                      </Link>
+
+                      {/* Family Stories */}
+                      <Link to="/family-stories" onClick={onClose} className="block w-full text-left">
+                        <div className="flex items-center justify-between p-4 rounded-lg hover:bg-gray-100 transition-colors">
+                          <div className="flex items-center gap-4">
+                            <Heart className="w-6 h-6 text-emerald-700" />
+                            <span className="text-lg font-medium text-gray-800">Family Stories</span>
                           </div>
                         </div>
                       </Link>

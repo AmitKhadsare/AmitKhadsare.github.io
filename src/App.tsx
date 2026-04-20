@@ -31,6 +31,7 @@ import DietaryPage from './components/DietaryPage';
 import VirtualTourPage from './components/VirtualTourPage';
 import BlogIndexPage from './components/BlogIndexPage';
 import BlogPostPage from './components/BlogPostPage';
+import WhatFamiliesSayPage from './components/WhatFamiliesSayPage';
 
 
 function App() {
@@ -84,6 +85,7 @@ function App() {
           <Route path="/virtual-tour" element={<VirtualTourPage />} />
           <Route path="/blog" element={<BlogIndexPage />} />
           <Route path="/blog/:slug" element={<BlogPostPage />} />
+          <Route path="/family-stories" element={<WhatFamiliesSayPage />} />
         </Routes>
         <Footer />
         <MobileSocialBar />

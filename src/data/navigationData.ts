@@ -42,6 +42,7 @@ export const menuData = {
         links: [
           { icon: BookOpen, name: 'Our Story', description: 'Learn about our mission and values.', path: '/about-us' },
           { icon: Building2, name: 'Our Facility', description: 'Explore our comfortable and safe environment.', path: '/facility' },
+          { icon: Heart, name: 'What Families Say', description: 'Read moving experiences from our community.', path: '/family-stories' },
         ]
       },
       {
