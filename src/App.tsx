@@ -9,7 +9,7 @@ import Footer from './components/Footer';
 import MobileSocialBar from './components/MobileSocialBar';
 import ScrollToTop from './components/ScrollToTop';
 import SEOHead from './components/SEOHead';
-import AuthorityInsight from './components/AuthorityInsight';
+import FeaturedInsights from './components/FeaturedInsights';
 import AwardsRecognition from './components/AwardsRecognition';
 
 import AboutUsPage from './components/AboutUsPage';
@@ -57,7 +57,7 @@ function App() {
                 <Services />
               </div>
               <div id="authority" className="scroll-mt-24">
-                <AuthorityInsight />
+                <FeaturedInsights />
               </div>
               <div id="contact" className="scroll-mt-24">
                 <Contact />
