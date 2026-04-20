@@ -1,4 +1,4 @@
-import { Star, Quote, Heart, Home } from 'lucide-react';
+import { Star, Quote, Heart, Home, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const fullTestimonials = [
@@ -123,19 +123,37 @@ const WhatFamiliesSayPage = () => {
                     <p className="text-xl text-stone-600 mb-12 leading-relaxed">
                         Sometimes the best way to understand the "sigh of relief" our families describe is to walk through the front door. We welcome you to schedule a quiet, private visit.
                     </p>
-                    <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                    <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
                         <Link 
                             to="/schedule-a-tour"
-                            className="bg-emerald-900 text-white px-12 py-5 rounded-full font-bold text-lg hover:bg-emerald-800 transition-all shadow-xl"
+                            className="bg-emerald-900 text-white px-12 py-5 rounded-full font-bold text-lg hover:bg-emerald-800 transition-all shadow-xl text-center"
                         >
                             Visit the Home
                         </Link>
                         <Link 
                             to="/contact"
-                            className="bg-white text-emerald-950 border border-emerald-100 px-12 py-5 rounded-full font-bold text-lg hover:bg-stone-50 transition-all shadow-md"
+                            className="bg-white text-emerald-950 border border-emerald-100 px-12 py-5 rounded-full font-bold text-lg hover:bg-stone-50 transition-all shadow-md text-center"
                         >
                             Have a Quick Question?
                         </Link>
+                    </div>
+
+                    {/* Google Verification Badge */}
+                    <div className="pt-8 border-t border-emerald-100 inline-block">
+                        <a 
+                            href="https://share.google/R93mjMWSOCFljsFlE"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-4 text-stone-500 hover:text-emerald-700 transition-colors group"
+                        >
+                            <div className="flex space-x-0.5">
+                                {[...Array(5)].map((_, i) => (
+                                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                                ))}
+                            </div>
+                            <span className="text-sm font-bold tracking-widest uppercase">Verified 5.0 Rating on Google</span>
+                            <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                        </a>
                     </div>
                 </div>
             </section>

@@ -1,4 +1,4 @@
-import { Star, ArrowRight, Quote } from 'lucide-react';
+import { Star, ArrowRight, Quote, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const testimonials = [
@@ -82,8 +82,8 @@ const Testimonials = () => {
                     ))}
                 </div>
 
-                {/* Main CTA */}
-                <div className="text-center">
+                {/* Main CTA & Google Verification */}
+                <div className="text-center flex flex-col items-center gap-8">
                     <Link
                         to="/family-stories"
                         className="inline-flex items-center gap-3 bg-emerald-900 text-white px-10 py-5 rounded-full font-bold hover:bg-emerald-800 transition-all shadow-lg hover:shadow-2xl group"
@@ -91,6 +91,21 @@ const Testimonials = () => {
                         Read the Full Family Experiences
                         <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </Link>
+
+                    <a 
+                        href="https://share.google/R93mjMWSOCFljsFlE"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-4 text-stone-500 hover:text-emerald-700 transition-colors group"
+                    >
+                        <div className="flex space-x-0.5">
+                            {[...Array(5)].map((_, i) => (
+                                <Star key={i} className="w-3.5 h-3.5 fill-yellow-400 text-yellow-400" />
+                            ))}
+                        </div>
+                        <span className="text-sm font-bold tracking-widest uppercase">Verified 5.0 Rating on Google</span>
+                        <ExternalLink className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </a>
                 </div>
 
             </div>
