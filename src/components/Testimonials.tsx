@@ -1,4 +1,4 @@
-import { Star, ArrowRight, Quote, ExternalLink } from 'lucide-react';
+import { Star, ArrowRight, Quote } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const testimonials = [
@@ -92,20 +92,14 @@ const Testimonials = () => {
                         <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </Link>
 
-                    <a 
-                        href="https://share.google/R93mjMWSOCFljsFlE"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-4 text-stone-500 hover:text-emerald-700 transition-colors group"
-                    >
-                        <div className="flex space-x-0.5">
+                    <div className="inline-flex items-center gap-3 sm:gap-4 px-6 sm:px-10 py-4 bg-white border border-stone-200 rounded-full shadow-md text-stone-600">
+                        <div className="flex space-x-1">
                             {[...Array(5)].map((_, i) => (
-                                <Star key={i} className="w-3.5 h-3.5 fill-yellow-400 text-yellow-400" />
+                                <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
                             ))}
                         </div>
-                        <span className="text-sm font-bold tracking-widest uppercase">Verified 5.0 Rating on Google</span>
-                        <ExternalLink className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    </a>
+                        <span className="text-[11px] sm:text-xs font-bold tracking-widest uppercase whitespace-nowrap">Verified 5.0 Rating on Google</span>
+                    </div>
                 </div>
 
             </div>

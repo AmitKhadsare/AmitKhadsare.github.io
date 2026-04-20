@@ -1,5 +1,6 @@
-import { Star, Quote, Heart, Home, ExternalLink } from 'lucide-react';
+import { Star, Quote, Heart, Home } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import SEOHead from './SEOHead';
 
 const fullTestimonials = [
     {
@@ -42,7 +43,13 @@ const fullTestimonials = [
 
 const WhatFamiliesSayPage = () => {
     return (
-        <div className="bg-stone-50 min-h-screen pt-20">
+        <div className="bg-stone-50 min-h-screen">
+            <SEOHead 
+                title="What Columbia Families Are Saying - Authentic Reviews"
+                description="Read raw, honest testimonials from families and professional therapists about life at Columbia Care Home. Real stories of relief, care, and dignity."
+                image="https://www.columbiacarehome.com/og-family-stories.jpg"
+                url="https://www.columbiacarehome.com/family-stories"
+            />
             {/* Simple Human Hero */}
             <header className="py-24 bg-emerald-950 text-white relative overflow-hidden">
                 <div className="absolute inset-0 opacity-20">
@@ -115,6 +122,18 @@ const WhatFamiliesSayPage = () => {
                 ))}
             </main>
 
+            {/* Google Verification Badge - The Trust Bridge */}
+            <div className="text-center pb-24">
+                <div className="inline-flex items-center gap-3 sm:gap-4 px-6 sm:px-10 py-4 bg-white border border-stone-200 rounded-full shadow-md text-stone-600">
+                    <div className="flex space-x-1">
+                        {[...Array(5)].map((_, i) => (
+                            <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                        ))}
+                    </div>
+                    <span className="text-[11px] sm:text-xs font-bold tracking-widest uppercase whitespace-nowrap">Verified 5.0 Rating on Google</span>
+                </div>
+            </div>
+
             {/* Soft Human CTA */}
             <section className="bg-emerald-50 py-24">
                 <div className="max-w-4xl mx-auto px-4 text-center">
@@ -123,7 +142,8 @@ const WhatFamiliesSayPage = () => {
                     <p className="text-xl text-stone-600 mb-12 leading-relaxed">
                         Sometimes the best way to understand the "sigh of relief" our families describe is to walk through the front door. We welcome you to schedule a quiet, private visit.
                     </p>
-                    <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
+                    
+                    <div className="flex flex-col sm:flex-row gap-6 justify-center">
                         <Link 
                             to="/schedule-a-tour"
                             className="bg-emerald-900 text-white px-12 py-5 rounded-full font-bold text-lg hover:bg-emerald-800 transition-all shadow-xl text-center"
@@ -136,24 +156,6 @@ const WhatFamiliesSayPage = () => {
                         >
                             Have a Quick Question?
                         </Link>
-                    </div>
-
-                    {/* Google Verification Badge */}
-                    <div className="pt-8 border-t border-emerald-100 inline-block">
-                        <a 
-                            href="https://share.google/R93mjMWSOCFljsFlE"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center gap-4 text-stone-500 hover:text-emerald-700 transition-colors group"
-                        >
-                            <div className="flex space-x-0.5">
-                                {[...Array(5)].map((_, i) => (
-                                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                                ))}
-                            </div>
-                            <span className="text-sm font-bold tracking-widest uppercase">Verified 5.0 Rating on Google</span>
-                            <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
-                        </a>
                     </div>
                 </div>
             </section>
