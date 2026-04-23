@@ -21,7 +21,7 @@ tags:
 </figure>
 
 ## How to Move a Parent to Assisted Living
-For many seniors, leaving a long-term home can feel like a loss of continuity. It is often an acknowledgment of physical or cognitive changes. While family members may want to offer reassurance with phrases like, *"You'll love it here,"* geriatric experts suggest that validating their feelings—listening and acknowledging the change—is far more effective for long-term clinical adjustment.
+For many seniors, leaving a long-term home can feel like a loss of continuity. It is often an acknowledgment of physical or cognitive changes. (If you are still deciding if the move is necessary, read our guide on the [7 signs it's time for assisted living](/blog/signs-its-time-for-assisted-living-columbia-md)). While family members may want to offer reassurance with phrases like, *"You'll love it here,"* geriatric experts suggest that validating their feelings—listening and acknowledging the change—is far more effective for long-term clinical adjustment.
 
 > **Expert Insight:** The transition period typically lasts between 30 and 90 days. During this time, constant communication with the care team is essential to ensure the resident's specific habits and preferences are honored.
 

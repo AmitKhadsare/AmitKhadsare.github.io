@@ -26,18 +26,28 @@ const BlogPostPage = () => {
                 type="article"
                 url={`https://www.columbiacarehome.com/blog/${post.slug}`}
                 structuredData={{
+                    "@type": "BlogPosting",
+                    "mainEntityOfPage": {
+                        "@type": "WebPage",
+                        "@id": `https://www.columbiacarehome.com/blog/${post.slug}`
+                    },
+                    "headline": post.title,
+                    "description": post.excerpt,
+                    "image": post.image,
                     "datePublished": post.date,
+                    "dateModified": post.date,
                     "author": {
                         "@type": "Person",
-                        "name": "Columbia Care Home Clinical Team",
-                        "jobTitle": "Doctors of Physical Therapy"
+                        "name": post.author,
+                        "jobTitle": "Doctor of Physical Therapy",
+                        "url": "https://www.columbiacarehome.com/about-us"
                     },
                     "publisher": {
                         "@type": "Organization",
                         "name": "Columbia Care Home",
                         "logo": {
                             "@type": "ImageObject",
-                            "url": "https://www.columbiacarehome.com/logo.png"
+                            "url": "https://www.columbiacarehome.com/logos/header_logo.webp"
                         }
                     }
                 }}

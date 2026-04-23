@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom'; // Import useLocation
 import { HashLink } from 'react-router-hash-link';
 import { Phone, MapPin, Menu as MenuIcon, ChevronDown } from 'lucide-react';
-import logo from '../assets/logo1.svg';
+const logo = "/logos/header_logo.webp";
 import MobileMenu from './MobileMenu';
 import MegaMenu from './MegaMenu';
 import { menuData } from '../data/navigationData';
@@ -66,13 +66,13 @@ const Header = () => {
 
       {/* Main Header */}
       <header className="sticky top-0 z-40 bg-white border-b border-stone-200">
-        <div className="max-w-7xl mx-auto flex items-center justify-between h-16 sm:h-18 md:h-20 lg:h-24 xl:h-28 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto flex items-center justify-between h-[76px] sm:h-20 md:h-20 lg:h-24 xl:h-28 px-4 sm:px-6 lg:px-8">
           {/* Logo */}
-          <Link to="/" className="flex-shrink-0 py-2">
+          <Link to="/" className="flex-1 lg:flex-initial py-0 lg:py-2 flex items-center">
             <img
               src={logo}
               alt="Columbia Care Home"
-              className="h-12 sm:h-14 md:h-16 lg:h-20 xl:h-24 w-auto max-w-[200px] sm:max-w-[220px] md:max-w-[260px] lg:max-w-[300px] xl:max-w-[340px] object-contain"
+              className="h-[74px] sm:h-16 md:h-16 lg:h-20 xl:h-24 w-auto max-w-none sm:max-w-[340px] md:max-w-[260px] lg:max-w-[300px] xl:max-w-[340px] object-contain object-left"
             />
           </Link>
 

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import { X, Phone, Calendar, Home, ArrowLeft, ChevronRight, Building2, Video, BookOpen, Briefcase, Mail, Heart } from 'lucide-react';
 import { menuData } from '../data/navigationData';
-import logo from '../assets/logo1.svg';
+const logo = "/logos/header_logo.webp";
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -63,7 +63,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                 <img
                   src={logo}
                   alt="Columbia Care Home"
-                  className="h-12 sm:h-14 w-auto max-w-[200px] sm:max-w-[220px] object-contain"
+                  className="h-[74px] sm:h-20 w-auto max-w-none sm:max-w-[340px] object-contain"
                 />
               </HashLink>
               <button onClick={onClose} className="p-2 rounded-full hover:bg-gray-100 transition-colors" aria-label="Close menu"><X className="w-6 h-6 text-gray-600" /></button>
