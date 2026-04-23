@@ -208,7 +208,18 @@ export const jobPostingSchema = {
         }
       },
       "directApply": true,
+      "datePosted": "2026-04-20",
       "occupationalCategory": "31-1120.00", // Home Health Aides
+      "baseSalary": {
+        "@type": "MonetaryAmount",
+        "currency": "USD",
+        "value": {
+          "@type": "QuantitativeValue",
+          "minValue": 17,
+          "maxValue": 22,
+          "unitText": "HOUR"
+        }
+      },
       "validThrough": new Date(new Date().getFullYear() + 1, 0, 1).toISOString()
     },
     {
@@ -234,6 +245,17 @@ export const jobPostingSchema = {
         }
       },
       "directApply": true,
+      "datePosted": "2026-04-20",
+      "baseSalary": {
+        "@type": "MonetaryAmount",
+        "currency": "USD",
+        "value": {
+          "@type": "QuantitativeValue",
+          "minValue": 19,
+          "maxValue": 25,
+          "unitText": "HOUR"
+        }
+      },
       "validThrough": new Date(new Date().getFullYear() + 1, 0, 1).toISOString()
     }
   ]
