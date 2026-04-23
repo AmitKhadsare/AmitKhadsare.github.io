@@ -53,7 +53,7 @@ const PrivacyPolicyPage = () => {
             <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page. You are advised to review this Privacy Policy periodically for any changes.</p>
 
             <h2>Contact Us</h2>
-            <p>If you have any questions about this Privacy Policy, please contact us by email at columbiacarehomes@gmail.com.</p>
+            <p>If you have any questions about this Privacy Policy, please contact us by email at admin@columbiacarehome.com.</p>
 
             <p className="mt-8 p-4 bg-yellow-50 border border-yellow-200 rounded-lg"><strong>Disclaimer:</strong> This is a template Privacy Policy and is not legal advice. Please consult with a legal professional to ensure your policy is compliant with all applicable laws and regulations.</p>
           </div>

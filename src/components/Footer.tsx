@@ -76,7 +76,7 @@ const Footer = () => {
 
   const contactInfo = [
     { icon: <Phone size={16} />, text: '(301) 500-0809, (201) 885-9225' },
-    { icon: <Mail size={16} />, text: 'columbiacarehomes@gmail.com' },
+    { icon: <Mail size={16} />, text: 'contact@columbiacarehome.com' },
     { icon: <MapPin size={16} />, text: '10610 Hickory Point Lane, Columbia, MD 21044' },
   ];
 

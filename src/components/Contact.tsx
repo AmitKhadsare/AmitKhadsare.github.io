@@ -77,9 +77,9 @@ const SimplifiedContact: React.FC = () => {
           <ContactCard
             icon={Mail}
             title="Email Us"
-            content="columbiacarehomes@gmail.com"
+            content="contact@columbiacarehome.com"
             subContent="Response within 24 hours"
-            href="mailto:columbiacarehomes@gmail.com"
+            href="mailto:contact@columbiacarehome.com"
             delay={0.2}
           />
 

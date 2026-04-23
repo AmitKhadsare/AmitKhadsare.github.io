@@ -110,7 +110,7 @@ const CareersPage = () => {
             </p>
             <div className="pt-6">
               <a
-                href="mailto:columbiacarehomes@gmail.com?subject=Career Application"
+                href="mailto:careers@columbiacarehome.com?subject=[CAREERS] Career Application"
                 className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-700 transition-colors shadow-md hover:shadow-lg"
               >
                 <Users className="w-5 h-5" />

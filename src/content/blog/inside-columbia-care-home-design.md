@@ -135,7 +135,7 @@ Architecture matters for quality of life. At Columbia Care Home, every design de
       <span>📞</span> <a href="tel:301-500-0809" class="underline hover:text-emerald-900">(301) 500-0809</a>
     </p>
     <p class="flex items-center justify-center gap-2">
-      <span>📧</span> <a href="mailto:columbiacarehomes@gmail.com" class="underline hover:text-emerald-900">columbiacarehomes@gmail.com</a>
+      <span>📧</span> <a href="mailto:contact@columbiacarehome.com" class="underline hover:text-emerald-900">contact@columbiacarehome.com</a>
     </p>
     <p class="flex items-center justify-center gap-2 text-center">
       <span>📍</span> <a href="https://www.google.com/maps/place/10610+Hickory+Point+Ln,+Columbia,+MD+21044" target="_blank" rel="noopener noreferrer" class="underline hover:text-emerald-900">10610 Hickory Point Lane, Columbia, MD 21044</a>

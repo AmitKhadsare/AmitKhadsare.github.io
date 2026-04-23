@@ -63,7 +63,7 @@ const ContactPage: React.FC = () => {
 
     try {
       // FormSubmit.co AJAX Endpoint
-      const response = await fetch('https://formsubmit.co/ajax/columbiacarehomes@gmail.com', {
+      const response = await fetch('https://formsubmit.co/ajax/contact@columbiacarehome.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -156,7 +156,7 @@ const ContactPage: React.FC = () => {
             </InfoCard>
 
             <InfoCard icon={Mail} title="Email Us">
-              <a href="mailto:columbiacarehomes@gmail.com" className="font-semibold text-emerald-700 hover:underline">columbiacarehomes@gmail.com</a>
+              <a href="mailto:contact@columbiacarehome.com" className="font-semibold text-emerald-700 hover:underline">contact@columbiacarehome.com</a>
               <p className="text-sm">Response within 24 hours</p>
             </InfoCard>
 
