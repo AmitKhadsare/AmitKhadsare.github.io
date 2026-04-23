@@ -22,13 +22,18 @@ const ScheduleTourPage = () => {
     setIsSubmitting(true);
 
     try {
-      const form = e.currentTarget;
-      const formDataToSend = new FormData(form);
-
-      const response = await fetch('/', {
+      const response = await fetch('https://formsubmit.co/ajax/contact@columbiacarehome.com', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formDataToSend as any).toString(),
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          ...formData,
+          _subject: `New Tour Request: ${formData.name}`,
+          _captcha: "false",
+          _template: "table"
+        })
       });
 
       if (response.ok) {
@@ -122,15 +127,9 @@ const ScheduleTourPage = () => {
                 </motion.div>
               ) : (
                 <form
-                  name="tour-request"
-                  method="POST"
-                  data-netlify="true"
-                  netlify-honeypot="bot-field"
                   onSubmit={handleSubmit}
                   className="space-y-6"
                 >
-                  <input type="hidden" name="form-name" value="tour-request" />
-                  <input type="hidden" name="bot-field" />
 
                   <div className="grid md:grid-cols-2 gap-6">
                     <motion.div variants={itemVariants}>
