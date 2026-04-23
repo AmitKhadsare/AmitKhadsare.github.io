@@ -32,6 +32,7 @@ import VirtualTourPage from './components/VirtualTourPage';
 import BlogIndexPage from './components/BlogIndexPage';
 import BlogPostPage from './components/BlogPostPage';
 import WhatFamiliesSayPage from './components/WhatFamiliesSayPage';
+import NotFoundPage from './components/NotFoundPage';
 
 
 function App() {
@@ -86,6 +87,8 @@ function App() {
           <Route path="/blog" element={<BlogIndexPage />} />
           <Route path="/blog/:slug" element={<BlogPostPage />} />
           <Route path="/family-stories" element={<WhatFamiliesSayPage />} />
+          {/* 404 Fallback */}
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
         <Footer />
         <MobileSocialBar />
