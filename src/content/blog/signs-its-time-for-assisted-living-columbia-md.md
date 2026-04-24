@@ -12,10 +12,9 @@ tags:
   - Columbia MD
 ---
 
-<p class="lead text-xl text-stone-600 font-serif italic">This is one of the hardest decisions families face. It is often accompanied by feelings of guilt, doubt, and sadness. You may find yourself constantly asking: <span class="blog-accent">"Is it time? Am I doing the right thing, or should we just try harder at home?"</span></p></br>
+<p class="lead text-xl text-stone-600 font-serif italic">This is one of the hardest decisions families face. It is often accompanied by feelings of guilt, doubt, and sadness. You may find yourself constantly asking: <span class="blog-accent">"Is it time? Am I doing the right thing, or should we just try harder at home?"</span></p>
 
-If you are reading this, you are likely noticing a shift. The balance of being a loving son or daughter has shifted entirely into being a primary medical caregiver—and you are exhausted. It’s not about giving up. It’s about safety.
-
+If you are reading this, you are likely noticing a shift. The balance of being a loving son or daughter has shifted entirely into being a primary medical caregiver—and you are exhausted. It’s not about giving up. It’s about safety.<br />
 Here are the signs to look for.
 
 ## 7 Signs Your Loved One May Need Assisted Living
@@ -59,34 +58,34 @@ When diseases like diabetes, COPD, or congestive heart failure progress, they re
 ### 7. Caregiver Burnout is Reaching a Breaking Point
 This is the sign families ignore the most. **Your health matters just as much as theirs.** If you are losing sleep, missing work, neglecting your own family, and feeling constant anxiety every time the phone rings, you have reached the limit of home care. Moving a parent into assisted living allows you to stop functioning as a stressed nurse, and go back to being a loving child.
 
-<div class="overflow-hidden border border-stone-200 rounded-3xl shadow-2xl bg-white my-8">
+<div class="overflow-hidden border border-stone-200 rounded-3xl shadow-2xl bg-white my-10">
   <div class="bg-emerald-900 px-6 py-4">
-    <h3 class="text-white font-serif text-xl m-0">Quick Assessment Checklist</h3>
+    <h3 class="text-white font-serif text-sm sm:text-xl m-0">Quick Assessment Checklist</h3>
   </div>
-  <div class="overflow-x-auto">
-    <table class="w-full text-left border-collapse m-0">
+  <div class="w-full">
+    <table class="w-full text-left border-collapse m-0 table-fixed">
       <thead>
         <tr class="bg-stone-50 text-stone-600 border-b border-stone-200">
-          <th class="p-6 font-bold text-sm uppercase tracking-wider">Area of Concern</th>
-          <th class="p-6 font-bold text-sm uppercase tracking-wider">What to Look For</th>
+          <th class="p-2 sm:p-6 font-bold text-[10px] sm:text-sm uppercase tracking-wider w-[35%]">Area of Concern</th>
+          <th class="p-2 sm:p-6 font-bold text-[10px] sm:text-sm uppercase tracking-wider w-[65%]">What to Look For</th>
         </tr>
       </thead>
-      <tbody class="divide-y divide-stone-100 italic">
+      <tbody class="divide-y divide-stone-100 text-[10px] sm:text-base italic">
         <tr>
-          <td class="p-6 font-semibold text-stone-900">Safety</td>
-          <td class="p-6">Unexplained bruising, burn marks on cookware, wandering at night.</td>
+          <td class="p-2 sm:p-6 font-semibold text-stone-900">Safety</td>
+          <td class="p-2 sm:p-6">Bruising, burn marks on pans, night wandering.</td>
         </tr>
         <tr>
-          <td class="p-6 font-semibold text-stone-900">Health Maintenance</td>
-          <td class="p-6">Stockpiled medication, spoiled food in fridge, unpaid utility bills.</td>
+          <td class="p-2 sm:p-6 font-semibold text-stone-900">Health</td>
+          <td class="p-2 sm:p-6">Stockpiled medication, spoiled food, unpaid bills.</td>
         </tr>
         <tr>
-          <td class="p-6 font-semibold text-stone-900">Hygiene</td>
-          <td class="p-6">Body odor, soiled clothing, untreated skin tears or wounds.</td>
+          <td class="p-2 sm:p-6 font-semibold text-stone-900">Hygiene</td>
+          <td class="p-2 sm:p-6">Body odor, soiled clothing, untreated skin tears.</td>
         </tr>
         <tr>
-          <td class="p-6 font-semibold text-stone-900">Caregiver Strain</td>
-          <td class="p-6">Resentment, anxiety, physical exhaustion, relationship strain.</td>
+          <td class="p-2 sm:p-6 font-semibold text-stone-900">Strain</td>
+          <td class="p-2 sm:p-6">Resentment, anxiety, physical/mental exhaustion.</td>
         </tr>
       </tbody>
     </table>
@@ -96,7 +95,8 @@ This is the sign families ignore the most. **Your health matters just as much as
 ## The Small Home Advantage in Columbia, MD
 When families finally realize it's time for assisted living, the next hurdle is the guilt of visualizing a large, clinical institution. It doesn't have to be that way.
 
-Smaller, 8-bed residential care homes offer a completely different model. The environment remains genuinely residential. Residents sit together at a family dining table. The staff-to-resident ratio allows for deeply personalized, quiet, and attentive care. If you are struggling with the leap from home to a facility, an 8-bed home often provides the ideal middle ground—offering the safety of clinical oversight with the warmth of a real home.
+Smaller, 8-bed residential care homes offer a completely different model. The environment remains genuinely residential. Residents sit together at a family dining table. The staff-to-resident ratio allows for deeply personalized, quiet, and attentive care.<br />
+If you are struggling with the leap from home to a facility, an 8-bed home often provides the ideal middle ground—offering the safety of clinical oversight with the warmth of a real home.
 
 <p class="mt-12 text-stone-700 italic">If your parent already needs help with mobility or frequent supervision, this guide explains <a href="/blog/level-3-assisted-living-meaning-columbia-md" class="underline hover:text-emerald-700 font-semibold blog-accent">what Level 3 care actually looks like</a>.</p>
 

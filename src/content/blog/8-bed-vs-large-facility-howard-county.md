@@ -20,46 +20,45 @@ tags:
 </figure>
 
 ## The <span class="blog-accent">Mega-Facility</span> Reality
-Large corporate facilities excel at first impressions. They offer expansive dining halls, organized bus trips, and a bustling social atmosphere. For a highly independent senior who simply wants to downsize and socialize, this model is often an excellent fit.
-
+Large corporate facilities excel at first impressions. They offer expansive dining halls, organized bus trips, and a bustling social atmosphere. For a highly independent senior who simply wants to downsize and socialize, this model is often an excellent fit.<br />
 However, when a senior begins to experience cognitive decline, mobility issues, or requires memory care supervision, the massive scale can become a profound liability. If several residents need help standing, walking, or using the restroom at the same time, staff must prioritize requests—which often means waiting for several minutes before assistance arrives.
 
 ## Quick Comparison: Corporate vs. Residential
 To understand the true difference in care, look at the ratio of staff members to individual residents.
 
-<div class="overflow-hidden border border-stone-200 rounded-3xl shadow-2xl bg-white">
+<div class="overflow-hidden border border-stone-200 rounded-3xl shadow-2xl bg-white my-10">
   <div class="bg-emerald-900 px-6 py-4">
-    <h3 class="text-white font-serif text-xl m-0">Care Environment Comparison</h3>
+    <h3 class="text-white font-serif text-sm sm:text-xl m-0">Care Environment Comparison</h3>
   </div>
-  <div class="overflow-x-auto">
-    <table class="w-full text-left border-collapse m-0">
+  <div class="w-full">
+    <table class="w-full text-left border-collapse m-0 table-fixed">
       <thead>
         <tr class="bg-stone-50 text-stone-600 border-b border-stone-200">
-          <th class="p-6 font-bold text-sm uppercase tracking-wider">Feature</th>
-          <th class="p-6 font-bold text-sm uppercase tracking-wider">Large Facility (100+ Beds)</th>
-          <th class="p-6 font-bold text-sm uppercase tracking-wider bg-emerald-50/50 text-emerald-900">Residential Home (8 Beds)</th>
+          <th class="p-2 sm:p-6 font-bold text-[10px] sm:text-sm uppercase tracking-wider w-[30%]">Feature</th>
+          <th class="p-2 sm:p-6 font-bold text-[10px] sm:text-sm uppercase tracking-wider w-[35%]">Large Facility (100+ Beds)</th>
+          <th class="p-2 sm:p-6 font-bold text-[10px] sm:text-sm uppercase tracking-wider bg-emerald-50/50 text-emerald-900 w-[35%]">Residential (8 Beds)</th>
         </tr>
       </thead>
-      <tbody class="divide-y divide-stone-100">
+      <tbody class="divide-y divide-stone-100 text-[10px] sm:text-base">
         <tr>
-          <td class="p-6 font-semibold text-stone-900">Staffing Ratio</td>
-          <td class="p-6">Typically 1:15 or 1:20</td>
-          <td class="p-6 bg-emerald-50/30 text-emerald-800 font-bold italic">Strict 1:3 Protocol</td>
+          <td class="p-2 sm:p-6 font-semibold text-stone-900">Staffing Ratio</td>
+          <td class="p-2 sm:p-6 text-stone-600">Typically 1:15 or 1:20</td>
+          <td class="p-2 sm:p-6 bg-emerald-50/30 text-emerald-800 font-bold italic">Strict 1:3 Protocol</td>
         </tr>
         <tr>
-          <td class="p-6 font-semibold text-stone-900">Navigation</td>
-          <td class="p-6">Elevators & Long Hallways</td>
-          <td class="p-6 bg-emerald-50/30 text-emerald-800 font-bold italic">Single-Floor Accessibility</td>
+          <td class="p-2 sm:p-6 font-semibold text-stone-900">Navigation</td>
+          <td class="p-2 sm:p-6 text-stone-600">Elevators & Long Hallways</td>
+          <td class="p-2 sm:p-6 bg-emerald-50/30 text-emerald-800 font-bold italic">Single-Floor Access</td>
         </tr>
         <tr>
-          <td class="p-6 font-semibold text-stone-900">Personalization</td>
-          <td class="p-6">"Face in the Crowd"</td>
-          <td class="p-6 bg-emerald-50/30 text-emerald-800 font-bold italic">Deep Clinical Familiarity</td>
+          <td class="p-2 sm:p-6 font-semibold text-stone-900">Personalization</td>
+          <td class="p-2 sm:p-6 text-stone-600">"Face in the Crowd"</td>
+          <td class="p-2 sm:p-6 bg-emerald-50/30 text-emerald-800 font-bold italic">Deep Familiarity</td>
         </tr>
         <tr>
-          <td class="p-6 font-semibold text-stone-900">Clinical Oversight</td>
-          <td class="p-6">Administrative Led</td>
-          <td class="p-6 bg-emerald-50/30 text-emerald-800 font-bold italic">Doctor of Physical Therapy</td>
+          <td class="p-2 sm:p-6 font-semibold text-stone-900">Clinical Oversight</td>
+          <td class="p-2 sm:p-6 text-stone-600">Administrative Led</td>
+          <td class="p-2 sm:p-6 bg-emerald-50/30 text-emerald-800 font-bold italic">DPT Led</td>
         </tr>
       </tbody>
     </table>
@@ -95,8 +94,7 @@ Columbia Care Home, located at **10610 Hickory Point Lane**, was deliberately de
 </div>
 
 ## Making the Decision for Howard County Families
-If a parent is seeking a country-club lifestyle and requires minimal supervision, a large facility is often an appropriate choice. But if they require dedicated mobility support, cognitive care, or consistent medical oversight, an 8-bed Level 3 Assisted Living Facility is the safer, more personal option.
-
+If a parent is seeking a country-club lifestyle and requires minimal supervision, a large facility is often an appropriate choice. But if they require dedicated mobility support, cognitive care, or consistent medical oversight, an 8-bed Level 3 Assisted Living Facility is the safer, more personal option.<br />
 At Columbia Care Home, we prioritize personalized engagement from day one, helping families find peace of mind knowing their parent is living with dignity and expert support.
 
 <div class="p-8 bg-emerald-50 rounded-2xl border border-emerald-100 text-center">

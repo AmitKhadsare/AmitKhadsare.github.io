@@ -20,41 +20,42 @@ tags:
 </figure>
 
 ## The Administrator vs. The Clinician
-When a corporate administrator looks at a senior, they often see a resident to be <span class="blog-accent">managed</span> via room assignments and meal schedules. When a physical therapist looks at a senior, they perform a continuous clinical assessment.
+When a corporate administrator looks at a senior, they often see a resident to be <span class="blog-accent">managed</span> via room assignments and meal schedules.<br />
+When a physical therapist looks at a senior, they perform a continuous clinical assessment.
 
-<div class="overflow-hidden border border-stone-200 rounded-3xl shadow-2xl bg-white">
+<div class="overflow-hidden border border-stone-200 rounded-3xl shadow-2xl bg-white my-10">
   <div class="bg-emerald-900 px-6 py-4">
-    <h3 class="text-white font-serif text-xl m-0">Leadership Perspective Comparison</h3>
+    <h3 class="text-white font-serif text-sm sm:text-xl m-0">Leadership Perspective Comparison</h3>
   </div>
-  <div class="overflow-x-auto">
-    <table class="w-full text-left border-collapse m-0">
+  <div class="w-full">
+    <table class="w-full text-left border-collapse m-0 table-fixed">
       <thead>
         <tr class="bg-stone-50 text-stone-600 border-b border-stone-200">
-          <th class="p-6 font-bold text-sm uppercase tracking-wider">Focus Area</th>
-          <th class="p-6 font-bold text-sm uppercase tracking-wider">Corporate Administration</th>
-          <th class="p-6 font-bold text-sm uppercase tracking-wider bg-emerald-50/50 text-emerald-900">DPT Clinical Leadership</th>
+          <th class="p-2 sm:p-6 font-bold text-[10px] sm:text-sm uppercase tracking-wider w-[30%]">Focus Area</th>
+          <th class="p-2 sm:p-6 font-bold text-[10px] sm:text-sm uppercase tracking-wider w-[35%]">Corporate Admin</th>
+          <th class="p-2 sm:p-6 font-bold text-[10px] sm:text-sm uppercase tracking-wider bg-emerald-50/50 text-emerald-900 w-[35%]">DPT Leadership</th>
         </tr>
       </thead>
-      <tbody class="divide-y divide-stone-100">
+      <tbody class="divide-y divide-stone-100 text-[10px] sm:text-base">
         <tr>
-          <td class="p-6 font-semibold text-stone-900">Resident Oversight</td>
-          <td class="p-6">Administrative Logistics</td>
-          <td class="p-6 bg-emerald-50/30 text-emerald-800 font-bold italic">Real-time Mobility Analysis</td>
+          <td class="p-2 sm:p-6 font-semibold text-stone-900">Oversight</td>
+          <td class="p-2 sm:p-6">Administrative Logistics</td>
+          <td class="p-2 sm:p-6 bg-emerald-50/30 text-emerald-800 font-bold italic">Mobility Analysis</td>
         </tr>
         <tr>
-          <td class="p-6 font-semibold text-stone-900">Fall Prevention</td>
-          <td class="p-6">Reactive (Incident Reports)</td>
-          <td class="p-6 bg-emerald-50/30 text-emerald-800 font-bold italic">Proactive (Gait Correction)</td>
+          <td class="p-2 sm:p-6 font-semibold text-stone-900">Fall Prev</td>
+          <td class="p-2 sm:p-6">Reactive Reports</td>
+          <td class="p-2 sm:p-6 bg-emerald-50/30 text-emerald-800 font-bold italic">Proactive Correction</td>
         </tr>
         <tr>
-          <td class="p-6 font-semibold text-stone-900">Staff Training</td>
-          <td class="p-6">Compliance Videos</td>
-          <td class="p-6 bg-emerald-50/30 text-emerald-800 font-bold italic">Clinical Transfer Coaching</td>
+          <td class="p-2 sm:p-6 font-semibold text-stone-900">Training</td>
+          <td class="p-2 sm:p-6">Compliance Videos</td>
+          <td class="p-2 sm:p-6 bg-emerald-50/30 text-emerald-800 font-bold italic">Clinical Coaching</td>
         </tr>
         <tr>
-          <td class="p-6 font-semibold text-stone-900">Health Preservation</td>
-          <td class="p-6">Service Continuity</td>
-          <td class="p-6 bg-emerald-50/30 text-emerald-800 font-bold italic">Function-First Engagement</td>
+          <td class="p-2 sm:p-6 font-semibold text-stone-900">Health</td>
+          <td class="p-2 sm:p-6">Service Continuity</td>
+          <td class="p-2 sm:p-6 bg-emerald-50/30 text-emerald-800 font-bold italic">Function-First</td>
         </tr>
       </tbody>
     </table>
@@ -99,7 +100,8 @@ For residents living with dementia, agitation and "sundowning" are often exacerb
 </div>
 
 ## Bridging the Gap: From Rehab to Resident Life
-Many of our residents come to us after a hospital stay or a stint in a rehabilitation center. The clinical oversight of our facility prevents the "post-rehab slide" where seniors lose the progress they made in therapy once they return to a standard assisted living environment. We provide the continuity that preserves their hard-won mobility.
+Many of our residents come to us after a hospital stay or a stint in a rehabilitation center. The clinical oversight of our facility prevents the "post-rehab slide" where seniors lose the progress they made in therapy once they return to a standard assisted living environment.<br />
+We provide the continuity that preserves their hard-won mobility.
 
 <div class="p-8 bg-emerald-50 rounded-2xl border border-emerald-100 text-center">
   <h3 class="text-emerald-900 font-serif font-bold text-2xl mb-6 italic">Speak with Our Clinical Founders</h3>

@@ -21,8 +21,7 @@ tags:
 </figure>
 
 ## How to Move a Parent to Assisted Living
-For many seniors, leaving a long-term home can feel like a loss of continuity. It is often an acknowledgment of physical or cognitive changes. (If you are still deciding if the move is necessary, read our guide on the [7 signs it's time for assisted living](/blog/signs-its-time-for-assisted-living-columbia-md)). While family members may want to offer reassurance with phrases like, *"You'll love it here,"* geriatric experts suggest that validating their feelings—listening and acknowledging the change—is far more effective for long-term clinical adjustment.
-
+For many seniors, leaving a long-term home can feel like a loss of continuity. It is often an acknowledgment of physical or cognitive changes. (If you are still deciding if the move is necessary, read our guide on the [7 signs it's time for assisted living](/blog/signs-its-time-for-assisted-living-columbia-md)). While family members may want to offer reassurance with phrases like, *"You'll love it here,"* geriatric experts suggest that validating their feelings—listening and acknowledging the change—is far more effective for long-term clinical adjustment.<br />
 > **Expert Insight:** The transition period typically lasts between 30 and 90 days. During this time, constant communication with the care team is essential to ensure the resident's specific habits and preferences are honored.
 
 ## Tips for Transitioning to Assisted Living
@@ -37,34 +36,34 @@ Whenever possible, have the resident’s room completely set up and decorated *b
 ### 3. Focus on <span class="blog-accent">Therapeutic Continuity</span> (For Dementia Care)
 If a loved one is living with Alzheimer's or dementia, avoid long debates about the permanence of the move. Frame the transition as a path to <span class="blog-accent">recovering strength</span> or a <span class="blog-accent">doctor-recommended stay</span>. Once the environment becomes the new baseline, anxiety naturally subsides.
 
-<div class="overflow-hidden border border-stone-200 rounded-3xl shadow-2xl bg-white">
+<div class="overflow-hidden border border-stone-200 rounded-3xl shadow-2xl bg-white my-10">
   <div class="bg-emerald-900 px-6 py-4">
-    <h3 class="text-white font-serif text-xl m-0">Transition Checklist: Moving Day Success</h3>
+    <h3 class="text-white font-serif text-sm sm:text-xl m-0">Transition Checklist: Success Items</h3>
   </div>
-  <div class="overflow-x-auto">
-    <table class="w-full text-left border-collapse m-0">
+  <div class="w-full">
+    <table class="w-full text-left border-collapse m-0 table-fixed">
       <thead>
         <tr class="bg-stone-50 text-stone-600 border-b border-stone-200">
-          <th class="p-6 font-bold text-sm uppercase tracking-wider">Action Item</th>
-          <th class="p-6 font-bold text-sm uppercase tracking-wider">Why it Matters</th>
+          <th class="p-2 sm:p-6 font-bold text-[10px] sm:text-sm uppercase tracking-wider w-[40%]">Action Item</th>
+          <th class="p-2 sm:p-6 font-bold text-[10px] sm:text-sm uppercase tracking-wider w-[60%]">Why it Matters</th>
         </tr>
       </thead>
-      <tbody class="divide-y divide-stone-100 italic">
+      <tbody class="divide-y divide-stone-100 text-[10px] sm:text-base italic">
         <tr>
-          <td class="p-6 font-semibold text-stone-900">Pre-Move Setup</td>
-          <td class="p-6">Reduces initial anxiety by providing immediate visual familiarity.</td>
+          <td class="p-2 sm:p-6 font-semibold text-stone-900">Pre-Move Setup</td>
+          <td class="p-2 sm:p-6">Reduces initial anxiety by providing visual familiarity.</td>
         </tr>
         <tr>
-          <td class="p-6 font-semibold text-stone-900">Validating Dialogue</td>
-          <td class="p-6">Builds trust and allows the senior to process the change.</td>
+          <td class="p-2 sm:p-6 font-semibold text-stone-900">Validating Dialogue</td>
+          <td class="p-2 sm:p-6">Builds trust and allows the senior to process the change.</td>
         </tr>
         <tr>
-          <td class="p-6 font-semibold text-stone-900">Functional Assessment</td>
-          <td class="p-6">Ensures the room layout minimizes fall risks from day one.</td>
+          <td class="p-2 sm:p-6 font-semibold text-stone-900">Functional Assessment</td>
+          <td class="p-2 sm:p-6">Ensures the room layout minimizes fall risks from day one.</td>
         </tr>
         <tr>
-          <td class="p-6 font-semibold text-stone-900">Familiar Bedding/Items</td>
-          <td class="p-6">Critical for sensory grounding and sleep quality during the first week.</td>
+          <td class="p-2 sm:p-6 font-semibold text-stone-900">Familiar Bedding</td>
+          <td class="p-2 sm:p-6">Critical for sensory grounding and sleep quality.</td>
         </tr>
       </tbody>
     </table>
@@ -72,10 +71,8 @@ If a loved one is living with Alzheimer's or dementia, avoid long debates about 
 </div>
 
 ## The <span class="blog-accent">Soft Landing</span> of an 8-Bed Home
-Moving from a quiet neighborhood into a massive 150-unit facility can be overwhelming. The sensory load of long industrial hallways, crowded cafeterias, and intercom systems often triggers withdrawal. 
-
-Smaller residential assisted living homes often operate with fewer layers of corporate administration. At our home at **10610 Hickory Point Lane**, the architecture remains residential in scale. This ensures the environment doesn't feel like an institution, but like a safer, better-supported version of the home they’ve always known. 
-
+Moving from a quiet neighborhood into a massive 150-unit facility can be overwhelming. The sensory load of long industrial hallways, crowded cafeterias, and intercom systems often triggers withdrawal.<br />
+Smaller residential assisted living homes often operate with fewer layers of corporate administration. At our home at **10610 Hickory Point Lane**, the architecture remains residential in scale. This ensures the environment doesn't feel like an institution, but like a safer, better-supported version of the home they’ve always known.<br />
 If you are still comparing care models, read our guide on [the difference between large facilities and small residential assisted living homes](/blog/8-bed-vs-large-facility-howard-county).
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-0 overflow-hidden rounded-3xl border border-stone-200 shadow-lg">
@@ -103,8 +100,7 @@ If you are still comparing care models, read our guide on [the difference betwee
 </div>
 
 ## Long-Term Success for Assisted Living Columbia MD
-Adjustment takes time and patience. As your loved one settles into their new routine in Columbia, MD, the focus shifts from the move itself to the enhancement of their daily function. If you're concerned about the financial aspects of this transition, explore our [comprehensive guide to assisted living costs in Maryland](/blog/understanding-assisted-living-costs-maryland).
-
+Adjustment takes time and patience. As your loved one settles into their new routine in Columbia, MD, the focus shifts from the move itself to the enhancement of their daily function. If you're concerned about the financial aspects of this transition, explore our [comprehensive guide to assisted living costs in Maryland](/blog/understanding-assisted-living-costs-maryland).<br />
 At Columbia Care Home, we prioritize personalized engagement from day one, helping families find peace of mind knowing their parent is living with dignity and expert support.
 
 <div class="p-8 bg-emerald-50 rounded-2xl border border-emerald-100 text-center">

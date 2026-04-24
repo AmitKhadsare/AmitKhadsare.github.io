@@ -30,8 +30,7 @@ Common symptoms include:
 - Difficulty sleeping
 
 ## The "Big Box" Approach to Memory Care
-Families exploring <span class="blog-accent">memory care in Howard County, Maryland</span> often assume that larger facilities provide better clinical care. However, many tour massive 100-bed corporate facilities and only see the beautiful, secure wings—not how they operate when staffing levels drop and 30 residents begin sundowning simultaneously.
-
+Families exploring <span class="blog-accent">memory care in Howard County, Maryland</span> often assume that larger facilities provide better clinical care. However, many tour massive 100-bed corporate facilities and only see the beautiful, secure wings—not how they operate when staffing levels drop and 30 residents begin sundowning simultaneously.<br />
 When a large facility is understaffed, caregivers cannot provide the 1-on-1 redirection needed to calm an agitated resident. Instead, the default institutional response relies heavily on <span class="blog-accent">chemical restraints</span>—administering antipsychotics or heavy sedatives simply to keep the floor manageable.
 
 > **The Chemical Cost:** Chemical sedation severely impairs functional mobility, increasing the risk of catastrophic falls, muscle atrophy, and accelerated cognitive decline.
@@ -79,8 +78,7 @@ As Doctors of Physical Therapy, the founders of Columbia Care Home approach deme
 </div>
 
 ## The <span class="blog-accent">Bio-Mechanical</span> Approach to Dementia Anxiety
-People with dementia often pace because their bodies are trying to process nervous energy that they cannot express verbally. If you restrict that wandering, agitation spikes. If you drug that wandering, they fall.
-
+People with dementia often pace because their bodies are trying to process nervous energy that they cannot express verbally. If you restrict that wandering, agitation spikes. If you drug that wandering, they fall.<br />
 At our home located at **10610 Hickory Point Lane**, we use a proactive, mechanical approach to manage the psychological symptoms of dementia. Learn more about our [8-bed memory care model and clinical approach](/memory-care).
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-0 overflow-hidden rounded-3xl border border-stone-200 shadow-lg">
@@ -109,8 +107,7 @@ At our home located at **10610 Hickory Point Lane**, we use a proactive, mechani
 </div>
 
 ## Environmental Triggers: Why Smaller is Calmer
-Massive facilities are inherently overstimulating. The sounds of dietary carts rolling over tile, overhead pages for nursing staff, and the visual clutter of 100 people moving through a dining hall can overwhelm a healthy brain, let alone one battling cognitive decline. 
-
+Massive facilities are inherently overstimulating. The sounds of dietary carts rolling over tile, overhead pages for nursing staff, and the visual clutter of 100 people moving through a dining hall can overwhelm a healthy brain, let alone one battling cognitive decline.<br />
 An 8-bed residential home looks, sounds, and feels like a <span class="blog-accent">real house</span>. We control the lighting as evening approaches. The ambient noise is limited to the soft sounds of dinner preparation or classical music in the living room. This environmental suppression of chaos is one of our most effective, non-pharmaceutical interventions.
 
 ## Frequently Asked Questions About Sundowning

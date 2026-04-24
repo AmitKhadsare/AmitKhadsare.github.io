@@ -21,18 +21,15 @@ tags:
 
 ## The State Definition vs. Practical Reality
 
-The Maryland Department of Health defines Level 3 as the highest tier of assisted living. Legally, a Level 3 license means a facility is authorized to care for individuals who require a "high" level of assistance with multiple Activities of Daily Living (ADLs)—such as bathing, feeding, dressing, toileting, and transferring. 
-
+The Maryland Department of Health defines Level 3 as the highest tier of assisted living. Legally, a Level 3 license means a facility is authorized to care for individuals who require a "high" level of assistance with multiple Activities of Daily Living (ADLs)—such as bathing, feeding, dressing, toileting, and transferring.<br />
 But a Level 3 license is only a permit. It doesn't tell you how a facility actually executes that care when the spotlight is off. That gap in execution is where most families make the wrong decision—without realizing it.
 
 ## The Wait-Time Dilemma
 
 To understand this, you have to look at response time.
 
-In a large corporate facility, your parent waits. Sometimes 2 minutes. Sometimes 10. A caregiver handling an entire wing of 15 to 20 residents might be stuck assisting another resident down the hall. A five-minute wait feels like an eternity for an elderly person with an urgent need. 
-
-**And sometimes, they stop waiting—and try to stand on their own.**
-
+In a large corporate facility, your parent waits. Sometimes 2 minutes. Sometimes 10. A caregiver handling an entire wing of 15 to 20 residents might be stuck assisting another resident down the hall. A five-minute wait feels like an eternity for an elderly person with an urgent need.<br />
+**And sometimes, they stop waiting—and try to stand on their own.**<br />
 Families don’t see this during a daytime tour. They notice it later through falls, late-night calls, or a nagging feeling that something isn’t right. This is where Level 3 licensing often breaks down in large settings. True Level 3 care relies on proximity as much as clinical competence.
 
 <div class="overflow-hidden border border-stone-200 rounded-3xl shadow-2xl bg-white my-8">
@@ -52,8 +49,7 @@ Families don’t see this during a daytime tour. They notice it later through fa
 
 This is the operational truth most facilities will never say out loud: **The involuntary discharge.**
 
-Many families move their parent into a facility on the promise of "aging in place," trusting the Level 3 license. Two years later, when the parent's mobility declines and they become a "two-person assist," they receive a discharge notice. This is one of the most common reasons families are forced into a second move. 
-
+Many families move their parent into a facility on the promise of "aging in place," trusting the Level 3 license. Two years later, when the parent's mobility declines and they become a "two-person assist," they receive a discharge notice. This is one of the most common reasons families are forced into a second move.<br />
 This is not a small adjustment. It means another move, another transition, and starting over. Families receive this notice after they’ve already settled in, built routines, and believed this was their loved one’s long-term home. They are then told the resident's needs now "exceed the staff's physical capacity," effectively pushing them into a far more expensive Skilled Nursing Facility.
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-0 overflow-hidden rounded-3xl border border-stone-200 shadow-lg my-8">
@@ -76,8 +72,7 @@ This is not a small adjustment. It means another move, another transition, and s
 
 ## Early Recognition vs. Reactive Management
 
-Level 3 care also covers residents with significant cognitive impairment. In massive settings, behavioral changes like sundowning are often managed reactively, sometimes resulting in medication changes or medical escalation.
-
+Level 3 care also covers residents with significant cognitive impairment. In massive settings, behavioral changes like sundowning are often managed reactively, sometimes resulting in medication changes or medical escalation.<br />
 In a smaller, 1:3 setting, behavioral patterns are recognized early—before agitation escalates into wandering or refusal of care. We notice when a resident’s breathing pattern shifts or how they prefer their environment as night approaches. Proactive recognition prevents behavioral crises before they start.
 
 ## Who This Matters Most For

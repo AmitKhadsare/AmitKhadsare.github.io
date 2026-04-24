@@ -36,16 +36,13 @@ What started as a $6,000 quote can easily balloon to $10,000+ once your loved on
 
 ## Let's Talk About the <span class="blog-accent">Community Fee</span>
 
-We’ll tell you the full cost upfront. Like most professional assisted living providers, there is a one-time, non-refundable **Community Fee** (typically equivalent to one month's rent).
-
+We’ll tell you the full cost upfront. Like most professional assisted living providers, there is a one-time, non-refundable **Community Fee** (typically equivalent to one month's rent).<br />
 Most places charge this. We just tell you about it upfront because the last thing a family needs during a transition is a surprise "move-in charge" on their first statement.
 
 ## The Value of <span class="blog-accent">All-Inclusive</span> Monthly Care
 
-At Columbia Care Home, we handle pricing differently. We don’t charge extra every time care increases.
-
-Once the one-time community fee is settled, your monthly rate is **all-inclusive**. 
-
+At Columbia Care Home, we handle pricing differently. We don’t charge extra every time care increases.<br />
+Once the one-time community fee is settled, your monthly rate is **all-inclusive**.<br />
 Whether your loved one needs help with dressing, bathing, or complex mobility transfers overseen by clinical experts, the price stays the same. That way, families know what they’re paying each month, knowing that as their parent's care needs increase, their bill won't.
 
 <div class="overflow-hidden border border-stone-200 rounded-3xl shadow-2xl bg-white my-10">
@@ -89,10 +86,8 @@ Whether your loved one needs help with dressing, bathing, or complex mobility tr
 
 ## Why an 8-Bed Home <span class="blog-accent">Works Differently</span>
 
-Smaller homes are simpler to run. We don't have layers of corporate marketing departments or massive regional management teams to pay for.
-
-At our home at **10610 Hickory Point Lane**, your investment goes toward two things: high-quality staff and clinical oversight. Because we are owned and operated by clinical experts, we can often manage complex care needs that would force a large facility to discharge a resident to a far more expensive skilled nursing home.
-
+Smaller homes are simpler to run. We don't have layers of corporate marketing departments or massive regional management teams to pay for.<br />
+At our home at **10610 Hickory Point Lane**, your investment goes toward two things: high-quality staff and clinical oversight. Because we are owned and operated by clinical experts, we can often manage complex care needs that would force a large facility to discharge a resident to a far more expensive skilled nursing home.<br />
 To see why this model is becoming the preferred choice for Howard County families, read our guide on [8-bed homes vs. large facilities](/blog/8-bed-vs-large-facility-howard-county).
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-0 overflow-hidden rounded-3xl border border-stone-200 shadow-lg my-12">
@@ -129,8 +124,7 @@ To see why this model is becoming the preferred choice for Howard County familie
 
 ## Evaluating <span class="blog-accent">No Hidden Pricing</span> in Howard County
 
-When comparing options in Columbia or Ellicott City, look past the lobby and the social calendar. Ask for a breakdown of the *care* costs. 
-
+When comparing options in Columbia or Ellicott City, look past the lobby and the social calendar. Ask for a breakdown of the *care* costs.<br />
 At Columbia Care Home, we believe in clear pricing. No tiered charges, no hidden nursing fees, and no surprises. Just professional, DPT-led care in a setting that actually feels like home.
 
 <div class="p-8 bg-emerald-50 rounded-2xl border border-emerald-100 text-center mt-12">

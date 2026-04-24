@@ -20,10 +20,8 @@ tags:
 </figure>
 
 ## Architectural Overview: Layout That Respects Autonomy
-The arrival sequence sets the tone. Our front entry is intentionally domestic in scale—a covered porch that avoids institutional grandeur and invites a calm transition from street to home.
-
-Inside, the circulation is designed for legibility. Short corridors, clear sightlines, and consistent flooring reduce cognitive load for residents and simplify staff workflows. Room clusters are organized around shared living and dining <span class="blog-accent">neighborhoods</span> to encourage incidental social interaction while preserving privacy.
-
+The arrival sequence sets the tone. Our front entry is intentionally domestic in scale—a covered porch that avoids institutional grandeur and invites a calm transition from street to home.<br />
+Inside, the circulation is designed for legibility. Short corridors, clear sightlines, and consistent flooring reduce cognitive load for residents and simplify staff workflows. Room clusters are organized around shared living and dining <span class="blog-accent">neighborhoods</span> to encourage incidental social interaction while preserving privacy.<br />
 Therapy and staff zones are strategically placed adjacent to living areas, allowing for quick support without interrupting the natural flow of resident life.
 
 <figure>
@@ -39,8 +37,7 @@ We use a palette of soft, warm neutrals—creams, warm grays, and muted greens�
   <figcaption class="text-center text-stone-500 mt-3 text-sm italic">Communal living room: small seating clusters encourage conversation and reduce noise.</figcaption>
 </figure>
 
-Daylight is a priority. Large windows and skylights bring sunlight deep into communal rooms, while window seats and planted sills encourage residents to spend time by the natural light. Furniture is residential in scale—no hospital loungers here. Seating is arranged in small clusters to promote intimate conversation, using non-glare surfaces and tactile textiles to reduce overstimulation.
-
+Daylight is a priority. Large windows and skylights bring sunlight deep into communal rooms, while window seats and planted sills encourage residents to spend time by the natural light. Furniture is residential in scale—no hospital loungers here. Seating is arranged in small clusters to promote intimate conversation, using non-glare surfaces and tactile textiles to reduce overstimulation.<br />
 Acoustics are managed through soft furnishings and area rugs, reducing reverberation to create calm conversation levels without isolation.
 
 <figure>
