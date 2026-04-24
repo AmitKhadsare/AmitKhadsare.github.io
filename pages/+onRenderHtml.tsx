@@ -146,6 +146,8 @@ async function onRenderHtml(pageContext: any) {
         <meta name="robots" content="index, follow" />
         <meta name="googlebot" content="index, follow" />
         <meta name="bingbot" content="index, follow" />
+        <meta name="msvalidate.01" content="130A2B4B6E2D654B67C97BB5727C0453" />
+        <meta name="google-site-verification" content="qoIlCCKaSRQEXzZyMJMkMwVMjW4m7yxlMoyqhi9Ylkw" />
         
         <!-- Local Business Meta Tags -->
         <meta name="geo.region" content="US-MD" />
