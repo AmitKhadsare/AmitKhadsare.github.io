@@ -46,21 +46,53 @@ const Header = () => {
   return (
     <>
       {/* Top Bar */}
-      <div className="bg-gradient-to-r from-slate-900 via-emerald-900 to-teal-900 text-white py-2 px-2 sm:px-4">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center md:justify-between gap-2 sm:gap-4 text-xs sm:text-sm md:text-base text-center">
-          <span className="flex items-center space-x-1 sm:space-x-2 truncate w-full md:w-auto justify-center">
-            <Phone size={14} />
-            <span>Call us:</span>
-            <a href="tel:301-500-0809" className="hover:text-emerald-300 ml-1 whitespace-nowrap">(301) 500-0809</a>
-            <span className="mx-1">|</span>
-            <a href="tel:201-885-9225" className="hover:text-emerald-300 whitespace-nowrap">(201) 885-9225</a>
-          </span>
-          {/* Ensure this Map link is correct */}
-          <a href="https://maps.google.com/?q=10610+Hickory+Point+Lane,+Columbia,+MD+21044" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-1 sm:space-x-2 text-center md:text-left hover:text-emerald-300 truncate w-full md:w-auto justify-center">
-            <MapPin size={14} />
-            <span className="hidden sm:inline">Visit us:</span>
-            <span className="truncate">10610 Hickory Point Lane, Columbia, MD 21044</span>
-          </a>
+      <div className="bg-slate-900 text-white py-2 border-b border-white/5">
+        <div className="max-w-7xl mx-auto px-4">
+          {/* Mobile View: High-Density Single Line */}
+          <div className="flex md:hidden items-center justify-between gap-2 text-xs">
+            <div className="flex items-center gap-2">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+              </span>
+              <span className="font-bold text-emerald-400 whitespace-nowrap uppercase tracking-wider">Only 1 Room Available</span>
+            </div>
+            <a 
+              href="tel:301-500-0809" 
+              className="flex items-center gap-1.5 bg-emerald-600 px-3 py-1 rounded-full font-bold text-[10px] animate-pulse shadow-lg shadow-emerald-900/20"
+            >
+              <Phone size={10} />
+              CALL TO CONFIRM
+            </a>
+          </div>
+
+          {/* Desktop View: Full Status Message */}
+          <div className="hidden md:flex items-center justify-between text-sm">
+            <div className="flex items-center gap-3">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+              </span>
+              <div className="flex items-center gap-2">
+                <span className="font-bold text-emerald-400">Limited Availability:</span>
+                <span className="text-stone-300">Only 1 room remains in our Columbia home.</span>
+              </div>
+              <a href="tel:301-500-0809" className="ml-4 bg-emerald-500/10 hover:bg-emerald-500/20 px-4 py-1 rounded-full border border-emerald-500/30 transition-all flex items-center gap-2">
+                <Phone size={14} className="text-emerald-400" />
+                <span className="font-bold">Call to Confirm: (301) 500-0809</span>
+              </a>
+            </div>
+            
+            <a 
+              href="https://maps.google.com/?q=10610+Hickory+Point+Lane,+Columbia,+MD+21044" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="flex items-center gap-2 text-stone-400 hover:text-emerald-300 transition-colors"
+            >
+              <MapPin size={14} />
+              <span>10610 Hickory Point Lane, Columbia</span>
+            </a>
+          </div>
         </div>
       </div>
 

@@ -14,6 +14,7 @@ export interface BlogPost {
   content: string;
   author: string;
   date: string;
+  lastModified?: string;
   image: string;
   tags: string[];
 }
@@ -84,6 +85,7 @@ export const blogs: BlogPost[] = Object.entries(modules).map(([path, module]: [s
     content: md.render(body),
     author: data.author || 'Columbia Care Home Team',
     date: data.date || new Date().toISOString().split('T')[0],
+    lastModified: data.lastModified,
     image: resolveAsset(data.image),
     tags: Array.isArray(data.tags) ? data.tags : []
   };

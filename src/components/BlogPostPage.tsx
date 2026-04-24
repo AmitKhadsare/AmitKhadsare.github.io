@@ -35,7 +35,7 @@ const BlogPostPage = () => {
                     "description": post.excerpt,
                     "image": post.image,
                     "datePublished": post.date,
-                    "dateModified": post.date,
+                    "dateModified": post.lastModified || post.date,
                     "author": {
                         "@type": "Person",
                         "name": post.author,
@@ -88,20 +88,31 @@ const BlogPostPage = () => {
                             dangerouslySetInnerHTML={{ __html: post.title }}
                         />
 
-                        <div className="flex flex-wrap items-center gap-6 text-white/90 text-sm md:text-base font-medium">
+                        <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-white/90 text-sm md:text-base font-medium">
                             <div className="flex items-center gap-2">
                                 <User className="w-4 h-4" />
                                 <span>{post.author}</span>
                             </div>
                             <div className="flex items-center gap-2">
                                 <Calendar className="w-4 h-4" />
-                                <time dateTime={post.date}>
-                                    {new Date(post.date).toLocaleDateString('en-US', {
-                                        year: 'numeric',
-                                        month: 'long',
-                                        day: 'numeric'
-                                    })}
-                                </time>
+                                <div className="flex flex-col sm:flex-row sm:gap-2">
+                                    <time dateTime={post.date}>
+                                        {new Date(post.date).toLocaleDateString('en-US', {
+                                            year: 'numeric',
+                                            month: 'long',
+                                            day: 'numeric'
+                                        })}
+                                    </time>
+                                    {post.lastModified && (
+                                        <span className="text-white/60 text-xs sm:text-base">
+                                            (Updated: {new Date(post.lastModified).toLocaleDateString('en-US', {
+                                                year: 'numeric',
+                                                month: 'long',
+                                                day: 'numeric'
+                                            })})
+                                        </span>
+                                    )}
+                                </div>
                             </div>
                             <div className="flex items-center gap-2">
                                 <Clock className="w-4 h-4" />

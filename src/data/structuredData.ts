@@ -6,6 +6,7 @@ export const localBusinessSchema = {
   "name": "Columbia Care Home",
   "alternateName": "Columbia Care",
   "description": "Columbia Care Home is a physical therapist-led assisted living residence providing high-acuity residential care for seniors with complex mobility and cognitive needs.",
+  "disambiguatingDescription": "Currently accepting new residents with 1 room available for immediate occupancy as of April 24, 2026.",
   "url": "https://www.columbiacarehome.com",
   "logo": {
     "@type": "ImageObject",
@@ -62,6 +63,13 @@ export const localBusinessSchema = {
       "longitude": -76.8610
     },
     "geoRadius": "50000"
+  },
+  "offers": {
+    "@type": "Offer",
+    "name": "Immediate Residential Placement",
+    "description": "1 private room currently available for immediate occupancy.",
+    "availability": "https://schema.org/InStock",
+    "validFrom": "2026-04-24"
   },
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
