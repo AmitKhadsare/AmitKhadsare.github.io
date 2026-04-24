@@ -63,7 +63,7 @@ const Footer = () => {
     { name: 'Our Story', path: '/about-us' },
     { name: 'Schedule a Tour', path: '/schedule-a-tour' },
     { name: 'What Families Say', path: '/family-stories' },
-    { name: 'Latest From Blog', path: '/blog' },
+    { name: 'Family Guides', path: '/blog' },
     { name: 'Our Facility', path: '/facility' },
   ];
 

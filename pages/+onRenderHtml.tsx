@@ -155,9 +155,12 @@ async function onRenderHtml(pageContext: any) {
         <meta name="geo.position" content="39.2037;-76.8610" />
         <meta name="ICBM" content="39.2037, -76.8610" />
         
-        <!-- Theme -->
+        <!-- Theme & Mobile -->
         <meta name="theme-color" content="#059669" />
         <meta name="msapplication-TileColor" content="#059669" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         
         <!-- SPA Redirect Script for GitHub Pages -->
         <script>

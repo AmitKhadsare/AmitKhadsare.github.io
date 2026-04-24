@@ -158,7 +158,7 @@ const Header = () => {
             </Link>
 
             <Link to="/blog" className={getLinkClass('/blog')}>
-              Blog
+              Family Guides
             </Link>
 
             <Link to="/contact" className={getLinkClass('/contact')}>

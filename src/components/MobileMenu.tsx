@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
-import { X, Phone, Calendar, Home, ArrowLeft, ChevronRight, Building2, Video, BookOpen, Briefcase, Mail, Heart } from 'lucide-react';
+import { X, Phone, Calendar, ArrowLeft, ChevronRight, Building2, Video, BookOpen, Heart } from 'lucide-react';
 import { menuData } from '../data/navigationData';
 const logo = "/logos/header_logo.webp";
 
@@ -21,7 +21,6 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
     }
   }, [isOpen]);
 
-  const activeSubMenuData = activeSubMenu && activeSubMenu !== 'call' ? menuData[activeSubMenu] : null;
   const activeSubMenuTitle = activeSubMenu && activeSubMenu !== 'call' ? menuData[activeSubMenu].title : activeSubMenu === 'call' ? 'Call Now' : '';
 
   // --- REFINED ANIMATIONS ---
@@ -73,165 +72,227 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
               <AnimatePresence initial={false}>
                 {!activeSubMenu && (
                   <motion.div key="main-menu" className="absolute w-full h-full flex flex-col" variants={listVariants} initial="enter" animate="enter" exit="exit">
-                    <nav className="flex-1 overflow-y-auto p-4">
-                      <HashLink to="/#home" onClick={onClose} className="block w-full text-left">
-                        <div className="flex items-center justify-between p-4 rounded-lg hover:bg-gray-100 transition-colors">
-                          <div className="flex items-center gap-4"><Home className="w-6 h-6 text-emerald-700" /><span className="text-lg font-medium text-gray-800">Home</span></div>
+                    <nav className="flex-1 overflow-y-auto p-6 space-y-8">
+                      {/* Hub 1: Explore the Residence */}
+                      <section>
+                        <div className="flex items-center justify-between mb-4">
+                          <h3 className="text-[10px] font-bold text-emerald-800 uppercase tracking-[0.2em]">The Residence</h3>
+                          <HashLink to="/#home" onClick={onClose} className="text-[10px] font-bold text-stone-400 uppercase tracking-widest hover:text-emerald-700 transition-colors">Home</HashLink>
                         </div>
-                      </HashLink>
+                        <div className="grid grid-cols-2 gap-3">
+                          <Link to="/facility" onClick={onClose} className="flex flex-col items-center justify-center p-4 rounded-xl bg-stone-50 border border-stone-100 hover:border-emerald-200 hover:bg-emerald-50/30 transition-all group">
+                            <Building2 className="w-6 h-6 text-emerald-700 mb-2 group-hover:scale-110 transition-transform" />
+                            <span className="text-xs font-semibold text-emerald-950 text-center leading-tight">Gallery & Facility</span>
+                          </Link>
+                          <Link to="/virtual-tour" onClick={onClose} className="relative flex flex-col items-center justify-center p-4 rounded-xl bg-stone-50 border border-stone-100 hover:border-emerald-200 hover:bg-emerald-50/30 transition-all group">
+                            <Video className="w-6 h-6 text-emerald-700 mb-2 group-hover:scale-110 transition-transform" />
+                            <span className="text-xs font-semibold text-emerald-950 text-center leading-tight">Virtual 3D Tour</span>
+                            <span className="absolute -top-2 -right-1 px-2 py-0.5 text-[8px] font-black text-white bg-emerald-600 rounded-full shadow-sm">NEW</span>
+                          </Link>
+                        </div>
+                      </section>
 
-                      {/* Added Facility Link */}
-                      <Link to="/facility" onClick={onClose} className="block w-full text-left">
-                        <div className="flex items-center justify-between p-4 rounded-lg hover:bg-gray-100 transition-colors">
-                          <div className="flex items-center gap-4">
-                            <Building2 className="w-6 h-6 text-emerald-700" />
-                            <span className="text-lg font-medium text-gray-800">Our Facility & Gallery</span>
+                      {/* Hub 2: Our Care Model */}
+                      <section>
+                        <h3 className="text-[10px] font-bold text-emerald-800 uppercase tracking-[0.2em] mb-4">Our Care Model</h3>
+                        <button onClick={() => setActiveSubMenu('services')} className="w-full group">
+                          <div className="flex items-center justify-between p-5 rounded-2xl bg-emerald-950 text-white shadow-lg shadow-emerald-900/20 active:scale-[0.98] transition-all">
+                            <div className="flex items-center gap-4">
+                              <menuData.services.icon className="w-6 h-6 text-emerald-400" />
+                              <div className="text-left">
+                                <span className="block text-base font-bold tracking-tight">{menuData.services.title}</span>
+                                <span className="text-[10px] text-emerald-300/80 font-medium uppercase tracking-wider">High-Acuity Specialty</span>
+                              </div>
+                            </div>
+                            <ChevronRight className="w-5 h-5 text-emerald-400/50 group-hover:translate-x-1 transition-transform" />
                           </div>
+                        </button>
+                      </section>
+
+                      {/* Hub 3: Community & Insights */}
+                      <section>
+                        <h3 className="text-[10px] font-bold text-emerald-800 uppercase tracking-[0.2em] mb-4">Community & Insights</h3>
+                        <div className="bg-white rounded-2xl border border-stone-100 divide-y divide-stone-50">
+                          <Link to="/about-us" onClick={onClose} className="flex items-center justify-between p-4 hover:bg-stone-50 transition-colors">
+                            <div className="flex items-center gap-4">
+                              <div className="w-8 h-8 rounded-lg bg-emerald-50 flex items-center justify-center">
+                                <BookOpen className="w-4 h-4 text-emerald-700" />
+                              </div>
+                              <span className="text-sm font-semibold text-stone-800">Our Founding Story</span>
+                            </div>
+                            <ChevronRight className="w-4 h-4 text-stone-300" />
+                          </Link>
+                          <Link to="/family-stories" onClick={onClose} className="flex items-center justify-between p-4 hover:bg-stone-50 transition-colors">
+                            <div className="flex items-center gap-4">
+                              <div className="w-8 h-8 rounded-lg bg-emerald-50 flex items-center justify-center">
+                                <Heart className="w-4 h-4 text-emerald-700" />
+                              </div>
+                              <span className="text-sm font-semibold text-stone-800">Family Testimonials</span>
+                            </div>
+                            <ChevronRight className="w-4 h-4 text-stone-300" />
+                          </Link>
+                          <Link to="/blog" onClick={onClose} className="flex items-center justify-between p-4 hover:bg-stone-50 transition-colors">
+                            <div className="flex items-center gap-4">
+                              <div className="w-8 h-8 rounded-lg bg-emerald-50 flex items-center justify-center">
+                                <BookOpen className="w-4 h-4 text-emerald-700" />
+                              </div>
+                              <span className="text-sm font-semibold text-stone-800">Family Guides & Insights</span>
+                            </div>
+                            <ChevronRight className="w-4 h-4 text-stone-300" />
+                          </Link>
                         </div>
-                      </Link>
+                      </section>
 
-                      {/* Added Virtual Tour Link */}
-                      <Link to="/virtual-tour" onClick={onClose} className="block w-full text-left">
-                        <div className="flex items-center justify-between p-4 rounded-lg hover:bg-gray-100 transition-colors">
-                          <div className="flex items-center gap-4">
-                            <Video className="w-6 h-6 text-emerald-700" />
-                            <span className="text-lg font-medium text-gray-800">Virtual Tour</span>
-                          </div>
-                          <span className="px-2 py-0.5 text-xs font-bold text-white bg-emerald-600 rounded-full">New</span>
+                      {/* Hub 4: Contact & Careers */}
+                      <section className="pb-10">
+                        <div className="flex items-center justify-center gap-6">
+                          <Link to="/contact" onClick={onClose} className="text-sm font-bold text-emerald-900 border-b-2 border-emerald-200 pb-1">Contact Us</Link>
+                          <div className="w-1.5 h-1.5 rounded-full bg-stone-200"></div>
+                          <Link to="/careers" onClick={onClose} className="text-sm font-bold text-stone-500 hover:text-emerald-700 transition-colors">Join Our Team</Link>
                         </div>
-                      </Link>
-
-                      {/* Our Services (Drill-down) */}
-                      <button onClick={() => setActiveSubMenu('services')} className="w-full text-left">
-                        <div className="flex items-center justify-between p-4 rounded-lg hover:bg-gray-100 transition-colors">
-                          <div className="flex items-center gap-4">
-                            <menuData.services.icon className="w-6 h-6 text-emerald-700" />
-                            <span className="text-lg font-medium text-gray-800">{menuData.services.title}</span>
-                          </div>
-                          <ChevronRight className="w-5 h-5 text-gray-400" />
-                        </div>
-                      </button>
-
-                      {/* Our Story (Flattened from About Us) */}
-                      <Link to="/about-us" onClick={onClose} className="block w-full text-left">
-                        <div className="flex items-center justify-between p-4 rounded-lg hover:bg-gray-100 transition-colors">
-                          <div className="flex items-center gap-4">
-                            <BookOpen className="w-6 h-6 text-emerald-700" />
-                            <span className="text-lg font-medium text-gray-800">Our Story</span>
-                          </div>
-                        </div>
-                      </Link>
-
-                      {/* Family Stories */}
-                      <Link to="/family-stories" onClick={onClose} className="block w-full text-left">
-                        <div className="flex items-center justify-between p-4 rounded-lg hover:bg-gray-100 transition-colors">
-                          <div className="flex items-center gap-4">
-                            <Heart className="w-6 h-6 text-emerald-700" />
-                            <span className="text-lg font-medium text-gray-800">Family Stories</span>
-                          </div>
-                        </div>
-                      </Link>
-
-                      {/* Blog Link */}
-                      <Link to="/blog" onClick={onClose} className="block w-full text-left">
-                        <div className="flex items-center justify-between p-4 rounded-lg hover:bg-gray-100 transition-colors">
-                          <div className="flex items-center gap-4">
-                            <BookOpen className="w-6 h-6 text-emerald-700" />
-                            <span className="text-lg font-medium text-gray-800">Blog</span>
-                          </div>
-                        </div>
-                      </Link>
-
-                      {/* Careers (Flattened from About Us) */}
-                      <Link to="/careers" onClick={onClose} className="block w-full text-left">
-                        <div className="flex items-center justify-between p-4 rounded-lg hover:bg-gray-100 transition-colors">
-                          <div className="flex items-center gap-4">
-                            <Briefcase className="w-6 h-6 text-emerald-700" />
-                            <span className="text-lg font-medium text-gray-800">Careers</span>
-                          </div>
-                        </div>
-                      </Link>
-
-                      {/* Contact Us (Flattened from Connect) */}
-                      <Link to="/contact" onClick={onClose} className="block w-full text-left">
-                        <div className="flex items-center justify-between p-4 rounded-lg hover:bg-gray-100 transition-colors">
-                          <div className="flex items-center gap-4">
-                            <Mail className="w-6 h-6 text-emerald-700" />
-                            <span className="text-lg font-medium text-gray-800">Contact Us</span>
-                          </div>
-                        </div>
-                      </Link>
-
-
+                      </section>
                     </nav>
                   </motion.div>
                 )}
-                {activeSubMenu && activeSubMenuData && (
+                {activeSubMenu && (
                   <motion.div key={activeSubMenu} className="absolute w-full h-full flex flex-col" variants={subMenuVariants} initial="enter" animate="enter" exit="exit">
-                    <div className="flex-shrink-0 p-2 border-b border-gray-200">
-                      <button onClick={() => setActiveSubMenu(null)} className="flex items-center gap-2 p-2 w-full font-semibold text-emerald-700 hover:bg-gray-100 rounded-lg">
+                    <div className="flex-shrink-0 p-4 border-b border-gray-200">
+                      <button onClick={() => setActiveSubMenu(null)} className="flex items-center gap-2 p-2 w-full font-bold text-emerald-800 hover:bg-gray-100 rounded-lg transition-colors">
                         <ArrowLeft className="w-5 h-5" />
                         {activeSubMenuTitle}
                       </button>
                     </div>
-                    <nav className="flex-1 overflow-y-auto p-4">
-                      {'subMenu' in activeSubMenuData ? (
-                        (activeSubMenuData as any).subMenu.map((item: any) => {
-                          const Icon = item.icon;
+                    
+                    <nav className="flex-1 overflow-y-auto p-6 space-y-8">
+                      {activeSubMenu === 'services' ? (
+                        (() => {
+                          const CoreIcon1 = menuData.services.sections[0].links[0].icon;
+                          const CoreIcon2 = menuData.services.sections[0].links[1].icon;
+                          const CoreIcon3 = menuData.services.sections[0].links[2].icon;
+                          const ClinicalIcon1 = menuData.services.sections[1].links[0].icon;
+                          const ClinicalIcon2 = menuData.services.sections[1].links[1].icon;
+                          const ClinicalIcon3 = menuData.services.sections[1].links[2].icon;
+                          const LifeIcon1 = menuData.services.sections[2].links[0].icon;
+                          const LifeIcon2 = menuData.services.sections[2].links[1].icon;
+
                           return (
-                            <Link key={item.name} to={item.path} onClick={onClose} className="block">
-                              <div className="flex items-center gap-4 p-4 rounded-lg hover:bg-gray-100 transition-colors">
-                                <Icon className="w-6 h-6 text-emerald-700" />
-                                <span className="text-lg font-medium text-gray-800">{item.name}</span>
-                              </div>
-                            </Link>
+                            <>
+                              {/* Services Hub 1: Core Care (Pyramid) */}
+                              <section>
+                                <h3 className="text-[10px] font-bold text-emerald-800 uppercase tracking-[0.2em] mb-3">Residential Core</h3>
+                                <div className="grid grid-cols-2 gap-3 mb-3">
+                                  <Link to={menuData.services.sections[0].links[0].path} onClick={onClose} className="flex flex-col items-center justify-center p-4 rounded-xl bg-emerald-950 text-white shadow-md active:scale-95 transition-all">
+                                    <CoreIcon1 className="w-5 h-5 text-emerald-400 mb-2" />
+                                    <span className="text-[11px] font-bold text-center leading-tight">Personal Assistance</span>
+                                  </Link>
+                                  <Link to={menuData.services.sections[0].links[1].path} onClick={onClose} className="flex flex-col items-center justify-center p-4 rounded-xl bg-emerald-950 text-white shadow-md active:scale-95 transition-all">
+                                    <CoreIcon2 className="w-5 h-5 text-emerald-400 mb-2" />
+                                    <span className="text-[11px] font-bold text-center leading-tight">Residential Care</span>
+                                  </Link>
+                                </div>
+                                <Link to={menuData.services.sections[0].links[2].path} onClick={onClose} className="flex items-center justify-center gap-3 p-4 rounded-xl bg-stone-50 border border-stone-100 active:scale-95 transition-all">
+                                  <CoreIcon3 className="w-5 h-5 text-emerald-700" />
+                                  <span className="text-xs font-bold text-emerald-950">Dietary & Nutrition Services</span>
+                                </Link>
+                              </section>
+
+                              {/* Services Hub 2: Clinical (Pyramid) */}
+                              <section>
+                                <h3 className="text-[10px] font-bold text-emerald-800 uppercase tracking-[0.2em] mb-3">Clinical Excellence</h3>
+                                <div className="grid grid-cols-2 gap-3 mb-3">
+                                  <Link to={menuData.services.sections[1].links[0].path} onClick={onClose} className="flex flex-col items-center justify-center p-4 rounded-xl bg-white border border-emerald-100 shadow-sm active:scale-95 transition-all">
+                                    <ClinicalIcon1 className="w-5 h-5 text-emerald-700 mb-2" />
+                                    <span className="text-[11px] font-bold text-emerald-950 text-center leading-tight">Rehabilitation</span>
+                                  </Link>
+                                  <Link to={menuData.services.sections[1].links[1].path} onClick={onClose} className="flex flex-col items-center justify-center p-4 rounded-xl bg-white border border-emerald-100 shadow-sm active:scale-95 transition-all">
+                                    <ClinicalIcon2 className="w-5 h-5 text-emerald-700 mb-2" />
+                                    <span className="text-[11px] font-bold text-emerald-950 text-center leading-tight">Memory Care</span>
+                                  </Link>
+                                </div>
+                                <Link to={menuData.services.sections[1].links[2].path} onClick={onClose} className="flex items-center justify-center gap-3 p-4 rounded-xl bg-white border border-emerald-100 active:scale-95 transition-all">
+                                  <ClinicalIcon3 className="w-5 h-5 text-emerald-700" />
+                                  <span className="text-xs font-bold text-emerald-950">Proactive Health & Safety</span>
+                                </Link>
+                              </section>
+
+                              {/* Services Hub 3: Life (Balanced) */}
+                              <section className="pb-6">
+                                <h3 className="text-[10px] font-bold text-emerald-800 uppercase tracking-[0.2em] mb-3">Daily Life</h3>
+                                <div className="grid grid-cols-2 gap-3">
+                                  <Link to={menuData.services.sections[2].links[0].path} onClick={onClose} className="flex flex-col items-center justify-center p-4 rounded-xl bg-stone-50 border border-stone-100 active:scale-95 transition-all">
+                                    <LifeIcon1 className="w-5 h-5 text-emerald-700 mb-2" />
+                                    <span className="text-[11px] font-bold text-emerald-950 text-center leading-tight">Recreation</span>
+                                  </Link>
+                                  <Link to={menuData.services.sections[2].links[1].path} onClick={onClose} className="flex flex-col items-center justify-center p-4 rounded-xl bg-stone-50 border border-stone-100 active:scale-95 transition-all">
+                                    <LifeIcon2 className="w-5 h-5 text-emerald-700 mb-2" />
+                                    <span className="text-[11px] font-bold text-emerald-950 text-center leading-tight">Family Care</span>
+                                  </Link>
+                                </div>
+                              </section>
+
+                              <section className="pt-2 pb-10">
+                                <Link 
+                                  to="/services" 
+                                  onClick={onClose}
+                                  className="flex items-center justify-center gap-2 text-xs font-bold text-emerald-700 hover:text-emerald-900 transition-colors py-2"
+                                >
+                                  <span>View All Care Services</span>
+                                  <ChevronRight className="w-3 h-3" />
+                                </Link>
+                              </section>
+                            </>
                           );
-                        })
-                      ) : 'sections' in activeSubMenuData ? (
-                        (activeSubMenuData as any).sections.map((section: any) => (
-                          <div key={section.title} className="mb-6">
-                            <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3 px-4">{section.title}</h3>
-                            {section.links.map((link: any) => {
-                              const Icon = link.icon;
-                              const LinkComponent = link.path.includes('#') ? HashLink : Link;
-                              return (
-                                <LinkComponent key={link.name} to={link.path} onClick={onClose} className="block">
-                                  <div className="flex items-center gap-4 p-4 rounded-lg hover:bg-gray-100 transition-colors">
-                                    <Icon className="w-6 h-6 text-emerald-700" />
-                                    <div>
-                                      <span className="text-lg font-medium text-gray-800">{link.name}</span>
-                                      <p className="text-sm text-gray-500">{link.description}</p>
-                                    </div>
-                                  </div>
-                                </LinkComponent>
-                              );
-                            })}
-                          </div>
-                        ))
-                      ) : null}
-                    </nav>
-                  </motion.div>
-                )}
-                {activeSubMenu === 'call' && (
-                  <motion.div key="call" className="absolute w-full h-full flex flex-col" variants={subMenuVariants} initial="enter" animate="enter" exit="exit">
-                    <div className="flex-shrink-0 p-2 border-b border-gray-200">
-                      <button onClick={() => setActiveSubMenu(null)} className="flex items-center gap-2 p-2 w-full font-semibold text-emerald-700 hover:bg-gray-100 rounded-lg">
-                        <ArrowLeft className="w-5 h-5" />
-                        Call Now
-                      </button>
-                    </div>
-                    <nav className="flex-1 overflow-y-auto p-4">
-                      <a href="tel:301-500-0809" className="block w-full mb-4 px-4 py-4 rounded-lg bg-emerald-600 text-white font-semibold text-lg text-center shadow hover:bg-emerald-700 transition-colors">(301) 500-0809</a>
-                      <a href="tel:201-885-9225" className="block w-full px-4 py-4 rounded-lg bg-emerald-600 text-white font-semibold text-lg text-center shadow hover:bg-emerald-700 transition-colors">(201) 885-9225</a>
+                        })()
+                      ) : activeSubMenu === 'call' ? (
+                        <div className="space-y-4 pt-4">
+                          <a href="tel:301-500-0809" className="flex items-center justify-between p-5 rounded-2xl bg-emerald-950 text-white shadow-lg active:scale-[0.98] transition-all">
+                            <div className="flex items-center gap-4">
+                              <div className="w-10 h-10 rounded-full bg-emerald-800 flex items-center justify-center">
+                                <Phone className="w-5 h-5 text-emerald-400" />
+                              </div>
+                              <div>
+                                <span className="block text-lg font-bold">(301) 500-0809</span>
+                                <span className="text-xs text-emerald-300">Direct Admissions</span>
+                              </div>
+                            </div>
+                          </a>
+                          <a href="tel:201-885-9225" className="flex items-center justify-between p-5 rounded-2xl bg-white border border-emerald-100 text-emerald-950 shadow-sm active:scale-[0.98] transition-all">
+                            <div className="flex items-center gap-4">
+                              <div className="w-10 h-10 rounded-full bg-emerald-50 flex items-center justify-center">
+                                <Phone className="w-5 h-5 text-emerald-700" />
+                              </div>
+                              <div>
+                                <span className="block text-lg font-bold">(201) 885-9225</span>
+                                <span className="text-xs text-stone-500">Facility Office</span>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                      ) : (
+                        <div className="text-center py-20 text-stone-400">Section coming soon...</div>
+                      )}
                     </nav>
                   </motion.div>
                 )}
               </AnimatePresence>
             </div>
-            <div className="flex-shrink-0 p-4 border-t border-gray-200 bg-gray-50">
-              <div className="flex flex-col items-center space-y-3">
-                <button onClick={() => setActiveSubMenu('call')} className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-emerald-600 text-white shadow-lg hover:bg-emerald-700 font-semibold"><Phone className="w-5 h-5" /> Call Now</button>
-                <Link to="/schedule-a-tour" onClick={onClose} className="flex items-center justify-center gap-2 py-3 px-6 bg-white text-gray-800 rounded-lg hover:bg-gray-100 border border-gray-300 font-semibold"><Calendar className="w-5 h-5" /> Schedule a Tour</Link>
+            <div className="flex-shrink-0 p-6 border-t border-stone-100 bg-stone-50/50">
+              <div className="grid grid-cols-2 gap-4">
+                <button 
+                  onClick={() => setActiveSubMenu('call')} 
+                  className="flex items-center justify-center gap-2 py-4 px-4 rounded-xl bg-emerald-800 text-white shadow-lg shadow-emerald-900/20 hover:bg-emerald-900 active:scale-[0.98] transition-all font-bold text-sm"
+                >
+                  <Phone className="w-4 h-4" /> 
+                  Call Now
+                </button>
+                <Link 
+                  to="/schedule-a-tour" 
+                  onClick={onClose} 
+                  className="flex items-center justify-center gap-2 py-4 px-4 bg-white text-emerald-900 rounded-xl hover:bg-emerald-50 border border-emerald-200 active:scale-[0.98] transition-all font-bold text-sm"
+                >
+                  <Calendar className="w-4 h-4" /> 
+                  Tour
+                </Link>
               </div>
             </div>
           </motion.div>
