@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown, HelpCircle, MessageCircle, Phone, Calendar } from 'lucide-react';
+import { ChevronDown, HelpCircle, MessageCircle, Phone, ShieldCheck, Scale } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SEOHead from './SEOHead';
 
 interface FAQItemProps {
   question: string;
-  answer: string;
+  answer: React.ReactNode;
   isOpen: boolean;
   onClick: () => void;
 }
@@ -16,9 +16,9 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer, isOpen, onClick }) 
     <div className="border-b border-stone-200">
       <button
         onClick={onClick}
-        className="w-full py-6 flex items-center justify-between text-left group"
+        className="w-full py-8 flex items-center justify-between text-left group"
       >
-        <span className={`text-lg md:text-xl font-serif font-semibold transition-colors ${isOpen ? 'text-emerald-800' : 'text-stone-800 group-hover:text-emerald-700'}`}>
+        <span className={`text-xl md:text-2xl font-serif font-bold transition-colors ${isOpen ? 'text-emerald-800' : 'text-stone-800 group-hover:text-emerald-700'}`}>
           {question}
         </span>
         <motion.div
@@ -26,19 +26,18 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer, isOpen, onClick }) 
           transition={{ duration: 0.3 }}
           className={`flex-shrink-0 ml-4 ${isOpen ? 'text-emerald-600' : 'text-stone-400'}`}
         >
-          <ChevronDown size={24} />
+          <ChevronDown size={28} />
         </motion.div>
       </button>
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'auto', opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3, ease: 'easeOut' }}
-            className="overflow-hidden"
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
           >
-            <div className="pb-8 text-stone-600 leading-relaxed text-lg prose prose-stone max-w-none">
+            <div className="pb-10 text-stone-600 leading-relaxed text-lg font-medium">
               {answer}
             </div>
           </motion.div>
@@ -54,129 +53,185 @@ const FAQPage = () => {
   const faqs = [
     {
       question: "How does your pricing model work?",
-      answer: "We believe in complete financial transparency. Unlike corporate facilities that use complex 'tier-based' pricing or add-on charges for every extra minute of care, Columbia Care Home uses an all-inclusive monthly model. This covers all personal care, meals, medication management, and daily clinical oversight. Our goal is to ensure families never face unexpected billing surprises."
+      answer: (
+        <div className="space-y-4">
+          <p>We believe in a strictly <strong>All-Inclusive Billing Model</strong>. Many facilities in the Maryland market advertise a low base rate but then add complex "care points" or "tiers" that can increase your bill by thousands of dollars every month for basic tasks.</p>
+          <p>At Columbia Care Home, we provide a single, transparent monthly rate that covers 24/7 clinical oversight, medication management, all meals, and personalized assistance. This ensures families have total financial predictability with no hidden charges or care-level surcharges.</p>
+        </div>
+      )
     },
     {
-      question: "What is the 'Community Fee' mentioned in the contract?",
-      answer: "The Community Fee is a standard, one-time administrative and clinical assessment fee paid at the time of admission. This fee covers the comprehensive clinical evaluation by our Doctors of Physical Therapy and the administrative setup required to integrate a new resident into our care ecosystem. It is disclosed upfront with no hidden components."
+      question: "What is the Community Fee for?",
+      answer: "The Community Fee is a one-time administrative and clinical intake fee. Unlike corporate entry fees that go toward marketing, ours covers the intensive clinical assessment performed by our founders (both Doctors of Physical Therapy) to ensure we can safely and effectively manage your loved one's mobility and health needs from day one."
     },
     {
-      question: "What exactly does 'Level 3 Licensed' mean?",
-      answer: "Level 3 is the highest license tier granted by the Maryland Department of Health for assisted living. It authorizes us to provide care for residents with 'high-acuity' needs—those requiring significant assistance with multiple activities of daily living (bathing, dressing, mobility) and those with complex medical or cognitive challenges that require professional oversight."
+      question: "Does '24/7 Awake Staff' really mean they stay awake all night?",
+      answer: (
+        <div className="space-y-4">
+          <p><strong>Yes.</strong> This is a critical distinction. Many residential homes use "sleep-in" staff who only wake up if an alarm goes off. At Columbia Care Home, our caregivers are on a dedicated awake shift throughout the night.</p>
+          <p>For Level 3 residents who are fall risks or experience sundowning, a 30-second delay in response is the difference between a safe transfer and a hospital visit. We stay awake so you can sleep.</p>
+        </div>
+      )
     },
     {
-      question: "Is there staff awake and available 24/7?",
-      answer: "Yes. Safety is our non-negotiable priority. We maintain awake staff 24 hours a day, including throughout the overnight hours. Because we are an 8-bed home, our caregivers are always just steps away from any resident room, ensuring immediate response times that larger facilities simply cannot match."
+      question: "How does an 8-bed home compare to a 100-bed facility?",
+      answer: (
+        <div className="space-y-4">
+          <p>It's about the <strong>1:3 Ratio</strong>. In a large facility, one caregiver might be responsible for 15+ residents. If two people need help at the same time, someone waits. In our home, caregivers are always mere steps away. We don't have long hallways, elevators, or "zones." We have a family living room where oversight is constant and natural.</p>
+        </div>
+      )
     },
     {
-      question: "What is your staff-to-resident ratio?",
-      answer: "We maintain a consistent ratio of 1 caregiver for every 3 residents. In a traditional corporate facility, a single caregiver may be responsible for 15 to 20 residents. Our 1:3 ratio ensures that care is proactive rather than reactive—we anticipate needs before they become emergencies."
+      question: "What exactly is 'Level 3' Assisted Living in Maryland?",
+      answer: (
+        <div className="space-y-4">
+          <p>Level 3 is the highest care designation provided by the Maryland Department of Health. It means we are licensed to provide comprehensive assistance to residents with high-acuity physical and cognitive needs—including those who require a 'two-person assist' for transfers.</p>
+          <p>Our license number is <strong>AL-01052</strong>. You can verify our status and clean record directly on the <a href='https://health.maryland.gov/ohcq/Pages/Assisted-Living-Programs-Consumers.aspx' target='_blank' rel='noopener' className='text-emerald-700 underline'>Maryland OHCQ website</a>.</p>
+        </div>
+      )
     },
     {
-      question: "Is the home truly owned and led by Physical Therapists?",
-      answer: "Yes. Columbia Care Home was founded and is actively led by Bhargav Patel, DPT and Sheetal Khadsare, DPT. Both are Doctors of Physical Therapy with extensive experience in geriatric rehabilitation. This clinical DNA is woven into everything we do, from staff training to our focus on resident mobility and fall prevention."
+      question: "Can I just drop in for a visit anytime?",
+      answer: (
+        <div className="space-y-4">
+          <p>To protect the privacy and safety of our 8 residents, we do not allow unannounced "walk-in" tours. This is their private home, not a retail storefront. We ask that all prospective families <Link to='/schedule-a-tour' className='text-emerald-700 underline'>Schedule a Tour</Link> in advance.</p>
+          <p>For current families, we maintain an open-door policy but coordinate visits to ensure they don't interfere with therapy sessions or the quiet house rhythms our residents enjoy.</p>
+        </div>
+      )
     },
     {
-      question: "Can we visit our loved one at any time?",
-      answer: "We consider our residents' home to be their private sanctuary. To maintain a peaceful, secure environment for all 8 residents, we ask that family visits be coordinated or scheduled. This ensures that therapy sessions, rest periods, and house rhythms are respected while welcoming family involvement."
+      question: "How do you handle physical therapy and mobility?",
+      answer: "Because we are Physical Therapist-led, mobility is our baseline, not an 'extra' service. We integrate safe movement into every daily interaction. If your loved one needs formal physical or occupational therapy, we coordinate with preferred local providers to have sessions right here in the comfort of our home."
     },
     {
-      question: "Do you provide specialized memory care?",
-      answer: "Absolutely. Our intimate environment is particularly beneficial for those with cognitive decline, Alzheimer's, or dementia. The smaller scale reduces the 'environmental noise' and confusion often found in large institutions, while our high staff ratio allows for the patience and redirection required for high-quality memory support."
-    },
-    {
-      question: "How do you handle medical emergencies?",
-      answer: "Our caregivers are trained in emergency protocols under the direction of our clinical founders. We maintain close relationships with local Howard County medical providers and emergency services. Because our staff is always awake and present, we can identify subtle changes in a resident's condition early, often preventing an emergency before it escalates."
-    },
-    {
-      question: "Is there a long-term commitment or lease?",
-      answer: "Our residency agreements are designed to be fair and flexible, focusing on the resident's best interest. We discuss all terms, including notice periods and discharge policies, transparently during the initial consultation to ensure families feel secure and informed."
+      question: "Who owns and operates Columbia Care Home?",
+      answer: (
+        <div className="space-y-4">
+          <p>We are family-owned and clinically operated. Founders <strong>Bhargav Patel, PT, DPT</strong> and <strong>Sheetal Khadsare, PT, DPT</strong> are involved in the daily clinical oversight. We are not a franchise or a corporate chain. When you have a question, you talk directly to the owners who know your loved one by name.</p>
+        </div>
+      )
     }
   ];
 
   return (
-    <div className="min-h-screen bg-stone-50 pt-24 pb-20">
+    <div className="min-h-screen bg-stone-50">
       <SEOHead
-        title="Frequently Asked Questions | Columbia Care Home"
-        description="Find answers to common questions about our physical therapist-led assisted living, pricing, staff ratios, and Level 3 care model in Columbia, MD."
+        title="FAQ - Truthful Answers About Our Care | Columbia Care Home"
+        description="Get direct, transparent answers about our all-inclusive pricing model, 1:3 staff ratio, 24/7 awake care, and Maryland Level 3 licensing."
         url="https://www.columbiacarehome.com/faq"
       />
 
-      {/* Hero Section */}
-      <section className="py-20 bg-emerald-950 text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-0 w-96 h-96 bg-emerald-500 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-teal-500 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
+      {/* Standard Hero Section - Matching AboutUs/Services Page Format */}
+      <section className="relative py-32 bg-gradient-to-br from-emerald-900 via-emerald-950 to-stone-900 overflow-hidden">
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-emerald-500 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/4"></div>
+          <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-teal-600 rounded-full blur-[120px] translate-y-1/2 -translate-x-1/4"></div>
         </div>
         
-        <div className="relative max-w-4xl mx-auto px-4 text-center">
+        <div className="relative max-w-5xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-emerald-800/50 border border-emerald-700 rounded-full text-xs font-bold uppercase tracking-widest text-emerald-300 mb-6">
-              <HelpCircle size={14} />
-              Support Center
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold font-serif mb-6">Common Questions</h1>
-            <p className="text-xl text-emerald-100/80 max-w-2xl mx-auto leading-relaxed">
-              Transparent answers about our care model, pricing, and daily life at Columbia Care Home.
+            <span className="inline-block px-4 py-1.5 bg-emerald-500/20 border border-emerald-500/30 text-emerald-300 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-8">
+              Transparency First
+            </span>
+            <h1 className="text-4xl md:text-6xl font-bold font-serif text-white mb-8 leading-tight">
+              Honest Answers for <br/><span className="italic text-emerald-400">Concerned Families</span>
+            </h1>
+            <p className="text-xl text-emerald-50/70 max-w-2xl mx-auto leading-relaxed">
+              Deciding on senior care is overwhelming. We've compiled the most frequent questions from our Howard County families to provide the clarity you deserve.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* FAQ Accordion */}
-      <section className="py-20 px-4">
-        <div className="max-w-3xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-white rounded-3xl shadow-xl shadow-stone-200/50 border border-stone-100 p-8 md:p-12"
-          >
-            <div className="space-y-2">
-              {faqs.map((faq, index) => (
-                <FAQItem
-                  key={index}
-                  question={faq.question}
-                  answer={faq.answer}
-                  isOpen={openIndex === index}
-                  onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                />
-              ))}
-            </div>
+      {/* Main Content with Side Sidebar */}
+      <section className="py-24 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col lg:flex-row gap-16">
             
-            <div className="mt-16 p-8 bg-stone-50 rounded-2xl border border-stone-100 text-center">
-              <h3 className="text-xl font-bold font-serif text-stone-800 mb-2">Still have questions?</h3>
-              <p className="text-stone-600 mb-6 italic">We're here to help you navigate this important decision with clarity and honesty.</p>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="tel:301-500-0809" className="flex items-center gap-2 px-6 py-3 bg-emerald-700 text-white rounded-full font-bold hover:bg-emerald-800 transition-all shadow-md">
-                  <Phone size={18} />
-                  (301) 500-0809
-                </a>
-                <Link to="/contact" className="flex items-center gap-2 px-6 py-3 bg-white text-emerald-700 border border-emerald-200 rounded-full font-bold hover:bg-stone-50 transition-all shadow-sm">
-                  <MessageCircle size={18} />
-                  Send a Message
-                </Link>
+            {/* FAQ List */}
+            <div className="lg:w-2/3">
+              <div className="space-y-4">
+                {faqs.map((faq, index) => (
+                  <FAQItem
+                    key={index}
+                    question={faq.question}
+                    answer={faq.answer}
+                    isOpen={openIndex === index}
+                    onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                  />
+                ))}
               </div>
             </div>
-          </motion.div>
+
+            {/* Sticky Contact Sidebar */}
+            <div className="lg:w-1/3">
+              <div className="sticky top-32 space-y-8">
+                <div className="bg-white p-8 rounded-3xl shadow-xl border border-stone-100">
+                  <h3 className="text-2xl font-serif font-bold text-stone-800 mb-6 flex items-center gap-3">
+                    <MessageCircle className="text-emerald-600" />
+                    Direct Contact
+                  </h3>
+                  <div className="space-y-6">
+                    <div className="flex items-start gap-4">
+                      <div className="w-10 h-10 bg-emerald-50 rounded-full flex items-center justify-center flex-shrink-0">
+                        <Phone className="w-5 h-5 text-emerald-700" />
+                      </div>
+                      <div>
+                        <span className="block text-xs font-bold text-stone-400 uppercase tracking-widest mb-1">Call Our Founders</span>
+                        <a href="tel:301-500-0809" className="text-lg font-bold text-emerald-900 hover:underline">(301) 500-0809</a>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-4">
+                      <div className="w-10 h-10 bg-emerald-50 rounded-full flex items-center justify-center flex-shrink-0">
+                        <HelpCircle className="w-5 h-5 text-emerald-700" />
+                      </div>
+                      <div>
+                        <span className="block text-xs font-bold text-stone-400 uppercase tracking-widest mb-1">Verify Our License</span>
+                        <p className="text-stone-600 text-sm">Maryland OHCQ: <strong>AL-01052</strong></p>
+                      </div>
+                    </div>
+                    <Link to="/contact">
+                      <button className="w-full mt-6 bg-emerald-700 text-white py-4 rounded-xl font-bold hover:bg-emerald-800 transition-all shadow-lg hover:shadow-emerald-900/20">
+                        Ask a Specific Question
+                      </button>
+                    </Link>
+                  </div>
+                </div>
+
+                {/* Trust Signal Cards */}
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="bg-emerald-50 p-6 rounded-2xl border border-emerald-100 text-center">
+                    <ShieldCheck className="mx-auto mb-3 text-emerald-700" size={32} />
+                    <span className="block text-xs font-bold text-emerald-900 uppercase">1:3 Ratio</span>
+                  </div>
+                  <div className="bg-emerald-50 p-6 rounded-2xl border border-emerald-100 text-center">
+                    <Scale className="mx-auto mb-3 text-emerald-700" size={32} />
+                    <span className="block text-xs font-bold text-emerald-900 uppercase">Level 3 MD</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* CTA Banner */}
-      <section className="max-w-5xl mx-auto px-4 mb-20">
-        <div className="bg-emerald-900 rounded-[2.5rem] p-10 md:p-16 text-center text-white relative overflow-hidden shadow-2xl">
-          <div className="relative z-10">
-            <h2 className="text-3xl md:text-4xl font-bold font-serif mb-6 italic">Experience the Difference in Person</h2>
-            <p className="text-emerald-100/80 text-lg mb-10 max-w-2xl mx-auto">
-              The best way to understand our unique 1:3 care model is to see it in action. Schedule a private tour of our 8-bed residential home today.
-            </p>
-            <Link to="/schedule-a-tour">
-              <button className="px-10 py-5 bg-white text-emerald-900 rounded-full font-bold text-lg hover:bg-emerald-50 transition-all transform hover:-translate-y-1 shadow-xl">
-                Schedule Your Visit
+      {/* CTA Section */}
+      <section className="bg-stone-900 text-white">
+        <div className="max-w-4xl mx-auto py-24 text-center px-4">
+          <h2 className="text-4xl md:text-5xl font-bold font-serif mb-8 italic">
+            Schedule Your <span className="text-emerald-400 font-sans not-italic">Clinical Consultation</span>
+          </h2>
+          <p className="text-xl text-stone-400 mb-10 max-w-2xl mx-auto">
+            Brochures only tell half the story. Meet Bhargav and Sheetal to discuss your family's specific medical and mobility needs.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+            <Link to="/schedule-a-tour" className="w-full sm:w-auto">
+              <button className="w-full bg-emerald-600 text-white px-10 py-5 rounded-full hover:bg-emerald-500 transition-all duration-300 font-bold text-lg shadow-xl">
+                Request a Private Tour
               </button>
             </Link>
           </div>
