@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -146,6 +146,12 @@ const Footer = () => {
     }
   ];
 
+  const [year, setYear] = useState<number>(new Date().getFullYear());
+
+  useEffect(() => {
+    setYear(new Date().getFullYear());
+  }, []);
+
   return (
     <footer className="bg-gray-800 text-gray-300 pt-16 pb-6">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -196,7 +202,7 @@ const Footer = () => {
 
         <div className="flex flex-col md:flex-row justify-between items-center text-sm">
           <p className="text-gray-500 mb-4 md:mb-0">
-            © {new Date().getFullYear()} Columbia Care Home. All Rights Reserved.
+            © {year} Columbia Care Home. All Rights Reserved.
           </p>
           <div className="space-x-6">
             <Link to="/privacy-policy" className="text-gray-400 hover:text-white">Privacy Policy</Link>

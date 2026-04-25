@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { BookOpen, ArrowRight, Calendar, User } from 'lucide-react';
@@ -70,7 +71,15 @@ const FeaturedInsights = () => {
         return selected.slice(0, 2);
     };
 
-    const dailyBlogs = getDailyBlogs(blogs);
+    const [dailyBlogs, setDailyBlogs] = useState<BlogPost[]>([]);
+
+    useEffect(() => {
+        setDailyBlogs(getDailyBlogs(blogs));
+    }, []);
+
+    if (dailyBlogs.length === 0) {
+        return null; // Or a skeleton loader
+    }
 
     return (
         <section className="py-24 bg-stone-50 overflow-hidden relative">

@@ -2,7 +2,6 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Heart, Star, Users, Clock } from 'lucide-react';
 import SEOHead from './SEOHead';
-import { jobPostingSchema } from '../data/structuredData';
 
 const CareersPage = () => {
   const benefitCards = [
@@ -35,7 +34,6 @@ const CareersPage = () => {
         description="Join the Columbia Care Home team. We are looking for compassionate professionals dedicated to providing exceptional senior care. Explore current job openings."
         image="https://www.columbiacarehome.com/og-careers.jpg"
         url="/careers"
-        structuredData={jobPostingSchema}
       />
       {/* Hero Header */}
       <div className="bg-gradient-to-br from-emerald-600 to-teal-700 text-white py-20">

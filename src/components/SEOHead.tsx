@@ -10,8 +10,6 @@ interface SEOHeadProps {
   url?: string;
   type?: string;
   structuredData?: any;
-  googleSiteVerification?: string;
-  bingSiteVerification?: string;
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
@@ -21,8 +19,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   url,
   type = "website",
   structuredData,
-  googleSiteVerification = "qoIlCCKaSRQEXzZyMJMkMwVMjW4m7yxlMoyqhi9Ylkw",
-  bingSiteVerification = "130A2B4B6E2D654B67C97BB5727C0453"
 }) => {
   const location = useLocation();
   const stripHtml = (html: string) => html.replace(/<[^>]*>?/gm, '');
@@ -69,7 +65,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       "@id": `${baseUrl}/#website`,
       "url": baseUrl,
       "name": "Columbia Care Home",
-      "publisher": { "@id": "https://www.columbiacarehome.com/#organization" }
+      "publisher": { "@id": "https://www.columbiacarehome.com/#local-business" }
     },
     {
       "@type": type === 'article' ? 'BlogPosting' : (type === 'website' ? 'WebPage' : (type || 'WebPage')),
@@ -110,8 +106,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <link rel="canonical" href={absoluteUrl} />
       <meta name="description" content={description} />
       <meta name="author" content="Columbia Care Home" />
-      {googleSiteVerification && <meta name="google-site-verification" content={googleSiteVerification} />}
-      {bingSiteVerification && <meta name="msvalidate.01" content={bingSiteVerification} />}
 
       {/* Open Graph Meta Tags */}
       <meta property="og:type" content={type} />

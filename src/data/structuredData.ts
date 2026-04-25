@@ -1,8 +1,8 @@
 // Structured Data for Columbia Care Home
 
 export const localBusinessSchema = {
-  "@type": "SeniorCareFacility",
-  "@id": "https://www.columbiacarehome.com/#organization",
+  "@type": ["LocalBusiness", "SeniorCareFacility"],
+  "@id": "https://www.columbiacarehome.com/#local-business",
   "name": "Columbia Care Home",
   "alternateName": "Columbia Care",
   "description": "Columbia Care Home is a physical therapist-led assisted living residence providing high-acuity residential care for seniors with complex mobility and cognitive needs.",
@@ -189,62 +189,3 @@ export const breadcrumbSchema = (items: Array<{ name: string, url: string }>) =>
   }))
 });
 
-
-export const jobPostingSchema = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "JobPosting",
-      "@id": "https://www.columbiacarehome.com/careers#caregiver",
-      "title": "Caregiver / Resident Assistant",
-      "description": "Join our team providing compassionate care to seniors in a home-like environment. Assist with daily living activities, medication reminders, and companionship.",
-      "hiringOrganization": {
-        "@type": "Organization",
-        "name": "Columbia Care Home",
-        "sameAs": "https://www.columbiacarehome.com"
-      },
-      "employmentType": "FULL_TIME",
-      "jobLocation": {
-        "@type": "Place",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "10610 Hickory Point Lane",
-          "addressLocality": "Columbia",
-          "addressRegion": "MD",
-          "postalCode": "21044",
-          "addressCountry": "US"
-        }
-      },
-      "directApply": true,
-      "datePosted": "2026-04-20",
-      "occupationalCategory": "31-1120.00", // Home Health Aides
-      "validThrough": new Date(new Date().getFullYear() + 1, 0, 1).toISOString()
-    },
-    {
-      "@type": "JobPosting",
-      "@id": "https://www.columbiacarehome.com/careers#cna",
-      "title": "Certified Nursing Assistant (CNA) / GNA",
-      "description": "Provide professional nursing care to residents. Monitor health status, coordinate with physical therapists, and document clinical observations.",
-      "hiringOrganization": {
-        "@type": "Organization",
-        "name": "Columbia Care Home",
-        "sameAs": "https://www.columbiacarehome.com"
-      },
-      "employmentType": ["FULL_TIME", "PART_TIME"],
-      "jobLocation": {
-        "@type": "Place",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "10610 Hickory Point Lane",
-          "addressLocality": "Columbia",
-          "addressRegion": "MD",
-          "postalCode": "21044",
-          "addressCountry": "US"
-        }
-      },
-      "directApply": true,
-      "datePosted": "2026-04-20",
-      "validThrough": new Date(new Date().getFullYear() + 1, 0, 1).toISOString()
-    }
-  ]
-};
