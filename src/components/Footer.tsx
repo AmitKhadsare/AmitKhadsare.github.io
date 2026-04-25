@@ -200,17 +200,21 @@ const Footer = () => {
           ))}
         </div>
 
-        <div className="border-t border-gray-700 mt-12 mb-6"></div>
-
-        <div className="flex flex-col md:flex-row justify-between items-center text-sm">
-          <div className="flex flex-col md:flex-row items-center gap-4 mb-4 md:mb-0">
+        <div className="mt-12 md:mt-16 flex flex-col md:flex-row justify-between items-center text-sm text-center md:text-left">
+          <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4 mb-4 md:mb-0">
             <p className="text-gray-500">
               © {year} Columbia Care Home. All Rights Reserved.
             </p>
             <span className="hidden md:block text-gray-700">|</span>
-            <p className="text-gray-500 italic">
-              Maryland Licensed Assisted Living Program · Licence No. AL-01052 · Level 3
-            </p>
+            <div className="flex flex-col md:flex-row items-center gap-1 md:gap-2 text-gray-500 italic">
+              <span>Maryland Licensed Assisted Living Program</span>
+              <span className="hidden md:inline">·</span>
+              <div className="flex items-center gap-2">
+                <span>Licence No. AL-01052</span>
+                <span className="text-gray-700">|</span>
+                <span>Level 3</span>
+              </div>
+            </div>
           </div>
           <div className="space-x-6">
             <Link to="/privacy-policy" className="text-gray-400 hover:text-white">Privacy Policy</Link>
