@@ -90,7 +90,7 @@ Real oversight requires asking the questions administrators aren't prepared to a
 * *"If my parent requires two people to help them stand, will they be discharged?"*
 * *"Who is responsible for training the direct caregivers on physical transfer techniques—and how often are they evaluated?"*
 
-<p class="mt-4 text-sm text-stone-500 italic">[Our FAQ page addresses these questions directly, based on what families ask us most](/faq).</p>
+<p class="mt-4 text-sm text-stone-500 italic"><a href="/faq" class="underline hover:text-emerald-700">Our FAQ page addresses these questions directly</a>, based on what families ask us most.</p>
 
 A Level 3 license is a permit to provide care, not a promise of how that care is delivered. It’s a difference you usually can’t see during a tour; you only see it when something goes wrong. The difference in that delivery is where your parent's safety—and your peace of mind—actually lives.
 

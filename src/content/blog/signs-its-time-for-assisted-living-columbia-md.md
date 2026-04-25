@@ -38,7 +38,7 @@ Unexplained bruising, close calls, or actual falls are a sign that the home envi
   <div class="p-10 bg-white shadow-sm flex flex-col justify-center">
     <h3 class="text-emerald-900 font-serif font-bold text-2xl mb-4 italic">The Therapy Perspective</h3>
     <p class="text-stone-700 leading-relaxed italic">
-      As physical therapists, we often tell families that you cannot outcare a physically unsafe environment. Waiting until a catastrophic fall breaks a hip often means a hospital stay, rehab, and an <span class="blog-accent">emergency placement</span> rather than a thoughtful, planned transition. This is why our [clinical-first approach](/blog/physical-therapist-owned-care-home-advantage) focuses on mobility analysis from day one.
+      As physical therapists, we often tell families that you cannot outcare a physically unsafe environment. Waiting until a catastrophic fall breaks a hip often means a hospital stay, rehab, and an <span class="blog-accent">emergency placement</span> rather than a thoughtful, planned transition. This is why our <a href="/blog/physical-therapist-owned-care-home-advantage" class="underline hover:text-emerald-700">clinical-first approach</a> focuses on mobility analysis from day one.
     </p>
   </div>
   <div class="p-10 bg-emerald-900 text-white flex flex-col justify-center">

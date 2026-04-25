@@ -128,7 +128,7 @@ Yes. Clinical studies and our own experience as physical therapists show that st
 ### Can a family member stay overnight during difficult sundowning episodes?
 Yes. While our 24/7 awake staff is professionally trained to handle these episodes, we understand that sometimes a familiar family presence is the best medicine during a difficult transition. We encourage family involvement that supports the resident's peace of mind.
 
-<p class="mt-4 text-sm text-stone-500 italic">For questions specific to our home's care model and admissions, [our full FAQ covers what families ask most](/faq).</p>
+<p class="mt-4 text-sm text-stone-500 italic">For questions specific to our home's care model and admissions, <a href="/faq" class="underline hover:text-emerald-700">our full FAQ covers what families ask most</a>.</p>
 
 <div class="not-prose p-8 bg-emerald-50 rounded-2xl border border-emerald-100 text-center">
   <h3 class="text-emerald-900 font-serif font-bold text-2xl mb-6">Learn How We Handle Late-Day Agitation</h3>
