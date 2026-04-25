@@ -166,9 +166,17 @@ const BlogPostPage = () => {
                     <style dangerouslySetInnerHTML={{
                         __html: `
                         .prose .blog-accent {
-                            color: #064e3b;
+                            color: inherit;
+                            --accent-color: #064e3b;
+                            color: var(--accent-color);
                             font-weight: 700;
                             font-style: normal;
+                        }
+                        /* Dark background override for accents */
+                        .bg-emerald-900 .blog-accent,
+                        .bg-emerald-800 .blog-accent {
+                            --accent-color: #ffffff;
+                            border-bottom-color: rgba(255,255,255,0.4);
                         }
                         /* Fix for figure and caption spacing */
                         .prose figure {

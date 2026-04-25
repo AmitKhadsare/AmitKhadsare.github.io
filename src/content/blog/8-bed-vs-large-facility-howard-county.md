@@ -34,13 +34,13 @@ To understand the true difference in care, look at the ratio of staff members to
   <div class="w-full">
     <table class="w-full text-left border-collapse m-0 table-fixed">
       <thead>
-        <tr class="bg-stone-50 text-stone-600 border-b border-stone-200">
+        <tr class="bg-stone-50 text-stone-600 border-b border-stone-200 text-center">
           <th class="p-2 sm:p-6 font-bold text-[10px] sm:text-sm uppercase tracking-wider w-[30%]">Feature</th>
           <th class="p-2 sm:p-6 font-bold text-[10px] sm:text-sm uppercase tracking-wider w-[35%]">Large Facility (100+ Beds)</th>
           <th class="p-2 sm:p-6 font-bold text-[10px] sm:text-sm uppercase tracking-wider bg-emerald-50/50 text-emerald-900 w-[35%]">Residential (8 Beds)</th>
         </tr>
       </thead>
-      <tbody class="divide-y divide-stone-100 text-[10px] sm:text-base">
+      <tbody class="divide-y divide-stone-100 text-[10px] sm:text-base text-center">
         <tr>
           <td class="p-2 sm:p-6 font-semibold text-stone-900">Staffing Ratio</td>
           <td class="p-2 sm:p-6 text-stone-600">Typically 1:15 or 1:20</td>

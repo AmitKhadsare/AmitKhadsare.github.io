@@ -113,8 +113,8 @@ While broad averages suggest $5,000–$7,000, families in the Columbia and Howar
 The best way is to look for residential care models (like 8-bed homes) that offer all-inclusive pricing. Always ask for a written list of every service that incurs an extra charge.
 
 <div class="not-prose p-8 bg-emerald-900 rounded-3xl text-white text-center mt-12 shadow-2xl">
-  <h3 class="text-emerald-200 font-serif font-bold text-2xl mb-4">Want a clear answer on cost?</h3>
-  <p class="text-emerald-50/90 mb-8 max-w-2xl mx-auto">Call or visit. We’ll tell you the exact monthly rate based on your parent’s needs. Our founders, [both Doctors of Physical Therapy](/about-us), are happy to help.</p>
+  <h3 class="text-emerald-200 font-serif font-bold text-2xl mb-4">Want a <span class="blog-accent text-white border-white">clear answer</span> on cost?</h3>
+  <p class="text-emerald-50/90 mb-8 max-w-2xl mx-auto">Call or visit. We’ll tell you the exact monthly rate based on your parent’s needs. Our founders, <a href="/about-us" class="text-white underline hover:text-emerald-200 transition-colors">both Doctors of Physical Therapy</a>, are happy to help.</p>
   <div class="flex flex-col sm:flex-row gap-4 justify-center">
       <a href="/contact" class="inline-flex items-center justify-center px-8 py-4 bg-white text-emerald-900 rounded-full font-bold hover:bg-emerald-50 transition-all hover:scale-105">Get a Transparent Quote</a>
   </div>

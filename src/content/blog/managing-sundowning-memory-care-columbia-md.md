@@ -44,33 +44,33 @@ As Doctors of Physical Therapy, the founders of Columbia Care Home approach deme
     <h3 class="text-white font-serif text-xl m-0">The Sundowning Protocol Comparison</h3>
   </div>
   <div class="overflow-x-auto">
-    <table class="w-full text-left border-collapse m-0">
+    <table class="w-full text-left border-collapse m-0 table-fixed">
       <thead>
         <tr class="bg-stone-50 text-stone-600 border-b border-stone-200">
-          <th class="p-6 font-bold text-sm uppercase tracking-wider">Intervention Strategy</th>
-          <th class="p-6 font-bold text-sm uppercase tracking-wider">Large Corporate Facility</th>
-          <th class="p-6 font-bold text-sm uppercase tracking-wider bg-emerald-50/50 text-emerald-900">Columbia Care Home (8-Bed Model)</th>
+          <th class="p-2 sm:p-6 font-bold text-[10px] sm:text-sm uppercase tracking-wider text-center">Intervention Strategy</th>
+          <th class="p-2 sm:p-6 font-bold text-[10px] sm:text-sm uppercase tracking-wider text-center">Large Corporate Facility</th>
+          <th class="p-2 sm:p-6 font-bold text-[10px] sm:text-sm uppercase tracking-wider bg-emerald-50/50 text-emerald-900 text-center">8-Bed Model (Columbia Care)</th>
         </tr>
       </thead>
-      <tbody class="divide-y divide-stone-100">
+      <tbody class="divide-y divide-stone-100 text-[10px] sm:text-base text-center">
         <tr>
-          <td class="p-6 font-semibold text-stone-900">Primary Response</td>
+          <td class="p-6 font-semibold text-stone-900 text-left">Primary Response</td>
           <td class="p-6">Sedative Medication (PRN)</td>
           <td class="p-6 bg-emerald-50/30 text-emerald-800 font-bold italic">Behavioral Redirection & Sensory Calming</td>
         </tr>
         <tr>
-          <td class="p-6 font-semibold text-stone-900">Sensory Environment</td>
+          <td class="p-6 font-semibold text-stone-900 text-left">Sensory Environment</td>
           <td class="p-6">Echoing Hallways, Paging Systems</td>
           <td class="p-6 bg-emerald-50/30 text-emerald-800 font-bold italic">Low-Stimulation Residential Acoustics</td>
         </tr>
         <tr>
-          <td class="p-6 font-semibold text-stone-900">Caregiver Consistency</td>
+          <td class="p-6 font-semibold text-stone-900 text-left">Caregiver Consistency</td>
           <td class="p-6">Rotating Shift Workers</td>
           <td class="p-6 bg-emerald-50/30 text-emerald-800 font-bold italic">Familiar Faces (High Trust)</td>
         </tr>
         <tr>
-          <td class="p-6 font-semibold text-stone-900">Daytime Routine</td>
-          <td class="p-6">Passive Group Activities (TV/Bingo)</td>
+          <td class="p-6 font-semibold text-stone-900 text-left">Daytime Routine</td>
+          <td class="p-2 sm:p-6">Passive Group Activities (TV/Bingo)</td>
           <td class="p-6 bg-emerald-50/30 text-emerald-800 font-bold italic">Therapeutic Mobility Work</td>
         </tr>
       </tbody>
@@ -130,11 +130,11 @@ Yes. While our 24/7 awake staff is professionally trained to handle these episod
 
 <p class="mt-4 text-sm text-stone-500 italic">For questions specific to our home's care model and admissions, <a href="/faq" class="underline hover:text-emerald-700">our full FAQ covers what families ask most</a>.</p>
 
-<div class="not-prose p-8 bg-emerald-50 rounded-2xl border border-emerald-100 text-center">
-  <h3 class="text-emerald-900 font-serif font-bold text-2xl mb-6">Learn How We Handle Late-Day Agitation</h3>
-  <p class="text-stone-600 mb-8 max-w-2xl mx-auto">If your parent is struggling with late-day dementia agitation or sundowning, speak directly with our Doctor-led team to learn how a smaller, calmer care environment can help. You do not have to navigate this journey alone.</p>
+<div class="not-prose p-8 bg-emerald-900 rounded-3xl text-white text-center mt-12 shadow-2xl">
+  <h3 class="text-emerald-200 font-serif font-bold text-2xl mb-6">Learn How We Handle <span class="blog-accent text-white border-white">Late-Day Agitation</span></h3>
+  <p class="text-emerald-50/90 mb-8 max-w-2xl mx-auto">If your parent is struggling with late-day dementia agitation or sundowning, speak directly with our Doctor-led team to learn how a smaller, calmer care environment can help. You do not have to navigate this journey alone.</p>
   <div class="flex flex-col sm:flex-row gap-4 justify-center">
-      <a href="/schedule-a-tour" class="inline-flex items-center justify-center px-8 py-3 bg-emerald-700 text-white rounded-full font-bold hover:bg-emerald-800 transition-colors shadow-md transition-all hover:scale-105">Schedule a Clinical Consultation</a>
-      <a href="/virtual-tour" class="inline-flex items-center justify-center px-8 py-3 bg-white text-emerald-700 border border-emerald-200 rounded-full font-bold hover:bg-emerald-50 transition-colors shadow-sm transition-all hover:scale-105">View Our Calming Architecture</a>
+      <a href="/schedule-a-tour" class="inline-flex items-center justify-center px-8 py-3 bg-white text-emerald-900 rounded-full font-bold hover:bg-emerald-50 transition-colors shadow-md transition-all hover:scale-105">Schedule a Clinical Consultation</a>
+      <a href="/virtual-tour" class="inline-flex items-center justify-center px-8 py-3 bg-emerald-800 text-white border border-emerald-700 rounded-full font-bold hover:bg-emerald-700 transition-colors shadow-sm transition-all hover:scale-105">View Our Calming Architecture</a>
   </div>
 </div>
