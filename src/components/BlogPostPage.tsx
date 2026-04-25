@@ -4,6 +4,8 @@ import { motion } from 'framer-motion';
 import { Calendar, User, ArrowLeft, Clock } from 'lucide-react';
 import SEOHead from './SEOHead';
 import { blogs } from '../data/blogs';
+import bhargavImage from '../assets/Bhargav_Patel.jpg';
+import sheetalImage from '../assets/Sheetal_Khadsare.jpeg';
 
 const BlogPostPage = () => {
     const { slug } = useParams();
@@ -137,10 +139,10 @@ const BlogPostPage = () => {
                         <div className="mt-8 inline-flex items-center gap-3 px-4 py-2 bg-emerald-900/40 backdrop-blur-md border border-emerald-400/30 rounded-xl">
                             <div className="flex -space-x-2">
                                 <div className="w-8 h-8 rounded-full border-2 border-emerald-500 overflow-hidden bg-stone-200">
-                                    <img src="/src/assets/Bhargav_Patel.jpg" alt="Bhargav Patel" className="w-full h-full object-cover" />
+                                    <img src={bhargavImage} alt="Bhargav Patel" className="w-full h-full object-cover" />
                                 </div>
                                 <div className="w-8 h-8 rounded-full border-2 border-emerald-500 overflow-hidden bg-stone-200">
-                                    <img src="/src/assets/Sheetal_Khadsare.jpeg" alt="Sheetal Khadsare" className="w-full h-full object-cover" />
+                                    <img src={sheetalImage} alt="Sheetal Khadsare" className="w-full h-full object-cover" />
                                 </div>
                             </div>
                             <div className="text-left">
