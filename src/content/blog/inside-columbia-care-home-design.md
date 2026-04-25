@@ -123,7 +123,7 @@ The virtual tour is a window into everyday life here and a first step before a s
 ## Closing: A Home Designed Around People
 Architecture matters for quality of life. At Columbia Care Home, every design decision—from door widths to window seats, from therapy layout to garden pathways—was made to protect independence, encourage connection, and honor dignity. We invite you to take the virtual tour or come visit to feel the difference in person.
 
-<div class="p-8 bg-emerald-50 rounded-2xl border border-emerald-100 text-center">
+<div class="not-prose p-8 bg-emerald-50 rounded-2xl border border-emerald-100 text-center">
   <h3 class="text-emerald-900 font-serif font-bold text-2xl mb-6">Experience the Difference</h3>
   
   <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">

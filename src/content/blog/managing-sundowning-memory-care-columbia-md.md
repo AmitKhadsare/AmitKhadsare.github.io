@@ -39,7 +39,7 @@ When a large facility is understaffed, caregivers cannot provide the 1-on-1 redi
 ## Large Memory Care vs. 8-Bed Residential Model
 As Doctors of Physical Therapy, the founders of Columbia Care Home approach dementia care from a physiological and environmental perspective. We know that agitation is a symptom, not a character flaw. Managing it requires a clinical understanding of the autonomic nervous system.
 
-<div class="overflow-hidden border border-stone-200 rounded-3xl shadow-2xl bg-white">
+<div class="not-prose overflow-hidden border border-stone-200 rounded-3xl shadow-2xl bg-white">
   <div class="bg-emerald-900 px-6 py-4">
     <h3 class="text-white font-serif text-xl m-0">The Sundowning Protocol Comparison</h3>
   </div>
@@ -82,7 +82,7 @@ As Doctors of Physical Therapy, the founders of Columbia Care Home approach deme
 People with dementia often pace because their bodies are trying to process nervous energy that they cannot express verbally. If you restrict that wandering, agitation spikes. If you drug that wandering, they fall.<br />
 At our home located at **10610 Hickory Point Lane**, we use a proactive, mechanical approach to manage the psychological symptoms of dementia. This clinical philosophy is rooted in the [Doctor of Physical Therapy-owned advantage](/blog/physical-therapist-owned-care-home-advantage) that defines our leadership. Learn more about our [8-bed memory care model and clinical approach](/memory-care).
 
-<div class="grid grid-cols-1 md:grid-cols-2 gap-0 overflow-hidden rounded-3xl border border-stone-200 shadow-lg">
+<div class="not-prose grid grid-cols-1 md:grid-cols-2 gap-0 overflow-hidden rounded-3xl border border-stone-200 shadow-lg">
   <div class="p-10 bg-white">
     <h3 class="text-emerald-900 font-serif font-bold text-2xl mb-6 flex items-center gap-3">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
@@ -130,7 +130,7 @@ Yes. While our 24/7 awake staff is professionally trained to handle these episod
 
 <p class="mt-4 text-sm text-stone-500 italic">For questions specific to our home's care model and admissions, [our full FAQ covers what families ask most](/faq).</p>
 
-<div class="p-8 bg-emerald-50 rounded-2xl border border-emerald-100 text-center">
+<div class="not-prose p-8 bg-emerald-50 rounded-2xl border border-emerald-100 text-center">
   <h3 class="text-emerald-900 font-serif font-bold text-2xl mb-6">Learn How We Handle Late-Day Agitation</h3>
   <p class="text-stone-600 mb-8 max-w-2xl mx-auto">If your parent is struggling with late-day dementia agitation or sundowning, speak directly with our Doctor-led team to learn how a smaller, calmer care environment can help. You do not have to navigate this journey alone.</p>
   <div class="flex flex-col sm:flex-row gap-4 justify-center">

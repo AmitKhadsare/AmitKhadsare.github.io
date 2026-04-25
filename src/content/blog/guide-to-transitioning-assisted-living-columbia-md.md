@@ -37,7 +37,7 @@ Whenever possible, have the resident’s room completely set up and decorated *b
 ### 3. Focus on <span class="blog-accent">Therapeutic Continuity</span> (For Dementia Care)
 If a loved one is living with Alzheimer's or dementia, avoid long debates about the permanence of the move. Frame the transition as a path to <span class="blog-accent">recovering strength</span> or a <span class="blog-accent">doctor-recommended stay</span>. Once the environment becomes the new baseline, anxiety naturally subsides. For a deeper look at how our team manages dementia-related agitation during this period, see our guide on [managing sundowning without heavy medication](/blog/managing-sundowning-memory-care-columbia-md).
 
-<div class="overflow-hidden border border-stone-200 rounded-3xl shadow-2xl bg-white my-10">
+<div class="not-prose overflow-hidden border border-stone-200 rounded-3xl shadow-2xl bg-white my-10">
   <div class="bg-emerald-900 px-6 py-4">
     <h3 class="text-white font-serif text-sm sm:text-xl m-0">Transition Checklist: Success Items</h3>
   </div>
@@ -76,7 +76,7 @@ Moving from a quiet neighborhood into a massive 150-unit facility can be overwhe
 Smaller residential assisted living homes often operate with fewer layers of corporate administration. At our home at **10610 Hickory Point Lane**, the architecture remains residential in scale. This ensures the environment doesn't feel like an institution, but like a safer, better-supported version of the home they’ve always known.<br />
 If you are still comparing care models, read our guide on [the difference between large facilities and small residential assisted living homes](/blog/8-bed-vs-large-facility-howard-county).
 
-<div class="grid grid-cols-1 md:grid-cols-2 gap-0 overflow-hidden rounded-3xl border border-stone-200 shadow-lg">
+<div class="not-prose grid grid-cols-1 md:grid-cols-2 gap-0 overflow-hidden rounded-3xl border border-stone-200 shadow-lg">
   <div class="p-10 bg-white">
     <h3 class="text-emerald-900 font-serif font-bold text-2xl mb-6 flex items-center gap-3 italic">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
@@ -104,7 +104,7 @@ If you are still comparing care models, read our guide on [the difference betwee
 Adjustment takes time and patience. As your loved one settles into their new routine in Columbia, MD, the focus shifts from the move itself to the enhancement of their daily function. If you're concerned about the financial aspects of this transition, explore our [comprehensive guide to assisted living costs in Maryland](/blog/understanding-assisted-living-costs-maryland). If you have questions about the move-in process itself, [our FAQ covers the most common ones](/faq).<br />
 At Columbia Care Home, we prioritize personalized engagement from day one, helping families find peace of mind knowing their parent is living with dignity and expert support.
 
-<div class="p-8 bg-emerald-50 rounded-2xl border border-emerald-100 text-center">
+<div class="not-prose p-8 bg-emerald-50 rounded-2xl border border-emerald-100 text-center">
   <h3 class="text-emerald-900 font-serif font-bold text-2xl mb-6 italic">Discuss Your Family’s Transition</h3>
   <p class="text-stone-600 mb-8 max-w-2xl mx-auto italic">We’re happy to answer questions — even if you’re still exploring options. If you are facing the difficult decision of moving a parent, you do not have to navigate it alone. Speak directly with our founders to discuss how our intimate environment serves as a softer landing place for Howard County seniors.</p>
   <div class="flex flex-col sm:flex-row gap-4 justify-center">

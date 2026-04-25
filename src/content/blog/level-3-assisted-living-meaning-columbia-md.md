@@ -32,7 +32,7 @@ In a large corporate facility, your parent waits. Sometimes 2 minutes. Sometimes
 **And sometimes, they stop waiting—and try to stand on their own.**<br />
 Families don’t see this during a daytime tour. They notice it later through falls, late-night calls, or a nagging feeling that something isn’t right. This is where Level 3 licensing often breaks down in large settings. True Level 3 care relies on proximity as much as clinical competence.
 
-<div class="overflow-hidden border border-stone-200 rounded-3xl shadow-2xl bg-white my-8">
+<div class="not-prose overflow-hidden border border-stone-200 rounded-3xl shadow-2xl bg-white my-8">
   <div class="bg-emerald-900 px-6 py-4">
     <h3 class="text-white font-serif text-xl m-0">The Contrast of Response</h3>
   </div>
@@ -52,7 +52,7 @@ This is the operational truth most facilities will never say out loud: **The inv
 Many families move their parent into a facility on the promise of "aging in place," trusting the Level 3 license. Two years later, when the parent's mobility declines and they become a "two-person assist," they receive a discharge notice. This is one of the most common reasons families are forced into a second move.<br />
 This is not a small adjustment. It means another move, another transition, and starting over. Families receive this notice after they’ve already settled in, built routines, and believed this was their loved one’s long-term home. They are then told the resident's needs now "exceed the staff's physical capacity," effectively pushing them into a far more expensive Skilled Nursing Facility. Understanding exactly what you're committing to financially before that happens matters — [our pricing page explains what's included in our all-inclusive rate](/pricing), and you can explore our [guide to assisted living costs in Maryland](/blog/understanding-assisted-living-costs-maryland) for more context.
 
-<div class="grid grid-cols-1 md:grid-cols-2 gap-0 overflow-hidden rounded-3xl border border-stone-200 shadow-lg my-8">
+<div class="not-prose grid grid-cols-1 md:grid-cols-2 gap-0 overflow-hidden rounded-3xl border border-stone-200 shadow-lg my-8">
   <div class="p-10 bg-white">
     <h3 class="text-emerald-900 font-serif font-bold text-2xl mb-6 flex items-center gap-3 italic">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
@@ -94,7 +94,7 @@ Real oversight requires asking the questions administrators aren't prepared to a
 
 A Level 3 license is a permit to provide care, not a promise of how that care is delivered. It’s a difference you usually can’t see during a tour; you only see it when something goes wrong. The difference in that delivery is where your parent's safety—and your peace of mind—actually lives.
 
-<div class="p-8 bg-emerald-50 rounded-2xl border border-emerald-100 text-center mt-12">
+<div class="not-prose p-8 bg-emerald-50 rounded-2xl border border-emerald-100 text-center mt-12">
   <h3 class="text-emerald-900 font-serif font-bold text-2xl mb-6 italic">See How It Works</h3>
   <p class="text-stone-600 mb-8 max-w-2xl mx-auto italic">If you're evaluating Level 3 care, don’t rely on a brochure. See how care actually works inside a real home during a tour of our Columbia location.</p>
   <div class="flex flex-col sm:flex-row gap-4 justify-center">

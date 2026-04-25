@@ -45,7 +45,7 @@ At Columbia Care Home, we handle pricing differently. We don’t charge extra ev
 Once the one-time community fee is settled, your monthly rate is **all-inclusive**.<br />
 Whether your loved one needs help with dressing, bathing, or complex mobility transfers overseen by clinical experts, the price stays the same. That way, families know what they’re paying each month, Knowing that as their parent's care needs increase, their bill won't. [See our full pricing structure and what's included](/pricing).
 
-<div class="overflow-hidden border border-stone-200 rounded-3xl shadow-2xl bg-white my-10">
+<div class="not-prose overflow-hidden border border-stone-200 rounded-3xl shadow-2xl bg-white my-10">
   <div class="bg-emerald-900 px-6 py-4">
     <h3 class="text-white font-serif text-sm sm:text-xl m-0">Billing Models: A Side-by-Side Look</h3>
   </div>
@@ -90,7 +90,7 @@ Smaller homes are simpler to run. We don't have layers of corporate marketing de
 At our home at **10610 Hickory Point Lane**, your investment goes toward two things: high-quality staff and clinical oversight. Because we are owned and operated by clinical experts, we can often manage complex care needs that would force a large facility to discharge a resident to a far more expensive skilled nursing home.<br />
 To see why this model is becoming the preferred choice for Howard County families, read our guide on [8-bed homes vs. large facilities](/blog/8-bed-vs-large-facility-howard-county).
 
-<div class="grid grid-cols-1 md:grid-cols-2 gap-0 overflow-hidden rounded-3xl border border-stone-200 shadow-lg my-12">
+<div class="not-prose grid grid-cols-1 md:grid-cols-2 gap-0 overflow-hidden rounded-3xl border border-stone-200 shadow-lg my-12">
   <div class="p-10 bg-white">
     <h3 class="text-emerald-900 font-serif font-bold text-2xl mb-6 flex items-center gap-3">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg>
@@ -132,7 +132,7 @@ To see why this model is becoming the preferred choice for Howard County familie
 When comparing options in Columbia or Ellicott City, look past the lobby and the social calendar. Ask for a breakdown of the *care* costs.<br />
 At Columbia Care Home, we believe in clear pricing. No tiered charges, no hidden nursing fees, and no surprises. Just professional, DPT-led care in a setting that actually feels like home.
 
-<div class="p-8 bg-emerald-50 rounded-2xl border border-emerald-100 text-center mt-12">
+<div class="not-prose p-8 bg-emerald-50 rounded-2xl border border-emerald-100 text-center mt-12">
   <h3 class="text-emerald-900 font-serif font-bold text-2xl mb-6">Get a Transparent Quote</h3>
   <p class="text-stone-600 mb-8 max-w-2xl mx-auto">We don't hide our pricing. If you're comparing care options for your parent, we’re happy to provide a clear, all-inclusive quote based on their specific needs.</p>
   <div class="flex flex-col sm:flex-row gap-4 justify-center">

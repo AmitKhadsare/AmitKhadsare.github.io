@@ -34,7 +34,7 @@ A noticeable change in grooming habits—wearing the same clothes for several da
 ### 4. Increased Falls or Mobility Issues
 Unexplained bruising, close calls, or actual falls are a sign that the home environment is no longer structurally safe. A home with stairs, narrow doorways, and throw rugs becomes an obstacle course for someone dealing with neuropathy, arthritis, or muscle weakness.
 
-<div class="grid grid-cols-1 md:grid-cols-2 gap-0 overflow-hidden rounded-3xl border border-stone-200 shadow-lg my-8">
+<div class="not-prose grid grid-cols-1 md:grid-cols-2 gap-0 overflow-hidden rounded-3xl border border-stone-200 shadow-lg my-8">
   <div class="p-10 bg-white shadow-sm flex flex-col justify-center">
     <h3 class="text-emerald-900 font-serif font-bold text-2xl mb-4 italic">The Therapy Perspective</h3>
     <p class="text-stone-700 leading-relaxed italic">
@@ -60,7 +60,7 @@ This is the sign families ignore the most. **Your health matters just as much as
 
 <p class="mt-4 text-stone-700 italic">If you've reached this point, a conversation — even a short one — usually helps more than another night of research.</p>
 
-<div class="overflow-hidden border border-stone-200 rounded-3xl shadow-2xl bg-white my-10">
+<div class="not-prose overflow-hidden border border-stone-200 rounded-3xl shadow-2xl bg-white my-10">
   <div class="bg-emerald-900 px-6 py-4">
     <h3 class="text-white font-serif text-sm sm:text-xl m-0">Quick Assessment Checklist</h3>
   </div>
@@ -102,7 +102,7 @@ If you are struggling with the leap from home to a facility, an [8-bed home ofte
 
 <p class="mt-12 text-stone-700 italic">If your parent already needs help with mobility or frequent supervision, this guide explains <a href="/blog/level-3-assisted-living-meaning-columbia-md" class="underline hover:text-emerald-700 font-semibold blog-accent">what Level 3 care actually looks like</a>.</p>
 
-<div class="p-8 bg-emerald-50 rounded-2xl border border-emerald-100 text-center mt-8">
+<div class="not-prose p-8 bg-emerald-50 rounded-2xl border border-emerald-100 text-center mt-8">
   <h3 class="text-emerald-900 font-serif font-bold text-2xl mb-6 italic">If you're seeing multiple signs from this list, waiting usually makes things harder, not easier.</h3>
   <p class="text-stone-600 mb-8 max-w-2xl mx-auto italic">If you want a clear assessment of whether assisted living is the right step, talk to our team.</p>
   <div class="flex flex-col sm:flex-row gap-4 justify-center">

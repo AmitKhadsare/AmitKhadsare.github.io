@@ -24,7 +24,7 @@ tags:
 When a corporate administrator looks at a senior, they often see a resident to be <span class="blog-accent">managed</span> via room assignments and meal schedules.<br />
 When a physical therapist looks at a senior, they perform a continuous clinical assessment.
 
-<div class="overflow-hidden border border-stone-200 rounded-3xl shadow-2xl bg-white my-10">
+<div class="not-prose overflow-hidden border border-stone-200 rounded-3xl shadow-2xl bg-white my-10">
   <div class="bg-emerald-900 px-6 py-4">
     <h3 class="text-white font-serif text-sm sm:text-xl m-0">Leadership Perspective Comparison</h3>
   </div>
@@ -75,7 +75,7 @@ Falls are the leading cause of injury among older adults. We don't wait for a fa
 ### 3. Mobility-Driven Memory Care
 For residents living with dementia, agitation and [sundowning](/blog/managing-sundowning-memory-care-columbia-md) are often exacerbated by unspent physical energy. By implementing daytime mobility routines and supervised physical engagement, we help manage anxiety naturally, promoting more restful sleep cycles without over-reliance on sedation.
 
-<div class="grid grid-cols-1 md:grid-cols-2 gap-0 overflow-hidden rounded-3xl border border-stone-200 shadow-lg">
+<div class="not-prose grid grid-cols-1 md:grid-cols-2 gap-0 overflow-hidden rounded-3xl border border-stone-200 shadow-lg">
   <div class="p-10 bg-white">
     <h3 class="text-emerald-900 font-serif font-bold text-2xl mb-6 flex items-center gap-3">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
@@ -105,7 +105,7 @@ Many of our residents come to us after a hospital stay or a stint in a rehabilit
 We provide the continuity that preserves their hard-won mobility.<br />
 Families frequently ask us how clinical oversight differs from standard assisted living — [we've answered the most common questions here](/faq). For families also weighing the financial side of clinical-grade care, [our pricing page explains the all-inclusive structure](/pricing).
 
-<div class="p-8 bg-emerald-50 rounded-2xl border border-emerald-100 text-center">
+<div class="not-prose p-8 bg-emerald-50 rounded-2xl border border-emerald-100 text-center">
   <h3 class="text-emerald-900 font-serif font-bold text-2xl mb-6 italic">Speak with Our Clinical Founders</h3>
   <p class="text-stone-600 mb-8 max-w-2xl mx-auto italic">We’re happy to answer questions — even if you’re still exploring options. Discuss your loved one's specific mobility and care needs directly with a Doctor of Physical Therapy. Learn how our clinical-first approach produces better daily outcomes.</p>
   <div class="flex flex-col sm:flex-row gap-4 justify-center">
