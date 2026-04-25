@@ -50,7 +50,7 @@ Families don’t see this during a daytime tour. They notice it later through fa
 This is the operational truth most facilities will never say out loud: **The involuntary discharge.**
 
 Many families move their parent into a facility on the promise of "aging in place," trusting the Level 3 license. Two years later, when the parent's mobility declines and they become a "two-person assist," they receive a discharge notice. This is one of the most common reasons families are forced into a second move.<br />
-This is not a small adjustment. It means another move, another transition, and starting over. Families receive this notice after they’ve already settled in, built routines, and believed this was their loved one’s long-term home. They are then told the resident's needs now "exceed the staff's physical capacity," effectively pushing them into a far more expensive Skilled Nursing Facility.
+This is not a small adjustment. It means another move, another transition, and starting over. Families receive this notice after they’ve already settled in, built routines, and believed this was their loved one’s long-term home. They are then told the resident's needs now "exceed the staff's physical capacity," effectively pushing them into a far more expensive Skilled Nursing Facility. Understanding exactly what you're committing to financially before that happens matters — [our pricing page explains what's included in our all-inclusive rate](/pricing), and you can explore our [guide to assisted living costs in Maryland](/blog/understanding-assisted-living-costs-maryland) for more context.
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-0 overflow-hidden rounded-3xl border border-stone-200 shadow-lg my-8">
   <div class="p-10 bg-white">
@@ -65,7 +65,7 @@ This is not a small adjustment. It means another move, another transition, and s
   <div class="p-10 bg-emerald-900 text-white flex flex-col justify-center">
     <h3 class="text-emerald-200 font-serif font-bold text-2xl mb-4 italic uppercase tracking-widest text-sm text-center">Clinical Authority</h3>
     <p class="text-emerald-50/90 leading-relaxed text-lg mb-4">
-      As a Doctor of Physical Therapy, I train our caregivers on the exact physics of movement. We don't shy away from complex mobility deficits because we know—at a granular level—how to manage them safely.
+      As a Doctor of Physical Therapy, I train our caregivers on the exact physics of movement. We don't shy away from complex mobility deficits because we know—at a granular level—how to manage them safely. This [clinical advantage](/blog/physical-therapist-owned-care-home-advantage) is the foundation of our safety record.
     </p>
   </div>
 </div>
@@ -73,7 +73,7 @@ This is not a small adjustment. It means another move, another transition, and s
 ## Early Recognition vs. Reactive Management
 
 Level 3 care also covers residents with significant cognitive impairment. In massive settings, behavioral changes like sundowning are often managed reactively, sometimes resulting in medication changes or medical escalation.<br />
-In a smaller, 1:3 setting, behavioral patterns are recognized early—before agitation escalates into wandering or refusal of care. We notice when a resident’s breathing pattern shifts or how they prefer their environment as night approaches. Proactive recognition prevents behavioral crises before they start.
+In a smaller, 1:3 setting, behavioral patterns are recognized early—before agitation escalates into wandering or refusal of care. We notice when a resident’s breathing pattern shifts or how they prefer their environment as night approaches. Proactive recognition, as detailed in our [guide to managing sundowning](/blog/managing-sundowning-memory-care-columbia-md), prevents behavioral crises before they start.
 
 ## Who This Matters Most For
 
@@ -89,6 +89,8 @@ Real oversight requires asking the questions administrators aren't prepared to a
 * *"What is your exact staff-to-resident ratio for the overnight shift?"*
 * *"If my parent requires two people to help them stand, will they be discharged?"*
 * *"Who is responsible for training the direct caregivers on physical transfer techniques—and how often are they evaluated?"*
+
+<p class="mt-4 text-sm text-stone-500 italic">[Our FAQ page addresses these questions directly, based on what families ask us most](/faq).</p>
 
 A Level 3 license is a permit to provide care, not a promise of how that care is delivered. It’s a difference you usually can’t see during a tour; you only see it when something goes wrong. The difference in that delivery is where your parent's safety—and your peace of mind—actually lives.
 

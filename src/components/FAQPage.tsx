@@ -231,6 +231,23 @@ const FAQPage = () => {
           </p>
         </div>
       )
+    },
+    {
+      question: "What clinical specialties (like Podiatry or Diabetic Care) do you provide?",
+      answer: (
+        <div className="space-y-4">
+          <p>
+            Because we are a <strong>Level 3 facility</strong> led by clinicians, we provide proactive management for chronic conditions on-site.
+          </p>
+          <ul className="list-disc pl-5 space-y-2">
+            <li><strong>Diabetic Management:</strong> Our clinical staff provides consistent monitoring, insulin administration, and dietary oversight to maintain stable levels.</li>
+            <li><strong>On-site Podiatry:</strong> Foot health is critical for mobility and fall prevention. We coordinate on-site podiatry visits to ensure residents receive specialized care without the stress of external travel.</li>
+          </ul>
+          <p>
+            Our goal is to bring the specialized care your loved one needs to them, rather than forcing frequent, exhausting trips to external clinics.
+          </p>
+        </div>
+      )
     }
   ];
 

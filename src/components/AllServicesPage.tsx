@@ -113,6 +113,17 @@ const services: Service[] = [
     imagePosition: 'object-center',
     color: 'purple',
     path: '/memory-care'
+  },
+  {
+    id: 9,
+    title: 'Clinical Specialties',
+    description: 'On-site specialized medical care for chronic conditions. From proactive diabetic management to specialized podiatry, we bring high-level clinical services directly to our residents.',
+    features: ['Diabetic Management', 'On-site Podiatry', 'Chronic Condition Oversight'],
+    icon: Activity,
+    image: proactiveHealthImage,
+    imagePosition: 'object-center',
+    color: 'teal',
+    path: '/health-safety'
   }
 ];
 

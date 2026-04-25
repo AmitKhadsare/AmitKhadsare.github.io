@@ -4,6 +4,7 @@ title: "Managing Sundowning Without Heavy Medication: The 8-Bed Memory Care Adva
 excerpt: "Large facilities often manage sundowning and wandering with sedation. Discover how our Doctor of Physical Therapy-led 8-bed home uses environmental design and daytime mobility to reduce dementia anxiety naturally."
 author: "Columbia Care Editorial Team"
 date: "2026-03-05"
+lastModified: "2026-04-25"
 image: "/images/blog/living-room-seating.jpg"
 tags:
   - Memory Care
@@ -79,7 +80,7 @@ As Doctors of Physical Therapy, the founders of Columbia Care Home approach deme
 
 ## The <span class="blog-accent">Bio-Mechanical</span> Approach to Dementia Anxiety
 People with dementia often pace because their bodies are trying to process nervous energy that they cannot express verbally. If you restrict that wandering, agitation spikes. If you drug that wandering, they fall.<br />
-At our home located at **10610 Hickory Point Lane**, we use a proactive, mechanical approach to manage the psychological symptoms of dementia. Learn more about our [8-bed memory care model and clinical approach](/memory-care).
+At our home located at **10610 Hickory Point Lane**, we use a proactive, mechanical approach to manage the psychological symptoms of dementia. This clinical philosophy is rooted in the [Doctor of Physical Therapy-owned advantage](/blog/physical-therapist-owned-care-home-advantage) that defines our leadership. Learn more about our [8-bed memory care model and clinical approach](/memory-care).
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-0 overflow-hidden rounded-3xl border border-stone-200 shadow-lg">
   <div class="p-10 bg-white">
@@ -108,7 +109,7 @@ At our home located at **10610 Hickory Point Lane**, we use a proactive, mechani
 
 ## Environmental Triggers: Why Smaller is Calmer
 Massive facilities are inherently overstimulating. The sounds of dietary carts rolling over tile, overhead pages for nursing staff, and the visual clutter of 100 people moving through a dining hall can overwhelm a healthy brain, let alone one battling cognitive decline.<br />
-An 8-bed residential home looks, sounds, and feels like a <span class="blog-accent">real house</span>. We control the lighting as evening approaches. The ambient noise is limited to the soft sounds of dinner preparation or classical music in the living room. This environmental suppression of chaos is one of our most effective, non-pharmaceutical interventions.
+An 8-bed residential home looks, sounds, and feels like a <span class="blog-accent">real house</span>. We control the lighting as evening approaches. The ambient noise is limited to the soft sounds of dinner preparation or classical music in the living room. This environmental suppression of chaos is one of our most effective, non-pharmaceutical interventions. To understand how this compares to the high-stimulation environment of a 100-bed facility, read our [guide on 8-bed vs. large facility care](/blog/8-bed-vs-large-facility-howard-county).
 
 ## Frequently Asked Questions About Sundowning
 
@@ -123,6 +124,11 @@ Sundowning typically begins in the late afternoon (around 4:00 PM to 6:00 PM) as
 
 ### Can exercise reduce sundowning symptoms?
 Yes. Clinical studies and our own experience as physical therapists show that structured daytime mobility helps regulate sleep cycles and reduces the build-up of nervous energy that leads to late-day agitation.
+
+### Can a family member stay overnight during difficult sundowning episodes?
+Yes. While our 24/7 awake staff is professionally trained to handle these episodes, we understand that sometimes a familiar family presence is the best medicine during a difficult transition. We encourage family involvement that supports the resident's peace of mind.
+
+<p class="mt-4 text-sm text-stone-500 italic">For questions specific to our home's care model and admissions, [our full FAQ covers what families ask most](/faq).</p>
 
 <div class="p-8 bg-emerald-50 rounded-2xl border border-emerald-100 text-center">
   <h3 class="text-emerald-900 font-serif font-bold text-2xl mb-6">Learn How We Handle Late-Day Agitation</h3>

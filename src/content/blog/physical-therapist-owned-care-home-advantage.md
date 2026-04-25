@@ -4,6 +4,7 @@ title: "The Clinical Advantage: Why a Physical Therapist-Owned Care Home Changes
 excerpt: "Most care facilities are run by developers and corporations. Discover how a Doctor of Physical Therapy-led facility drastically improves medical oversight and resident mobility."
 author: "Columbia Care Editorial Team"
 date: "2026-02-22"
+lastModified: "2026-04-25"
 image: "/images/blog/gym-therapy.jpg"
 tags:
   - Physical Therapy
@@ -72,7 +73,7 @@ Every interaction at our home at **10610 Hickory Point Lane** is a data point. O
 Falls are the leading cause of injury among older adults. We don't wait for a fall to happen to implement changes. Our environment is engineered to remove barriers, and our transition plans include a comprehensive mobility assessment designed to help residents maintain their independence for as long as possible.
 
 ### 3. Mobility-Driven Memory Care
-For residents living with dementia, agitation and "sundowning" are often exacerbated by unspent physical energy. By implementing daytime mobility routines and supervised physical engagement, we help manage anxiety naturally, promoting more restful sleep cycles without over-reliance on sedation.
+For residents living with dementia, agitation and [sundowning](/blog/managing-sundowning-memory-care-columbia-md) are often exacerbated by unspent physical energy. By implementing daytime mobility routines and supervised physical engagement, we help manage anxiety naturally, promoting more restful sleep cycles without over-reliance on sedation.
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-0 overflow-hidden rounded-3xl border border-stone-200 shadow-lg">
   <div class="p-10 bg-white">
@@ -100,8 +101,9 @@ For residents living with dementia, agitation and "sundowning" are often exacerb
 </div>
 
 ## Bridging the Gap: From Rehab to Resident Life
-Many of our residents come to us after a hospital stay or a stint in a rehabilitation center. The clinical oversight of our facility prevents the "post-rehab slide" where seniors lose the progress they made in therapy once they return to a standard assisted living environment.<br />
-We provide the continuity that preserves their hard-won mobility.
+Many of our residents come to us after a hospital stay or a stint in a rehabilitation center. The clinical oversight of our facility prevents the "post-rehab slide" where seniors lose the progress they made in therapy once they return to a standard assisted living environment. For families navigating this transition, [our guide to moving a parent to assisted living in Columbia](/blog/guide-to-transitioning-assisted-living-columbia-md) covers what to expect in those first 30 to 90 days.<br />
+We provide the continuity that preserves their hard-won mobility.<br />
+Families frequently ask us how clinical oversight differs from standard assisted living — [we've answered the most common questions here](/faq). For families also weighing the financial side of clinical-grade care, [our pricing page explains the all-inclusive structure](/pricing).
 
 <div class="p-8 bg-emerald-50 rounded-2xl border border-emerald-100 text-center">
   <h3 class="text-emerald-900 font-serif font-bold text-2xl mb-6 italic">Speak with Our Clinical Founders</h3>

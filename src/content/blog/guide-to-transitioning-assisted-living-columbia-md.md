@@ -5,6 +5,7 @@ titleSeo: "Transitioning to Assisted Living in Columbia MD: A Family Guide"
 excerpt: "Moving a parent to assisted living in Columbia MD can feel overwhelming. Learn practical strategies to ease the transition while protecting your loved one's dignity, safety, and independence."
 author: "Columbia Care Editorial Team"
 date: "2026-03-03"
+lastModified: "2026-04-25"
 image: "/images/blog/entrance-foyer.jpg"
 tags:
   - Family Guide
@@ -34,7 +35,7 @@ Familiarity is the best tool for reducing anxiety. Bring a cherished armchair, f
 Whenever possible, have the resident’s room completely set up and decorated *before* they arrive. Stepping into a room that already <span class="blog-accent">feels like them</span>—with their bed made and photos on the wall—significantly reduces the institutional shock of the move.
 
 ### 3. Focus on <span class="blog-accent">Therapeutic Continuity</span> (For Dementia Care)
-If a loved one is living with Alzheimer's or dementia, avoid long debates about the permanence of the move. Frame the transition as a path to <span class="blog-accent">recovering strength</span> or a <span class="blog-accent">doctor-recommended stay</span>. Once the environment becomes the new baseline, anxiety naturally subsides.
+If a loved one is living with Alzheimer's or dementia, avoid long debates about the permanence of the move. Frame the transition as a path to <span class="blog-accent">recovering strength</span> or a <span class="blog-accent">doctor-recommended stay</span>. Once the environment becomes the new baseline, anxiety naturally subsides. For a deeper look at how our team manages dementia-related agitation during this period, see our guide on [managing sundowning without heavy medication](/blog/managing-sundowning-memory-care-columbia-md).
 
 <div class="overflow-hidden border border-stone-200 rounded-3xl shadow-2xl bg-white my-10">
   <div class="bg-emerald-900 px-6 py-4">
@@ -100,7 +101,7 @@ If you are still comparing care models, read our guide on [the difference betwee
 </div>
 
 ## Long-Term Success for Assisted Living Columbia MD
-Adjustment takes time and patience. As your loved one settles into their new routine in Columbia, MD, the focus shifts from the move itself to the enhancement of their daily function. If you're concerned about the financial aspects of this transition, explore our [comprehensive guide to assisted living costs in Maryland](/blog/understanding-assisted-living-costs-maryland).<br />
+Adjustment takes time and patience. As your loved one settles into their new routine in Columbia, MD, the focus shifts from the move itself to the enhancement of their daily function. If you're concerned about the financial aspects of this transition, explore our [comprehensive guide to assisted living costs in Maryland](/blog/understanding-assisted-living-costs-maryland). If you have questions about the move-in process itself, [our FAQ covers the most common ones](/faq).<br />
 At Columbia Care Home, we prioritize personalized engagement from day one, helping families find peace of mind knowing their parent is living with dignity and expert support.
 
 <div class="p-8 bg-emerald-50 rounded-2xl border border-emerald-100 text-center">

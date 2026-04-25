@@ -43,7 +43,7 @@ Most places charge this. We just tell you about it upfront because the last thin
 
 At Columbia Care Home, we handle pricing differently. We don’t charge extra every time care increases.<br />
 Once the one-time community fee is settled, your monthly rate is **all-inclusive**.<br />
-Whether your loved one needs help with dressing, bathing, or complex mobility transfers overseen by clinical experts, the price stays the same. That way, families know what they’re paying each month, knowing that as their parent's care needs increase, their bill won't.
+Whether your loved one needs help with dressing, bathing, or complex mobility transfers overseen by clinical experts, the price stays the same. That way, families know what they’re paying each month, Knowing that as their parent's care needs increase, their bill won't. [See our full pricing structure and what's included](/pricing).
 
 <div class="overflow-hidden border border-stone-200 rounded-3xl shadow-2xl bg-white my-10">
   <div class="bg-emerald-900 px-6 py-4">
@@ -109,7 +109,12 @@ To see why this model is becoming the preferred choice for Howard County familie
         <span class="text-emerald-600 font-bold text-lg">03</span>
         <span class="text-stone-700">"How often have you historically increased the monthly rent?"</span>
       </li>
+      <li class="flex items-start gap-3 bg-stone-50 p-4 rounded-xl border border-stone-100 transition-all hover:bg-white hover:shadow-md">
+        <span class="text-emerald-600 font-bold text-lg">04</span>
+        <span class="text-stone-700">"What happens to our monthly rate if my parent's care needs increase significantly?"</span>
+      </li>
     </ul>
+    <p class="mt-4 text-sm text-stone-500 italic"><a href="/faq" class="underline hover:text-emerald-700">We've answered these and more on our FAQ page.</a></p>
   </div>
   <div class="p-10 bg-emerald-900 text-white flex flex-col justify-center">
     <h3 class="text-emerald-200 font-serif font-bold text-2xl mb-4 uppercase tracking-widest text-sm">The Clinical Advantage</h3>
