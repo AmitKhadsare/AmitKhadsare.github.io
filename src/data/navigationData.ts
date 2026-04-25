@@ -1,4 +1,4 @@
-import { Home, Users, Shield, Mail, BookOpen, Building2, Briefcase, Heart, Utensils, Activity, Dumbbell, BrainCircuit, Grid3X3, Calendar } from 'lucide-react';
+import { Home, Users, Shield, Mail, BookOpen, Building2, Briefcase, Heart, Utensils, Activity, Dumbbell, BrainCircuit, Grid3X3, Calendar, HelpCircle } from 'lucide-react';
 
 export const menuData = {
   services: {
@@ -43,12 +43,13 @@ export const menuData = {
           { icon: BookOpen, name: 'Our Story', description: 'Learn about our mission and values.', path: '/about-us' },
           { icon: Building2, name: 'Our Facility', description: 'Explore our comfortable and safe environment.', path: '/facility' },
           { icon: Heart, name: 'Family Stories', description: 'Read moving experiences from our community.', path: '/family-stories' },
-          { icon: BookOpen, name: 'Common Questions (FAQ)', description: 'Quick answers about our care and policies.', path: '/faq' },
         ]
       },
       {
-        title: 'Join Our Community',
+        title: 'Transparency & Careers',
         links: [
+          { icon: Shield, name: 'Pricing & Value', description: 'Clear, all-inclusive monthly rates.', path: '/pricing' },
+          { icon: HelpCircle, name: 'Common Questions (FAQ)', description: 'Direct answers about our care.', path: '/faq' },
           { icon: Briefcase, name: 'Careers', description: 'Join our team of dedicated caregivers.', path: '/careers' },
         ]
       }

@@ -39,7 +39,9 @@ const staticRoutes = [
     { path: '/terms-of-service', priority: '0.3', changefreq: 'yearly' },
     { path: '/virtual-tour', priority: '0.8', changefreq: 'monthly' },
     { path: '/family-stories', priority: '0.8', changefreq: 'monthly' },
-    { path: '/blog', priority: '0.8', changefreq: 'weekly' }
+    { path: '/blog', priority: '0.8', changefreq: 'weekly' },
+    { path: '/faq', priority: '0.8', changefreq: 'monthly' },
+    { path: '/pricing', priority: '0.8', changefreq: 'monthly' }
 ];
 
 // Dynamic blog post routes

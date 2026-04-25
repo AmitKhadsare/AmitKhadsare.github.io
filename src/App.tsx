@@ -33,6 +33,7 @@ import BlogIndexPage from './components/BlogIndexPage';
 import BlogPostPage from './components/BlogPostPage';
 import WhatFamiliesSayPage from './components/WhatFamiliesSayPage';
 import FAQPage from './components/FAQPage';
+import PricingPage from './components/PricingPage';
 import NotFoundPage from './components/NotFoundPage';
 
 
@@ -89,6 +90,7 @@ function App() {
           <Route path="/blog/:slug" element={<BlogPostPage />} />
           <Route path="/family-stories" element={<WhatFamiliesSayPage />} />
           <Route path="/faq" element={<FAQPage />} />
+          <Route path="/pricing" element={<PricingPage />} />
           {/* 404 Fallback */}
           <Route path="*" element={<NotFoundPage />} />
         </Routes>

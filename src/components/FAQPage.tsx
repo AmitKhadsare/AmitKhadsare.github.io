@@ -37,7 +37,7 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer, isOpen, onClick }) 
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
           >
-            <div className="pb-10 text-stone-600 leading-relaxed text-lg font-medium">
+            <div className="pb-10 text-stone-600 leading-relaxed text-lg">
               {answer}
             </div>
           </motion.div>
@@ -52,32 +52,20 @@ const FAQPage = () => {
 
   const faqs = [
     {
-      question: "How does your pricing model work?",
+      question: "How does an 8-bed home actually compare to a 100-bed facility?",
       answer: (
         <div className="space-y-4">
-          <p>We believe in a strictly <strong>All-Inclusive Billing Model</strong>. Many facilities in the Maryland market advertise a low base rate but then add complex "care points" or "tiers" that can increase your bill by thousands of dollars every month for basic tasks.</p>
-          <p>At Columbia Care Home, we provide a single, transparent monthly rate that covers 24/7 clinical oversight, medication management, all meals, and personalized assistance. This ensures families have total financial predictability with no hidden charges or care-level surcharges.</p>
-        </div>
-      )
-    },
-    {
-      question: "What is the Community Fee for?",
-      answer: "The Community Fee is a one-time administrative and clinical intake fee. Unlike corporate entry fees that go toward marketing, ours covers the intensive clinical assessment performed by our founders (both Doctors of Physical Therapy) to ensure we can safely and effectively manage your loved one's mobility and health needs from day one."
-    },
-    {
-      question: "Does '24/7 Awake Staff' really mean they stay awake all night?",
-      answer: (
-        <div className="space-y-4">
-          <p><strong>Yes.</strong> This is a critical distinction. Many residential homes use "sleep-in" staff who only wake up if an alarm goes off. At Columbia Care Home, our caregivers are on a dedicated awake shift throughout the night.</p>
-          <p>For Level 3 residents who are fall risks or experience sundowning, a 30-second delay in response is the difference between a safe transfer and a hospital visit. We stay awake so you can sleep.</p>
-        </div>
-      )
-    },
-    {
-      question: "How does an 8-bed home compare to a 100-bed facility?",
-      answer: (
-        <div className="space-y-4">
-          <p>It's about the <strong>1:3 Ratio</strong>. In a large facility, one caregiver might be responsible for 15+ residents. If two people need help at the same time, someone waits. In our home, caregivers are always mere steps away. We don't have long hallways, elevators, or "zones." We have a family living room where oversight is constant and natural.</p>
+          <p>
+            The difference is the <strong>1:3 staff-to-resident ratio</strong>. In a large institutional facility, one caregiver may be responsible for 12 to 20 residents simultaneously. When two people need help at the same time, someone waits.
+          </p>
+          <p>
+            That wait is where problems start. Falls. Frustration. Loss of dignity. In our home, there are no long hallways or elevators. Caregivers are in the same space as residents — steps away, not across a building.
+          </p>
+          <p>
+            <Link to="/blog/8-bed-vs-large-facility-howard-county" className="inline-flex items-center gap-2 text-emerald-700 font-bold hover:underline">
+              We wrote a full guide on exactly this comparison →
+            </Link>
+          </p>
         </div>
       )
     },
@@ -85,49 +73,199 @@ const FAQPage = () => {
       question: "What exactly is 'Level 3' Assisted Living in Maryland?",
       answer: (
         <div className="space-y-4">
-          <p>Level 3 is the highest care designation provided by the Maryland Department of Health. It means we are licensed to provide comprehensive assistance to residents with high-acuity physical and cognitive needs—including those who require a 'two-person assist' for transfers.</p>
-          <p>Our license number is <strong>AL-01052</strong>. You can verify our status and clean record directly on the <a href='https://health.maryland.gov/ohcq/Pages/Assisted-Living-Programs-Consumers.aspx' target='_blank' rel='noopener' className='text-emerald-700 underline'>Maryland OHCQ website</a>.</p>
+          <p>
+            Level 3 is the highest level of assisted living care in Maryland. It means we’re allowed to care for residents who need more physical help, complex medications, or higher supervision.
+          </p>
+          <p>
+            Our licence number is <strong>AL-01052</strong>. You can verify our current standing directly on the{' '}
+            <a href="https://health.maryland.gov/ohcq/Pages/Assisted-Living-Programs-Consumers.aspx" target="_blank" rel="noopener noreferrer" className="text-emerald-700 underline">
+              Maryland OHCQ website
+            </a>.
+          </p>
+          <p>
+            <Link to="/blog/level-3-assisted-living-meaning-columbia-md" className="inline-flex items-center gap-2 text-emerald-700 font-bold hover:underline">
+              Read what Level 3 actually means in daily care →
+            </Link>
+          </p>
         </div>
       )
     },
     {
-      question: "Can I just drop in for a visit anytime?",
+      question: "Does '24/7 Awake Staff' actually mean someone is awake all night?",
       answer: (
         <div className="space-y-4">
-          <p>To protect the privacy and safety of our 8 residents, we do not allow unannounced "walk-in" tours. This is their private home, not a retail storefront. We ask that all prospective families <Link to='/schedule-a-tour' className='text-emerald-700 underline'>Schedule a Tour</Link> in advance.</p>
-          <p>For current families, we maintain an open-door policy but coordinate visits to ensure they don't interfere with therapy sessions or the quiet house rhythms our residents enjoy.</p>
+          <p>
+            <strong>Yes. And it matters more than people realize.</strong> Many residential homes use "sleep-in" staff — caregivers who are on-site but asleep, available only if an alarm triggers. At Columbia Care Home, our caregivers are on a dedicated awake night shift.
+          </p>
+          <p>
+            For residents who are fall risks or have mobility limitations, even a short delay can become a real problem. We stay awake so your family can sleep.
+          </p>
+          <p>
+            <Link to="/health-safety" className="inline-flex items-center gap-2 text-emerald-700 font-bold hover:underline">
+              See how we approach safety and overnight care →
+            </Link>
+          </p>
+        </div>
+      )
+    },
+    {
+      question: "What if my parent's health declines significantly — will they be asked to leave?",
+      answer: (
+        <div className="space-y-4">
+          <p>
+            This is one of the most important questions, and most families don’t ask it early enough. In many corporate facilities, when a resident's needs become more complex, they receive a discharge notice and the family has to start over.
+          </p>
+          <p>
+            Because our team is trained to handle higher levels of care, we are equipped to handle needs that would cause a standard facility to transfer a resident to skilled nursing. Our goal is to be the last move your family has to make.
+          </p>
+          <p>
+            We discuss this directly and honestly during every admission consultation.
+          </p>
         </div>
       )
     },
     {
       question: "How do you handle physical therapy and mobility?",
-      answer: "Because we are Physical Therapist-led, mobility is our baseline, not an 'extra' service. We integrate safe movement into every daily interaction. If your loved one needs formal physical or occupational therapy, we coordinate with preferred local providers to have sessions right here in the comfort of our home."
+      answer: (
+        <div className="space-y-4">
+          <p>
+            Mobility isn’t a separate service here. It’s part of everyday care here. Safe transfers, fall prevention, and body mechanics are part of every daily interaction in this house, not scheduled as a weekly session.
+          </p>
+          <p>
+            For residents who need formal PT or OT sessions, we coordinate with preferred local providers to bring those sessions directly into our home — so your loved one doesn't have to travel for care.
+          </p>
+          <p>
+            <Link to="/rehabilitation" className="inline-flex items-center gap-2 text-emerald-700 font-bold hover:underline">
+              Learn about our rehabilitation approach →
+            </Link>
+          </p>
+        </div>
+      )
     },
     {
       question: "Who owns and operates Columbia Care Home?",
       answer: (
         <div className="space-y-4">
-          <p>We are family-owned and clinically operated. Founders <strong>Bhargav Patel, PT, DPT</strong> and <strong>Sheetal Khadsare, PT, DPT</strong> are involved in the daily clinical oversight. We are not a franchise or a corporate chain. When you have a question, you talk directly to the owners who know your loved one by name.</p>
+          <p>
+            The home is owned and run by our clinical team, both Doctors of Physical Therapy. This isn’t a franchise or a facility managed by a corporate group. We are on-site daily, overseeing care and making clinical decisions ourselves.
+          </p>
+          <p>
+            When you have a concern, you talk to the people actually responsible for the care, not a regional manager.
+          </p>
+          <p>
+            <Link to="/about-us" className="inline-flex items-center gap-2 text-emerald-700 font-bold hover:underline">
+              Read our full story →
+            </Link>
+          </p>
+        </div>
+      )
+    },
+    {
+      question: "Is there a waitlist? How does admission work?",
+      answer: (
+        <div className="space-y-4">
+          <p>
+            We have a maximum of 8 residents. Availability is limited and doesn’t change often. If you're considering Columbia Care Home for a loved one, it’s better to reach out early, even if you're just exploring.
+          </p>
+          <p>
+            Admission begins with a conversation and a clinical consultation. There are no forms to fill out upfront. We get to know your family first.
+          </p>
+          <p>
+            <Link to="/schedule-a-tour" className="inline-flex items-center gap-2 text-emerald-700 font-bold hover:underline">
+              Start the conversation →
+            </Link>
+          </p>
+        </div>
+      )
+    },
+    {
+      question: "Can I just drop by for a visit or a tour anytime?",
+      answer: (
+        <div className="space-y-4">
+          <p>
+            We don't allow unannounced walk-in tours. This is our residents' private home, not a showroom. To protect their privacy, dignity, and daily rhythms, all prospective family visits are scheduled in advance.
+          </p>
+          <p>
+            For current families, we maintain a genuinely open relationship. We just coordinate visits to avoid interrupting therapy, rest periods, or mealtimes. You'll always be welcome here.
+          </p>
+          <p>
+            <Link to="/schedule-a-tour" className="inline-flex items-center gap-2 text-emerald-700 font-bold hover:underline">
+              Schedule your private visit →
+            </Link>
+          </p>
+        </div>
+      )
+    },
+    {
+      question: "How does your pricing model work?",
+      answer: (
+        <div className="space-y-4">
+          <p>
+            We use a single, flat monthly rate. Many assisted living facilities in Maryland advertise a low base rate but add extra charges for every task: help with dressing, a medication reminder, assistance walking to the dining room. By month three, the bill often looks very different from what they were told.
+          </p>
+          <p>
+            At Columbia Care Home, your rate covers 24/7 clinical oversight, medication management, all meals, and full personal assistance. It is the same bill every month, even if your loved one needs more help.
+          </p>
+          <p>
+            <Link to="/pricing" className="inline-flex items-center gap-2 text-emerald-700 font-bold hover:underline">
+              Read how our pricing model works in full →
+            </Link>
+          </p>
+        </div>
+      )
+    },
+    {
+      question: "What is the Community Fee for?",
+      answer: (
+        <div className="space-y-4">
+          <p>
+            The Community Fee is a one-time fee charged at move-in.
+          </p>
+          <p>
+            We’ll walk you through it clearly during your visit so you know exactly what to expect.
+          </p>
+          <p>
+            <Link to="/schedule-a-tour" className="inline-flex items-center gap-2 text-emerald-700 font-bold hover:underline">
+              Ask us directly during your tour →
+            </Link>
+          </p>
         </div>
       )
     }
   ];
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Please visit our website for the full details on this topic. We focus on transparent, all-inclusive care and personalized clinical support."
+      }
+    }))
+  };
+
   return (
     <div className="min-h-screen bg-stone-50">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <SEOHead
         title="FAQ - Truthful Answers About Our Care | Columbia Care Home"
         description="Get direct, transparent answers about our all-inclusive pricing model, 1:3 staff ratio, 24/7 awake care, and Maryland Level 3 licensing."
         url="https://www.columbiacarehome.com/faq"
       />
 
-      {/* Standard Hero Section - Matching AboutUs/Services Page Format */}
-      <section className="relative py-32 bg-gradient-to-br from-emerald-900 via-emerald-950 to-stone-900 overflow-hidden">
+      {/* Hero */}
+      <section className="relative py-20 bg-gradient-to-br from-emerald-900 via-emerald-950 to-stone-900 text-white overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-emerald-500 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/4"></div>
           <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-teal-600 rounded-full blur-[120px] translate-y-1/2 -translate-x-1/4"></div>
         </div>
-        
+
         <div className="relative max-w-5xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -138,23 +276,23 @@ const FAQPage = () => {
               Transparency First
             </span>
             <h1 className="text-4xl md:text-6xl font-bold font-serif text-white mb-8 leading-tight">
-              Honest Answers for <br/><span className="italic text-emerald-400">Concerned Families</span>
+              Straight answers about <br /><span className="italic text-emerald-400">how we actually operate</span>
             </h1>
             <p className="text-xl text-emerald-50/70 max-w-2xl mx-auto leading-relaxed">
-              Deciding on senior care is overwhelming. We've compiled the most frequent questions from our Howard County families to provide the clarity you deserve.
+              These are the questions families usually ask after something goes wrong somewhere else. We’d rather answer them upfront.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Main Content with Side Sidebar */}
-      <section className="py-24 px-4">
+      {/* Main Content */}
+      <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col lg:flex-row gap-16">
-            
+
             {/* FAQ List */}
             <div className="lg:w-2/3">
-              <div className="space-y-4">
+              <div>
                 {faqs.map((faq, index) => (
                   <FAQItem
                     key={index}
@@ -167,7 +305,7 @@ const FAQPage = () => {
               </div>
             </div>
 
-            {/* Sticky Contact Sidebar */}
+            {/* Sticky Sidebar */}
             <div className="lg:w-1/3">
               <div className="sticky top-32 space-y-8">
                 <div className="bg-white p-8 rounded-3xl shadow-xl border border-stone-100">
@@ -181,7 +319,7 @@ const FAQPage = () => {
                         <Phone className="w-5 h-5 text-emerald-700" />
                       </div>
                       <div>
-                        <span className="block text-xs font-bold text-stone-400 uppercase tracking-widest mb-1">Call Our Founders</span>
+                        <span className="block text-xs font-bold text-stone-400 uppercase tracking-widest mb-1">Call Our Clinical Team</span>
                         <a href="tel:301-500-0809" className="text-lg font-bold text-emerald-900 hover:underline">(301) 500-0809</a>
                       </div>
                     </div>
@@ -195,14 +333,14 @@ const FAQPage = () => {
                       </div>
                     </div>
                     <Link to="/contact">
-                      <button className="w-full mt-6 bg-emerald-700 text-white py-4 rounded-xl font-bold hover:bg-emerald-800 transition-all shadow-lg hover:shadow-emerald-900/20">
+                      <button className="w-full mt-6 bg-emerald-700 text-white py-4 rounded-xl font-bold hover:bg-emerald-800 transition-all shadow-lg">
                         Ask a Specific Question
                       </button>
                     </Link>
                   </div>
                 </div>
 
-                {/* Trust Signal Cards */}
+                {/* Trust Signals */}
                 <div className="grid grid-cols-2 gap-4">
                   <div className="bg-emerald-50 p-6 rounded-2xl border border-emerald-100 text-center">
                     <ShieldCheck className="mx-auto mb-3 text-emerald-700" size={32} />
@@ -213,28 +351,49 @@ const FAQPage = () => {
                     <span className="block text-xs font-bold text-emerald-900 uppercase">Level 3 MD</span>
                   </div>
                 </div>
+
+                {/* Quick Links */}
+                <div className="bg-white p-8 rounded-3xl border border-stone-100 shadow-sm">
+                  <h4 className="text-sm font-bold text-stone-400 uppercase tracking-widest mb-4">Explore Further</h4>
+                  <div className="space-y-3">
+                    <Link to="/pricing" className="flex items-center justify-between text-stone-700 hover:text-emerald-700 transition-colors py-1 border-b border-stone-50">
+                      <span className="font-medium">Pricing & Value</span>
+                      <span className="text-stone-400">→</span>
+                    </Link>
+                    <Link to="/about-us" className="flex items-center justify-between text-stone-700 hover:text-emerald-700 transition-colors py-1 border-b border-stone-50">
+                      <span className="font-medium">Our Story</span>
+                      <span className="text-stone-400">→</span>
+                    </Link>
+                    <Link to="/rehabilitation" className="flex items-center justify-between text-stone-700 hover:text-emerald-700 transition-colors py-1 border-b border-stone-50">
+                      <span className="font-medium">Rehabilitation & Therapy</span>
+                      <span className="text-stone-400">→</span>
+                    </Link>
+                    <Link to="/family-partnership" className="flex items-center justify-between text-stone-700 hover:text-emerald-700 transition-colors py-1">
+                      <span className="font-medium">Family Partnership</span>
+                      <span className="text-stone-400">→</span>
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="bg-stone-900 text-white">
-        <div className="max-w-4xl mx-auto py-24 text-center px-4">
-          <h2 className="text-4xl md:text-5xl font-bold font-serif mb-8 italic">
-            Schedule Your <span className="text-emerald-400 font-sans not-italic">Clinical Consultation</span>
+      {/* CTA */}
+      <section className="py-16 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-bold font-serif text-stone-800 mb-8 italic">
+            Still have questions?
           </h2>
-          <p className="text-xl text-stone-400 mb-10 max-w-2xl mx-auto">
-            Brochures only tell half the story. Meet Bhargav and Sheetal to discuss your family's specific medical and mobility needs.
+          <p className="text-xl text-stone-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+            Come see how we operate. Meet our clinical team, walk through the home, and ask anything you need to. No pressure. No pitch.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-            <Link to="/schedule-a-tour" className="w-full sm:w-auto">
-              <button className="w-full bg-emerald-600 text-white px-10 py-5 rounded-full hover:bg-emerald-500 transition-all duration-300 font-bold text-lg shadow-xl">
-                Request a Private Tour
-              </button>
-            </Link>
-          </div>
+          <Link to="/schedule-a-tour" className="inline-block">
+            <button className="bg-emerald-600 text-white px-10 py-5 rounded-full hover:bg-emerald-500 transition-all duration-300 font-bold text-lg shadow-xl">
+              Request a Private Tour
+            </button>
+          </Link>
         </div>
       </section>
     </div>
