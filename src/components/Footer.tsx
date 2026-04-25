@@ -75,7 +75,7 @@ const Footer = () => {
   ];
 
   const contactInfo = [
-    { icon: <Phone size={16} />, text: '(301) 500-0809, (201) 885-9225' },
+    { icon: <Phone size={16} />, text: '(301) 500-0809 (Primary), (201) 885-9225 (Alt)' },
     { icon: <Mail size={16} />, text: 'contact@columbiacarehome.com' },
     { icon: <MapPin size={16} />, text: '10610 Hickory Point Lane, Columbia, MD 21044' },
   ];
@@ -201,9 +201,15 @@ const Footer = () => {
         <div className="border-t border-gray-700 mt-12 mb-6"></div>
 
         <div className="flex flex-col md:flex-row justify-between items-center text-sm">
-          <p className="text-gray-500 mb-4 md:mb-0">
-            © {year} Columbia Care Home. All Rights Reserved.
-          </p>
+          <div className="flex flex-col md:flex-row items-center gap-4 mb-4 md:mb-0">
+            <p className="text-gray-500">
+              © {year} Columbia Care Home. All Rights Reserved.
+            </p>
+            <span className="hidden md:block text-gray-700">|</span>
+            <p className="text-gray-500 italic">
+              Maryland Licensed Assisted Living Program · Licence No. AL-01052 · Level 3
+            </p>
+          </div>
           <div className="space-x-6">
             <Link to="/privacy-policy" className="text-gray-400 hover:text-white">Privacy Policy</Link>
             <Link to="/terms-of-service" className="text-gray-400 hover:text-white">Terms of Service</Link>

@@ -155,6 +155,88 @@ const AboutUsPage = () => {
         </div>
       </motion.section>
 
+      {/* License & Certification Section */}
+      <motion.section
+        className="pt-12 pb-24 md:py-24 bg-white px-4"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={fadeIn}
+      >
+        <div className="max-w-4xl mx-auto">
+          {/* Mobile-only Top Tag */}
+          <div className="md:hidden flex mb-8">
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-bold uppercase tracking-wider">
+              Official Certification
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="order-2 md:order-1 space-y-6">
+              <div className="hidden md:inline-flex items-center gap-2 px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-bold uppercase tracking-wider mb-2">
+                Official Certification
+              </div>
+              <h2 className="text-3xl font-bold text-stone-800 font-serif">
+                Licensed & Regulated by Maryland Dept. of Health
+              </h2>
+              <div className="space-y-4">
+                <div className="grid grid-cols-2 gap-4 border-b border-stone-100 pb-4">
+                  <div>
+                    <span className="block text-[10px] text-stone-400 uppercase font-bold tracking-widest">Licence Number</span>
+                    <span className="text-stone-800 font-semibold uppercase">AL-01052</span>
+                  </div>
+                  <div>
+                    <span className="block text-[10px] text-stone-400 uppercase font-bold tracking-widest">Provider Type</span>
+                    <span className="text-stone-800 font-semibold uppercase">Assisted Living Program</span>
+                  </div>
+                </div>
+                <div className="grid grid-cols-2 gap-4 border-b border-stone-100 pb-4">
+                  <div>
+                    <span className="block text-[10px] text-stone-400 uppercase font-bold tracking-widest">Level of Care</span>
+                    <span className="text-stone-800 font-semibold uppercase font-serif">Level 3</span>
+                  </div>
+                  <div>
+                    <span className="block text-[10px] text-stone-400 uppercase font-bold tracking-widest">Licensed Beds</span>
+                    <span className="text-stone-800 font-semibold uppercase font-serif">8 Total</span>
+                  </div>
+                </div>
+                <div className="pt-2">
+                  <p className="text-stone-600 text-sm leading-relaxed mb-6">
+                    Our residence is fully licensed by the Maryland Department of Health, Office of Health Care Quality (OHCQ). This non-expiring license certifies that our facility meets the rigorous state standards for Level 3 high-acuity residential senior care.
+                  </p>
+                  <a 
+                    href="https://health.maryland.gov/ohcq/Pages/Assisted-Living-Programs-Consumers.aspx" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-emerald-700 font-bold hover:text-emerald-900 transition-colors"
+                  >
+                    Verify on Maryland OHCQ →
+                  </a>
+                </div>
+              </div>
+            </div>
+            
+            <div className="order-1 md:order-2">
+              <div 
+                className="relative cursor-pointer group"
+                onClick={() => window.open('/licence.jpeg', '_blank')}
+              >
+                <img 
+                  src="/licence.jpeg" 
+                  alt="Official Maryland Assisted Living License for Columbia Care Home" 
+                  className="rounded-xl shadow-2xl border border-stone-200 transform group-hover:scale-[1.02] transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-stone-900/0 group-hover:bg-stone-900/10 transition-colors rounded-xl flex items-center justify-center">
+                  <div className="bg-white/90 px-4 py-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity shadow-lg text-xs font-bold text-stone-800">
+                    Click to View Full License
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </motion.section>
+
       {/* CTA Section */}
       <section className="bg-stone-900 text-white">
         <div className="max-w-4xl mx-auto py-20 text-center px-4">

@@ -6,7 +6,7 @@ export const localBusinessSchema = {
   "name": "Columbia Care Home",
   "alternateName": "Columbia Care",
   "description": "Columbia Care Home is a physical therapist-led assisted living residence providing high-acuity residential care for seniors with complex mobility and cognitive needs.",
-  "disambiguatingDescription": "Currently accepting new residents with 1 room available for immediate occupancy as of April 24, 2026.",
+  "disambiguatingDescription": "Currently accepting new residents. 1 private room available for immediate occupancy. Level 3 licensed, DPT-founded, 8-bed residential assisted living home in Columbia, Maryland.",
   "url": "https://www.columbiacarehome.com/",
   "logo": {
     "@type": "ImageObject",
@@ -21,6 +21,16 @@ export const localBusinessSchema = {
   },
   "telephone": "+1-301-500-0809",
   "email": "contact@columbiacarehome.com",
+  "hasCredential": {
+    "@type": "EducationalOccupationalCredential",
+    "name": "Maryland Assisted Living Program License",
+    "credentialCategory": "License",
+    "identifier": "AL-01052",
+    "recognizedBy": {
+      "@type": "GovernmentOrganization",
+      "name": "Maryland Department of Health, Office of Health Care Quality"
+    }
+  },
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "10610 Hickory Point Lane",
@@ -54,7 +64,7 @@ export const localBusinessSchema = {
       "closes": "16:00"
     }
   ],
-  "priceRange": "$$$",
+  "priceRange": "$$$$",
   "areaServed": {
     "@type": "GeoCircle",
     "geoMidpoint": {

@@ -252,7 +252,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                               </div>
                               <div>
                                 <span className="block text-lg font-bold">(301) 500-0809</span>
-                                <span className="text-xs text-emerald-300">Direct Admissions</span>
+                                <span className="text-xs text-emerald-300 font-bold uppercase tracking-wider">Primary Admissions</span>
                               </div>
                             </div>
                           </a>
@@ -263,7 +263,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                               </div>
                               <div>
                                 <span className="block text-lg font-bold">(201) 885-9225</span>
-                                <span className="text-xs text-stone-500">Facility Office</span>
+                                <span className="text-xs text-stone-500 font-bold uppercase tracking-wider">Facility Office (Alt)</span>
                               </div>
                             </div>
                           </a>

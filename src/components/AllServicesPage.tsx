@@ -221,10 +221,12 @@ const AllServicesPage = () => {
             className="text-center"
           >
             {/* Back Link */}
-            <button className="inline-flex items-center gap-2 text-emerald-100 hover:text-white font-medium mb-8 transition-colors text-base sm:text-lg">
-              <ArrowLeft className="w-5 h-5" />
-              Back to Home
-            </button>
+            <Link to="/">
+              <button className="inline-flex items-center gap-2 text-emerald-100 hover:text-white font-medium mb-8 transition-colors text-base sm:text-lg">
+                <ArrowLeft className="w-5 h-5" />
+                Back to Home
+              </button>
+            </Link>
 
             {/* Page Title */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 font-serif leading-tight">
@@ -289,10 +291,12 @@ const AllServicesPage = () => {
             Schedule a personalized tour to see how our comprehensive services can support your loved one's journey.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button className="w-full sm:w-auto inline-flex items-center gap-3 px-8 py-4 bg-emerald-600 text-white font-semibold rounded-full hover:bg-emerald-700 transition-colors shadow-lg hover:shadow-xl text-base sm:text-lg">
-              Schedule Your Tour
-              <ArrowRight className="w-5 h-5" />
-            </button>
+            <Link to="/schedule-a-tour" className="w-full sm:w-auto">
+              <button className="w-full sm:w-auto inline-flex items-center gap-3 px-8 py-4 bg-emerald-600 text-white font-semibold rounded-full hover:bg-emerald-700 transition-colors shadow-lg hover:shadow-xl text-base sm:text-lg">
+                Schedule Your Tour
+                <ArrowRight className="w-5 h-5" />
+              </button>
+            </Link>
             <Link to="/contact" className="w-full sm:w-auto">
               <button className="w-full sm:w-auto inline-flex items-center gap-3 px-8 py-4 bg-white text-emerald-700 border-2 border-emerald-600 font-semibold rounded-full hover:bg-emerald-50 transition-colors text-base sm:text-lg">
                 Speak With a Care Advisor

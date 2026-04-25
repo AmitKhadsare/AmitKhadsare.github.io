@@ -117,6 +117,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta property="og:image:height" content="630" />
       <meta property="og:image:type" content="image/jpeg" />
       <meta property="og:site_name" content="Columbia Care Home" />
+      <meta property="og:locale" content="en_US" />
 
       {/* Twitter Card Meta Tags */}
       <meta name="twitter:card" content="summary_large_image" />
