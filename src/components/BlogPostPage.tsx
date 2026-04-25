@@ -69,18 +69,18 @@ const BlogPostPage = () => {
             />
 
             {/* Header Section */}
-            <div className="relative h-[60vh] min-h-[400px] w-full overflow-hidden">
+            <div className="relative w-full min-h-[40vh] flex flex-col justify-end pt-12 pb-24 md:pb-32">
                 <div className="absolute inset-0">
                     <img
                         src={post.image}
                         alt={post.title}
                         className="w-full h-full object-cover"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-stone-900/90" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-stone-900" />
                 </div>
 
-                <div className="relative h-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-end pb-24">
-                    <Link to="/blog" className="inline-flex items-center text-white/80 hover:text-white transition-colors mb-8 group w-fit">
+                <div className="relative h-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                    <Link to="/blog" className="inline-flex items-center text-white/80 hover:text-white transition-colors mb-6 md:mb-8 group w-fit">
                         <ArrowLeft className="w-4 h-4 mr-2 transform group-hover:-translate-x-1 transition-transform" />
                         Back to Blog
                     </Link>
@@ -89,6 +89,7 @@ const BlogPostPage = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
+                        className="w-full"
                     >
                         <div className="flex flex-wrap gap-2 mb-6">
                             {post.tags.map((tag) => (
@@ -99,7 +100,7 @@ const BlogPostPage = () => {
                         </div>
 
                         <h1
-                            className="text-3xl md:text-4xl lg:text-5xl font-bold text-white font-serif leading-tight mb-6 drop-shadow-lg"
+                            className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white font-serif leading-tight mb-8 drop-shadow-xl"
                             dangerouslySetInnerHTML={{ __html: post.title }}
                         />
 

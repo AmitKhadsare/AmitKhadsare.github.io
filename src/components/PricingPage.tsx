@@ -94,6 +94,11 @@ const PricingPage = () => {
                 <br />
                 Our all-inclusive rate typically falls between <strong>$7,000 to $10,000</strong> per month, depending on the specific care and mobility needs at the time of admission. No hidden tiers, no surprise invoices.
               </p>
+              <div className="mt-8">
+                <Link to="/blog/care-points-trap-hidden-costs-assisted-living" className="inline-flex items-center gap-2 text-emerald-700 font-bold hover:underline">
+                  Read our deep-dive on why these "Care Point" traps exist →
+                </Link>
+              </div>
             </div>
           </div>
         </div>

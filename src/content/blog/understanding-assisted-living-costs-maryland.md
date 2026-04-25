@@ -26,6 +26,8 @@ When you tour a large, resort-style facility in Howard County, the first number 
 
 The reality is, that rate usually only covers your rent and meals. It doesn't cover the *care* your parent actually needs. 
 
+In many corporate settings, care is billed through a "Care Point" system that can cause your bill to double without warning. [Learn more about the Care Points Trap here](/blog/care-points-trap-hidden-costs-assisted-living).
+
 In many corporate settings, care is billed like an a-la-carte menu. You might see additional monthly charges for:
 - **Medication Management:** +$500 to $1,500/month
 - **Mobility Assistance:** +$800/month
