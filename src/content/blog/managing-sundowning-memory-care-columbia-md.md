@@ -2,7 +2,7 @@
 id: "5"
 title: "Managing Sundowning Without Heavy Medication: The 8-Bed Memory Care Advantage"
 excerpt: "Large facilities often manage sundowning and wandering with sedation. Discover how our Doctor of Physical Therapy-led 8-bed home uses environmental design and daytime mobility to reduce dementia anxiety naturally."
-author: "Columbia Care Home Team"
+author: "Columbia Care Editorial Team"
 date: "2026-03-05"
 image: "/images/blog/living-room-seating.jpg"
 tags:

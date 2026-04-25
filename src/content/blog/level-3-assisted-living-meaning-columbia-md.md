@@ -2,7 +2,7 @@
 id: "6"
 title: "What 'Level 3 Assisted Living' Actually Means for Your Parent's Daily Care"
 excerpt: "A practical guide to understanding Maryland's highest level of assisted living. Learn what happens when state definitions meet the reality of daily care."
-author: "Columbia Care Home Team"
+author: "Columbia Care Editorial Team"
 date: "2026-04-20"
 image: "/images/blog/bedroom-suite.jpg"
 tags:

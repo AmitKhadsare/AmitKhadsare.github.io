@@ -2,7 +2,7 @@
 id: "2"
 title: "The Clinical Advantage: Why a Physical Therapist-Owned Care Home Changes the Aging Experience"
 excerpt: "Most care facilities are run by developers and corporations. Discover how a Doctor of Physical Therapy-led facility drastically improves medical oversight and resident mobility."
-author: "Columbia Care Home Team"
+author: "Columbia Care Editorial Team"
 date: "2026-02-22"
 image: "/images/blog/gym-therapy.jpg"
 tags:

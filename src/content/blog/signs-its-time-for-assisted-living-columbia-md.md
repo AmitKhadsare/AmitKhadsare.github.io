@@ -3,7 +3,7 @@ id: "7"
 title: "7 Signs It's Time for Assisted Living: When Home Care is No Longer Enough"
 titleSeo: "Signs It's Time for Assisted Living for Parents in Columbia MD"
 excerpt: "Wondering when home care is no longer enough for an aging parent? Learn the 7 crucial signs it might be time to transition to assisted living for safety, dignity, and peace of mind."
-author: "Columbia Care Home Team"
+author: "Columbia Care Editorial Team"
 date: "2026-04-23"
 image: "/images/blog/assisted_living_columbia_time_home_care.png"
 tags:

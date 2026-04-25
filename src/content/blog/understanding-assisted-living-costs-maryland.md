@@ -2,7 +2,7 @@
 id: "3"
 title: "Understanding Assisted Living Costs in Maryland: Base Rates, Hidden Fees, and True Value"
 excerpt: "The 'Base Rate' in Maryland senior care is often an illusion. Learn why upfront transparency and all-inclusive pricing matter more than a low starting price."
-author: "Columbia Care Home Team"
+author: "Columbia Care Editorial Team"
 date: "2026-02-28"
 lastModified: "2026-04-24"
 image: "/images/blog/assisted-living-costs-maryland-real-expenses.png"

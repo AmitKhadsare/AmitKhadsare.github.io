@@ -37,11 +37,24 @@ const BlogPostPage = () => {
                     "datePublished": post.date,
                     "dateModified": post.lastModified || post.date,
                     "author": {
-                        "@type": "Person",
+                        "@type": "Organization",
                         "name": post.author,
-                        "jobTitle": "Doctor of Physical Therapy",
-                        "url": "https://www.columbiacarehome.com/about-us"
+                        "url": "https://www.columbiacarehome.com/blog"
                     },
+                    "reviewedBy": [
+                        {
+                            "@type": "Person",
+                            "name": "Bhargav Patel",
+                            "jobTitle": "Doctor of Physical Therapy",
+                            "url": "https://www.columbiacarehome.com/about-us"
+                        },
+                        {
+                            "@type": "Person",
+                            "name": "Sheetal Khadsare",
+                            "jobTitle": "Doctor of Physical Therapy",
+                            "url": "https://www.columbiacarehome.com/about-us"
+                        }
+                    ],
                     "publisher": {
                         "@type": "Organization",
                         "name": "Columbia Care Home",
@@ -88,7 +101,7 @@ const BlogPostPage = () => {
                             dangerouslySetInnerHTML={{ __html: post.title }}
                         />
 
-                        <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-white/90 text-sm md:text-base font-medium">
+                        <div className="flex flex-wrap items-center gap-x-6 gap-y-4 text-white/90 text-sm md:text-base font-medium">
                             <div className="flex items-center gap-2">
                                 <User className="w-4 h-4" />
                                 <span>{post.author}</span>
@@ -117,6 +130,22 @@ const BlogPostPage = () => {
                             <div className="flex items-center gap-2">
                                 <Clock className="w-4 h-4" />
                                 <span>{readingTime} min read</span>
+                            </div>
+                        </div>
+
+                        {/* Clinical Oversight Badge */}
+                        <div className="mt-8 inline-flex items-center gap-3 px-4 py-2 bg-emerald-900/40 backdrop-blur-md border border-emerald-400/30 rounded-xl">
+                            <div className="flex -space-x-2">
+                                <div className="w-8 h-8 rounded-full border-2 border-emerald-500 overflow-hidden bg-stone-200">
+                                    <img src="/src/assets/Bhargav_Patel.jpg" alt="Bhargav Patel" className="w-full h-full object-cover" />
+                                </div>
+                                <div className="w-8 h-8 rounded-full border-2 border-emerald-500 overflow-hidden bg-stone-200">
+                                    <img src="/src/assets/Sheetal_Khadsare.jpeg" alt="Sheetal Khadsare" className="w-full h-full object-cover" />
+                                </div>
+                            </div>
+                            <div className="text-left">
+                                <span className="block text-[10px] uppercase font-bold tracking-widest text-emerald-300 leading-none mb-1">Clinical Oversight</span>
+                                <span className="text-xs text-white/90 font-medium">Informed by Bhargav Patel, DPT & Sheetal Khadsare, DPT</span>
                             </div>
                         </div>
                     </motion.div>

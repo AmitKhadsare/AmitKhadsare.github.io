@@ -2,7 +2,7 @@
 id: "1"
 title: "Large Facility vs. An 8-Bed Residential Home: What's Right for Your Parent in Howard County?"
 excerpt: "Is a 100-bed corporate facility the best fit, or does your loved one need the focused attention of an 8-bed residential care home? Explore the clinical and emotional differences."
-author: "Columbia Care Home Team"
+author: "Columbia Care Editorial Team"
 date: "2026-02-15"
 image: "/images/blog/living-room-seating.jpg"
 tags:

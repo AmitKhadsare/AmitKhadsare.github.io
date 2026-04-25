@@ -62,8 +62,9 @@ const Footer = () => {
   const resourceLinks = [
     { name: 'Our Story', path: '/about-us' },
     { name: 'Schedule a Tour', path: '/schedule-a-tour' },
-    { name: 'What Families Say', path: '/family-stories' },
+    { name: 'Family Stories', path: '/family-stories' },
     { name: 'Family Guides', path: '/blog' },
+    { name: 'Common Questions (FAQ)', path: '/faq' },
     { name: 'Our Facility', path: '/facility' },
   ];
 

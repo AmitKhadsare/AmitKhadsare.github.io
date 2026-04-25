@@ -3,7 +3,7 @@ id: "4"
 title: "A Guide to Transitioning to Assisted Living in Columbia, MD: A Path to Dignity and Safety"
 titleSeo: "Transitioning to Assisted Living in Columbia MD: A Family Guide"
 excerpt: "Moving a parent to assisted living in Columbia MD can feel overwhelming. Learn practical strategies to ease the transition while protecting your loved one's dignity, safety, and independence."
-author: "Columbia Care Home Team"
+author: "Columbia Care Editorial Team"
 date: "2026-03-03"
 image: "/images/blog/entrance-foyer.jpg"
 tags:
