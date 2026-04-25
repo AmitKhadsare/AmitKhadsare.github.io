@@ -20,7 +20,7 @@ export const localBusinessSchema = {
     "@id": "https://www.columbiacarehome.com/#mainImage"
   },
   "telephone": "+1-301-500-0809",
-  "email": "admin@columbiacarehome.com",
+  "email": "contact@columbiacarehome.com",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "10610 Hickory Point Lane",

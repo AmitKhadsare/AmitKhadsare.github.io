@@ -133,25 +133,25 @@ const AboutUsPage = () => {
             </p>
           </div>
 
-          <div className="bg-white p-10 rounded-xl shadow-lg border-l-8 border-emerald-600">
-            <h3 className="text-2xl font-bold font-serif text-stone-800 mb-4">You Are Never Just a Room Number</h3>
-            <p className="text-lg text-stone-600 leading-relaxed mb-6">
-              In Howard County, the standard assisted living model relies on volume—massive buildings with hundreds of units. While these facilities look like luxury hotels in the lobby, the reality of the care is often driven by corporate quotas and high staff turnover.
-            </p>
-            <p className="text-lg text-stone-600 leading-relaxed">
-              At Columbia Care Home, we legally cap our residence at 8 beds. This guarantees an elite 1-to-4 or 1-to-8 caregiver ratio depending on the shift. Our caregivers aren't rushing down long hallways to answer call bells; they are sitting in the same room, anticipating needs before they arise.
-            </p>
-          </div>
+            <div className="bg-white p-10 rounded-xl shadow-lg border-l-8 border-emerald-600">
+              <h3 className="text-2xl font-bold font-serif text-stone-800 mb-4">You Are Never Just a Room Number</h3>
+              <p className="text-lg text-stone-600 leading-relaxed mb-6">
+                In Howard County, the standard assisted living model relies on volume—massive buildings with hundreds of units. While these facilities look like luxury hotels in the lobby, the reality of the care is often driven by corporate quotas and high staff turnover.
+              </p>
+              <p className="text-lg text-stone-600 leading-relaxed">
+                At Columbia Care Home, we legally cap our residence at 8 beds. This guarantees a strict 1:3 day and 1:4 night caregiver ratio. Our caregivers aren't rushing down long hallways to answer call bells; they are sitting in the same room, anticipating needs before they arise.
+              </p>
+            </div>
 
-          <div className="bg-white p-10 rounded-xl shadow-lg border-l-8 border-teal-600">
-            <h3 className="text-2xl font-bold font-serif text-stone-800 mb-4">A Layout Designed for Aging in Place</h3>
-            <p className="text-lg text-stone-600 leading-relaxed mb-6">
-              Large facilities inadvertently create fall risks with their sprawling layouts. For residents with cognitive decline or physical frailty, navigating elevators and 100-yard hallways is exhausting and disorienting.
-            </p>
-            <p className="text-lg text-stone-600 leading-relaxed">
-              Our home at 10610 Hickory Point Lane is a single-family property intentionally adapted for senior mobility. Navigation is intuitive, lines of sight are clear, and the environment is universally accessible. It feels like home because it *is* a home.
-            </p>
-          </div>
+            <div className="bg-white p-10 rounded-xl shadow-lg border-l-8 border-teal-600">
+              <h3 className="text-2xl font-bold font-serif text-stone-800 mb-4">A Layout Designed for Aging in Place</h3>
+              <p className="text-lg text-stone-600 leading-relaxed mb-6">
+                Large facilities inadvertently create fall risks with their sprawling layouts. For residents with cognitive decline or physical frailty, navigating elevators and 100-yard hallways is exhausting and disorienting.
+              </p>
+              <p className="text-lg text-stone-600 leading-relaxed">
+                Our home at 10610 Hickory Point Lane is a single-family property intentionally adapted for senior mobility. Navigation is intuitive, lines of sight are clear, and the environment is universally accessible. It feels like home because it <em>is</em> a home.
+              </p>
+            </div>
         </div>
       </motion.section>
 
@@ -164,11 +164,18 @@ const AboutUsPage = () => {
           <p className="text-xl text-stone-400 mb-8 max-w-2xl mx-auto">
             Deciding on a care level is a complex medical decision. Call us directly to discuss your loved one's specific physical and cognitive needs.
           </p>
-          <Link to="/contact">
-            <button className="bg-emerald-600 text-white px-10 py-5 rounded-full hover:bg-emerald-500 transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-              Contact Bhargav & Sheetal Directly
-            </button>
-          </Link>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link to="/contact">
+              <button className="bg-emerald-600 text-white px-10 py-5 rounded-full hover:bg-emerald-500 transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 w-full sm:w-auto">
+                Contact Bhargav & Sheetal Directly
+              </button>
+            </Link>
+            <Link to="/virtual-tour">
+              <button className="bg-transparent border-2 border-white text-white px-10 py-5 rounded-full hover:bg-white hover:text-stone-900 transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 w-full sm:w-auto">
+                Take a Virtual Tour
+              </button>
+            </Link>
+          </div>
         </div>
       </section>
     </div>
