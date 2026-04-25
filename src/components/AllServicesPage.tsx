@@ -117,8 +117,8 @@ const services: Service[] = [
   {
     id: 9,
     title: 'Clinical Specialties',
-    description: 'On-site specialized medical care for chronic conditions. From proactive diabetic management to specialized podiatry, we bring high-level clinical services directly to our residents.',
-    features: ['Diabetic Management', 'On-site Podiatry', 'Chronic Condition Oversight'],
+    description: 'Specialized medical care for chronic and complex conditions. From diabetic management (including insulin) to visiting podiatry and psychiatric support, we bring high-level clinical services directly to our residents.',
+    features: ['Diabetic Care (Insulin)', 'Visiting Podiatrist', 'Psychiatric Support'],
     icon: Activity,
     image: proactiveHealthImage,
     imagePosition: 'object-center',

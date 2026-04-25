@@ -49,7 +49,7 @@ To understand the true difference in care, look at the ratio of staff members to
         <tr>
           <td class="p-2 sm:p-6 font-semibold text-stone-900">Navigation</td>
           <td class="p-2 sm:p-6 text-stone-600">Elevators & Long Hallways</td>
-          <td class="p-2 sm:p-6 bg-emerald-50/30 text-emerald-800 font-bold italic">Single-Floor Access</td>
+          <td class="p-2 sm:p-6 bg-emerald-50/30 text-emerald-800 font-bold italic">Stair Glide Access</td>
         </tr>
         <tr>
           <td class="p-2 sm:p-6 font-semibold text-stone-900">Personalization</td>

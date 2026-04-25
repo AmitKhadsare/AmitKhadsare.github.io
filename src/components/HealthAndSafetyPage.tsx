@@ -60,7 +60,7 @@ const HealthAndSafetyPage = () => {
     {
       icon: Stethoscope,
       title: "Medical Coordination",
-      description: "We coordinate directly with visiting physicians, podiatrists, and specialists, ensuring that your loved one's medical plan is executed with 100% fidelity."
+      description: "We coordinate directly with visiting physicians, visiting podiatrists, and psychiatric specialists. Our clinical team ensures that every resident's complex care plan—including diabetic insulin management—is executed with 100% fidelity."
     },
     {
       icon: ShieldCheck,

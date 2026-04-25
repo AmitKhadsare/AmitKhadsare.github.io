@@ -89,6 +89,11 @@ const PricingPage = () => {
               <p>
                 We built our model to be the opposite of that. One flat monthly rate. Everything included. The same bill every month. <strong className="text-stone-800">If your parent needs more help this week than last, the number doesn’t change.</strong>
               </p>
+              <p className="mt-6 pt-6 border-t border-stone-100">
+                <span className="inline-block px-3 py-1 bg-emerald-50 text-emerald-700 text-sm font-bold rounded-md mb-3 uppercase tracking-wider text-xs">Typical Range</span>
+                <br />
+                Our all-inclusive rate typically falls between <strong>$7,000 to $10,000</strong> per month, depending on the specific care and mobility needs at the time of admission. No hidden tiers, no surprise invoices.
+              </p>
             </div>
           </div>
         </div>

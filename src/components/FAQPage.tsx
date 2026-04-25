@@ -164,7 +164,7 @@ const FAQPage = () => {
           </p>
         </div>
       ),
-      schemaAnswer: "Columbia Care Home is a founder-led residence owned by two Doctors of Physical Therapy who are on-site daily overseeing all clinical and residential operations."
+      schemaAnswer: "Columbia Care Home is a founder-led residence owned by two Doctors of Physical Therapy. We use our in-house therapy company, At Home Rehab, or external preferred providers, to ensure clinical oversight is on-site daily."
     },
     {
       question: "Is there a waitlist? How does admission work?",
@@ -190,7 +190,7 @@ const FAQPage = () => {
       answer: (
         <div className="space-y-4">
           <p>
-            We don't allow unannounced walk-in tours. This is our residents' private home, not a showroom. To protect their privacy, dignity, and daily rhythms, all prospective family visits are scheduled in advance.
+            We don't allow unannounced walk-in tours. To protect our residents' privacy, dignity, and daily rhythms, all prospective family visits are scheduled in advance.
           </p>
           <p>
             For current families, we maintain a genuinely open relationship. We just coordinate visits to avoid interrupting therapy, rest periods, or mealtimes. You'll always be welcome here.
@@ -205,6 +205,26 @@ const FAQPage = () => {
       schemaAnswer: "To protect resident privacy, all tours must be scheduled in advance. Current families enjoy open visitation coordinated around therapeutic and rest cycles."
     },
     {
+      question: "What clinical specialties (like Podiatry or Diabetic Care) do you provide?",
+      answer: (
+        <div className="space-y-4">
+          <p>
+            Because we are a <strong>Level 3 facility</strong> led by clinicians, we provide proactive management for chronic conditions on-site.
+          </p>
+          <ul className="list-disc pl-5 space-y-2">
+            <li><strong>Diabetic Management:</strong> Our clinical staff provides consistent monitoring, insulin administration (including injections and sliding-scale dosing), and dietary oversight.</li>
+            <li><strong>Visiting Podiatrist:</strong> We have a visiting podiatrist who performs specialized services on-site. We coordinate these visits to ensure residents receive foot care without the stress of external travel.</li>
+            <li><strong>Psychiatric Care:</strong> We are equipped to accept and support residents with psychiatric diagnoses.</li>
+            <li><strong>Age Flexibility:</strong> While we primarily serve seniors, we can accept adults under age 60 when clinically appropriate for our care model.</li>
+          </ul>
+          <p>
+            Our goal is to bring the specialized care your loved one needs to them, rather than forcing frequent, exhausting trips to external clinics.
+          </p>
+        </div>
+      ),
+      schemaAnswer: "As a Level 3 facility led by clinicians, we manage chronic conditions like diabetes (including insulin/sliding-scale), coordinate visiting podiatry, and accept residents with psychiatric diagnoses or those under age 60 when appropriate."
+    },
+    {
       question: "How does your pricing model work?",
       answer: (
         <div className="space-y-4">
@@ -212,7 +232,7 @@ const FAQPage = () => {
             We use a single, flat monthly rate. Many assisted living facilities in Maryland advertise a low base rate but add extra charges for every task: help with dressing, a medication reminder, assistance walking to the dining room. By month three, the bill often looks very different from what they were told.
           </p>
           <p>
-            At Columbia Care Home, your rate covers 24/7 clinical oversight, medication management, all meals, and full personal assistance. It is the same bill every month, even if your loved one needs more help.
+            At Columbia Care Home, your rate covers 24/7 clinical oversight, medication management, all meals, and full personal assistance. <strong>Our all-inclusive rate typically falls between $7,000 to $10,000 per month</strong>, depending on individual care needs. It is the same bill every month, even if your loved one needs more help.
           </p>
           <p>
             <Link to="/pricing" className="inline-flex items-center gap-2 text-emerald-700 font-bold hover:underline">
@@ -221,7 +241,7 @@ const FAQPage = () => {
           </p>
         </div>
       ),
-      schemaAnswer: "We use an all-inclusive monthly rate that covers 24/7 care, medications, and meals. Unlike large facilities that add charges for every task, our transparent pricing stays the same even as care needs increase."
+      schemaAnswer: "We use an all-inclusive monthly rate that typically falls between $7,000 to $10,000. This covers 24/7 care, medications, and meals with no hidden tiers or surprise fees."
     },
     {
       question: "What is the Community Fee for?",
@@ -241,24 +261,6 @@ const FAQPage = () => {
         </div>
       ),
       schemaAnswer: "The Community Fee is a one-time move-in fee. We provide full transparency on all costs during your initial tour so there are no surprises."
-    },
-    {
-      question: "What clinical specialties (like Podiatry or Diabetic Care) do you provide?",
-      answer: (
-        <div className="space-y-4">
-          <p>
-            Because we are a <strong>Level 3 facility</strong> led by clinicians, we provide proactive management for chronic conditions on-site.
-          </p>
-          <ul className="list-disc pl-5 space-y-2">
-            <li><strong>Diabetic Management:</strong> Our clinical staff provides consistent monitoring, insulin administration, and dietary oversight to maintain stable levels.</li>
-            <li><strong>On-site Podiatry:</strong> Foot health is critical for mobility and fall prevention. We coordinate on-site podiatry visits to ensure residents receive specialized care without the stress of external travel.</li>
-          </ul>
-          <p>
-            Our goal is to bring the specialized care your loved one needs to them, rather than forcing frequent, exhausting trips to external clinics.
-          </p>
-        </div>
-      ),
-      schemaAnswer: "As a Level 3 facility led by clinicians, we manage chronic conditions like diabetes and provide on-site podiatry. We bring specialized care to the resident, avoiding frequent trips to external clinics."
     }
   ];
 

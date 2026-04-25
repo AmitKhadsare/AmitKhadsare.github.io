@@ -82,9 +82,9 @@ const ResidentialCarePage = () => {
               <div className="w-16 h-16 bg-teal-50 rounded-full flex items-center justify-center mb-6">
                 <Home className="w-8 h-8 text-teal-700" />
               </div>
-              <h3 className="text-xl font-bold font-serif text-gray-900 mb-4">Single-Floor Navigation</h3>
+              <h3 className="text-xl font-bold font-serif text-gray-900 mb-4">Stair Glide Accessible</h3>
               <p className="text-gray-600 leading-relaxed">
-                Falls are the primary mechanism of decline in seniors. By utilizing a spacious 2007 residential property, we provide an environment without elevators or complex floor plans. Every common area and bedroom is immediately accessible.
+                Falls are the primary mechanism of decline in seniors. Our home is equipped with a professional stair glide, ensuring safe and comfortable transitions between floors. This allows residents to enjoy the full space of a real home while maintaining the highest level of safety.
               </p>
             </div>
             <div className="p-10">

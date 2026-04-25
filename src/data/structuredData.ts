@@ -64,7 +64,7 @@ export const localBusinessSchema = {
       "closes": "16:00"
     }
   ],
-  "priceRange": "$$$$",
+  "priceRange": "$7000 - $10000",
   "areaServed": {
     "@type": "GeoCircle",
     "geoMidpoint": {
@@ -76,10 +76,11 @@ export const localBusinessSchema = {
   },
   "offers": {
     "@type": "Offer",
-    "name": "Immediate Residential Placement",
-    "description": "1 private room currently available for immediate occupancy.",
-    "availability": "https://schema.org/InStock",
-    "validFrom": "2026-04-24"
+    "name": "All-Inclusive Residential Placement",
+    "description": "Transparent, all-inclusive monthly rate typically between $7,000 to $10,000. Covers 24/7 clinical oversight, all meals, and full personal assistance.",
+    "price": "7000.00",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock"
   },
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
@@ -125,8 +126,8 @@ export const localBusinessSchema = {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Clinical Specialties & Diabetic Care",
-          "description": "On-site specialized medical care for chronic conditions, including podiatry and diabetic management",
+          "name": "Clinical Specialties & Chronic Care",
+          "description": "On-site specialized care for diabetes (insulin/sliding-scale), psychiatric support, and visiting podiatry services.",
           "image": "https://www.columbiacarehome.com/og-residential.jpg"
         }
       }
@@ -192,8 +193,8 @@ export const serviceSchema = {
   },
   "offers": {
     "@type": "Offer",
-    "description": "Professional senior care in a warm, home-like environment",
-    "priceRange": "$$"
+    "description": "All-inclusive Level 3 care typically ranging from $7,000 to $10,000 per month.",
+    "priceRange": "$7000 - $10000"
   }
 };
 
