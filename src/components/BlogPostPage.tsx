@@ -181,7 +181,7 @@ const BlogPostPage = () => {
                         className="prose prose-xl prose-stone max-w-none
             prose-headings:font-serif prose-headings:text-emerald-950 prose-headings:font-bold
             prose-p:text-stone-700 prose-p:leading-relaxed prose-p:mb-6
-            prose-a:text-emerald-700 prose-a:no-underline prose-a:border-b-2 prose-a:border-emerald-200 hover:prose-a:border-emerald-600 prose-a:transition-colors
+            prose-a:text-emerald-600 prose-a:font-bold prose-a:no-underline prose-a:border-b-2 prose-a:border-emerald-500/30 hover:prose-a:text-emerald-500 hover:prose-a:border-emerald-500 prose-a:transition-all
             prose-blockquote:border-l-4 prose-blockquote:border-emerald-500 prose-blockquote:bg-emerald-50/50 prose-blockquote:py-6 prose-blockquote:px-8 prose-blockquote:rounded-r-lg prose-blockquote:not-italic prose-blockquote:text-emerald-900 prose-blockquote:font-medium prose-blockquote:my-10
             prose-li:text-stone-700 prose-li:mb-2
             prose-strong:text-emerald-950 prose-strong:font-bold

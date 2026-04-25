@@ -67,7 +67,8 @@ const FAQPage = () => {
             </Link>
           </p>
         </div>
-      )
+      ),
+      schemaAnswer: "Columbia Care Home provides a 1:3 staff-to-resident ratio, compared to 1:12 or 1:20 in large facilities. This intimacy prevents falls and ensures dignity by providing immediate assistance without the wait times typical of institutional settings."
     },
     {
       question: "What exactly is 'Level 3' Assisted Living in Maryland?",
@@ -88,7 +89,8 @@ const FAQPage = () => {
             </Link>
           </p>
         </div>
-      )
+      ),
+      schemaAnswer: "Level 3 is Maryland's highest assisted living license, allowing for complex medical oversight and physical assistance. Columbia Care Home is fully licensed (AL-01052) to provide this advanced level of clinical care."
     },
     {
       question: "Does '24/7 Awake Staff' actually mean someone is awake all night?",
@@ -106,7 +108,8 @@ const FAQPage = () => {
             </Link>
           </p>
         </div>
-      )
+      ),
+      schemaAnswer: "Yes. Our facility is staffed 24/7 by awake caregivers on a dedicated night shift. This is a critical safety difference from homes that use sleep-in staff who only respond to alarms."
     },
     {
       question: "What if my parent's health declines significantly — will they be asked to leave?",
@@ -122,7 +125,8 @@ const FAQPage = () => {
             We discuss this directly and honestly during every admission consultation.
           </p>
         </div>
-      )
+      ),
+      schemaAnswer: "We prioritize safety through a clinical-first model led by Doctors of Physical Therapy. Our team is trained to handle high-acuity needs that often trigger discharge in standard facilities."
     },
     {
       question: "How do you handle physical therapy and mobility?",
@@ -140,7 +144,8 @@ const FAQPage = () => {
             </Link>
           </p>
         </div>
-      )
+      ),
+      schemaAnswer: "Columbia Care Home is owned and led by a Doctor of Physical Therapy. This means mobility, transfer safety, and rehabilitation are part of the daily care culture, not just an occasional outside service."
     },
     {
       question: "Who owns and operates Columbia Care Home?",
@@ -158,7 +163,8 @@ const FAQPage = () => {
             </Link>
           </p>
         </div>
-      )
+      ),
+      schemaAnswer: "Columbia Care Home is a founder-led residence owned by two Doctors of Physical Therapy who are on-site daily overseeing all clinical and residential operations."
     },
     {
       question: "Is there a waitlist? How does admission work?",
@@ -176,7 +182,8 @@ const FAQPage = () => {
             </Link>
           </p>
         </div>
-      )
+      ),
+      schemaAnswer: "With only 8 residents, availability is limited. Admission begins with a direct clinical consultation to ensure we are the right fit for your loved one's needs."
     },
     {
       question: "Can I just drop by for a visit or a tour anytime?",
@@ -194,7 +201,8 @@ const FAQPage = () => {
             </Link>
           </p>
         </div>
-      )
+      ),
+      schemaAnswer: "To protect resident privacy, all tours must be scheduled in advance. Current families enjoy open visitation coordinated around therapeutic and rest cycles."
     },
     {
       question: "How does your pricing model work?",
@@ -212,7 +220,8 @@ const FAQPage = () => {
             </Link>
           </p>
         </div>
-      )
+      ),
+      schemaAnswer: "We use an all-inclusive monthly rate that covers 24/7 care, medications, and meals. Unlike large facilities that add charges for every task, our transparent pricing stays the same even as care needs increase."
     },
     {
       question: "What is the Community Fee for?",
@@ -230,7 +239,8 @@ const FAQPage = () => {
             </Link>
           </p>
         </div>
-      )
+      ),
+      schemaAnswer: "The Community Fee is a one-time move-in fee. We provide full transparency on all costs during your initial tour so there are no surprises."
     },
     {
       question: "What clinical specialties (like Podiatry or Diabetic Care) do you provide?",
@@ -247,7 +257,8 @@ const FAQPage = () => {
             Our goal is to bring the specialized care your loved one needs to them, rather than forcing frequent, exhausting trips to external clinics.
           </p>
         </div>
-      )
+      ),
+      schemaAnswer: "As a Level 3 facility led by clinicians, we manage chronic conditions like diabetes and provide on-site podiatry. We bring specialized care to the resident, avoiding frequent trips to external clinics."
     }
   ];
 
@@ -259,7 +270,7 @@ const FAQPage = () => {
       "name": faq.question,
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Please visit our website for the full details on this topic. We focus on transparent, all-inclusive care and personalized clinical support."
+        "text": (faq as any).schemaAnswer || "Please visit our website for the full details on this topic. We focus on transparent, all-inclusive care and personalized clinical support."
       }
     }))
   };

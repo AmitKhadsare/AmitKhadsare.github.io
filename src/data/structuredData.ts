@@ -120,6 +120,15 @@ export const localBusinessSchema = {
           "description": "Specialized cognitive support and behavioral management for residents with dementia",
           "image": "https://www.columbiacarehome.com/og-memory.jpg"
         }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Clinical Specialties & Diabetic Care",
+          "description": "On-site specialized medical care for chronic conditions, including podiatry and diabetic management",
+          "image": "https://www.columbiacarehome.com/og-residential.jpg"
+        }
       }
     ]
   },
