@@ -6,7 +6,7 @@ excerpt: "Moving a parent to assisted living in Columbia MD can feel overwhelmin
 author: "Columbia Care Editorial Team"
 date: "2026-03-03"
 lastModified: "2026-04-25"
-image: "/images/blog/entrance-foyer.jpg"
+image: "/images/blog/adult-child-talking-to-parents-assisted-living-decision-columbia-md.png"
 tags:
   - Family Guide
   - Transitioning Care
@@ -17,8 +17,8 @@ tags:
 <p class="lead text-xl text-stone-600 font-serif italic">The decision has been made, and the facility chosen. But the actual day of transitioning a parent from their lifelong home into assisted living can feel like a heavy milestone. While it’s natural to feel anxiety or uncertainty, it’s important to remember: you aren’t failing your parent; you are prioritizing their safety and long-term quality of life.</p>
 
 <figure>
-  <img src="/images/blog/entrance-foyer.jpg" alt="The warm, welcoming foyer at Columbia Care Home" class="w-full rounded-2xl shadow-xl border border-stone-200" />
-  <figcaption class="text-center text-stone-500 mt-4 text-sm font-medium">A low-stimulation, residential foyer provides a <span class="blog-accent">soft landing</span> for new residents entering their new home.</figcaption>
+  <img src="/images/blog/adult-child-talking-to-parents-assisted-living-decision-columbia-md.png" alt="Adult child talking to aging parents about assisted living transition" class="w-full rounded-2xl shadow-xl border border-stone-200" />
+  <figcaption class="text-center text-stone-500 mt-4 text-sm font-medium">Open, honest conversations are the foundation of a successful transition to assisted living.</figcaption>
 </figure>
 
 ## How to Move a Parent to Assisted Living
