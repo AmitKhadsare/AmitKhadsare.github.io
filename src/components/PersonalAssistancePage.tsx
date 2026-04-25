@@ -97,7 +97,7 @@ const PersonalAssistancePage = () => {
     <div className="min-h-screen bg-gray-50">
       <SEOHead
         title="Personal Assistance & ADL Support in Columbia MD | Columbia Care Home"
-        description="Clinical-led personal assistance with daily living (ADLs). 1:4 staffing ratio in a premium 8-bed care home in Columbia, MD. Overseen by Doctors of Physical Therapy."
+        description="Clinical-led personal assistance with daily living (ADLs). 1:3 staffing ratio in a premium 8-bed care home in Columbia, MD. Overseen by Doctors of Physical Therapy."
         structuredData={personalAssistanceSchema}
         image="https://www.columbiacarehome.com/og-personal-assistance.jpg"
         url="/personal-assistance"

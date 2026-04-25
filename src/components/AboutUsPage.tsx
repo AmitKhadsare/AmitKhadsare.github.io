@@ -104,7 +104,7 @@ const AboutUsPage = () => {
                   Sheetal Khadsare shares the exact same rigorous clinical background. But at 10610 Hickory Point Lane, her focus is on transforming our high-level medical expertise into a warm, lived reality.
                 </p>
                 <p className="text-lg leading-relaxed text-stone-600">
-                  By strictly capping our home at 8 residents, Sheetal ensures that our Level 3 Care never feels sterile. She oversees the daily rhythms of the house—from personalized nutrition to afternoon activities—guaranteeing that every resident receives the kind of cultural respect, close supervision, and genuine friendship that large institutions simply cannot scale.
+                  By capping our home at 8 residents, Sheetal ensures that our Level 3 Care never feels sterile. She oversees the daily rhythms of the house—from personalized nutrition to afternoon activities—guaranteeing that every resident receives the kind of cultural respect, close supervision, and genuine friendship that large institutions simply cannot scale.
                 </p>
               </div>
             </motion.div>
@@ -139,7 +139,7 @@ const AboutUsPage = () => {
                 In Howard County, the standard assisted living model relies on volume—massive buildings with hundreds of units. While these facilities look like luxury hotels in the lobby, the reality of the care is often driven by corporate quotas and high staff turnover.
               </p>
               <p className="text-lg text-stone-600 leading-relaxed">
-                At Columbia Care Home, we legally cap our residence at 8 beds. This guarantees a strict 1:3 day and 1:4 night caregiver ratio. Our caregivers aren't rushing down long hallways to answer call bells; they are sitting in the same room, anticipating needs before they arise.
+                At Columbia Care Home, we legally cap our residence at 8 beds. This guarantees a 1:3 caregiver ratio at all times. Our caregivers aren't rushing down long hallways to answer call bells; they are sitting in the same room, anticipating needs before they arise.
               </p>
             </div>
 

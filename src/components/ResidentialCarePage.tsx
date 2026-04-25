@@ -102,7 +102,7 @@ const ResidentialCarePage = () => {
               </div>
               <h3 className="text-xl font-bold font-serif text-gray-900 mb-4">The 1-to-3 Protocol</h3>
               <p className="text-gray-600 leading-relaxed">
-                Corporate facilities often stretch one aide across 20+ residents. At Columbia Care Home, our strict 8-bed limit, 1:3 staffing ratio, and 24/7 overnight awake staff guarantee that your loved one has immediate, personalized assistance the moment they need to stand, walk, or eat.
+                Corporate facilities often stretch one aide across 20+ residents. At Columbia Care Home, our 8-bed limit, 1:3 staffing ratio, and 24/7 overnight awake staff guarantee that your loved one has immediate, personalized assistance the moment they need to stand, walk, or eat.
               </p>
             </div>
           </div>

@@ -1,0 +1,13 @@
+# AI Coding Assistant Rules
+
+## General
+- NEVER perform DOM rendering or browser-based testing/verification (using `browser_subagent` or similar tools) unless specifically asked by the user.
+- Focus on code quality, architecture, and adherence to the project's "Clinical Emerald" and "Quiet Premium" design system.
+
+## Design System
+- Use "Clinical Emerald" colors (e.g., `bg-emerald-900`, `text-emerald-900`).
+- Maintain "Quiet Premium" aesthetics (serif fonts for headings, clean vertical rhythm, professional spacing).
+- Follow the guidelines in `EDITORIAL_GUIDE.md` for content and layout.
+
+## Version Control
+- NEVER perform git commands (add, commit, push) unless explicitly requested by the USER.

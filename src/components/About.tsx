@@ -32,7 +32,7 @@ const About = () => (
           </p>
           <p>
             They built this <strong className="text-emerald-700">8-bed residential model</strong> to provide a radical alternative:
-            a strict 1:3 caregiver ratio where clinical oversight is proactive, not reactive. Our care model focuses on proactive mobility routines, structured daily rhythms, and 24/7 overnight awake staff to support both physical and cognitive well-being.
+            a 1:3 caregiver ratio where clinical oversight is proactive, not reactive. Our care model focuses on proactive mobility routines, structured daily rhythms, and 24/7 overnight awake staff to support both physical and cognitive well-being.
           </p>
         </div>
 
