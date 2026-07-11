@@ -1,8 +1,39 @@
 import React, { useState } from 'react';
 import { motion, Variants } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Calendar, Clock, Mail, MessageSquare, Phone, Send, User, CheckCircle2 } from 'lucide-react';
+import { HashLink } from 'react-router-hash-link';
+import { ArrowLeft, Calendar, Clock, Mail, MessageSquare, Phone, Send, User, CheckCircle2, MapPin } from 'lucide-react';
 import SEOHead from './SEOHead';
+
+const LocationCard = () => {
+  return (
+    <div className="bg-slate-900 text-white rounded-2xl p-6 shadow-xl border border-slate-800">
+      <div className="flex items-center gap-2 mb-3">
+        <MapPin className="w-5 h-5 text-emerald-400" />
+        <span className="text-[10px] sm:text-xs font-bold text-emerald-400 uppercase tracking-widest">
+          Tour Location
+        </span>
+      </div>
+      <h4 className="text-xl font-bold font-serif mb-2 leading-tight">
+        Columbia Care Home
+      </h4>
+      <p className="text-stone-300 font-medium text-sm leading-relaxed mb-4">
+        10610 Hickory Point Lane<br />
+        Columbia, MD 21044
+      </p>
+      <div className="border-t border-slate-800/80 pt-4 mb-4 text-xs text-stone-400 leading-relaxed">
+        Located in a quiet residential neighborhood off Hickory Point Lane. Visitor parking is available directly in the front driveway.
+      </div>
+      <HashLink
+        to="/contact#find-us"
+        className="inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 font-bold text-xs uppercase tracking-wider transition-colors"
+      >
+        <span>View Map & Parking Info</span>
+        <span>→</span>
+      </HashLink>
+    </div>
+  );
+};
 
 const ScheduleTourPage = () => {
   const [formData, setFormData] = useState({
@@ -106,6 +137,11 @@ const ScheduleTourPage = () => {
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+        {/* Mobile View Location Card - Priority Placement */}
+        <div className="block lg:hidden mb-8">
+          <LocationCard />
+        </div>
+
         <div className="grid lg:grid-cols-3 gap-12">
           {/* Left Column: Form */}
           <div className="lg:col-span-2">
@@ -173,6 +209,10 @@ const ScheduleTourPage = () => {
 
           {/* Right Column: Info */}
           <div className="lg:col-span-1 space-y-8">
+            {/* Desktop View Location Card */}
+            <div className="hidden lg:block">
+              <LocationCard />
+            </div>
             <motion.div
               className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100"
               initial={{ opacity: 0 }}
