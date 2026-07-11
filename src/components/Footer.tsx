@@ -155,7 +155,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="bg-gray-800 text-gray-300 pt-16 pb-6">
+    <footer className="bg-gray-800 text-gray-300 pt-16 pb-20 md:pb-6">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Desktop Footer */}
@@ -172,14 +172,15 @@ const Footer = () => {
         </div>
 
         {/* Mobile Accordion Footer */}
-        <div className="md:hidden">
+        <div className="md:hidden space-y-4">
+
           <FooterAccordionItem
             title="Get In Touch"
             isOpen={openAccordion === 'location'}
             onToggle={() => handleAccordionToggle('location')}
           >
             <ul className="space-y-3 pt-3">
-              {contactInfo.map((item, index) => (
+              {contactInfo.filter(item => item.text !== '10610 Hickory Point Lane, Columbia, MD 21044').map((item, index) => (
                 <li key={index} className="flex items-center justify-center space-x-3">
                   <span className="text-indigo-300">{item.icon}</span>
                   <span className="text-gray-400 text-sm">{item.text}</span>

@@ -365,7 +365,7 @@ const ContactPage: React.FC = () => {
         </div>
 
         {/* Map Section */}
-        <div className="mt-16">
+        <div id="find-us" className="mt-16 scroll-mt-24">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Find Us</h2>
           <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
             <iframe

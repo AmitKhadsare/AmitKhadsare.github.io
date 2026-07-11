@@ -43,58 +43,60 @@ function App() {
       <ScrollToTop />
       <div className="min-h-screen">
         <Header />
-        <Routes>
-          <Route path="/" element={
-            <>
-              <SEOHead
-                title="Physical Therapist-Led Assisted Living in Columbia, MD | Columbia Care Home"
-                description="Columbia Care Home is a physical therapist-led assisted living home offering personalized care in an intimate 8-resident residential setting. Our Level 3 licensed care model supports seniors with complex mobility and cognitive needs while maintaining dignity and independence."
-              />
-              <div id="home" className="scroll-mt-24">
-                <Hero />
-              </div>
-              <Testimonials />
-              <div id="about" className="scroll-mt-24">
-                <About />
-              </div>
-              <div id="services" className="scroll-mt-24">
-                <Services />
-              </div>
-              <div id="authority" className="scroll-mt-24">
-                <FeaturedInsights />
-              </div>
-              <div id="contact" className="scroll-mt-24">
-                <Contact />
-              </div>
-              <AwardsRecognition />
-            </>
-          } />
-          <Route path="/about-us" element={<AboutUsPage />} />
-          <Route path="/schedule-a-tour" element={<ScheduleTourPage />} />
-          <Route path="/services" element={<AllServicesPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/facility" element={<FacilityPage />} />
-          <Route path="/careers" element={<CareersPage />} />
-          <Route path="/rehabilitation" element={<RehabilitationPage />} />
-          <Route path="/memory-care" element={<MemoryCarePage />} />
-          <Route path="/family-partnership" element={<FamilyPartnershipPage />} />
-          <Route path="/health-safety" element={<HealthAndSafetyPage />} />
-          <Route path="/residential-care" element={<ResidentialCarePage />} />
-          <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
-          <Route path="/terms-of-service" element={<TermsOfServicePage />} />
-          <Route path="/recreation" element={<RecreationPage />} />
-          <Route path="/personal-assistance" element={<PersonalAssistancePage />} />
-          <Route path="/dietary" element={<DietaryPage />} />
-          <Route path="/virtual-tour" element={<VirtualTourPage />} />
-          <Route path="/blog" element={<BlogIndexPage />} />
-          <Route path="/blog/:slug" element={<BlogPostPage />} />
-          <Route path="/family-stories" element={<WhatFamiliesSayPage />} />
-          <Route path="/faq" element={<FAQPage />} />
-          <Route path="/pricing" element={<PricingPage />} />
-          {/* 404 Fallback */}
-          <Route path="*" element={<NotFoundPage />} />
-        </Routes>
-        <Footer />
+        <div className="overflow-x-hidden">
+          <Routes>
+            <Route path="/" element={
+              <>
+                <SEOHead
+                  title="Physical Therapist-Led Assisted Living in Columbia, MD | Columbia Care Home"
+                  description="Columbia Care Home is a physical therapist-led assisted living home offering personalized care in an intimate 8-resident residential setting. Our Level 3 licensed care model supports seniors with complex mobility and cognitive needs while maintaining dignity and independence."
+                />
+                <div id="home" className="scroll-mt-24">
+                  <Hero />
+                </div>
+                <Testimonials />
+                <div id="about" className="scroll-mt-24">
+                  <About />
+                </div>
+                <div id="services" className="scroll-mt-24">
+                  <Services />
+                </div>
+                <div id="authority" className="scroll-mt-24">
+                  <FeaturedInsights />
+                </div>
+                <div id="contact" className="scroll-mt-24">
+                  <Contact />
+                </div>
+                <AwardsRecognition />
+              </>
+            } />
+            <Route path="/about-us" element={<AboutUsPage />} />
+            <Route path="/schedule-a-tour" element={<ScheduleTourPage />} />
+            <Route path="/services" element={<AllServicesPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/facility" element={<FacilityPage />} />
+            <Route path="/careers" element={<CareersPage />} />
+            <Route path="/rehabilitation" element={<RehabilitationPage />} />
+            <Route path="/memory-care" element={<MemoryCarePage />} />
+            <Route path="/family-partnership" element={<FamilyPartnershipPage />} />
+            <Route path="/health-safety" element={<HealthAndSafetyPage />} />
+            <Route path="/residential-care" element={<ResidentialCarePage />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+            <Route path="/terms-of-service" element={<TermsOfServicePage />} />
+            <Route path="/recreation" element={<RecreationPage />} />
+            <Route path="/personal-assistance" element={<PersonalAssistancePage />} />
+            <Route path="/dietary" element={<DietaryPage />} />
+            <Route path="/virtual-tour" element={<VirtualTourPage />} />
+            <Route path="/blog" element={<BlogIndexPage />} />
+            <Route path="/blog/:slug" element={<BlogPostPage />} />
+            <Route path="/family-stories" element={<WhatFamiliesSayPage />} />
+            <Route path="/faq" element={<FAQPage />} />
+            <Route path="/pricing" element={<PricingPage />} />
+            {/* 404 Fallback */}
+            <Route path="*" element={<NotFoundPage />} />
+          </Routes>
+          <Footer />
+        </div>
         <MobileSocialBar />
       </div>
     </>

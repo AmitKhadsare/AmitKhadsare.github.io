@@ -45,18 +45,18 @@ const Header = () => {
 
   return (
     <>
-      {/* Top Bar */}
+      {/* Top Bar — scrolls away on mobile */}
       <div className="bg-slate-900 text-white py-2 border-b border-white/5">
         <div className="max-w-7xl mx-auto px-4">
           {/* Mobile View: High-Density Single Line */}
           <div className="flex md:hidden items-center justify-between gap-2 text-xs">
-            <div className="flex items-center gap-2">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-              </span>
-              <span className="font-bold text-emerald-400 whitespace-nowrap uppercase tracking-wider">Only 1 Room Available</span>
-            </div>
+            <HashLink 
+              to="/contact#find-us" 
+              className="flex items-center gap-1 bg-slate-800/80 border border-slate-700/50 px-2.5 py-1 rounded-full text-emerald-400 hover:bg-slate-700 hover:text-emerald-300 transition-all text-[10px]"
+            >
+              <MapPin size={10} className="text-emerald-400 flex-shrink-0" />
+              <span className="font-semibold whitespace-nowrap">10610 Hickory Point Ln</span>
+            </HashLink>
             <a 
               href="tel:301-500-0809" 
               className="flex items-center gap-1.5 bg-emerald-600 px-3 py-1 rounded-full font-bold text-[10px] animate-pulse shadow-lg shadow-emerald-900/20"
@@ -96,15 +96,15 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Main Header */}
-      <header className="sticky top-0 z-40 bg-white border-b border-stone-200">
+      {/* Main Header — sticky throughout */}
+      <header className="sticky top-0 z-50 bg-white border-b border-stone-200">
         <div className="max-w-7xl mx-auto flex items-center justify-between h-[76px] sm:h-20 md:h-20 lg:h-24 xl:h-28 px-4 sm:px-6 lg:px-8">
           {/* Logo */}
           <Link to="/" className="flex-1 lg:flex-initial py-0 lg:py-2 flex items-center">
             <img
               src={logo}
               alt="Columbia Care Home"
-              className="h-[74px] sm:h-16 md:h-16 lg:h-20 xl:h-24 w-auto max-w-none sm:max-w-[340px] md:max-w-[260px] lg:max-w-[300px] xl:max-w-[340px] object-contain object-left"
+              className="h-14 sm:h-16 md:h-16 lg:h-20 xl:h-24 w-auto max-w-[220px] sm:max-w-[340px] md:max-w-[260px] lg:max-w-[300px] xl:max-w-[340px] object-contain object-left"
             />
           </Link>
 
