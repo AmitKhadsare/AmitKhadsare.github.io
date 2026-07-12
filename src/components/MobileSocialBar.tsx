@@ -11,7 +11,7 @@ const MobileSocialBar = () => {
   }
 
   return (
-    <div className="md:hidden fixed bottom-0 left-0 right-0 bg-slate-950/95 backdrop-blur-md border-t border-white/10 px-4 py-3.5 shadow-2xl z-40">
+    <div className="md:hidden fixed bottom-0 left-0 right-0 bg-stone-900/95 backdrop-blur-md border-t border-white/10 px-4 py-3.5 shadow-2xl z-40">
       <div className="flex items-center justify-between max-w-md mx-auto">
         <div className="flex items-center gap-2.5">
           <span className="relative flex h-2.5 w-2.5">
