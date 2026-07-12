@@ -20,12 +20,18 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
   const [servicesExpanded, setServicesExpanded] = useState(false);
 
   useEffect(() => {
-    if (!isOpen) {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
       setTimeout(() => {
         setActiveSubMenu(null);
         setServicesExpanded(false);
       }, 250);
     }
+    return () => {
+      document.body.style.overflow = '';
+    };
   }, [isOpen]);
 
   const panelVariants: Variants = {
