@@ -206,7 +206,7 @@ const Footer = () => {
               <div className="flex items-center gap-2 text-sm text-gray-400 px-4">
                 <MapPin size={16} className="text-indigo-300 flex-shrink-0" />
                 <HashLink smooth to="/contact#find-us" className="hover:text-white underline decoration-indigo-300/30 text-center">
-                  10610 Hickory Point Lane, Columbia, MD 21044
+                  Our Location
                 </HashLink>
               </div>
             </div>
