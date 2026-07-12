@@ -1,6 +1,6 @@
 ---
 id: "0"
-title: "Inside Columbia Care Home: A <span class="blog-accent">Home-First</span> Approach to Design and Care"
+title: "Inside Columbia Care Home: A Home-First Approach to Design and Care"
 excerpt: "See how Columbia Care Home pairs therapeutic intent with warm residential design to make every day feel like home."
 author: "Columbia Care Editorial Team"
 date: "2025-11-28"

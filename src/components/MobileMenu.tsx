@@ -76,33 +76,33 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
               <AnimatePresence initial={false} mode="wait">
                 {!activeSubMenu ? (
                   <motion.div key="main-menu" className="absolute w-full h-full flex flex-col" variants={listVariants} initial="enter" animate="enter" exit="exit">
-                    <nav className="flex-1 overflow-y-auto p-5 space-y-6">
+                    <nav className="flex-1 overflow-y-auto p-4 space-y-4">
                       
-                      {/* Decluttered List of Links with Inline Icons */}
-                      <div className="flex flex-col space-y-2">
+                      {/* Primary Links */}
+                      <div className="flex flex-col space-y-1">
                         <HashLink 
                           to="/#home" 
                           onClick={onClose} 
-                          className="flex items-center gap-3.5 px-3.5 py-3 rounded-xl hover:bg-stone-50 text-stone-800 hover:text-emerald-700 active:scale-95 transition-all text-base font-bold"
+                          className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-stone-50 text-stone-800 hover:text-emerald-700 active:scale-95 transition-all text-sm font-semibold"
                         >
-                          <Home size={18} className="text-emerald-700/80" />
+                          <Home size={16} className="text-emerald-700/80" />
                           <span>Home</span>
                         </HashLink>
 
                         {/* Accordion Care Model */}
-                        <div className="space-y-1">
+                        <div className="space-y-0.5">
                           <button 
                             onClick={() => setServicesExpanded(!servicesExpanded)} 
-                            className="flex items-center justify-between w-full px-3.5 py-3 rounded-xl hover:bg-stone-50 text-stone-800 hover:text-emerald-700 active:scale-95 transition-all text-base font-bold text-left"
+                            className="flex items-center justify-between w-full px-3 py-2 rounded-lg hover:bg-stone-50 text-stone-800 hover:text-emerald-700 active:scale-95 transition-all text-sm font-semibold text-left"
                           >
-                            <div className="flex items-center gap-3.5">
-                              <Shield size={18} className="text-emerald-700/80" />
+                            <div className="flex items-center gap-3">
+                              <Shield size={16} className="text-emerald-700/80" />
                               <span>Our Care Services</span>
                             </div>
                             {servicesExpanded ? (
-                              <ChevronUp size={18} className="text-stone-400" />
+                              <ChevronUp size={16} className="text-stone-400" />
                             ) : (
-                              <ChevronDown size={18} className="text-stone-400" />
+                              <ChevronDown size={16} className="text-stone-400" />
                             )}
                           </button>
 
@@ -112,7 +112,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                                 initial={{ height: 0, opacity: 0 }}
                                 animate={{ height: 'auto', opacity: 1 }}
                                 exit={{ height: 0, opacity: 0 }}
-                                className="pl-6 pr-2 py-1 space-y-1 border-l border-emerald-100/60 overflow-hidden ml-5"
+                                className="pl-6 pr-2 py-0.5 space-y-0.5 border-l border-emerald-100/60 overflow-hidden ml-5"
                               >
                                 {menuData.services.sections.flatMap(s => s.links).map((link, idx) => {
                                   const LinkIcon = link.icon;
@@ -121,9 +121,9 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                                       key={idx}
                                       to={link.path}
                                       onClick={onClose}
-                                      className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-stone-600 hover:text-emerald-750 hover:bg-emerald-50/20 transition-all text-sm font-bold"
+                                      className="flex items-center gap-2.5 px-2.5 py-1.5 rounded-md text-stone-600 hover:text-emerald-750 hover:bg-emerald-50/20 transition-all text-[13px] font-medium"
                                     >
-                                      <LinkIcon size={14} className="text-emerald-600/70" />
+                                      <LinkIcon size={12} className="text-emerald-600/70" />
                                       <span>{link.name}</span>
                                     </Link>
                                   );
@@ -131,7 +131,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                                 <Link
                                   to="/services"
                                   onClick={onClose}
-                                  className="block text-xs font-black text-emerald-800 hover:text-emerald-950 transition-colors pt-2 px-3 border-t border-stone-100 w-fit"
+                                  className="block text-xs font-bold text-emerald-800 hover:text-emerald-950 transition-colors pt-1.5 px-2.5 border-t border-stone-100 w-fit"
                                 >
                                   View All Services & Care Model →
                                 </Link>
@@ -141,105 +141,109 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                         </div>
 
                         <Link 
-                          to="/facility" 
-                          onClick={onClose} 
-                          className="flex items-center gap-3.5 px-3.5 py-3 rounded-xl hover:bg-stone-50 text-stone-850 hover:text-emerald-700 active:scale-95 transition-all text-base font-bold"
-                        >
-                          <Building2 size={18} className="text-emerald-700/80" />
-                          <span>Our Facility (Gallery)</span>
-                        </Link>
-
-                        <Link 
                           to="/virtual-tour" 
                           onClick={onClose} 
-                          className="flex items-center gap-3.5 px-3.5 py-3 rounded-xl hover:bg-stone-50 text-stone-850 hover:text-emerald-700 active:scale-95 transition-all text-base font-bold"
+                          className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-stone-50 text-stone-850 hover:text-emerald-700 active:scale-95 transition-all text-sm font-semibold"
                         >
-                          <Video size={18} className="text-emerald-700/80" />
+                          <Video size={16} className="text-emerald-700/80" />
                           <span>Virtual Tour</span>
-                        </Link>
-
-                        <Link 
-                          to="/pricing" 
-                          onClick={onClose} 
-                          className="flex items-center gap-3.5 px-3.5 py-3 rounded-xl hover:bg-stone-50 text-stone-850 hover:text-emerald-700 active:scale-95 transition-all text-base font-bold"
-                        >
-                          <Coins size={18} className="text-emerald-700/80" />
-                          <span>Pricing & Rates</span>
-                        </Link>
-
-                        <Link 
-                          to="/family-stories" 
-                          onClick={onClose} 
-                          className="flex items-center gap-3.5 px-3.5 py-3 rounded-xl hover:bg-stone-50 text-stone-855 hover:text-emerald-700 active:scale-95 transition-all text-base font-bold"
-                        >
-                          <Heart size={18} className="text-emerald-700/80" />
-                          <span>Family Testimonials</span>
-                        </Link>
-
-                        <Link 
-                          to="/about-us" 
-                          onClick={onClose} 
-                          className="flex items-center gap-3.5 px-3.5 py-3 rounded-xl hover:bg-stone-50 text-stone-850 hover:text-emerald-700 active:scale-95 transition-all text-base font-bold"
-                        >
-                          <BookOpen size={18} className="text-emerald-700/80" />
-                          <span>Our Founding Story</span>
-                        </Link>
-
-                        <Link 
-                          to="/faq" 
-                          onClick={onClose} 
-                          className="flex items-center gap-3.5 px-3.5 py-3 rounded-xl hover:bg-stone-50 text-stone-850 hover:text-emerald-700 active:scale-95 transition-all text-base font-bold"
-                        >
-                          <HelpCircle size={18} className="text-emerald-700/80" />
-                          <span>Common Questions (FAQ)</span>
-                        </Link>
-
-                        <Link 
-                          to="/blog" 
-                          onClick={onClose} 
-                          className="flex items-center gap-3.5 px-3.5 py-3 rounded-xl hover:bg-stone-50 text-stone-850 hover:text-emerald-700 active:scale-95 transition-all text-base font-bold"
-                        >
-                          <Newspaper size={18} className="text-emerald-700/80" />
-                          <span>Family Guides & Insights</span>
                         </Link>
                       </div>
 
+                      {/* Secondary Links Grid */}
+                      <div>
+                        <span className="block text-[9px] font-bold text-stone-400 uppercase tracking-widest px-3 mb-2">Explore More</span>
+                        <div className="grid grid-cols-2 gap-2">
+                          <Link 
+                            to="/facility" 
+                            onClick={onClose} 
+                            className="flex items-center gap-2 p-2.5 rounded-xl bg-stone-50/60 hover:bg-stone-50 border border-stone-200/50 text-stone-800 hover:text-emerald-700 active:scale-95 transition-all text-xs font-semibold"
+                          >
+                            <Building2 size={14} className="text-emerald-700/80 flex-shrink-0" />
+                            <span>Our Facility</span>
+                          </Link>
+
+                          <Link 
+                            to="/pricing" 
+                            onClick={onClose} 
+                            className="flex items-center gap-2 p-2.5 rounded-xl bg-stone-50/60 hover:bg-stone-50 border border-stone-200/50 text-stone-800 hover:text-emerald-700 active:scale-95 transition-all text-xs font-semibold"
+                          >
+                            <Coins size={14} className="text-emerald-700/80 flex-shrink-0" />
+                            <span>Pricing & Rates</span>
+                          </Link>
+
+                          <Link 
+                            to="/family-stories" 
+                            onClick={onClose} 
+                            className="flex items-center gap-2 p-2.5 rounded-xl bg-stone-50/60 hover:bg-stone-50 border border-stone-200/50 text-stone-800 hover:text-emerald-700 active:scale-95 transition-all text-xs font-semibold"
+                          >
+                            <Heart size={14} className="text-emerald-700/80 flex-shrink-0" />
+                            <span>Testimonials</span>
+                          </Link>
+
+                          <Link 
+                            to="/about-us" 
+                            onClick={onClose} 
+                            className="flex items-center gap-2 p-2.5 rounded-xl bg-stone-50/60 hover:bg-stone-50 border border-stone-200/50 text-stone-800 hover:text-emerald-700 active:scale-95 transition-all text-xs font-semibold"
+                          >
+                            <BookOpen size={14} className="text-emerald-700/80 flex-shrink-0" />
+                            <span>Founding Story</span>
+                          </Link>
+
+                          <Link 
+                            to="/faq" 
+                            onClick={onClose} 
+                            className="flex items-center gap-2 p-2.5 rounded-xl bg-stone-50/60 hover:bg-stone-50 border border-stone-200/50 text-stone-800 hover:text-emerald-700 active:scale-95 transition-all text-xs font-semibold"
+                          >
+                            <HelpCircle size={14} className="text-emerald-700/80 flex-shrink-0" />
+                            <span>FAQ</span>
+                          </Link>
+
+                          <Link 
+                            to="/blog" 
+                            onClick={onClose} 
+                            className="flex items-center gap-2 p-2.5 rounded-xl bg-stone-50/60 hover:bg-stone-50 border border-stone-200/50 text-stone-800 hover:text-emerald-700 active:scale-95 transition-all text-xs font-semibold"
+                          >
+                            <Newspaper size={14} className="text-emerald-700/80 flex-shrink-0" />
+                            <span>Family Guides</span>
+                          </Link>
+                        </div>
+                      </div>
+
+                      {/* Interactive Location Link */}
+                      <div className="pt-1">
+                        <HashLink
+                          to="/contact#find-us"
+                          onClick={onClose}
+                          className="flex items-center justify-between p-3 rounded-xl bg-stone-50 border border-stone-200/60 hover:border-emerald-500/50 hover:bg-emerald-50/10 transition-all group"
+                        >
+                          <div className="flex items-center gap-2.5">
+                            <MapPin size={16} className="text-emerald-700 flex-shrink-0" />
+                            <div className="text-left">
+                              <p className="text-xs font-bold text-stone-800 leading-none">Our Location</p>
+                              <p className="text-[10px] text-stone-500 mt-1 leading-none">10610 Hickory Point Ln, Columbia, MD</p>
+                            </div>
+                          </div>
+                          <ChevronRight size={14} className="text-stone-400 group-hover:translate-x-0.5 transition-transform" />
+                        </HashLink>
+                      </div>
+
                       {/* Secondary Careers Link */}
-                      <div className="pt-4 border-t border-stone-100 flex items-center justify-between">
+                      <div className="pt-2 border-t border-stone-100 flex items-center justify-between">
                         <Link 
                           to="/careers" 
                           onClick={onClose} 
-                          className="text-sm font-bold text-stone-400 hover:text-stone-600 transition-colors px-3.5"
+                          className="text-xs font-bold text-stone-400 hover:text-stone-600 transition-colors px-2"
                         >
                           Careers
                         </Link>
                         <Link 
                           to="/privacy-policy" 
                           onClick={onClose} 
-                          className="text-xs font-medium text-stone-400 hover:text-stone-600 transition-colors px-3.5"
+                          className="text-[10px] font-medium text-stone-400 hover:text-stone-600 transition-colors px-2"
                         >
                           Privacy Policy
                         </Link>
-                      </div>
-
-                      {/* Interactive Location Card */}
-                      <div className="pt-2">
-                        <HashLink
-                          to="/contact#find-us"
-                          onClick={onClose}
-                          className="block p-5 rounded-2xl bg-stone-50 border border-stone-200/80 hover:border-emerald-500/50 hover:bg-emerald-50/10 transition-all group"
-                        >
-                          <div className="flex items-center gap-2 mb-2">
-                            <MapPin size={16} className="text-emerald-700" />
-                            <span className="text-[10px] font-black text-emerald-800 uppercase tracking-[0.2em] leading-none">Our Location</span>
-                          </div>
-                          <p className="text-xs font-bold text-stone-800 leading-tight">Columbia Care Home</p>
-                          <p className="text-xs text-stone-500 mt-1 leading-normal">10610 Hickory Point Ln, Columbia, MD 21044</p>
-                          <div className="mt-3 flex items-center gap-1 text-[10px] font-black text-emerald-700 uppercase tracking-widest group-hover:text-emerald-850 transition-colors">
-                            <span>View Map & Directions</span>
-                            <ChevronRight size={12} className="group-hover:translate-x-0.5 transition-transform" />
-                          </div>
-                        </HashLink>
                       </div>
 
                     </nav>

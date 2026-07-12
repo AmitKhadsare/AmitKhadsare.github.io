@@ -385,7 +385,7 @@ const ContactPage: React.FC = () => {
                   <p className="text-gray-600">10610 Hickory Point Lane, Columbia, MD 21044</p>
                 </div>
                 <a
-                  href="https://maps.google.com"
+                  href="https://www.google.com/maps/search/?api=1&query=10610+Hickory+Point+Lane,+Columbia,+MD+21044"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-6 py-2 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-colors"
