@@ -2,7 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
-import { X, Phone, Calendar, ArrowLeft, ChevronRight, Building2, Video, ShieldCheck, HelpCircle, Heart, BookOpen, Shield } from 'lucide-react';
+import { 
+  X, Phone, Calendar, ArrowLeft, ChevronRight, ChevronDown, ChevronUp, MapPin,
+  Home, Building2, Video, Coins, Heart, BookOpen, HelpCircle, Newspaper, Shield 
+} from 'lucide-react';
 import { menuData } from '../data/navigationData';
 
 const logo = "/logos/header_logo.webp";
@@ -13,15 +16,17 @@ interface MobileMenuProps {
 }
 
 const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
-  const [activeSubMenu, setActiveSubMenu] = useState<keyof typeof menuData | 'call' | null>(null);
+  const [activeSubMenu, setActiveSubMenu] = useState<'call' | null>(null);
+  const [servicesExpanded, setServicesExpanded] = useState(false);
 
   useEffect(() => {
     if (!isOpen) {
-      setTimeout(() => setActiveSubMenu(null), 250);
+      setTimeout(() => {
+        setActiveSubMenu(null);
+        setServicesExpanded(false);
+      }, 250);
     }
   }, [isOpen]);
-
-
 
   const panelVariants: Variants = {
     hidden: { opacity: 0, scale: 0.98 },
@@ -73,87 +78,170 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                   <motion.div key="main-menu" className="absolute w-full h-full flex flex-col" variants={listVariants} initial="enter" animate="enter" exit="exit">
                     <nav className="flex-1 overflow-y-auto p-5 space-y-6">
                       
-                      {/* Hub 1: The Residence */}
-                      <section>
-                        <div className="flex items-center justify-between mb-3">
-                          <h3 className="text-[10px] font-black text-emerald-800 uppercase tracking-[0.2em]">The Residence</h3>
-                          <HashLink to="/#home" onClick={onClose} className="text-[10px] font-bold text-stone-300 uppercase tracking-widest">Home</HashLink>
-                        </div>
-                        <div className="grid grid-cols-2 gap-2">
-                          <Link to="/facility" onClick={onClose} className="flex flex-col items-center justify-center py-4 rounded-xl bg-stone-50 border border-stone-100 active:scale-95 transition-all group">
-                            <Building2 size={20} className="text-emerald-700 mb-2 group-hover:scale-110 transition-transform" />
-                            <span className="text-xs font-bold text-emerald-950">Gallery</span>
-                          </Link>
-                          <Link to="/virtual-tour" onClick={onClose} className="flex flex-col items-center justify-center py-4 rounded-xl bg-stone-50 border border-stone-100 active:scale-95 transition-all group">
-                            <Video size={20} className="text-emerald-700 mb-2 group-hover:scale-110 transition-transform" />
-                            <span className="text-xs font-bold text-emerald-950">Virtual Tour</span>
-                          </Link>
-                        </div>
-                      </section>
+                      {/* Decluttered List of Links with Inline Icons */}
+                      <div className="flex flex-col space-y-2">
+                        <HashLink 
+                          to="/#home" 
+                          onClick={onClose} 
+                          className="flex items-center gap-3.5 px-3.5 py-3 rounded-xl hover:bg-stone-50 text-stone-800 hover:text-emerald-700 active:scale-95 transition-all text-base font-bold"
+                        >
+                          <Home size={18} className="text-emerald-700/80" />
+                          <span>Home</span>
+                        </HashLink>
 
-                      {/* Hub 2: Community & Transparency */}
-                      <section>
-                        <h3 className="text-[10px] font-black text-emerald-800 uppercase tracking-[0.2em] mb-3">Community & Transparency</h3>
-                        <div className="bg-white rounded-2xl border border-stone-100 divide-y divide-stone-50">
-                          <Link to="/family-stories" onClick={onClose} className="flex items-center justify-between p-4 hover:bg-stone-50 transition-colors">
-                            <div className="flex items-center gap-4">
-                              <Heart size={18} className="text-emerald-700/60" />
-                              <span className="text-sm font-bold text-stone-800">Family Testimonials</span>
+                        {/* Accordion Care Model */}
+                        <div className="space-y-1">
+                          <button 
+                            onClick={() => setServicesExpanded(!servicesExpanded)} 
+                            className="flex items-center justify-between w-full px-3.5 py-3 rounded-xl hover:bg-stone-50 text-stone-800 hover:text-emerald-700 active:scale-95 transition-all text-base font-bold text-left"
+                          >
+                            <div className="flex items-center gap-3.5">
+                              <Shield size={18} className="text-emerald-700/80" />
+                              <span>Our Care Services</span>
                             </div>
-                            <ChevronRight size={16} className="text-stone-300" />
-                          </Link>
-                          <Link to="/about-us" onClick={onClose} className="flex items-center justify-between p-4 hover:bg-stone-50 transition-colors">
-                            <div className="flex items-center gap-4">
-                              <BookOpen size={18} className="text-emerald-700/60" />
-                              <span className="text-sm font-bold text-stone-800">Our Founding Story</span>
-                            </div>
-                            <ChevronRight size={16} className="text-stone-300" />
-                          </Link>
-                          <Link to="/blog" onClick={onClose} className="flex items-center justify-between p-4 hover:bg-stone-50 transition-colors">
-                            <div className="flex items-center gap-4">
-                              <BookOpen size={18} className="text-emerald-700/60" />
-                              <span className="text-sm font-bold text-stone-800">Family Guides & Insights</span>
-                            </div>
-                            <ChevronRight size={16} className="text-stone-300" />
-                          </Link>
-                          <Link to="/pricing" onClick={onClose} className="flex items-center justify-between p-4 hover:bg-stone-50 transition-colors">
-                            <div className="flex items-center gap-4">
-                              <ShieldCheck size={18} className="text-emerald-700/60" />
-                              <span className="text-sm font-bold text-stone-800">Pricing & All-Inclusive Rates</span>
-                            </div>
-                            <ChevronRight size={16} className="text-stone-300" />
-                          </Link>
-                          <Link to="/faq" onClick={onClose} className="flex items-center justify-between p-4 hover:bg-stone-50 transition-colors">
-                            <div className="flex items-center gap-4">
-                              <HelpCircle size={18} className="text-emerald-700/60" />
-                              <span className="text-sm font-bold text-stone-800">Common Questions (FAQ)</span>
-                            </div>
-                            <ChevronRight size={16} className="text-stone-300" />
-                          </Link>
-                        </div>
-                      </section>
+                            {servicesExpanded ? (
+                              <ChevronUp size={18} className="text-stone-400" />
+                            ) : (
+                              <ChevronDown size={18} className="text-stone-400" />
+                            )}
+                          </button>
 
-                      {/* Hub 3: Care Services - Moved below community & no green bg */}
-                      <section>
-                        <h3 className="text-[10px] font-black text-emerald-800 uppercase tracking-[0.2em] mb-3">Care Model</h3>
-                        <button onClick={() => setActiveSubMenu('services')} className="w-full group">
-                          <div className="flex items-center justify-between p-4 rounded-2xl bg-stone-50 border border-stone-100 active:scale-[0.98] transition-all">
-                            <div className="flex items-center gap-3">
-                              <Shield size={20} className="text-emerald-700" />
-                              <span className="text-sm font-bold text-emerald-950">Explore Care Services</span>
-                            </div>
-                            <ChevronRight size={18} className="text-stone-300 group-hover:translate-x-1 transition-transform" />
+                          <AnimatePresence>
+                            {servicesExpanded && (
+                              <motion.div 
+                                initial={{ height: 0, opacity: 0 }}
+                                animate={{ height: 'auto', opacity: 1 }}
+                                exit={{ height: 0, opacity: 0 }}
+                                className="pl-6 pr-2 py-1 space-y-1 border-l border-emerald-100/60 overflow-hidden ml-5"
+                              >
+                                {menuData.services.sections.flatMap(s => s.links).map((link, idx) => {
+                                  const LinkIcon = link.icon;
+                                  return (
+                                    <Link
+                                      key={idx}
+                                      to={link.path}
+                                      onClick={onClose}
+                                      className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-stone-600 hover:text-emerald-750 hover:bg-emerald-50/20 transition-all text-sm font-bold"
+                                    >
+                                      <LinkIcon size={14} className="text-emerald-600/70" />
+                                      <span>{link.name}</span>
+                                    </Link>
+                                  );
+                                })}
+                                <Link
+                                  to="/services"
+                                  onClick={onClose}
+                                  className="block text-xs font-black text-emerald-800 hover:text-emerald-950 transition-colors pt-2 px-3 border-t border-stone-100 w-fit"
+                                >
+                                  View All Services & Care Model →
+                                </Link>
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
+                        </div>
+
+                        <Link 
+                          to="/facility" 
+                          onClick={onClose} 
+                          className="flex items-center gap-3.5 px-3.5 py-3 rounded-xl hover:bg-stone-50 text-stone-850 hover:text-emerald-700 active:scale-95 transition-all text-base font-bold"
+                        >
+                          <Building2 size={18} className="text-emerald-700/80" />
+                          <span>Our Facility (Gallery)</span>
+                        </Link>
+
+                        <Link 
+                          to="/virtual-tour" 
+                          onClick={onClose} 
+                          className="flex items-center gap-3.5 px-3.5 py-3 rounded-xl hover:bg-stone-50 text-stone-850 hover:text-emerald-700 active:scale-95 transition-all text-base font-bold"
+                        >
+                          <Video size={18} className="text-emerald-700/80" />
+                          <span>Virtual Tour</span>
+                        </Link>
+
+                        <Link 
+                          to="/pricing" 
+                          onClick={onClose} 
+                          className="flex items-center gap-3.5 px-3.5 py-3 rounded-xl hover:bg-stone-50 text-stone-850 hover:text-emerald-700 active:scale-95 transition-all text-base font-bold"
+                        >
+                          <Coins size={18} className="text-emerald-700/80" />
+                          <span>Pricing & Rates</span>
+                        </Link>
+
+                        <Link 
+                          to="/family-stories" 
+                          onClick={onClose} 
+                          className="flex items-center gap-3.5 px-3.5 py-3 rounded-xl hover:bg-stone-50 text-stone-855 hover:text-emerald-700 active:scale-95 transition-all text-base font-bold"
+                        >
+                          <Heart size={18} className="text-emerald-700/80" />
+                          <span>Family Testimonials</span>
+                        </Link>
+
+                        <Link 
+                          to="/about-us" 
+                          onClick={onClose} 
+                          className="flex items-center gap-3.5 px-3.5 py-3 rounded-xl hover:bg-stone-50 text-stone-850 hover:text-emerald-700 active:scale-95 transition-all text-base font-bold"
+                        >
+                          <BookOpen size={18} className="text-emerald-700/80" />
+                          <span>Our Founding Story</span>
+                        </Link>
+
+                        <Link 
+                          to="/faq" 
+                          onClick={onClose} 
+                          className="flex items-center gap-3.5 px-3.5 py-3 rounded-xl hover:bg-stone-50 text-stone-850 hover:text-emerald-700 active:scale-95 transition-all text-base font-bold"
+                        >
+                          <HelpCircle size={18} className="text-emerald-700/80" />
+                          <span>Common Questions (FAQ)</span>
+                        </Link>
+
+                        <Link 
+                          to="/blog" 
+                          onClick={onClose} 
+                          className="flex items-center gap-3.5 px-3.5 py-3 rounded-xl hover:bg-stone-50 text-stone-850 hover:text-emerald-700 active:scale-95 transition-all text-base font-bold"
+                        >
+                          <Newspaper size={18} className="text-emerald-700/80" />
+                          <span>Family Guides & Insights</span>
+                        </Link>
+                      </div>
+
+                      {/* Secondary Careers Link */}
+                      <div className="pt-4 border-t border-stone-100 flex items-center justify-between">
+                        <Link 
+                          to="/careers" 
+                          onClick={onClose} 
+                          className="text-sm font-bold text-stone-400 hover:text-stone-600 transition-colors px-3.5"
+                        >
+                          Careers
+                        </Link>
+                        <Link 
+                          to="/privacy-policy" 
+                          onClick={onClose} 
+                          className="text-xs font-medium text-stone-400 hover:text-stone-600 transition-colors px-3.5"
+                        >
+                          Privacy Policy
+                        </Link>
+                      </div>
+
+                      {/* Interactive Location Card */}
+                      <div className="pt-2">
+                        <HashLink
+                          to="/contact#find-us"
+                          onClick={onClose}
+                          className="block p-5 rounded-2xl bg-stone-50 border border-stone-200/80 hover:border-emerald-500/50 hover:bg-emerald-50/10 transition-all group"
+                        >
+                          <div className="flex items-center gap-2 mb-2">
+                            <MapPin size={16} className="text-emerald-700" />
+                            <span className="text-[10px] font-black text-emerald-800 uppercase tracking-[0.2em] leading-none">Our Location</span>
                           </div>
-                        </button>
-                      </section>
+                          <p className="text-xs font-bold text-stone-800 leading-tight">Columbia Care Home</p>
+                          <p className="text-xs text-stone-500 mt-1 leading-normal">10610 Hickory Point Ln, Columbia, MD 21044</p>
+                          <div className="mt-3 flex items-center gap-1 text-[10px] font-black text-emerald-700 uppercase tracking-widest group-hover:text-emerald-850 transition-colors">
+                            <span>View Map & Directions</span>
+                            <ChevronRight size={12} className="group-hover:translate-x-0.5 transition-transform" />
+                          </div>
+                        </HashLink>
+                      </div>
 
-                      {/* Hub 4: Secondary Actions */}
-                      <section className="pb-6">
-                        <div className="flex items-center justify-center gap-8 pt-2">
-                          <Link to="/contact" onClick={onClose} className="text-xs font-black text-emerald-900 uppercase tracking-widest border-b-2 border-emerald-100 pb-1">Contact</Link>
-                          <Link to="/careers" onClick={onClose} className="text-xs font-black text-stone-400 uppercase tracking-widest">Careers</Link>
-                        </div>
-                      </section>
                     </nav>
                   </motion.div>
                 ) : (
@@ -165,28 +253,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                     </div>
                     
                     <nav className="flex-1 overflow-y-auto p-5 space-y-6">
-                      {activeSubMenu === 'services' ? (
-                        <div className="space-y-6">
-                          {menuData.services.sections.map((section, sIdx) => (
-                            <section key={sIdx}>
-                              <h3 className="text-[10px] font-black text-emerald-800 uppercase tracking-[0.2em] mb-3">{section.title}</h3>
-                              <div className="grid grid-cols-1 gap-2">
-                                {section.links.map((link, lIdx) => {
-                                  const Icon = link.icon;
-                                  return (
-                                    <Link key={lIdx} to={link.path} onClick={onClose} className="flex items-center gap-4 p-4 rounded-xl bg-stone-50 border border-stone-100 active:scale-[0.98] transition-all">
-                                      <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center shadow-sm">
-                                        <Icon size={16} className="text-emerald-700" />
-                                      </div>
-                                      <span className="text-xs font-bold text-stone-800">{link.name}</span>
-                                    </Link>
-                                  );
-                                })}
-                              </div>
-                            </section>
-                          ))}
-                        </div>
-                      ) : activeSubMenu === 'call' ? (
+                      {activeSubMenu === 'call' && (
                         <div className="space-y-3 pt-2">
                           <a href="tel:301-500-0809" className="flex items-center justify-between p-4 rounded-xl bg-emerald-950 text-white shadow-lg">
                             <div className="flex items-center gap-3">
@@ -201,7 +268,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                             </div>
                           </a>
                         </div>
-                      ) : null}
+                      )}
                     </nav>
                   </motion.div>
                 )}
