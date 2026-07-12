@@ -83,15 +83,13 @@ const Header = () => {
               </a>
             </div>
             
-            <a 
-              href="https://maps.google.com/?q=10610+Hickory+Point+Lane,+Columbia,+MD+21044" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="flex items-center gap-2 text-stone-400 hover:text-emerald-300 transition-colors"
+            <HashLink 
+              to="/contact#find-us" 
+              className="flex items-center gap-2 text-stone-200 hover:text-emerald-400 transition-colors"
             >
-              <MapPin size={14} />
+              <MapPin size={14} className="text-emerald-500/80" />
               <span>10610 Hickory Point Lane, Columbia</span>
-            </a>
+            </HashLink>
           </div>
         </div>
       </div>
