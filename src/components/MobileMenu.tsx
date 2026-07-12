@@ -67,12 +67,12 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
             exit="exit"
           >
             {/* Header */}
-            <div className="flex-shrink-0 flex items-center justify-between p-4 border-b border-gray-100">
-              <HashLink to="/#home" onClick={onClose}>
+            <div className="flex-shrink-0 flex items-center justify-between h-[76px] sm:h-20 px-4 border-b border-gray-100">
+              <HashLink to="/#home" onClick={onClose} className="flex items-center">
                 <img
                   src={logo}
                   alt="Columbia Care Home"
-                  className="h-12 w-auto object-contain"
+                  className="h-14 sm:h-16 w-auto object-contain object-left"
                 />
               </HashLink>
               <button onClick={onClose} className="p-2 text-gray-400 hover:text-emerald-700 transition-colors" aria-label="Close menu"><X size={24} /></button>
