@@ -179,14 +179,37 @@ const Footer = () => {
             isOpen={openAccordion === 'location'}
             onToggle={() => handleAccordionToggle('location')}
           >
-            <ul className="space-y-3 pt-3">
-              {contactInfo.filter(item => item.text !== '10610 Hickory Point Lane, Columbia, MD 21044').map((item, index) => (
-                <li key={index} className="flex items-center justify-center space-x-3">
-                  <span className="text-indigo-300">{item.icon}</span>
-                  <span className="text-gray-400 text-sm">{item.text}</span>
-                </li>
-              ))}
-            </ul>
+            <div className="space-y-3 pt-3 flex flex-col items-center text-center">
+              {/* Phone Numbers in Single Line */}
+              <div className="flex items-center gap-2 text-sm text-gray-450">
+                <Phone size={16} className="text-indigo-300 flex-shrink-0" />
+                <div className="flex items-center gap-1.5 flex-wrap justify-center text-gray-400">
+                  <a href="tel:301-500-0809" className="hover:text-white underline decoration-indigo-300/30">
+                    (301) 500-0809
+                  </a>
+                  <span className="text-gray-600">/</span>
+                  <a href="tel:201-885-9225" className="hover:text-white underline decoration-indigo-300/30">
+                    (201) 885-9225
+                  </a>
+                </div>
+              </div>
+
+              {/* Email Link */}
+              <div className="flex items-center gap-2 text-sm text-gray-400">
+                <Mail size={16} className="text-indigo-300 flex-shrink-0" />
+                <a href="mailto:contact@columbiacarehome.com" className="hover:text-white">
+                  contact@columbiacarehome.com
+                </a>
+              </div>
+
+              {/* Location Link to find-us */}
+              <div className="flex items-center gap-2 text-sm text-gray-400 px-4">
+                <MapPin size={16} className="text-indigo-300 flex-shrink-0" />
+                <HashLink smooth to="/contact#find-us" className="hover:text-white underline decoration-indigo-300/30 text-center">
+                  10610 Hickory Point Lane, Columbia, MD 21044
+                </HashLink>
+              </div>
+            </div>
           </FooterAccordionItem>
 
           {footerSections.map(section => (
