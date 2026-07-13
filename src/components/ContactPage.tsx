@@ -142,7 +142,7 @@ const ContactPage: React.FC = () => {
               We're here to answer your questions and help you take the next step in finding quality care for your loved one.
             </p>
             <p className="text-emerald-50/80 max-w-3xl mx-auto leading-relaxed">
-              Families in Columbia, Ellicott City, and throughout Howard County can contact Columbia Care Home to learn about our assisted living and memory care services.
+              We welcome families from across the United States, Maryland, and our local communities in Columbia, Ellicott City, and throughout Howard County to contact us for assisted living and memory care services.
             </p>
           </motion.div>
         </div>
