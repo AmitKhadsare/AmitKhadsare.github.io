@@ -52,10 +52,10 @@ const Header = () => {
           <div className="flex md:hidden items-center justify-between gap-2 text-xs">
             <HashLink 
               to="/contact#find-us" 
-              className="flex items-center gap-1 bg-slate-800/80 border border-slate-700/50 px-2.5 py-1 rounded-full text-emerald-400 hover:bg-slate-700 hover:text-emerald-300 transition-all text-[10px]"
+              className="flex items-center gap-1.5 bg-slate-800/80 border border-slate-700/50 px-3 py-1 rounded-full text-emerald-400 hover:bg-slate-700 hover:text-emerald-300 transition-all text-[10px]"
             >
               <MapPin size={10} className="text-emerald-400 flex-shrink-0" />
-              <span className="font-semibold">10610 Hickory Point Ln, Columbia, MD 21044</span>
+              <span className="font-bold">LOCATION</span>
             </HashLink>
             <a 
               href="tel:301-500-0809" 
