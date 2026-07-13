@@ -75,7 +75,13 @@ const Header = () => {
               </span>
               <div className="flex items-center gap-2">
                 <span className="font-bold text-amber-400">Waitlist Only:</span>
-                <span className="text-stone-300">Fully occupied. Join our priority waitlist.</span>
+                <span className="text-stone-300">
+                  Fully occupied. Join our{' '}
+                  <Link to="/contact" className="text-amber-400 hover:text-amber-300 transition-colors font-bold underline decoration-amber-400/50 underline-offset-2">
+                    priority waitlist
+                  </Link>
+                  .
+                </span>
               </div>
               <a href="tel:301-500-0809" className="ml-4 bg-emerald-500/10 hover:bg-emerald-500/20 px-4 py-1 rounded-full border border-emerald-500/30 transition-all flex items-center gap-2">
                 <Phone size={14} className="text-emerald-400" />
