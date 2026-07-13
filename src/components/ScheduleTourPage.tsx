@@ -242,9 +242,6 @@ const ScheduleTourPage = () => {
                   <Phone size={18} />
                   (301) 500-0809
                 </a>
-                <a href="tel:201-885-9225" className="text-emerald-700 font-medium hover:underline text-sm">
-                  Alternative: (201) 885-9225
-                </a>
               </div>
             </motion.div>
           </div>

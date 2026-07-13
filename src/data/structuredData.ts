@@ -11,7 +11,7 @@ export const localBusinessSchema = {
   "logo": {
     "@type": "ImageObject",
     "@id": "https://www.columbiacarehome.com/#logo",
-    "url": "https://www.columbiacarehome.com/logos/header_logo.webp",
+    "url": "https://www.columbiacarehome.com/logos/logo.webp",
     "width": 250,
     "height": 60,
     "caption": "Columbia Care Home Logo"
@@ -155,7 +155,7 @@ export const organizationSchema = {
   "@id": "https://www.columbiacarehome.com/#organization",
   "name": "Columbia Care Home",
   "url": "https://www.columbiacarehome.com",
-  "logo": "https://www.columbiacarehome.com/logos/header_logo.webp",
+  "logo": "https://www.columbiacarehome.com/logos/logo.webp",
   "contactPoint": {
     "@type": "ContactPoint",
     "telephone": "+1-301-500-0809",

@@ -146,19 +146,12 @@ const ContactPage: React.FC = () => {
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Left Column - Contact Information */}
           <div className="lg:col-span-1 space-y-6">
-            {/* Primary Contact */}
             <InfoCard icon={Phone} title="Call Us">
               <div className="flex flex-col gap-3">
                 <div>
                   <span className="block text-[10px] text-stone-400 uppercase font-bold tracking-widest mb-1">Primary Admissions</span>
                   <a href="tel:301-500-0809" className="text-xl font-bold text-emerald-700 hover:underline tracking-tight">
                     (301) 500-0809
-                  </a>
-                </div>
-                <div className="pt-2 border-t border-stone-100">
-                  <span className="block text-[10px] text-stone-400 uppercase font-bold tracking-widest mb-1">Facility Office / After Hours</span>
-                  <a href="tel:201-885-9225" className="text-lg font-semibold text-stone-600 hover:underline">
-                    (201) 885-9225
                   </a>
                 </div>
               </div>
@@ -342,19 +335,17 @@ const ContactPage: React.FC = () => {
           <InfoCard icon={Car} title="Parking & Transportation">
             <p>Free visitor parking available</p>
             <p>Handicap accessible spaces</p>
-            <p>Public transit nearby</p>
           </InfoCard>
 
           <InfoCard icon={Accessibility} title="Accessibility">
             <p>Wheelchair accessible</p>
-            <p>Elevator access to all floors</p>
+            <p>Stair lift access available</p>
             <p>ADA compliant facilities</p>
           </InfoCard>
 
           <InfoCard icon={Users} title="Family Support">
             <p>Family counseling available</p>
             <p>Support groups monthly</p>
-            <p>Care planning meetings</p>
           </InfoCard>
 
           <InfoCard icon={Shield} title="Safety & Security">
@@ -410,8 +401,7 @@ const ContactPage: React.FC = () => {
                 For urgent matters concerning current residents, our emergency support team is available around the clock.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mt-2">
-                <a href="tel:301-500-0809" className="inline-flex items-center gap-2 text-red-600 font-bold hover:text-red-700">(301) 500-0809 (Admissions)</a>
-                <a href="tel:201-885-9225" className="inline-flex items-center gap-2 text-red-600 font-semibold hover:text-red-700">(201) 885-9225 (Facility)</a>
+                <a href="tel:301-500-0809" className="inline-flex items-center gap-2 text-red-600 font-bold hover:text-red-700">(301) 500-0809</a>
               </div>
             </div>
           </div>

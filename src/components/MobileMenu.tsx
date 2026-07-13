@@ -8,7 +8,7 @@ import {
 } from 'lucide-react';
 import { menuData } from '../data/navigationData';
 
-const logo = "/logos/header_logo.webp";
+const logo = "/logos/logo.webp";
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -227,7 +227,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                             <MapPin size={16} className="text-emerald-700 flex-shrink-0" />
                             <div className="text-left">
                               <p className="text-xs font-bold text-stone-800 leading-none">Our Location</p>
-                              <p className="text-[10px] text-stone-500 mt-1 leading-none">10610 Hickory Point Ln, Columbia, MD</p>
+                              <p className="text-[10px] text-stone-500 mt-1 leading-none">10610 Hickory Point Ln, Columbia, MD 21044</p>
                             </div>
                           </div>
                           <ChevronRight size={14} className="text-stone-400 group-hover:translate-x-0.5 transition-transform" />
@@ -288,12 +288,12 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
             {/* Bottom Fixed Actions */}
             <div className="flex-shrink-0 p-5 border-t border-stone-100 bg-stone-50">
               <div className="grid grid-cols-2 gap-3">
-                <button 
-                  onClick={() => setActiveSubMenu('call')} 
+                <a 
+                  href="tel:301-500-0809" 
                   className="flex items-center justify-center gap-2 py-4 rounded-xl bg-emerald-800 text-white shadow-lg active:scale-[0.98] transition-all font-black text-xs uppercase tracking-widest"
                 >
                   <Phone size={16} /> Call
-                </button>
+                </a>
                 <Link 
                   to="/schedule-a-tour" 
                   onClick={onClose} 

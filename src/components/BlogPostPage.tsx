@@ -62,7 +62,7 @@ const BlogPostPage = () => {
                         "name": "Columbia Care Home",
                         "logo": {
                             "@type": "ImageObject",
-                            "url": "https://www.columbiacarehome.com/logos/header_logo.webp"
+                            "url": "https://www.columbiacarehome.com/logos/logo.webp"
                         }
                     }
                 }}

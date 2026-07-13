@@ -67,7 +67,7 @@ const SimplifiedContact: React.FC = () => {
           <ContactCard
             icon={Phone}
             title="Call Us"
-            content="(301) 500-0809, (201) 885-9225"
+            content="(301) 500-0809"
             href="tel:301-500-0809"
             delay={0.1}
             target="_blank"

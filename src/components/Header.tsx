@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom'; // Import useLocation
 import { HashLink } from 'react-router-hash-link';
 import { Phone, MapPin, Menu as MenuIcon, ChevronDown } from 'lucide-react';
-const logo = "/logos/header_logo.webp";
+const logo = "/logos/logo.webp";
 import MobileMenu from './MobileMenu';
 import MegaMenu from './MegaMenu';
 import { menuData } from '../data/navigationData';
@@ -39,8 +39,8 @@ const Header = () => {
   // Function to determine link style
   const getLinkClass = (path: string) => {
     return location.pathname === path
-      ? 'text-base font-semibold text-emerald-700 transition-colors' // Active style
-      : 'text-base font-semibold text-gray-700 hover:text-emerald-700 transition-colors'; // Default style
+      ? 'text-sm xl:text-base font-semibold text-emerald-700 transition-colors' // Active style
+      : 'text-sm xl:text-base font-semibold text-gray-700 hover:text-emerald-700 transition-colors'; // Default style
   };
 
   return (
@@ -55,7 +55,7 @@ const Header = () => {
               className="flex items-center gap-1 bg-slate-800/80 border border-slate-700/50 px-2.5 py-1 rounded-full text-emerald-400 hover:bg-slate-700 hover:text-emerald-300 transition-all text-[10px]"
             >
               <MapPin size={10} className="text-emerald-400 flex-shrink-0" />
-              <span className="font-semibold whitespace-nowrap">10610 Hickory Point Ln</span>
+              <span className="font-semibold">10610 Hickory Point Ln, Columbia, MD 21044</span>
             </HashLink>
             <a 
               href="tel:301-500-0809" 
@@ -88,7 +88,7 @@ const Header = () => {
               className="flex items-center gap-2 text-stone-200 hover:text-emerald-400 transition-colors"
             >
               <MapPin size={14} className="text-emerald-500/80" />
-              <span>10610 Hickory Point Lane, Columbia</span>
+              <span>10610 Hickory Point Lane, Columbia, MD 21044</span>
             </HashLink>
           </div>
         </div>
@@ -102,18 +102,18 @@ const Header = () => {
             <img
               src={logo}
               alt="Columbia Care Home"
-              className="h-14 sm:h-16 md:h-16 lg:h-20 xl:h-24 w-auto max-w-[220px] sm:max-w-[340px] md:max-w-[260px] lg:max-w-[300px] xl:max-w-[340px] object-contain object-left"
+              className="h-14 sm:h-16 md:h-16 lg:h-16 xl:h-24 w-auto max-w-[220px] sm:max-w-[340px] md:max-w-[260px] lg:max-w-[220px] xl:max-w-[340px] object-contain object-left"
             />
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8 h-full">
+          <nav className="hidden lg:flex items-center space-x-4 xl:space-x-8 h-full">
             <HashLink
               to="/#home"
               // Special check for homepage (root path or hash link)
               className={location.pathname === '/' || location.hash === '#home'
-                ? 'text-base font-semibold text-emerald-700 transition-colors'
-                : 'text-base font-semibold text-gray-700 hover:text-emerald-700 transition-colors'
+                ? 'text-sm xl:text-base font-semibold text-emerald-700 transition-colors'
+                : 'text-sm xl:text-base font-semibold text-gray-700 hover:text-emerald-700 transition-colors'
               }
             >
               Home
@@ -123,7 +123,7 @@ const Header = () => {
                 aria-haspopup="true"
                 aria-expanded={activeMegaMenu === 'services'}
                 onClick={() => handleMegaMenuToggle('services')}
-                className="flex items-center gap-1 text-base font-semibold text-gray-700 hover:text-emerald-700 transition-colors"
+                className="flex items-center gap-1 text-sm xl:text-base font-semibold text-gray-700 hover:text-emerald-700 transition-colors"
               >
                 <span>Our Services</span>
                 <motion.div animate={{ rotate: activeMegaMenu === 'services' ? 180 : 0 }} transition={{ duration: 0.2 }}>
@@ -136,7 +136,7 @@ const Header = () => {
                 aria-haspopup="true"
                 aria-expanded={activeMegaMenu === 'aboutUs'}
                 onClick={() => handleMegaMenuToggle('aboutUs')}
-                className="flex items-center gap-1 text-base font-semibold text-gray-700 hover:text-emerald-700 transition-colors"
+                className="flex items-center gap-1 text-sm xl:text-base font-semibold text-gray-700 hover:text-emerald-700 transition-colors"
               >
                 <span>About Us</span>
                 <motion.div animate={{ rotate: activeMegaMenu === 'aboutUs' ? 180 : 0 }} transition={{ duration: 0.2 }}>

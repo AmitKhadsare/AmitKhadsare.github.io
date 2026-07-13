@@ -77,7 +77,7 @@ const Footer = () => {
   ];
 
   const contactInfo = [
-    { icon: <Phone size={16} />, text: '(301) 500-0809 (Primary), (201) 885-9225 (Alt)' },
+    { icon: <Phone size={16} />, text: '(301) 500-0809' },
     { icon: <Mail size={16} />, text: 'contact@columbiacarehome.com' },
     { icon: <MapPin size={16} />, text: '10610 Hickory Point Lane, Columbia, MD 21044' },
   ];
@@ -180,18 +180,12 @@ const Footer = () => {
             onToggle={() => handleAccordionToggle('location')}
           >
             <div className="space-y-3 pt-3 flex flex-col items-center text-center">
-              {/* Phone Numbers in Single Line */}
+              {/* Phone Number */}
               <div className="flex items-center gap-2 text-sm text-gray-450">
                 <Phone size={16} className="text-indigo-300 flex-shrink-0" />
-                <div className="flex items-center gap-1.5 flex-wrap justify-center text-gray-400">
-                  <a href="tel:301-500-0809" className="hover:text-white underline decoration-indigo-300/30">
-                    (301) 500-0809
-                  </a>
-                  <span className="text-gray-600">/</span>
-                  <a href="tel:201-885-9225" className="hover:text-white underline decoration-indigo-300/30">
-                    (201) 885-9225
-                  </a>
-                </div>
+                <a href="tel:301-500-0809" className="hover:text-white underline decoration-indigo-300/30 text-gray-400">
+                  (301) 500-0809
+                </a>
               </div>
 
               {/* Email Link */}
