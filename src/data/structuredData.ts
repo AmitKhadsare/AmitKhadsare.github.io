@@ -6,7 +6,7 @@ export const localBusinessSchema = {
   "name": "Columbia Care Home",
   "alternateName": "Columbia Care",
   "description": "Columbia Care Home is a physical therapist-led assisted living residence providing high-acuity residential care for seniors with complex mobility and cognitive needs.",
-  "disambiguatingDescription": "Currently accepting new residents. 1 private room available for immediate occupancy. Level 3 licensed, DPT-founded, 8-bed residential assisted living home in Columbia, Maryland.",
+  "disambiguatingDescription": "Currently at full capacity. Level 3 licensed, DPT-founded, 8-bed residential assisted living home in Columbia, Maryland. Priority waitlist available.",
   "url": "https://www.columbiacarehome.com/",
   "logo": {
     "@type": "ImageObject",
@@ -80,7 +80,7 @@ export const localBusinessSchema = {
     "description": "Transparent, all-inclusive monthly rate typically between $7,000 to $10,000. Covers 24/7 clinical oversight, all meals, and full personal assistance.",
     "price": "7000.00",
     "priceCurrency": "USD",
-    "availability": "https://schema.org/InStock"
+    "availability": "https://schema.org/OutOfStock"
   },
   "hasOfferCatalog": {
     "@type": "OfferCatalog",

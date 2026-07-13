@@ -70,12 +70,12 @@ const Header = () => {
           <div className="hidden md:flex items-center justify-between text-sm">
             <div className="flex items-center gap-3">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
               </span>
               <div className="flex items-center gap-2">
-                <span className="font-bold text-emerald-400">Limited Availability:</span>
-                <span className="text-stone-300">Only 1 room remains in our Columbia home.</span>
+                <span className="font-bold text-amber-400">Waitlist Only:</span>
+                <span className="text-stone-300">Fully occupied. Join our priority waitlist.</span>
               </div>
               <a href="tel:301-500-0809" className="ml-4 bg-emerald-500/10 hover:bg-emerald-500/20 px-4 py-1 rounded-full border border-emerald-500/30 transition-all flex items-center gap-2">
                 <Phone size={14} className="text-emerald-400" />
