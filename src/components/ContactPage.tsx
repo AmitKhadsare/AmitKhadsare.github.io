@@ -8,6 +8,7 @@ import {
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import SEOHead from './SEOHead';
+import heroBgImage from '../assets/contact-hero-bg.jpg';
 
 
 // Access Key for Web3Forms removed - using FormSubmit.co
@@ -122,16 +123,22 @@ const ContactPage: React.FC = () => {
         type="ContactPage"
       />
       {/* Hero Section */}
-      <div className="bg-gradient-to-br from-emerald-600 to-teal-700 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div 
+        className="relative text-white py-20 overflow-hidden bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url("${heroBgImage}")` }}
+      >
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-emerald-600/60 to-teal-700/70" />
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             className="text-center"
           >
-            <h1 className="text-4xl lg:text-5xl font-bold mb-4">Get in Touch</h1>
-            <p className="text-xl text-white/90 max-w-2xl mx-auto mb-6">
+            <h1 className="text-4xl lg:text-5xl font-bold mb-4 font-serif">Get in Touch</h1>
+            <p className="text-xl text-emerald-100 max-w-2xl mx-auto mb-6">
               We're here to answer your questions and help you take the next step in finding quality care for your loved one.
             </p>
             <p className="text-emerald-50/80 max-w-3xl mx-auto leading-relaxed">
