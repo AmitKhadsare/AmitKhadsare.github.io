@@ -67,13 +67,13 @@ const Header = () => {
           </div>
 
           {/* Desktop View: Full Status Message */}
-          <div className="hidden md:flex items-center justify-between text-sm">
-            <div className="flex items-center gap-3">
+          <div className="hidden md:flex items-center justify-between text-[10px] lg:text-xs xl:text-sm whitespace-nowrap">
+            <div className="flex items-center gap-1 lg:gap-3 whitespace-nowrap">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
               </span>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-1 lg:gap-2 whitespace-nowrap">
                 <span className="font-bold text-amber-400">Waitlist Only:</span>
                 <span className="text-stone-300">
                   Fully occupied. Join our{' '}
@@ -83,7 +83,7 @@ const Header = () => {
                   .
                 </span>
               </div>
-              <a href="tel:301-500-0809" className="ml-4 bg-emerald-500/10 hover:bg-emerald-500/20 px-4 py-1 rounded-full border border-emerald-500/30 transition-all flex items-center gap-2">
+              <a href="tel:301-500-0809" className="ml-3 lg:ml-6 bg-emerald-500/10 hover:bg-emerald-500/20 px-2 lg:px-4 py-1 rounded-full border border-emerald-500/30 transition-all flex items-center gap-1 lg:gap-2 whitespace-nowrap">
                 <Phone size={14} className="text-emerald-400" />
                 <span className="font-bold">Call to Confirm: (301) 500-0809</span>
               </a>
@@ -91,7 +91,7 @@ const Header = () => {
             
             <HashLink 
               to="/contact#find-us" 
-              className="flex items-center gap-2 text-stone-200 hover:text-emerald-400 transition-colors"
+              className="flex items-center gap-1 lg:gap-2 text-stone-200 hover:text-emerald-400 transition-colors"
             >
               <MapPin size={14} className="text-emerald-500/80" />
               <span>10610 Hickory Point Lane, Columbia, MD 21044</span>
