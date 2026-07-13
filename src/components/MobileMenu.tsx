@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import { 
   X, Phone, Calendar, ArrowLeft, ChevronRight, ChevronDown, ChevronUp, MapPin,
-  Home, Building2, Video, Coins, Heart, BookOpen, HelpCircle, Newspaper, Shield 
+  Home, Building2, Video, Coins, Heart, BookOpen, HelpCircle, Newspaper, Shield, Mail 
 } from 'lucide-react';
 import { menuData } from '../data/navigationData';
 
@@ -153,6 +153,15 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                         >
                           <Video size={16} className="text-emerald-700/80" />
                           <span>Virtual Tour</span>
+                        </Link>
+
+                        <Link 
+                          to="/contact" 
+                          onClick={onClose} 
+                          className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-stone-50 text-stone-850 hover:text-emerald-700 active:scale-95 transition-all text-sm font-semibold"
+                        >
+                          <Mail size={16} className="text-emerald-700/80" />
+                          <span>Contact Us</span>
                         </Link>
                       </div>
 
