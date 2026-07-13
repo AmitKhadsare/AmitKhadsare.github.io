@@ -1,7 +1,8 @@
 
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Video, Globe, Play } from 'lucide-react';
+import { ArrowLeft, Video, Globe, Play, MapPin } from 'lucide-react';
+import { HashLink } from 'react-router-hash-link';
 import SEOHead from './SEOHead';
 
 const VirtualTourPage = () => {
@@ -33,6 +34,13 @@ const VirtualTourPage = () => {
                         <h1 className="text-4xl lg:text-5xl font-bold font-serif mb-4 text-white">
                             Experience Our Home Virtually
                         </h1>
+                        <HashLink
+                            to="/contact#find-us"
+                            className="flex items-center justify-center gap-1.5 text-emerald-300 hover:text-emerald-200 transition-colors text-sm font-medium mb-6"
+                        >
+                            <MapPin className="w-4 h-4 flex-shrink-0" />
+                            <span>10610 Hickory Point Ln, Columbia, MD 21044</span>
+                        </HashLink>
                         <p className="text-xl text-emerald-50 max-w-3xl mx-auto">
                             Explore Columbia Care Home from the comfort of your own home. Watch our guided video tour or take an interactive 3D walkthrough.
                         </p>
