@@ -164,8 +164,8 @@ const ContactPage: React.FC = () => {
               </div>
             </InfoCard>
 
-            <InfoCard icon={Mail} title="Email Us">
-              <a href="mailto:contact@columbiacarehome.com" className="font-semibold text-emerald-700 hover:underline">contact@columbiacarehome.com</a>
+             <InfoCard icon={Mail} title="Email Us">
+              <a href="mailto:contact@columbiacarehome.com" className="font-semibold text-emerald-700 hover:underline break-all">contact@columbiacarehome.com</a>
               <p className="text-sm">Response within 24 hours</p>
             </InfoCard>
 
@@ -185,16 +185,16 @@ const ContactPage: React.FC = () => {
             {/* Hours of Operation */}
             <InfoCard icon={Clock} title="Hours of Operation">
               <div className="space-y-1">
-                <div className="flex justify-between">
-                  <span>Monday - Friday</span>
+                <div className="flex flex-col sm:flex-row sm:justify-between">
+                  <span className="text-stone-500 sm:text-stone-600">Monday - Friday</span>
                   <span className="font-medium">8:00 AM - 6:00 PM</span>
                 </div>
-                <div className="flex justify-between">
-                  <span>Saturday</span>
+                <div className="flex flex-col sm:flex-row sm:justify-between">
+                  <span className="text-stone-500 sm:text-stone-600">Saturday</span>
                   <span className="font-medium">9:00 AM - 5:00 PM</span>
                 </div>
-                <div className="flex justify-between">
-                  <span>Sunday</span>
+                <div className="flex flex-col sm:flex-row sm:justify-between">
+                  <span className="text-stone-500 sm:text-stone-600">Sunday</span>
                   <span className="font-medium">10:00 AM - 4:00 PM</span>
                 </div>
               </div>
