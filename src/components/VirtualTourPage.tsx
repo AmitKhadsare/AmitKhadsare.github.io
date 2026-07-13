@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft, Video, Globe, Play, MapPin } from 'lucide-react';
 import { HashLink } from 'react-router-hash-link';
 import SEOHead from './SEOHead';
+import heroBgImage from '../assets/virtual-tour-hero-bg.jpg';
 
 const VirtualTourPage = () => {
     return (
@@ -16,12 +17,14 @@ const VirtualTourPage = () => {
             />
 
             {/* Hero Header */}
-            <div className="relative bg-gradient-to-br from-slate-900 to-emerald-900 py-20 overflow-hidden">
-                <div className="absolute inset-0 opacity-20">
-                    <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIj48cGF0aCBkPSJNMzYgMzRjMC0yLjIxLTEuNzktNC00LTRzLTQgMS43OS00IDQgMS43OSA0IDQgNCA0LTEuNzkgNC00em0wLTEwYzAtMi4yMS0xLjc5LTQtNC00cy00IDEuNzktNCA0IDEuNzkgNCA0IDQgNC0xLjc5IDQtNHoiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-30"></div>
-                </div>
+            <div 
+                className="relative py-20 overflow-hidden bg-cover bg-center bg-no-repeat"
+                style={{ backgroundImage: `url("${heroBgImage}")` }}
+            >
+                {/* Gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-slate-950/70 to-emerald-950/80" />
 
-                <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}

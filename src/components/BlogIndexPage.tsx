@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { Calendar, User, ArrowRight } from 'lucide-react';
 import SEOHead from './SEOHead';
 import { blogs } from '../data/blogs';
+import heroBgImage from '../assets/family-guides-hero-bg.jpg';
 
 const BlogIndexPage = () => {
     return (
@@ -15,12 +16,15 @@ const BlogIndexPage = () => {
                 url="https://www.columbiacarehome.com/blog"
             />
 
-            {/* Hero Section - Simplified for performance */}
-            <div className="bg-emerald-900 text-white py-20 md:py-24 relative overflow-hidden">
-                {/* Subtle pattern instead of heavy image */}
-                <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+            {/* Hero Section */}
+            <div 
+                className="relative text-white py-20 md:py-24 overflow-hidden bg-cover bg-[center_35%] bg-no-repeat"
+                style={{ backgroundImage: `url("${heroBgImage}")` }}
+            >
+                {/* Gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-emerald-950/55 to-teal-900/65" />
 
-                <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
