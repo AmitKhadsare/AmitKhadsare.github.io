@@ -232,7 +232,7 @@ const FAQPage = () => {
             We use a single, flat monthly rate. Many assisted living facilities in Maryland advertise a low base rate but add extra charges for every task: help with dressing, a medication reminder, assistance walking to the dining room. By month three, the bill often looks very different from what they were told.
           </p>
           <p>
-            At Columbia Care Home, your rate covers 24/7 clinical oversight, medication management, all meals, and full personal assistance. Our all-inclusive rate typically falls between $7,000 to $10,000 per month, depending on individual care needs. It is the same bill every month, even if your loved one needs more help.
+            At Columbia Care Home, your rate covers 24/7 clinical oversight, medication management, all meals, and full personal assistance. Our all-inclusive rate typically falls between $7,500 to $10,000 per month, depending on individual care needs. It is the same bill every month, even if your loved one needs more help.
           </p>
           <p>
             <Link to="/pricing" className="inline-flex items-center gap-2 text-emerald-700 font-bold hover:underline">
@@ -246,7 +246,7 @@ const FAQPage = () => {
           </p>
         </div>
       ),
-      schemaAnswer: "We use an all-inclusive monthly rate that typically falls between $7,000 to $10,000, with no hidden 'care point' fees or task-based surcharges. We have published a full guide on avoiding these common industry billing traps to help families compare costs accurately."
+      schemaAnswer: "We use an all-inclusive monthly rate that typically falls between $7,500 to $10,000, with no hidden 'care point' fees or task-based surcharges. We have published a full guide on avoiding these common industry billing traps to help families compare costs accurately."
     },
     {
       question: "What is the Community Fee for?",

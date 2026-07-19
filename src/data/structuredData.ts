@@ -64,7 +64,7 @@ export const localBusinessSchema = {
       "closes": "16:00"
     }
   ],
-  "priceRange": "$7000 - $10000",
+  "priceRange": "$7500 - $10000",
   "areaServed": {
     "@type": "GeoCircle",
     "geoMidpoint": {
@@ -77,8 +77,8 @@ export const localBusinessSchema = {
   "offers": {
     "@type": "Offer",
     "name": "All-Inclusive Residential Placement",
-    "description": "Transparent, all-inclusive monthly rate typically between $7,000 to $10,000. Covers 24/7 clinical oversight, all meals, and full personal assistance.",
-    "price": "7000.00",
+    "description": "Transparent, all-inclusive monthly rate typically between $7,500 to $10,000. Covers 24/7 clinical oversight, all meals, and full personal assistance.",
+    "price": "7500.00",
     "priceCurrency": "USD",
     "availability": "https://schema.org/OutOfStock"
   },
@@ -193,8 +193,8 @@ export const serviceSchema = {
   },
   "offers": {
     "@type": "Offer",
-    "description": "All-inclusive Level 3 care typically ranging from $7,000 to $10,000 per month.",
-    "priceRange": "$7000 - $10000"
+    "description": "All-inclusive Level 3 care typically ranging from $7,500 to $10,000 per month.",
+    "priceRange": "$7500 - $10000"
   }
 };
 

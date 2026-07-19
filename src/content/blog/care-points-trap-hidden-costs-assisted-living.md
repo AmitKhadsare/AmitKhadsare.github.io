@@ -90,7 +90,7 @@ When the bill keeps changing, trust erodes. Families start feeling stuck. Moving
 
 *   **No care points**: The price doesn’t change based on tasks.
 *   **No changing levels**: We do not use levels that increase the price. We provide [Level 3 high-acuity care](/blog/level-3-assisted-living-meaning-columbia-md) as our standard.
-*   **Transparent rate**: Our monthly rate is usually between **$7,000 and $10,000**. It includes care, meals, medication management, and staffing. [See exactly what's included in our pricing](/pricing).
+*   **Transparent rate**: Our monthly rate is usually between **$7,500 and $10,000**. It includes care, meals, medication management, and staffing. [See exactly what's included in our pricing](/pricing).
 
 ## Questions to Ask During Your Next Tour
 
