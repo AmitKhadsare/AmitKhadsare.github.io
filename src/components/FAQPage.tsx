@@ -47,10 +47,16 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer, isOpen, onClick }) 
   );
 };
 
+interface FAQItem {
+  question: string;
+  answer: React.ReactNode;
+  schemaAnswer?: string;
+}
+
 const FAQPage = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
-  const faqs = [
+  const faqs: FAQItem[] = [
     {
       question: "How does an 8-bed home actually compare to a 100-bed facility?",
       answer: (
@@ -277,7 +283,7 @@ const FAQPage = () => {
       "name": faq.question,
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": (faq as any).schemaAnswer || "Please visit our website for the full details on this topic. We focus on transparent, all-inclusive care and personalized clinical support."
+        "text": faq.schemaAnswer || "Please visit our website for the full details on this topic. We focus on transparent, all-inclusive care and personalized clinical support."
       }
     }))
   };

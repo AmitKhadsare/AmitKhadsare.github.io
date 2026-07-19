@@ -43,7 +43,7 @@ function App() {
       <ScrollToTop />
       <div className="min-h-screen">
         <Header />
-        <div className="overflow-x-hidden">
+        <div id="main-content" tabIndex={-1} className="overflow-x-hidden focus:outline-none">
           <Routes>
             <Route path="/" element={
               <>

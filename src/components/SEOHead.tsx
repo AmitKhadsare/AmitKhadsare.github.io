@@ -9,7 +9,7 @@ interface SEOHeadProps {
   image?: string;
   url?: string;
   type?: string;
-  structuredData?: any;
+  structuredData?: Record<string, unknown> | Record<string, unknown>[] | null;
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({

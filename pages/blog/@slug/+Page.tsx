@@ -3,7 +3,6 @@ import '../../../src/index.css';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Calendar, User, Tag, ArrowLeft, Clock } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
 import SEOHead from '../../../src/components/SEOHead';
 import { blogs } from '../../../src/data/blogs';
 

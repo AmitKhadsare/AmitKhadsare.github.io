@@ -4,73 +4,73 @@ import { Link } from 'react-router-dom';
 import { BookOpen, ArrowRight, Calendar, User } from 'lucide-react';
 import { blogs, BlogPost } from '../data/blogs';
 
+// Deterministic selection based on current date
+// Helper to check if a post is "New" (less than 7 days old)
+const isPostNew = (dateString: string) => {
+    const postDate = new Date(dateString);
+    const today = new Date();
+    const diffTime = Math.abs(today.getTime() - postDate.getTime());
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    return diffDays <= 7;
+};
+
+const getDailyBlogs = (allBlogs: BlogPost[]) => {
+    // 1. Identify "New" blogs
+    const newBlogs = [...allBlogs]
+        .filter(blog => isPostNew(blog.date))
+        .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+    // 2. Deterministic selection for non-new blogs
+    const otherBlogs = allBlogs.filter(blog => !isPostNew(blog.date));
+    
+    // Create a stable seed based on the date string
+    const today = new Date();
+    const seedString = today.toDateString();
+    let hash = 0;
+    for (let i = 0; i < seedString.length; i++) {
+        hash = (hash << 5) - hash + seedString.charCodeAt(i);
+        hash |= 0;
+    }
+    const absHash = Math.abs(hash);
+
+    // 3. Combine: Prioritize New, then backfill with Daily rotation
+    const selected: BlogPost[] = [];
+
+    // Add the first post (prioritizing New)
+    if (newBlogs.length > 0) {
+        selected.push(newBlogs[0]);
+    } else if (otherBlogs.length > 0) {
+        const index1 = absHash % otherBlogs.length;
+        selected.push(otherBlogs[index1]);
+    }
+
+    // Add the second post (ensuring unique image if possible)
+    if (selected.length === 1) {
+        const firstImage = selected[0].image;
+        
+        // Try to find a second post with a different image
+        let candidate: BlogPost | undefined;
+
+        // Try from New blogs first
+        candidate = newBlogs.slice(1).find(b => b.image !== firstImage);
+        
+        // If not found, try from Other blogs
+        if (!candidate) {
+            const candidates = otherBlogs.filter(b => b.id !== selected[0].id);
+            // Deterministic check to avoid duplicate image
+            candidate = candidates.find((_, i) => {
+                const idx = (absHash + 7 + i) % candidates.length;
+                return candidates[idx].image !== firstImage;
+            }) || candidates[absHash % candidates.length]; // Fallback to any post if no unique image exists
+        }
+
+        if (candidate) selected.push(candidate);
+    }
+    
+    return selected.slice(0, 2);
+};
+
 const FeaturedInsights = () => {
-    // Deterministic selection based on current date
-    // Helper to check if a post is "New" (less than 7 days old)
-    const isPostNew = (dateString: string) => {
-        const postDate = new Date(dateString);
-        const today = new Date();
-        const diffTime = Math.abs(today.getTime() - postDate.getTime());
-        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-        return diffDays <= 7;
-    };
-
-    const getDailyBlogs = (allBlogs: BlogPost[]) => {
-        // 1. Identify "New" blogs
-        const newBlogs = [...allBlogs]
-            .filter(blog => isPostNew(blog.date))
-            .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-
-        // 2. Deterministic selection for non-new blogs
-        const otherBlogs = allBlogs.filter(blog => !isPostNew(blog.date));
-        
-        // Create a stable seed based on the date string
-        const today = new Date();
-        const seedString = today.toDateString();
-        let hash = 0;
-        for (let i = 0; i < seedString.length; i++) {
-            hash = (hash << 5) - hash + seedString.charCodeAt(i);
-            hash |= 0;
-        }
-        const absHash = Math.abs(hash);
-
-        // 3. Combine: Prioritize New, then backfill with Daily rotation
-        const selected: BlogPost[] = [];
-
-        // Add the first post (prioritizing New)
-        if (newBlogs.length > 0) {
-            selected.push(newBlogs[0]);
-        } else if (otherBlogs.length > 0) {
-            const index1 = absHash % otherBlogs.length;
-            selected.push(otherBlogs[index1]);
-        }
-
-        // Add the second post (ensuring unique image if possible)
-        if (selected.length === 1) {
-            const firstImage = selected[0].image;
-            
-            // Try to find a second post with a different image
-            let candidate: BlogPost | undefined;
-
-            // Try from New blogs first
-            candidate = newBlogs.slice(1).find(b => b.image !== firstImage);
-            
-            // If not found, try from Other blogs
-            if (!candidate) {
-                const candidates = otherBlogs.filter(b => b.id !== selected[0].id);
-                // Deterministic check to avoid duplicate image
-                candidate = candidates.find((_, i) => {
-                    const idx = (absHash + 7 + i) % candidates.length;
-                    return candidates[idx].image !== firstImage;
-                }) || candidates[absHash % candidates.length]; // Fallback to any post if no unique image exists
-            }
-
-            if (candidate) selected.push(candidate);
-        }
-        
-        return selected.slice(0, 2);
-    };
-
     const [dailyBlogs, setDailyBlogs] = useState<BlogPost[]>([]);
 
     useEffect(() => {

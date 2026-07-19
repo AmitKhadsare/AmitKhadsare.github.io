@@ -23,7 +23,12 @@ export { onRenderHtml };
  *   - Input: React components with JSX
  *   - Output: dist/client/about-us/index.html (full HTML with baked-in meta tags)
  */
-async function onRenderHtml(pageContext: any) {
+interface PageContextHtml {
+    urlPathname: string;
+    [key: string]: unknown;
+}
+
+async function onRenderHtml(pageContext: PageContextHtml) {
     // ============================================================
     // SECTION 1: Extract the current route being rendered
     // ============================================================
@@ -40,7 +45,20 @@ async function onRenderHtml(pageContext: any) {
     // SECTION 2: Create Helmet context to capture meta tags
     // ============================================================
 
-    const helmetContext = {} as any;
+    interface HelmetData {
+        toString(): string;
+    }
+
+    interface HelmetContext {
+        helmet?: {
+            title: HelmetData;
+            meta: HelmetData;
+            link: HelmetData;
+            script: HelmetData;
+        };
+    }
+
+    const helmetContext: HelmetContext = {};
 
     // This is an EMPTY object that react-helmet-async will MUTATE.
     // After rendering, it will contain all the <Helmet> tags from your components.
@@ -143,6 +161,7 @@ async function onRenderHtml(pageContext: any) {
         <link rel="manifest" href="/site.webmanifest" />
         
         <!-- Meta Tags -->
+        <meta name="keywords" content="assisted living Columbia MD, senior care Maryland, memory care Columbia, residential care, high-acuity care, physical therapist led" />
         <meta name="robots" content="index, follow" />
         <meta name="googlebot" content="index, follow" />
         <meta name="bingbot" content="index, follow" />

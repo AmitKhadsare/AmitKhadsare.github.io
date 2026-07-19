@@ -79,7 +79,10 @@ const CareHomeCarousel = () => {
   };
 
   // Handle swipe gestures
-  const handleDragEnd = (_: any, { offset, velocity }: any) => {
+  const handleDragEnd = (
+    _: MouseEvent | TouchEvent | PointerEvent,
+    { offset, velocity }: { offset: { x: number; y: number }; velocity: { x: number; y: number } }
+  ) => {
     const swipe = offset.x * velocity.x;
     if (swipe < -10000) {
       nextSlide();

@@ -17,7 +17,12 @@ import App from '../src/App';
  * 3. React hydrates the static HTML (attaches event listeners)
  * 4. App becomes fully interactive
  */
-async function onRenderClient(pageContext: any) {
+interface PageContextClient {
+    isHydration: boolean;
+    [key: string]: unknown;
+}
+
+async function onRenderClient(pageContext: PageContextClient) {
     const container = document.getElementById('root')!;
 
     const page = (

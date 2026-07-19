@@ -19,14 +19,26 @@ export interface BlogPost {
   tags: string[];
 }
 
+interface FrontmatterData {
+  id?: string;
+  title?: string;
+  excerpt?: string;
+  author?: string;
+  date?: string;
+  lastModified?: string;
+  image?: string;
+  tags?: string[];
+  [key: string]: string | string[] | undefined;
+}
+
 // Simple frontmatter parser to avoid bulky Node-dependent libraries in the browser
-const parseFrontmatter = (fileContent: string) => {
+const parseFrontmatter = (fileContent: string): { data: FrontmatterData; content: string } => {
   const match = fileContent.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/);
-  if (!match) return { data: {} as any, content: fileContent };
+  if (!match) return { data: {}, content: fileContent };
 
   const yaml = match[1];
   const content = match[2];
-  const data: any = {};
+  const data: FrontmatterData = {};
 
   yaml.split('\n').forEach(line => {
     const colonIndex = line.indexOf(':');
@@ -56,7 +68,7 @@ const parseFrontmatter = (fileContent: string) => {
 const modules = import.meta.glob('../content/blog/*.md', { query: '?raw', eager: true });
 
 // Import all images to resolve them from markdown paths
-const assetModules = import.meta.glob('../assets/**/*.{jpg,jpeg,png,webp,svg}', { eager: true, as: 'url' });
+const assetModules = import.meta.glob('../assets/**/*.{jpg,jpeg,png,webp,svg}', { eager: true, query: '?url', import: 'default' });
 
 // Function to resolve image paths from markdown
 const resolveAsset = (path: string) => {
@@ -72,9 +84,9 @@ const resolveAsset = (path: string) => {
   return (resolved ? resolved[1] : path) as string;
 };
 
-export const blogs: BlogPost[] = Object.entries(modules).map(([path, module]: [string, any]) => {
+export const blogs: BlogPost[] = Object.entries(modules).map(([path, module]) => {
   const slug = path.split('/').pop()?.replace('.md', '') || '';
-  const fileContent = typeof module === 'string' ? module : module.default;
+  const fileContent = typeof module === 'string' ? module : (module as { default: string }).default;
   const { data, content: body } = parseFrontmatter(fileContent);
 
   return {

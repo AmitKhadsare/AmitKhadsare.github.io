@@ -1,6 +1,8 @@
 {
-  "name": "ColumbiaCareHome",
+  "name": "Columbia Care Home",
   "short_name": "CCH",
+  "description": "Physical therapist-led assisted living residence providing high-acuity residential care for seniors.",
+  "start_url": "/",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
@@ -15,7 +17,7 @@
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#ffffff",
+  "theme_color": "#059669",
   "background_color": "#ffffff",
   "display": "standalone"
 }
