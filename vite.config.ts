@@ -8,7 +8,7 @@ export default defineConfig({
   base: '/',
   plugins: [
     react(),
-    vike({ prerender: true })
+    vike()
   ],
   optimizeDeps: {
     exclude: ['lucide-react'],
@@ -21,6 +21,7 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
+    chunkSizeWarningLimit: 800,
     rollupOptions: {
       output: {
         // Vike requires manualChunks to be a function, not an object
