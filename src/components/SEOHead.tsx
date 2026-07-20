@@ -28,6 +28,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   const baseUrl = "https://www.columbiacarehome.com";
   const currentPath = url || `${baseUrl}${location.pathname}`;
   const absoluteUrl = currentPath.startsWith('http') ? currentPath : `${baseUrl}${currentPath.startsWith('/') ? '' : '/'}${currentPath}`;
+  const absoluteImageUrl = image.startsWith('http') ? image : `${baseUrl}${image.startsWith('/') ? '' : '/'}${image}`;
 
   // Generate Automatic Breadcrumb Schema
   const pathnames = location.pathname.split('/').filter((x) => x);
@@ -74,7 +75,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       "name": fullTitle,
       "headline": title.split(' | ')[0],
       "description": description,
-      "image": image,
+      "image": absoluteImageUrl,
       "isPartOf": { "@id": `${baseUrl}/#website` },
       "breadcrumb": { "@id": `${absoluteUrl}#breadcrumb` },
       "inLanguage": "en-US",
@@ -82,14 +83,15 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   ];
 
   if (structuredData) {
-    if (structuredData['@graph']) {
-      graph.push(...structuredData['@graph']);
-    } else if (Array.isArray(structuredData)) {
-      graph.push(...structuredData);
+    const data = structuredData as any;
+    if (data['@graph']) {
+      graph.push(...data['@graph']);
+    } else if (Array.isArray(data)) {
+      graph.push(...data);
     } else {
       graph.push({
-        ...structuredData,
-        "@id": structuredData["@id"] || `${absoluteUrl}#primary`
+        ...data,
+        "@id": data["@id"] || `${absoluteUrl}#primary`
       });
     }
   }
@@ -112,7 +114,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta property="og:url" content={absoluteUrl} />
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
+      <meta property="og:image" content={absoluteImageUrl} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
       <meta property="og:image:type" content="image/jpeg" />
@@ -124,7 +126,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="twitter:url" content={absoluteUrl} />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
+      <meta name="twitter:image" content={absoluteImageUrl} />
 
       {/* Unified Structured Data */}
       <script type="application/ld+json">
