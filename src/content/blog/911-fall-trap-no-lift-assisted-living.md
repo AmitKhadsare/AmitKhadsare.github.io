@@ -1,7 +1,7 @@
 ---
 id: "10"
-title: "The '911 Fall Trap' in Corporate Senior Living: How 'No-Lift' Policies Cause Hospital Delirium"
-excerpt: "Discover why 100-bed corporate assisted living facilities call 911 for uninjured falls, how emergency room visits trigger acute hospital delirium, and how DPT-led 8-bed care homes stop the cycle."
+title: "The '911 Fall Trap' in Corporate Senior Living"
+excerpt: "Why corporate assisted living facilities call 911 for uninjured falls, how ER visits cause hospital delirium, and how micro-homes stop the cycle."
 author: "Columbia Care Editorial Team"
 date: "2026-07-20"
 lastModified: "2026-07-20"
