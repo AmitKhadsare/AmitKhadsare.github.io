@@ -73,7 +73,7 @@ const PricingPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-stone-50">
+    <div className="min-h-screen bg-stone-50 pb-24 lg:pb-0">
       <SEOHead
         title="Pricing & Value | Transparent Senior Care in Columbia, MD"
         description="One flat monthly rate. No hidden tiers, no care-point surcharges. Learn how our all-inclusive pricing model works for Level 3 assisted living in Columbia, MD."
@@ -484,6 +484,18 @@ const PricingPage = () => {
           </Link>
         </div>
       </section>
+
+      {/* Sticky Bottom Comparison Bar for Mobile/Tablet */}
+      <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-stone-200 px-6 py-4 shadow-[0_-8px_30px_rgb(0,0,0,0.12)] z-50 flex items-center justify-between">
+        <div>
+          <span className="block text-[10px] text-stone-500 uppercase font-bold tracking-wider">Corporate Point Total</span>
+          <span className="text-xl font-bold text-amber-800">${calculatedTotal}<span className="text-xs text-stone-500 font-normal">/mo</span></span>
+        </div>
+        <div className="text-right">
+          <span className="block text-[10px] text-emerald-700 uppercase font-bold tracking-wider">Columbia Care Home</span>
+          <span className="text-lg font-bold text-emerald-800">All-Inclusive Flat</span>
+        </div>
+      </div>
     </div>
   );
 };
