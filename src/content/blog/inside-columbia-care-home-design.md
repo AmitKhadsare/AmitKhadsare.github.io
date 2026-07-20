@@ -5,7 +5,7 @@ excerpt: "See how Columbia Care Home pairs therapeutic intent with warm resident
 author: "Columbia Care Editorial Team"
 date: "2025-11-28"
 lastModified: "2026-04-25"
-image: "/images/blog/exterior-front.jpg"
+image: "/images/blog/exterior-front-compressed.jpg"
 tags:
   - Senior Living Design
   - Assisted Living Architecture

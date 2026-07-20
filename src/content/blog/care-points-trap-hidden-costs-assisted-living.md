@@ -4,7 +4,7 @@ title: "The Care Points Trap: What the Big Facilities Don't Tell You (And How to
 excerpt: 'In many Maryland assisted living facilities, the bill you''re quoted isn''t the bill you pay. Learn how "care points" and sudden reassessments can balloon your monthly costs.'
 author: "Columbia Care Editorial Team"
 date: "2026-04-25"
-image: "/images/blog/assisted-living-hidden-fees-care-points.png"
+image: "/images/blog/assisted-living-hidden-fees-care-points.jpg"
 tags:
   - Cost of Care
   - Maryland Senior Living

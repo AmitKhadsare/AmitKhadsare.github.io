@@ -6,7 +6,7 @@ excerpt: "Moving a parent to assisted living in Columbia MD can feel overwhelmin
 author: "Columbia Care Editorial Team"
 date: "2026-03-03"
 lastModified: "2026-04-25"
-image: "/images/blog/adult-child-talking-to-parents-assisted-living-decision-columbia-md.png"
+image: "/images/blog/adult-child-talking-to-parents-assisted-living-decision-columbia-md.jpg"
 tags:
   - Family Guide
   - Transitioning Care

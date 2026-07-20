@@ -5,7 +5,7 @@ excerpt: "The 'Base Rate' in Maryland senior care is often an illusion. Learn wh
 author: "Columbia Care Editorial Team"
 date: "2026-02-28"
 lastModified: "2026-04-24"
-image: "/images/blog/assisted-living-costs-maryland-real-expenses.png"
+image: "/images/blog/assisted-living-costs-maryland-real-expenses.jpg"
 tags:
   - Cost of Care
   - Maryland Senior Living
