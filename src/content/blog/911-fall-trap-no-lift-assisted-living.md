@@ -5,7 +5,7 @@ excerpt: "Discover why 100-bed corporate assisted living facilities call 911 for
 author: "Columbia Care Editorial Team"
 date: "2026-07-20"
 lastModified: "2026-07-20"
-image: "/images/blog/911-fall-trap-no-lift-assisted-living.png"
+image: "/images/blog/911-fall-trap-no-lift-assisted-living.jpg"
 tags:
   - Senior Living Secrets
   - Fall Prevention
@@ -17,7 +17,7 @@ tags:
 <p class="lead text-xl text-stone-600 font-serif italic">Across the senior care industry, thousands of adult children each year face a baffling scenario: their aging parent has a minor slip onto a carpeted bedroom floor, completely unhurt, yet two hours later, they receive a call from a busy hospital Emergency Department. <span class="blog-accent">Why does an uninjured fall in corporate assisted living so frequently end up in a 911 dispatch?</span></p>
 
 <figure>
-  <img src="/images/blog/911-fall-trap-no-lift-assisted-living.png" alt="Physical therapist performing gentle mobility assessment in a residential home" class="w-full rounded-2xl shadow-xl border border-stone-200" />
+  <img src="/images/blog/911-fall-trap-no-lift-assisted-living.jpg" alt="Physical therapist performing gentle mobility assessment in a residential home" class="w-full rounded-2xl shadow-xl border border-stone-200" />
   <figcaption class="text-center text-stone-500 mt-4 text-sm font-medium italic">On-site clinical movement assessments help evaluate uninjured slips safely, avoiding unnecessary emergency room dispatches.</figcaption>
 </figure>
 
