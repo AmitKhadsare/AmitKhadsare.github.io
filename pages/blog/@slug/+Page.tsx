@@ -26,7 +26,6 @@ const BlogPostPage = () => {
             <SEOHead
                 title={post.title}
                 description={post.excerpt}
-                keywords={post.tags.join(', ')}
                 image={`https://www.columbiacarehome.com${post.image}`}
                 url={`https://www.columbiacarehome.com/blog/${post.slug}`}
                 type="article"
