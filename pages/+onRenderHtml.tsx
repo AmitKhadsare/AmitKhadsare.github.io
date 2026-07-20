@@ -1,5 +1,5 @@
 import ReactDOMServer from 'react-dom/server';
-import { HelmetProvider } from 'react-helmet-async';
+import { HelmetProvider, type HelmetServerState } from 'react-helmet-async';
 import { StaticRouter } from 'react-router-dom/server';
 import { dangerouslySkipEscape, escapeInject } from 'vike/server';
 import App from '../src/App';
@@ -45,20 +45,7 @@ async function onRenderHtml(pageContext: PageContextHtml) {
     // SECTION 2: Create Helmet context to capture meta tags
     // ============================================================
 
-    interface HelmetData {
-        toString(): string;
-    }
-
-    interface HelmetContext {
-        helmet?: {
-            title: HelmetData;
-            meta: HelmetData;
-            link: HelmetData;
-            script: HelmetData;
-        };
-    }
-
-    const helmetContext: HelmetContext = {};
+    const helmetContext = {} as { helmet?: HelmetServerState };
 
     // This is an EMPTY object that react-helmet-async will MUTATE.
     // After rendering, it will contain all the <Helmet> tags from your components.
