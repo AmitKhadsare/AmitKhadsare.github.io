@@ -24,7 +24,7 @@ const BlogPostPage = () => {
     return (
         <div className="min-h-screen bg-gray-50">
             <SEOHead
-                title={`${post.title} | Columbia Care Home Blog`}
+                title={post.title}
                 description={post.excerpt}
                 keywords={post.tags.join(', ')}
                 image={`https://www.columbiacarehome.com${post.image}`}
